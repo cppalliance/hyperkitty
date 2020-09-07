@@ -16,7 +16,8 @@ News / Changelog
 - Add the ability to disable Gravatar using ``HYPERKITTY_ENABLE_GRAVATAR``
   settings. (Closes #303)
 - Replaced deprecated ``ugettext`` functions with ``gettext``. (Closes #310)
-
+- Fix export of Email message where the ``In-Reply-To`` header doesn't include
+  the ``<>`` brackets. (Closes #331)
 
 1.3.3
 =====
