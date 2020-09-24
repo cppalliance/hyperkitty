@@ -246,7 +246,12 @@ class DbImporter(object):
 
 
 class Command(BaseCommand):
-    help = "Imports the specified mailbox archive"
+    help = (
+        "Imports the specified archive mbox(es). "
+        "Before running this, the mbox(es) should be checked for "
+        "messages that could throw uncaught exceptions with the "
+        "contrib/check_hk_archive script and for unescaped 'From ' lines "
+        "with Mailman 2.1's cleanarch script.")
 
     def add_arguments(self, parser):
         parser.add_argument('mbox', nargs='+')
