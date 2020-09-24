@@ -18,6 +18,8 @@ News / Changelog
 - Replaced deprecated ``ugettext`` functions with ``gettext``. (Closes #310)
 - Fix export of Email message where the ``In-Reply-To`` header doesn't include
   the ``<>`` brackets. (Closes #331)
+- We now catch a few more exceptions in ``hyperkitty_import`` when getting
+  messages from a mbox. (Closes #313 and #314)
 
 1.3.3
 =====
