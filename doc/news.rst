@@ -20,6 +20,8 @@ News / Changelog
   the ``<>`` brackets. (Closes #331)
 - We now catch a few more exceptions in ``hyperkitty_import`` when getting
   messages from a mbox. (Closes #313 and #314)
+- Added a new contrib/check_hk_import script to check mboxes before running
+  hyperkitty_import.
 
 1.3.3
 =====

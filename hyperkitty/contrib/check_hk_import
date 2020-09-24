@@ -1,0 +1,69 @@
+#! /usr/bin/env python3
+'Check for possible hyperkitty_import exceptions.'
+
+import argparse
+import mailbox
+from email import message_from_bytes, policy
+from email.utils import unquote
+
+
+def parseargs():
+    parser = argparse.ArgumentParser(
+        description="""\
+This script is used to check an archive mbox file for
+messages that might cause hyperkitty_import to skip the message or fail
+altogether. It will only catch and report exceptions in getting messages
+from the mbox or converting them to email.message.Message instances. There
+can be other issues with mboxes such as unescaped 'From ' lines and
+unparseable Date: headers. The Mailman 2.1 cleanarch script can check for
+unescaped 'From ' lines and the script at
+https://www.msapiro.net/scripts/cleanarch2 can do that and check for
+unparseable Date: headers as well.""")
+    parser.add_argument('mbox',
+                        type=str,
+                        help='The path to the mbox file to be checked.'
+                        )
+    return parser.parse_args()
+
+
+def loop(start, end, mbox, mb_keys):
+    global count
+    try:
+        for count in range(start, end):
+            msg = mbox.get_message(mb_keys[count])
+            try:
+                msg_raw = msg.as_bytes(unixfrom=False)
+            except Exception as e:
+                print('Failed to convert message number {}, '
+                      'message=id {} to bytes\n'
+                      '    {}'.format(count,
+                                      unquote(msg.get("Message-Id", 'n/a')),
+                                      e))
+                continue
+            msg.get_from()
+            try:
+                message_from_bytes(msg_raw, policy=policy.default)
+            except Exception as e:
+                print('Failed to convert message number {}, '
+                      'message=id {} to email.message.Message\n'
+                      '    {}'.format(count,
+                                      unquote(msg.get("Message-Id", 'n/a')),
+                                      e))
+                continue
+    except Exception as e:
+        print('Failed to retrieve message number {}\n    {}'.format(count, e))
+
+
+def main():
+    global count
+    ns = parseargs()
+    mbox = mailbox.mbox(ns.mbox, create=False)
+    mb_keys = mbox.keys()
+    count = -1
+    while count < len(mb_keys) - 1:
+        loop(count+1, len(mb_keys), mbox, mb_keys)
+    print('Processed {} messages.'.format(count+1))
+
+
+if __name__ == '__main__':
+    main()
