@@ -2,6 +2,7 @@
 
 import mailbox
 import os.path
+import sys
 from datetime import datetime
 from email import message_from_file
 from email.message import EmailMessage
@@ -337,10 +338,12 @@ class CommandTestCase(TestCase):
         self.assertEqual(MailingList.objects.count(), 1)
         self.assertEqual(Email.objects.count(), 1)
 
-    @expectedFailure
-    # This can fail because https://bugs.python.org/issue37491 is fixed.
     def test_another_unconvertable_message(self):
         # This message can't be converted to an email.message.EmailMessage.
+        # This fails with Python>=3.7.5 because
+        # https://bugs.python.org/issue37491 is fixed.
+        if sys.hexversion >= 0x30705f0:
+            raise SkipTest
         mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
         # We have to do it this way to see the exception.
         with open(get_test_file("unconvertable_msg-2.txt"), "rb") as em_file:
