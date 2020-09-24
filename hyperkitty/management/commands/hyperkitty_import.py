@@ -152,14 +152,20 @@ class DbImporter(object):
         for msg in mbox:
             # FIXME: this converts mailbox.mboxMessage to
             # email.message.EmailMessage
-            msg_raw = msg.as_bytes(unixfrom=False)
+            try:
+                msg_raw = msg.as_bytes(unixfrom=False)
+            except UnicodeError as e:
+                self.stderr.write('Failed to convert {} to bytes\n'
+                                  '    {}'.format(
+                                   unquote(msg.get("Message-Id", 'n/a')), e))
+                continue
             unixfrom = msg.get_from()
             try:
                 message = message_from_bytes(msg_raw, policy=policy.default)
-            except UnicodeError as e:
+            except (UnicodeError, IndexError) as e:
                 self.stderr.write('Failed to convert {} to '
                                   'email.message.Message\n    {}'.format(
-                                   unquote(msg["Message-Id"]), e))
+                                   unquote(msg.get("Message-Id", 'n/a')), e))
                 continue
             # Fix missing and wierd Date: headers.
             date = (self._get_date(message, "date") or

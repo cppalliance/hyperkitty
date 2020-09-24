@@ -337,6 +337,62 @@ class CommandTestCase(TestCase):
         self.assertEqual(MailingList.objects.count(), 1)
         self.assertEqual(Email.objects.count(), 1)
 
+    @expectedFailure
+    # This can fail because https://bugs.python.org/issue37491 is fixed.
+    def test_another_unconvertable_message(self):
+        # This message can't be converted to an email.message.EmailMessage.
+        mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
+        # We have to do it this way to see the exception.
+        with open(get_test_file("unconvertable_msg-2.txt"), "rb") as em_file:
+            with open(os.path.join(self.tmpdir, "test.mbox"), "wb") as mb_file:
+                mb_file.write(em_file.read())
+        # Add a scond message because we need to archive something.
+        msg = EmailMessage()
+        msg["From"] = "dummy@example.com"
+        msg["Message-ID"] = "<msg2>"
+        msg["Date"] = "01 Feb 2015 12:00:00"
+        msg.set_payload("msg2")
+        mbox.add(msg)
+        mbox.close()
+        # do the import
+        output = StringIO()
+        kw = self.common_cmd_args.copy()
+        kw["stdout"] = kw["stderr"] = output
+        call_command('hyperkitty_import',
+                     os.path.join(self.tmpdir, "test.mbox"), **kw)
+        # Message 1 must have been rejected, but no crash
+        self.assertIn("Failed to convert n/a to email", output.getvalue())
+        # Message 2 must have been accepted
+        self.assertEqual(MailingList.objects.count(), 1)
+        self.assertEqual(Email.objects.count(), 1)
+
+    def test_ungetable_message(self):
+        # This mbox message can't be converted to bytes.
+        mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
+        # We have to do it this way to see the exception.
+        with open(get_test_file("unicode_issue.txt"), "rb") as em_file:
+            with open(os.path.join(self.tmpdir, "test.mbox"), "wb") as mb_file:
+                mb_file.write(em_file.read())
+        # Add a scond message because we need to archive something.
+        msg = EmailMessage()
+        msg["From"] = "dummy@example.com"
+        msg["Message-ID"] = "<msg2>"
+        msg["Date"] = "01 Feb 2015 12:00:00"
+        msg.set_payload("msg2")
+        mbox.add(msg)
+        mbox.close()
+        # do the import
+        output = StringIO()
+        kw = self.common_cmd_args.copy()
+        kw["stdout"] = kw["stderr"] = output
+        call_command('hyperkitty_import',
+                     os.path.join(self.tmpdir, "test.mbox"), **kw)
+        # Message 1 must have been rejected, but no crash
+        self.assertIn("Failed to convert n/a to bytes", output.getvalue())
+        # Message 2 must have been accepted
+        self.assertEqual(MailingList.objects.count(), 1)
+        self.assertEqual(Email.objects.count(), 1)
+
     def test_unknown_encoding(self):
         # Spam messages have been seen with bogus charset= encodings which
         # throw LookupError.
