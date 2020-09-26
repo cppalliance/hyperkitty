@@ -117,7 +117,7 @@ class DbImporter(object):
                 self.stderr.write(
                     "Can't parse date string in message {}: {}. "
                     "The date string is: '{}'".format(
-                        message["message-id"], e,
+                        unquote(message.get("message-id", 'n/a')), e,
                         date.decode("ascii", "replace")))
             return False
         if date.tzinfo is None:
@@ -134,7 +134,7 @@ class DbImporter(object):
             if self.verbose:
                 self.stderr.write(
                     "Can't get {} header in message {}: {}.".format(
-                        header, message["message-id"], e))
+                        header, unquote(message.get("message-id", 'n/a')), e))
             return None
 
         return date
@@ -183,11 +183,16 @@ class DbImporter(object):
 
             if self._is_too_old(message):
                 continue
-            progress_marker.tick(message["Message-Id"])
+            progress_marker.tick(unquote(message.get("message-id", 'n/a')))
             # Un-wrap the subject line if necessary
             if message["subject"]:
-                message.replace_header(
-                    "subject", TEXTWRAP_RE.sub(" ", message["subject"]))
+                try:
+                    message.replace_header(
+                        "subject", TEXTWRAP_RE.sub(" ", message["subject"]))
+                except ValueError:
+                    # We can't replace the header. It may contain some unicode
+                    # Next Line or similar. Just keep the original.
+                    pass
             if unixfrom:
                 message.set_unixfrom(unixfrom)
             if message['message-id'] is None:
@@ -327,6 +332,9 @@ class Command(BaseCommand):
             if options["verbosity"] >= 1:
                 self.stdout.write("Importing from mbox file %s to %s"
                                   % (mbfile, list_address))
+                # Also write the mbox name to stderr for syncing error messages
+                # with the mbox when importing multiple mboxes.
+                self.stderr.write("Processing %s" % mbfile)
             if not options["ignore_mtime"] and options["since"] is not None:
                 mtime = datetime.fromtimestamp(
                     os.path.getmtime(mbfile), tz.tzlocal())

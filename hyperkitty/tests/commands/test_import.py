@@ -283,6 +283,26 @@ class CommandTestCase(TestCase):
                          '[<redacted>]  Sicherheit 2005: Stichworte und '
                          'Vorschlag PC-Mitglieder; Ergänzung!')
 
+    def test_bad_subject_header(self):
+        # This message has a Subject: header with an encoded word that
+        # contains \x85 which becomes a unicode next line.
+        with open(get_test_file("bad-subject-header.txt")) as email_file:
+            msg = message_from_file(email_file)
+        mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
+        mbox.add(msg)
+        mbox.close()
+        # do the import
+        output = StringIO()
+        kw = self.common_cmd_args.copy()
+        kw["stdout"] = kw["stderr"] = output
+        call_command('hyperkitty_import',
+                     os.path.join(self.tmpdir, "test.mbox"), **kw)
+        # Message must have been accepted
+        self.assertEqual(MailingList.objects.count(), 1)
+        self.assertEqual(Email.objects.count(), 1)
+        self.assertEqual(Email.objects.first().subject,
+                         '(et en plus, en local\x85)')
+
     def test_cant_write_error(self):
         # This message throws an exception which is caught by the catchall
         # except clause. Ensure we can then write the error message.
