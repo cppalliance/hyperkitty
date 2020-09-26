@@ -104,7 +104,7 @@ class DbImporter(object):
         self.stdout = stdout
         self.stderr = stderr
 
-    def _is_too_old(self, message):
+    def _is_too_old(self, message, report_name):
         if not self.since:
             return False
         date = message.get("date")
@@ -115,10 +115,10 @@ class DbImporter(object):
         except ValueError as e:
             if self.verbose:
                 self.stderr.write(
-                    "Can't parse date string in message {}: {}. "
+                    "Can't parse date string in message {}{}: {}. "
                     "The date string is: '{}'".format(
-                        unquote(message.get("message-id", 'n/a')), e,
-                        date.decode("ascii", "replace")))
+                        unquote(message.get("message-id", 'n/a')),
+                        report_name, e, date.decode("ascii", "replace")))
             return False
         if date.tzinfo is None:
             date = date.replace(tzinfo=utc)
@@ -127,19 +127,20 @@ class DbImporter(object):
         except ValueError:
             return False
 
-    def _get_date(self, message, header):
+    def _get_date(self, message, header, report_name):
         try:
             date = message.get(header)
         except (TypeError, ValueError) as e:
             if self.verbose:
                 self.stderr.write(
-                    "Can't get {} header in message {}: {}.".format(
-                        header, unquote(message.get("message-id", 'n/a')), e))
+                    "Can't get {} header in message {}{}: {}.".format(
+                        header, unquote(message.get("message-id", 'n/a')),
+                        report_name, e))
             return None
 
         return date
 
-    def from_mbox(self, mbfile):
+    def from_mbox(self, mbfile, report_name):
         """
         Insert all the emails contained in an mbox file into the database.
 
@@ -155,21 +156,23 @@ class DbImporter(object):
             try:
                 msg_raw = msg.as_bytes(unixfrom=False)
             except UnicodeError as e:
-                self.stderr.write('Failed to convert {} to bytes\n'
+                self.stderr.write('Failed to convert {}{} to bytes\n'
                                   '    {}'.format(
-                                   unquote(msg.get("Message-Id", 'n/a')), e))
+                                   unquote(msg.get("Message-Id", 'n/a')),
+                                   report_name, e))
                 continue
             unixfrom = msg.get_from()
             try:
                 message = message_from_bytes(msg_raw, policy=policy.default)
             except (UnicodeError, IndexError) as e:
-                self.stderr.write('Failed to convert {} to '
+                self.stderr.write('Failed to convert {}{} to '
                                   'email.message.Message\n    {}'.format(
-                                   unquote(msg.get("Message-Id", 'n/a')), e))
+                                   unquote(msg.get("Message-Id", 'n/a')),
+                                   report_name, e))
                 continue
             # Fix missing and wierd Date: headers.
-            date = (self._get_date(message, "date") or
-                    self._get_date(message, "resent-date"))
+            date = (self._get_date(message, "date", report_name) or
+                    self._get_date(message, "resent-date", report_name))
             if unixfrom and not date:
                 date = " ".join(unixfrom.split()[1:])
 
@@ -181,18 +184,16 @@ class DbImporter(object):
                     del message['Date']
                     message['Date'] = date
 
-            if self._is_too_old(message):
+            if self._is_too_old(message, report_name):
                 continue
             progress_marker.tick(unquote(message.get("message-id", 'n/a')))
             # Un-wrap the subject line if necessary
             if message["subject"]:
-                try:
+                # If we can't replace the header because it contains some
+                # unicode Next Line or similar. Just keep the original.
+                with suppress(ValueError):
                     message.replace_header(
                         "subject", TEXTWRAP_RE.sub(" ", message["subject"]))
-                except ValueError:
-                    # We can't replace the header. It may contain some unicode
-                    # Next Line or similar. Just keep the original.
-                    pass
             if unixfrom:
                 message.set_unixfrom(unixfrom)
             if message['message-id'] is None:
@@ -204,11 +205,13 @@ class DbImporter(object):
             except DuplicateMessage as e:
                 if self.verbose:
                     self.stderr.write(
-                        "Duplicate email with message-id '%s'" % e.args[0])
+                        "Duplicate email with message-id '%s'%s"
+                        % (e.args[0], report_name))
                 continue
             except (LookupError, UnicodeError, ValueError) as e:
-                self.stderr.write("Failed adding message %s: %s"
-                                  % (message.get("Message-ID"), e))
+                self.stderr.write("Failed adding message %s%s: %s"
+                                  % (message.get("Message-ID"),
+                                     report_name, e))
                 if len(e.args) == 2:
                     try:
                         self.stderr.write(
@@ -225,15 +228,15 @@ class DbImporter(object):
                 except UnicodeError:
                     pass
                 self.stderr.write(
-                    "Message %s failed to import, skipping"
-                    % unquote(message["Message-Id"]))
+                    "Message %s%s failed to import, skipping"
+                    % (unquote(message["Message-Id"])), report_name)
                 continue
             except Exception as e:
                 # In case of *any* exception, log and continue to import the
                 # rest of the archive.
                 self.stderr.write(
-                    "Message {} failed to import, skipping\n    {}".format(
-                        unquote(message["Message-ID"]), e))
+                    "Message {}{} failed to import, skipping\n    {}".format(
+                        unquote(message["Message-ID"]), report_name, e))
                 continue
             email = Email.objects.get(
                 mailinglist__name=self.list_address,
@@ -329,12 +332,13 @@ class Command(BaseCommand):
         importer = DbImporter(list_address, options, self.stdout, self.stderr)
         # disable mailman client for now
         for mbfile in options["mbox"]:
+            if len(options["mbox"]) > 1:
+                report_name = ' from mbox {}'.format(mbfile)
+            else:
+                report_name = ''
             if options["verbosity"] >= 1:
                 self.stdout.write("Importing from mbox file %s to %s"
                                   % (mbfile, list_address))
-                # Also write the mbox name to stderr for syncing error messages
-                # with the mbox when importing multiple mboxes.
-                self.stderr.write("Processing %s" % mbfile)
             if not options["ignore_mtime"] and options["since"] is not None:
                 mtime = datetime.fromtimestamp(
                     os.path.getmtime(mbfile), tz.tzlocal())
@@ -343,7 +347,7 @@ class Command(BaseCommand):
                         self.stdout.write('Mailbox file for %s is too old'
                                           % list_address)
                     continue
-            importer.from_mbox(mbfile)
+            importer.from_mbox(mbfile, report_name)
             if options["verbosity"] >= 2:
                 total_in_list = Email.objects.filter(
                     mailinglist__name=list_address).count()
