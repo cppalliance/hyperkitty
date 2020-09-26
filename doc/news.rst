@@ -22,10 +22,10 @@ News / Changelog
   messages from a mbox. (Closes #313 and #314)
 - Added a new contrib/check_hk_import script to check mboxes before running
   hyperkitty_import.
-- We now catch and ignore a ``ValueError`` in ``hyperkitty_import`` when
-  trying to replace a ``Subject:`` header. (Closes #317)
-- ``hyperkitty_import`` now writes each mbox name to stderr for syncing with
-  error messages when importing multiple mboxes. (Closes #318)
+- We now ignore a ``ValueError`` in ``hyperkitty_import`` when trying to
+  replace a ``Subject:`` header. (Closes #317)
+- ``hyperkitty_import`` now includes the mbox name in error messages when
+  importing multiple mboxes. (Closes #318)
 
 1.3.3
 =====
