@@ -26,6 +26,8 @@ News / Changelog
   replace a ``Subject:`` header. (Closes #317)
 - ``hyperkitty_import`` now includes the mbox name in error messages when
   importing multiple mboxes. (Closes #318)
+- `` at `` is now only replaced with ``@`` in ``From:`` header values when
+  necessary and not unconditionally. (Closes #320)
 
 1.3.3
 =====
