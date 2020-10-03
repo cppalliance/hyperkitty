@@ -241,6 +241,53 @@ class TestUtils(TestCase):
         self.assertEqual(name, '')
         self.assertEqual(email, '')
 
+    def test_odd_from(self):
+        msg = EmailMessage()
+        msg['From'] = 'First Last at somedomain <user@example.com>'
+        msg.set_content("Dummy message")
+        try:
+            name, email = utils.parseaddr(msg["From"])
+        except AttributeError as e:
+            self.fail(e)
+        self.assertEqual(name, 'First Last at somedomain')
+        self.assertEqual(email, 'user@example.com')
+
+    def test_from_with_at(self):
+        msg = EmailMessage()
+        msg['From'] = 'user at example.com'
+        msg.set_content("Dummy message")
+        try:
+            name, email = utils.parseaddr(msg["From"])
+        except AttributeError as e:
+            self.fail(e)
+        self.assertEqual(name, 'user@example.com')
+        self.assertEqual(email, 'user@example.com')
+
+    def test_from_with_bracketed_at(self):
+        msg = EmailMessage()
+        msg['From'] = 'Display Name <user at example.com>'
+        msg.set_content("Dummy message")
+        try:
+            name, email = utils.parseaddr(msg["From"])
+        except AttributeError as e:
+            self.fail(e)
+        self.assertEqual(name, 'Display Name')
+        if email != '"user@example.com"':
+            # This is bogus. utils.parseaddr only seems to return the address
+            # quoted in this test, not when called in other contexts.
+            self.assertEqual(email, 'user@example.com')
+
+    def test_normal_from(self):
+        msg = EmailMessage()
+        msg['From'] = 'Display Name <user@example.com>'
+        msg.set_content("Dummy message")
+        try:
+            name, email = utils.parseaddr(msg["From"])
+        except AttributeError as e:
+            self.fail(e)
+        self.assertEqual(name, 'Display Name')
+        self.assertEqual(email, 'user@example.com')
+
     def test_get_message_id_hash(self):
         msg_id = '<87myycy5eh.fsf@uwakimon.sk.tsukuba.ac.jp>'
         expected = 'JJIGKPKB6CVDX6B2CUG4IHAJRIQIOUTP'

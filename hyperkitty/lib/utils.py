@@ -102,8 +102,10 @@ def parseaddr(address):
     """
     if address is None:
         return "", ""
-    address = address.replace(" at ", "@")
     from_name, from_email = email.utils.parseaddr(address)
+    if '@' not in from_email:
+        address = address.replace(" at ", "@")
+        from_name, from_email = email.utils.parseaddr(address)
     if not from_name:
         from_name = from_email
     return from_name, from_email
