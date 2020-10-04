@@ -229,7 +229,7 @@ class DbImporter(object):
                     pass
                 self.stderr.write(
                     "Message %s%s failed to import, skipping"
-                    % (unquote(message["Message-Id"])), report_name)
+                    % (unquote(message["Message-Id"]), report_name))
                 continue
             except Exception as e:
                 # In case of *any* exception, log and continue to import the
