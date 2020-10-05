@@ -1,4 +1,4 @@
-image: maxking/mailman-ci-runner
+image: ghcr.io/maxking/mailman-ci-runner:latest
 
 stages:
   - test
