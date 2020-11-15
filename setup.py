@@ -72,8 +72,9 @@ setup(
         "Programming Language :: JavaScript",
         ],
     keywords='email',
-    # packages=find_packages(exclude=["*.test", "test", "*.test.*"]),
-    packages=find_packages(),
+    packages=find_packages(
+        exclude=["example_project"]
+    ),
     include_package_data=True,
     install_requires=REQUIRES,
     setup_requires=[
