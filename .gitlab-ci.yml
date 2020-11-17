@@ -50,6 +50,13 @@ lint:
   script:
   - tox -e lint
 
+lint-js:
+  image: node:latest
+  stage: quality-assurance
+  script:
+    - npm install -g eslint
+    - eslint -c .eslintrc.yml hyperkitty/static/hyperkitty/js
+
 docs:
   stage: quality-assurance
   script:
