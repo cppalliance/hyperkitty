@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-27 15:16+0200\n"
-"PO-Revision-Date: 2020-07-20 03:57+0000\n"
+"PO-Revision-Date: 2020-10-02 21:41+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -1106,7 +1106,7 @@ msgstr "Esta mensagem em formato gzipped mbox"
 #: views/message.py:278
 #, python-format
 msgid "Could not delete message %(msg_id_hash)s: %(error)s"
-msgstr "Não foi possível excluir a mensagem %(msg_id_hash)s: %(error)s"
+msgstr "Não foi possível apagar a mensagem %(msg_id_hash)s: %(error)s"
 
 #: views/message.py:287
 #, python-format

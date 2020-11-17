@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-27 15:16+0200\n"
-"PO-Revision-Date: 2020-04-10 20:00+0000\n"
-"Last-Translator: Daniele Pizzolli <dan-i18n@toel.it>\n"
+"PO-Revision-Date: 2020-08-16 03:46+0000\n"
+"Last-Translator: Massimo Zappalà <maszap@tin.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/it/>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -253,7 +253,7 @@ msgstr "Devi aver fatto l'accesso per votare."
 
 #: templates/hyperkitty/fragments/month_list.html:5
 msgid "Go to"
-msgstr ""
+msgstr "Vai a"
 
 #: templates/hyperkitty/fragments/month_list.html:72
 msgid "List overview"
@@ -283,7 +283,7 @@ msgstr "Intero archivio"
 
 #: templates/hyperkitty/fragments/overview_threads.html:9
 msgid "More..."
-msgstr ""
+msgstr "Altro..."
 
 #: templates/hyperkitty/fragments/overview_threads.html:17
 msgid "New messages in this thread"
@@ -538,7 +538,7 @@ msgstr[0] ""
 msgstr[1] ""
 "\n"
 "                %(email.attachments.count)s allegati\n"
-"                <"
+"                "
 
 #: templates/hyperkitty/messages/message.html:130
 msgid "Quote"
@@ -585,19 +585,19 @@ msgstr "Statistiche"
 
 #: templates/hyperkitty/overview.html:43
 msgid "Discussions"
-msgstr ""
+msgstr "Discussioni"
 
 #: templates/hyperkitty/overview.html:46
 msgid "most recent"
-msgstr ""
+msgstr "Più recente"
 
 #: templates/hyperkitty/overview.html:49
 msgid "most popular"
-msgstr ""
+msgstr "Più popolare"
 
 #: templates/hyperkitty/overview.html:52
 msgid "most active"
-msgstr ""
+msgstr "Più attiva"
 
 #: templates/hyperkitty/overview.html:65
 #: templates/hyperkitty/thread_list.html:48
@@ -609,12 +609,16 @@ msgid ""
 "<span class=\"hidden-tn hidden-xs\">Start a </span><span class=\"hidden-sm "
 "hidden-md hidden-lg\">N</span>ew thread"
 msgstr ""
+"<span class=\"hidden-tn hidden-xs\">Inizia un </span><span class=\"hidden-sm "
+"hidden-md hidden-lg\">N</span>uovo thread"
 
 #: templates/hyperkitty/overview.html:73
 msgid ""
 "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-sm "
 "hidden-md hidden-lg\">S</span>ubscription"
 msgstr ""
+"<span class=\"hidden-tn hidden-xs\">Gestisci l</span><span class=\"hidden-sm "
+"hidden-md hidden-lg\">L</span>e iscrizioni"
 
 #: templates/hyperkitty/overview.html:80
 msgid "Search this list"
@@ -682,7 +686,7 @@ msgstr "Riattaca questa conversazione ad un'altra"
 
 #: templates/hyperkitty/reattach.html:22
 msgid "Thread to re-attach:"
-msgstr "Conversazioni da riattaccare"
+msgstr "Conversazioni da riattaccare:"
 
 #: templates/hyperkitty/reattach.html:29
 msgid "Re-attach it to:"
@@ -690,7 +694,7 @@ msgstr "Riattaccala a:"
 
 #: templates/hyperkitty/reattach.html:31
 msgid "Search for the parent thread"
-msgstr "Cerca per conversazione genitrice"
+msgstr "Cerca il thread principale"
 
 #: templates/hyperkitty/reattach.html:32
 msgid "Search"
@@ -706,7 +710,7 @@ msgstr "Fallo"
 
 #: templates/hyperkitty/reattach.html:50
 msgid "(there's no undoing!), or"
-msgstr "non c'è modo di tornare indietro, o"
+msgstr "(non c'è modo di tornare indietro!), o"
 
 #: templates/hyperkitty/reattach.html:52
 msgid "go back to the thread"
@@ -748,7 +752,7 @@ msgstr "ordinati dai meno recenti"
 
 #: templates/hyperkitty/search_results.html:66
 msgid "Update"
-msgstr ""
+msgstr "Aggiorna"
 
 #: templates/hyperkitty/search_results.html:86
 msgid "Sorry no email could be found for this query."
@@ -869,6 +873,9 @@ msgid ""
 "                                        by %(name)s\n"
 "                                    "
 msgstr ""
+"\n"
+"                                        per %(name)s\n"
+"                                    "
 
 #: templates/hyperkitty/threads/summary_thread_large.html:42
 msgid "Most recent thread activity"
@@ -954,7 +961,7 @@ msgstr "Ultima attività:"
 #: templates/hyperkitty/user_profile/favorites.html:30
 #: templates/hyperkitty/user_profile/last_views.html:33
 msgid "Replies:"
-msgstr "Repliche"
+msgstr "Risposte:"
 
 #: templates/hyperkitty/user_profile/favorites.html:41
 #: templates/hyperkitty/user_profile/last_views.html:46
@@ -1083,7 +1090,7 @@ msgstr "Voti per questo utente:"
 
 #: templates/hyperkitty/user_public_profile.html:42
 msgid "Email addresses:"
-msgstr "Indirizzi e-mail"
+msgstr "Indirizzi e-mail:"
 
 #: views/message.py:75
 msgid "This message in gzipped mbox format"

@@ -3,48 +3,49 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-27 15:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-08-19 03:44+0000\n"
+"Last-Translator: marklin0913da248e4cdada422a <marklin0913@protonmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"gnu-mailman/hyperkitty/zh_Hant/>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
-msgstr ""
+msgstr "附上檔案"
 
 #: forms.py:65
 msgid "Attach another file"
-msgstr ""
+msgstr "附上另一個檔案"
 
 #: forms.py:66
 msgid "Remove this file"
-msgstr ""
+msgstr "移除這個檔案"
 
 #: templates/hyperkitty/404.html:28
 msgid "Error 404"
-msgstr ""
+msgstr "Error 404"
 
 #: templates/hyperkitty/404.html:30 templates/hyperkitty/500.html:31
 msgid "Oh No!"
-msgstr ""
+msgstr "噢不！"
 
 #: templates/hyperkitty/404.html:32
 msgid "I can't find this page."
-msgstr ""
+msgstr "找不到這個頁面。"
 
 #: templates/hyperkitty/404.html:33 templates/hyperkitty/500.html:34
 msgid "Go back home"
-msgstr ""
+msgstr "回到首頁"
 
 #: templates/hyperkitty/500.html:29
 msgid "Error 500"
@@ -78,7 +79,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:5
 msgid "REST API"
-msgstr ""
+msgstr "重置 API"
 
 #: templates/hyperkitty/api.html:7
 msgid ""
@@ -88,7 +89,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:10
 msgid "Formats"
-msgstr ""
+msgstr "格式"
 
 #: templates/hyperkitty/api.html:12
 msgid ""
@@ -157,7 +158,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:50
 msgid "Tags"
-msgstr ""
+msgstr "標籤"
 
 #: templates/hyperkitty/api.html:53
 msgid "Using this address you will be able to retrieve the list of tags."
@@ -165,11 +166,11 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:57 templates/hyperkitty/base.html:99
 msgid "Account"
-msgstr ""
+msgstr "帳號"
 
 #: templates/hyperkitty/base.html:62 templates/hyperkitty/base.html:104
 msgid "Mailman settings"
-msgstr ""
+msgstr "Mailman 設定"
 
 #: templates/hyperkitty/base.html:67 templates/hyperkitty/base.html:109
 #: templates/hyperkitty/user_profile/base.html:16
@@ -179,19 +180,19 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:72 templates/hyperkitty/base.html:114
 msgid "Logout"
-msgstr ""
+msgstr "登出"
 
 #: templates/hyperkitty/base.html:77 templates/hyperkitty/base.html:121
 msgid "Sign In"
-msgstr ""
+msgstr "登入"
 
 #: templates/hyperkitty/base.html:81 templates/hyperkitty/base.html:125
 msgid "Sign Up"
-msgstr ""
+msgstr "加入"
 
 #: templates/hyperkitty/base.html:135
 msgid "Manage this list"
-msgstr ""
+msgstr "管理這個清單"
 
 #: templates/hyperkitty/base.html:140
 msgid "Manage lists"
@@ -203,7 +204,7 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:193
 msgid "version"
-msgstr ""
+msgstr "版本"
 
 #: templates/hyperkitty/errors/notimplemented.html:8
 msgid "Not implemented yet"
@@ -237,7 +238,7 @@ msgstr ""
 #: templates/hyperkitty/fragments/like_form.html:27
 #: templates/hyperkitty/fragments/like_form.html:31
 msgid "You must be logged-in to vote."
-msgstr ""
+msgstr "您必須登入才能投票。"
 
 #: templates/hyperkitty/fragments/month_list.html:5
 msgid "Go to"
@@ -255,15 +256,15 @@ msgstr ""
 #: templates/hyperkitty/fragments/month_list.html:87 views/message.py:74
 #: views/mlist.py:96 views/thread.py:166
 msgid "Download"
-msgstr ""
+msgstr "下載"
 
 #: templates/hyperkitty/fragments/month_list.html:90
 msgid "Past 30 days"
-msgstr ""
+msgstr "過去 30天"
 
 #: templates/hyperkitty/fragments/month_list.html:91
 msgid "This month"
-msgstr ""
+msgstr "這個月"
 
 #: templates/hyperkitty/fragments/month_list.html:94
 msgid "Entire archive"
@@ -271,7 +272,7 @@ msgstr ""
 
 #: templates/hyperkitty/fragments/overview_threads.html:9
 msgid "More..."
-msgstr ""
+msgstr "查看更多"
 
 #: templates/hyperkitty/fragments/overview_threads.html:17
 msgid "New messages in this thread"
@@ -295,7 +296,7 @@ msgstr ""
 
 #: templates/hyperkitty/fragments/send_as.html:6
 msgid "Change sender"
-msgstr ""
+msgstr "更改寄送人"
 
 #: templates/hyperkitty/fragments/send_as.html:16
 msgid "Link another address"
@@ -308,7 +309,7 @@ msgstr ""
 #: templates/hyperkitty/index.html:22 templates/hyperkitty/index.html:27
 #: templates/hyperkitty/index.html:72
 msgid "Most popular"
-msgstr ""
+msgstr "最熱門"
 
 #: templates/hyperkitty/index.html:26
 msgid "Sort by number of recent participants"
@@ -317,7 +318,7 @@ msgstr ""
 #: templates/hyperkitty/index.html:32 templates/hyperkitty/index.html:37
 #: templates/hyperkitty/index.html:75
 msgid "Most active"
-msgstr ""
+msgstr "最活躍"
 
 #: templates/hyperkitty/index.html:36
 msgid "Sort by number of recent discussions"
@@ -326,7 +327,7 @@ msgstr ""
 #: templates/hyperkitty/index.html:42 templates/hyperkitty/index.html:47
 #: templates/hyperkitty/index.html:78
 msgid "By name"
-msgstr ""
+msgstr "依名稱"
 
 #: templates/hyperkitty/index.html:46
 msgid "Sort alphabetically"
@@ -335,7 +336,7 @@ msgstr ""
 #: templates/hyperkitty/index.html:52 templates/hyperkitty/index.html:57
 #: templates/hyperkitty/index.html:81
 msgid "Newest"
-msgstr ""
+msgstr "最新的"
 
 #: templates/hyperkitty/index.html:56
 msgid "Sort by list creation date"
@@ -395,7 +396,7 @@ msgstr ""
 #: templates/hyperkitty/overview.html:152
 #: templates/hyperkitty/thread_list.html:45
 msgid "discussions"
-msgstr ""
+msgstr "討論"
 
 #: templates/hyperkitty/index.html:162 templates/hyperkitty/index.html:240
 msgid "No archived list yet."
@@ -408,15 +409,15 @@ msgstr ""
 #: templates/hyperkitty/user_profile/subscriptions.html:41
 #: templates/hyperkitty/user_profile/votes.html:46
 msgid "List"
-msgstr ""
+msgstr "清單"
 
 #: templates/hyperkitty/index.html:175
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: templates/hyperkitty/index.html:176
 msgid "Activity in the past 30 days"
-msgstr ""
+msgstr "過去 30天的活動"
 
 #: templates/hyperkitty/message.html:23
 msgid "thread"
@@ -425,7 +426,7 @@ msgstr ""
 #: templates/hyperkitty/message_delete.html:8
 #: templates/hyperkitty/message_delete.html:21
 msgid "Delete message(s)"
-msgstr ""
+msgstr "刪除訊息"
 
 #: templates/hyperkitty/message_delete.html:26
 #, python-format
@@ -437,13 +438,13 @@ msgstr ""
 
 #: templates/hyperkitty/message_delete.html:45
 msgid "Delete"
-msgstr ""
+msgstr "刪除"
 
 #: templates/hyperkitty/message_delete.html:46
 #: templates/hyperkitty/message_new.html:54
 #: templates/hyperkitty/messages/message.html:145
 msgid "or"
-msgstr ""
+msgstr "或"
 
 #: templates/hyperkitty/message_delete.html:46
 #: templates/hyperkitty/message_new.html:54
@@ -451,7 +452,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/votes.html:36
 #: templates/hyperkitty/user_profile/votes.html:74
 msgid "cancel"
-msgstr ""
+msgstr "取消"
 
 #: templates/hyperkitty/message_new.html:9
 #: templates/hyperkitty/message_new.html:22
@@ -466,7 +467,7 @@ msgstr ""
 #: templates/hyperkitty/message_new.html:53
 #: templates/hyperkitty/messages/message.html:144
 msgid "Send"
-msgstr ""
+msgstr "寄送"
 
 #: templates/hyperkitty/messages/message.html:18
 #, python-format
@@ -475,7 +476,7 @@ msgstr ""
 
 #: templates/hyperkitty/messages/message.html:28
 msgid "Unread"
-msgstr ""
+msgstr "尚未閱讀"
 
 #: templates/hyperkitty/messages/message.html:45
 msgid "Sender's time:"
@@ -487,7 +488,7 @@ msgstr ""
 
 #: templates/hyperkitty/messages/message.html:62
 msgid "Attachments:"
-msgstr ""
+msgstr "附件："
 
 #: templates/hyperkitty/messages/message.html:77
 msgid "Display in fixed font"
@@ -500,7 +501,7 @@ msgstr ""
 #: templates/hyperkitty/messages/message.html:90
 #: templates/hyperkitty/messages/message.html:96
 msgid "Reply"
-msgstr ""
+msgstr "回覆"
 
 #: templates/hyperkitty/messages/message.html:93
 msgid "Sign in to reply online"
@@ -529,7 +530,7 @@ msgstr ""
 
 #: templates/hyperkitty/messages/message.html:134
 msgid "Use email software"
-msgstr ""
+msgstr "使用電子郵件軟體"
 
 #: templates/hyperkitty/messages/right_col.html:12
 msgid "Back to the thread"
@@ -537,11 +538,11 @@ msgstr ""
 
 #: templates/hyperkitty/messages/right_col.html:19
 msgid "Back to the list"
-msgstr ""
+msgstr "回到清單"
 
 #: templates/hyperkitty/messages/right_col.html:28
 msgid "Delete this message"
-msgstr ""
+msgstr "刪除這個訊息"
 
 #: templates/hyperkitty/messages/summary_message.html:24
 #, python-format
@@ -553,27 +554,27 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:37
 msgid "Home"
-msgstr ""
+msgstr "首頁"
 
 #: templates/hyperkitty/overview.html:40 templates/hyperkitty/thread.html:75
 msgid "Stats"
-msgstr ""
+msgstr "狀態"
 
 #: templates/hyperkitty/overview.html:43
 msgid "Discussions"
-msgstr ""
+msgstr "討論"
 
 #: templates/hyperkitty/overview.html:46
 msgid "most recent"
-msgstr ""
+msgstr "最新"
 
 #: templates/hyperkitty/overview.html:49
 msgid "most popular"
-msgstr ""
+msgstr "最熱門"
 
 #: templates/hyperkitty/overview.html:52
 msgid "most active"
-msgstr ""
+msgstr "最活躍"
 
 #: templates/hyperkitty/overview.html:65
 #: templates/hyperkitty/thread_list.html:48
@@ -610,11 +611,11 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:120
 msgid "Most popular discussions"
-msgstr ""
+msgstr "最熱門的討論"
 
 #: templates/hyperkitty/overview.html:128
 msgid "Most active discussions"
-msgstr ""
+msgstr "最活躍的討論"
 
 #: templates/hyperkitty/overview.html:139
 msgid "Activity Summary"
@@ -630,7 +631,7 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:147
 msgid "In"
-msgstr ""
+msgstr "在"
 
 #: templates/hyperkitty/overview.html:148
 msgid "the past <strong>30</strong> days:"
@@ -670,7 +671,7 @@ msgstr ""
 
 #: templates/hyperkitty/reattach.html:32
 msgid "Search"
-msgstr ""
+msgstr "搜尋"
 
 #: templates/hyperkitty/reattach.html:44
 msgid "this thread ID:"
@@ -694,11 +695,11 @@ msgstr ""
 
 #: templates/hyperkitty/search_results.html:31
 msgid "search results"
-msgstr ""
+msgstr "搜尋結果"
 
 #: templates/hyperkitty/search_results.html:33
 msgid "Search results"
-msgstr ""
+msgstr "搜尋結果"
 
 #: templates/hyperkitty/search_results.html:35
 msgid "for query"
@@ -724,7 +725,7 @@ msgstr ""
 
 #: templates/hyperkitty/search_results.html:66
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 #: templates/hyperkitty/search_results.html:86
 msgid "Sorry no email could be found for this query."
@@ -740,21 +741,21 @@ msgstr ""
 
 #: templates/hyperkitty/thread.html:30
 msgid "newer"
-msgstr ""
+msgstr "較新"
 
 #: templates/hyperkitty/thread.html:44
 msgid "older"
-msgstr ""
+msgstr "較舊"
 
 #: templates/hyperkitty/thread.html:69
 msgid "First Post"
-msgstr ""
+msgstr "新貼文"
 
 #: templates/hyperkitty/thread.html:72
 #: templates/hyperkitty/user_profile/favorites.html:45
 #: templates/hyperkitty/user_profile/last_views.html:50
 msgid "Replies"
-msgstr ""
+msgstr "回復"
 
 #: templates/hyperkitty/thread.html:94
 msgid "Show replies by thread"
@@ -770,11 +771,11 @@ msgstr ""
 
 #: templates/hyperkitty/threads/category.html:7
 msgid "Click to edit"
-msgstr ""
+msgstr "取消編輯"
 
 #: templates/hyperkitty/threads/category.html:9
 msgid "You must be logged-in to edit."
-msgstr ""
+msgstr "您必須登入才能編輯。"
 
 #: templates/hyperkitty/threads/category.html:15
 msgid "no category"
@@ -795,7 +796,7 @@ msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:49
 msgid "unread"
-msgstr ""
+msgstr "未讀"
 
 #: templates/hyperkitty/threads/right_col.html:60
 msgid "You must be logged-in to have favorites."
@@ -803,11 +804,11 @@ msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:61
 msgid "Add to favorites"
-msgstr ""
+msgstr "新增到最愛"
 
 #: templates/hyperkitty/threads/right_col.html:63
 msgid "Remove from favorites"
-msgstr ""
+msgstr "從最愛中移除"
 
 #: templates/hyperkitty/threads/right_col.html:72
 msgid "Reattach this thread"
@@ -827,16 +828,16 @@ msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:116
 msgid "next"
-msgstr ""
+msgstr "下一個"
 
 #: templates/hyperkitty/threads/right_col.html:117
 msgid "prev"
-msgstr ""
+msgstr "上一個"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:24
 #: templates/hyperkitty/threads/summary_thread_large.html:26
 msgid "Favorite"
-msgstr ""
+msgstr "最愛"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:32
 #, python-format
@@ -852,7 +853,7 @@ msgstr ""
 
 #: templates/hyperkitty/threads/tags.html:3
 msgid "tags"
-msgstr ""
+msgstr "標籤"
 
 #: templates/hyperkitty/threads/tags.html:9
 msgid "Search for tag"
@@ -860,7 +861,7 @@ msgstr ""
 
 #: templates/hyperkitty/threads/tags.html:15
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #: templates/hyperkitty/user_posts.html:9
 #: templates/hyperkitty/user_posts.html:22
@@ -891,7 +892,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/base.html:20
 #: templates/hyperkitty/user_profile/base.html:21
 msgid "Favorites"
-msgstr ""
+msgstr "最愛"
 
 #: templates/hyperkitty/user_profile/base.html:24
 #: templates/hyperkitty/user_profile/base.html:25
@@ -908,13 +909,13 @@ msgstr ""
 #: templates/hyperkitty/user_profile/base.html:32
 #: templates/hyperkitty/user_profile/base.html:33
 msgid "Subscriptions"
-msgstr ""
+msgstr "描述"
 
 #: templates/hyperkitty/user_profile/favorites.html:24
 #: templates/hyperkitty/user_profile/last_views.html:27
 #: templates/hyperkitty/user_profile/votes.html:23
 msgid "Original author:"
-msgstr ""
+msgstr "原作者："
 
 #: templates/hyperkitty/user_profile/favorites.html:26
 #: templates/hyperkitty/user_profile/last_views.html:29
@@ -930,7 +931,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/favorites.html:30
 #: templates/hyperkitty/user_profile/last_views.html:33
 msgid "Replies:"
-msgstr ""
+msgstr "回覆："
 
 #: templates/hyperkitty/user_profile/favorites.html:41
 #: templates/hyperkitty/user_profile/last_views.html:46
@@ -943,7 +944,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/last_views.html:47
 #: templates/hyperkitty/user_profile/votes.html:48
 msgid "Original author"
-msgstr ""
+msgstr "原作者"
 
 #: templates/hyperkitty/user_profile/favorites.html:43
 #: templates/hyperkitty/user_profile/last_views.html:48
@@ -963,7 +964,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/last_views.html:22
 #: templates/hyperkitty/user_profile/last_views.html:59
 msgid "New comments"
-msgstr ""
+msgstr "新留言"
 
 #: templates/hyperkitty/user_profile/last_views.html:82
 msgid "Nothing read yet."
@@ -975,7 +976,7 @@ msgstr ""
 
 #: templates/hyperkitty/user_profile/profile.html:17
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: templates/hyperkitty/user_profile/profile.html:19
 msgid "Thread"
@@ -1047,7 +1048,7 @@ msgstr ""
 
 #: templates/hyperkitty/user_public_profile.html:24
 msgid "Name:"
-msgstr ""
+msgstr "名稱："
 
 #: templates/hyperkitty/user_public_profile.html:29
 msgid "Creation:"

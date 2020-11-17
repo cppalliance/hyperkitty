@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-27 15:17+0200\n"
-"PO-Revision-Date: 2020-04-16 11:08+0000\n"
+"PO-Revision-Date: 2020-10-18 03:21+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0.1-dev\n"
+"X-Generator: Weblate 4.3.1-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -784,15 +784,15 @@ msgstr "İlk Gönderi"
 #: templates/hyperkitty/user_profile/favorites.html:45
 #: templates/hyperkitty/user_profile/last_views.html:50
 msgid "Replies"
-msgstr "Cevaplar"
+msgstr "Yanıtlar"
 
 #: templates/hyperkitty/thread.html:94
 msgid "Show replies by thread"
-msgstr "Cevapları mesaj dizisine göre göster"
+msgstr "Yanıtları mesaj dizisine göre göster"
 
 #: templates/hyperkitty/thread.html:97
 msgid "Show replies by date"
-msgstr "Cevapları tarihe göre göster"
+msgstr "Yanıtları tarihe göre göster"
 
 #: templates/hyperkitty/thread_list.html:60
 msgid "Sorry no email threads could be found"
@@ -963,7 +963,7 @@ msgstr "Son etkinlik:"
 #: templates/hyperkitty/user_profile/favorites.html:30
 #: templates/hyperkitty/user_profile/last_views.html:33
 msgid "Replies:"
-msgstr "Cevaplar:"
+msgstr "Yanıtlar:"
 
 #: templates/hyperkitty/user_profile/favorites.html:41
 #: templates/hyperkitty/user_profile/last_views.html:46
