@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-17 17:11+0530\n"
-"PO-Revision-Date: 2020-08-16 03:46+0000\n"
+"PO-Revision-Date: 2020-11-18 03:58+0000\n"
 "Last-Translator: Massimo Zappalà <maszap@tin.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/it/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -205,10 +205,8 @@ msgid "Search this list"
 msgstr "Cerca in questa lista"
 
 #: templates/hyperkitty/base.html:90
-#, fuzzy
-#| msgid "Search this list"
 msgid "Search all lists"
-msgstr "Cerca in questa lista"
+msgstr "Cerca in tutte le liste"
 
 #: templates/hyperkitty/base.html:148
 msgid "Manage this list"
@@ -220,35 +218,27 @@ msgstr "Gestisci liste"
 
 #: templates/hyperkitty/base.html:191
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Tasti rapidi"
 
 #: templates/hyperkitty/base.html:194
-#, fuzzy
-#| msgid "Thread"
 msgid "Thread View"
-msgstr "Conversazione"
+msgstr "Mastra Conversazione"
 
 #: templates/hyperkitty/base.html:196
-#, fuzzy
-#| msgid "Delete message(s)"
 msgid "Next unread message"
-msgstr "Elimina messaggio(i)"
+msgstr "Messaggio successivo non letto"
 
 #: templates/hyperkitty/base.html:197
 msgid "Previous unread message"
-msgstr ""
+msgstr "Messaggio precedente non letto"
 
 #: templates/hyperkitty/base.html:198
-#, fuzzy
-#| msgid "All Threads"
 msgid "Jump to all threads"
-msgstr "Tutte le conversazioni"
+msgstr "Vai a tutte le conversazioni"
 
 #: templates/hyperkitty/base.html:199
-#, fuzzy
-#| msgid "List overview"
 msgid "Jump to MailingList overview"
-msgstr "Vista generale della lista"
+msgstr "Vai alla vista generale della MailingList"
 
 #: templates/hyperkitty/base.html:213
 msgid "Powered by"
@@ -293,16 +283,12 @@ msgid "You must be logged-in to vote."
 msgstr "Devi aver fatto l'accesso per votare."
 
 #: templates/hyperkitty/fragments/month_list.html:6
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads by"
-msgstr "Conversazione"
+msgstr "Conversazioni di"
 
 #: templates/hyperkitty/fragments/month_list.html:6
-#, fuzzy
-#| msgid "This month"
 msgid " month"
-msgstr "Questo mese"
+msgstr " Mese"
 
 #: templates/hyperkitty/fragments/overview_threads.html:12
 msgid "New messages in this thread"
@@ -342,6 +328,8 @@ msgstr "Collega altri indirizzi"
 msgid ""
 "If you aren't a current list member, sending this message will subscribe you."
 msgstr ""
+"Se non sei attualmente un membro della lista, l'invio di questo messaggio ti "
+"iscriverà."
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:11
 msgid "List overview"
@@ -483,17 +471,19 @@ msgstr "Attività nei giorni precendenti"
 
 #: templates/hyperkitty/list_delete.html:7
 msgid "Delete MailingList"
-msgstr ""
+msgstr "Elimina la MailingList"
 
 #: templates/hyperkitty/list_delete.html:20
 msgid "Delete Mailing List"
-msgstr ""
+msgstr "Elimina la Mailing List"
 
 #: templates/hyperkitty/list_delete.html:26
 msgid ""
 "will be deleted along with all the threads and messages. Do you want to "
 "continue?"
 msgstr ""
+"verrà eliminato insieme a tutte le conversazioni ed i messaggi. Vuoi "
+"continuare?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -653,10 +643,8 @@ msgid "Stats"
 msgstr "Statistiche"
 
 #: templates/hyperkitty/overview.html:41
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads"
-msgstr "Conversazione"
+msgstr "Conversazioni"
 
 #: templates/hyperkitty/overview.html:47 templates/hyperkitty/overview.html:58
 #: templates/hyperkitty/thread_list.html:44
@@ -665,28 +653,20 @@ msgstr "Devi accedere per iniziare una nuova conversazione."
 
 #: templates/hyperkitty/overview.html:60
 #: templates/hyperkitty/thread_list.html:48
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Start a </span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">N</span>ew thread"
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">Inizia un </span><span class=\"hidden-sm "
-"hidden-md hidden-lg\">N</span>uovo thread"
+"<span class=\"d-none d-md-inline\">Inizia una n</span><span class=\"d-md-"
+"none\">N</span>uova conversazione"
 
 #: templates/hyperkitty/overview.html:72
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">S</span>ubscription"
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">Gestisci l</span><span class=\"hidden-sm "
-"hidden-md hidden-lg\">L</span>e iscrizioni"
+"<span class=\"d-none d-md-inline\">Gestisci le s</span><span class=\"d-md-"
+"none\">I</span>scrizioni"
 
 #: templates/hyperkitty/overview.html:88
 msgid "Activity Summary"
@@ -927,19 +907,15 @@ msgid "Favorite"
 msgstr "Preferito"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:29
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                                by %(name)s\n"
-#| "                            "
+#, python-format
 msgid ""
 "\n"
 "                    by %(name)s\n"
 "                    "
 msgstr ""
 "\n"
-"                                da %(name)s\n"
-"                            "
+"                    da %(name)s\n"
+"                    "
 
 #: templates/hyperkitty/threads/summary_thread_large.html:39
 msgid "Most recent thread activity"
@@ -1196,13 +1172,11 @@ msgstr "Non hai ancora scritto un messaggio a questa lista."
 
 #: views/mlist.py:353
 msgid "You must be a staff member to delete a MailingList"
-msgstr ""
+msgstr "Devi essere un membro dello staff per eliminare una MailingList"
 
 #: views/mlist.py:367
-#, fuzzy
-#| msgid "Successfully deleted %(count)s messages."
 msgid "Successfully deleted {}"
-msgstr "Eliminati %(count)s messaggi."
+msgstr "Eliminato con successo {}"
 
 #: views/search.py:115
 #, python-format
