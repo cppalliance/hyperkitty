@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-17 17:11+0530\n"
-"PO-Revision-Date: 2020-10-18 03:21+0000\n"
+"PO-Revision-Date: 2020-11-18 03:58+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.3.1-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -207,10 +207,8 @@ msgid "Search this list"
 msgstr "Bu listede ara"
 
 #: templates/hyperkitty/base.html:90
-#, fuzzy
-#| msgid "Search this list"
 msgid "Search all lists"
-msgstr "Bu listede ara"
+msgstr "Tüm listeleri ara"
 
 #: templates/hyperkitty/base.html:148
 msgid "Manage this list"
@@ -222,35 +220,27 @@ msgstr "Listeleri yönet"
 
 #: templates/hyperkitty/base.html:191
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Klavye Kısayolları"
 
 #: templates/hyperkitty/base.html:194
-#, fuzzy
-#| msgid "Thread"
 msgid "Thread View"
-msgstr "Mesaj dizisi"
+msgstr "Mesaj Dizisi Görünümü"
 
 #: templates/hyperkitty/base.html:196
-#, fuzzy
-#| msgid "Delete message(s)"
 msgid "Next unread message"
-msgstr "Mesaj(lar)ı sil"
+msgstr "Sonraki okunmamış mesaj"
 
 #: templates/hyperkitty/base.html:197
 msgid "Previous unread message"
-msgstr ""
+msgstr "Önceki okunmamış mesaj"
 
 #: templates/hyperkitty/base.html:198
-#, fuzzy
-#| msgid "All Threads"
 msgid "Jump to all threads"
-msgstr "Tüm Mesaj Dizileri"
+msgstr "Tüm mesaj dizilerine atla"
 
 #: templates/hyperkitty/base.html:199
-#, fuzzy
-#| msgid "List overview"
 msgid "Jump to MailingList overview"
-msgstr "Listeye genel bakış"
+msgstr "Posta listesine genel bakışa atla"
 
 #: templates/hyperkitty/base.html:213
 msgid "Powered by"
@@ -296,16 +286,12 @@ msgid "You must be logged-in to vote."
 msgstr "Oy kullanmak için giriş yapmalısınız."
 
 #: templates/hyperkitty/fragments/month_list.html:6
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads by"
-msgstr "Mesaj dizisi"
+msgstr "Mesaj dizileri"
 
 #: templates/hyperkitty/fragments/month_list.html:6
-#, fuzzy
-#| msgid "This month"
 msgid " month"
-msgstr "Bu ay"
+msgstr " ay"
 
 #: templates/hyperkitty/fragments/overview_threads.html:12
 msgid "New messages in this thread"
@@ -344,7 +330,7 @@ msgstr "Başka bir adres bağla"
 #: templates/hyperkitty/fragments/send_as.html:20
 msgid ""
 "If you aren't a current list member, sending this message will subscribe you."
-msgstr ""
+msgstr "Liste üyesi değilseniz, bu mesajı göndermek sizi abone yapacaktır."
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:11
 msgid "List overview"
@@ -486,17 +472,19 @@ msgstr "Son 30 gün içindeki etkinlik"
 
 #: templates/hyperkitty/list_delete.html:7
 msgid "Delete MailingList"
-msgstr ""
+msgstr "Posta Listesi Sil"
 
 #: templates/hyperkitty/list_delete.html:20
 msgid "Delete Mailing List"
-msgstr ""
+msgstr "Posta Listesini Sil"
 
 #: templates/hyperkitty/list_delete.html:26
 msgid ""
 "will be deleted along with all the threads and messages. Do you want to "
 "continue?"
 msgstr ""
+"tüm mesaj dizileri ve mesajlarla birlikte silinecek. Devam etmek istiyor "
+"musun?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -656,10 +644,8 @@ msgid "Stats"
 msgstr "İstatistikler"
 
 #: templates/hyperkitty/overview.html:41
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads"
-msgstr "Mesaj dizisi"
+msgstr "Mesaj dizileri"
 
 #: templates/hyperkitty/overview.html:47 templates/hyperkitty/overview.html:58
 #: templates/hyperkitty/thread_list.html:44
@@ -668,28 +654,20 @@ msgstr "Bir mesaj dizisi oluşturmak için oturum açmış olmalısınız."
 
 #: templates/hyperkitty/overview.html:60
 #: templates/hyperkitty/thread_list.html:48
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Start a </span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">N</span>ew thread"
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
-"<span class=\"hidden-sm hidden-md hidden-lg\">Y</span>eni bir mesaj dizisi "
-"<span class=\"hidden-tn hidden-xs\">başlat</span>"
+"<span class=\"d-md-none\">Y</span>eni bir mesaj dizisi <span class=\"d-none d"
+"-md-inline\">başlat</span>"
 
 #: templates/hyperkitty/overview.html:72
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">S</span>ubscription"
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"hidden-sm hidden-md hidden-lg\">A</span>boneliği <span class="
-"\"hidden-tn hidden-xs\">yönet</span>"
+"<span class=\"d-md-none\">A</span>boneliği <span class=\"d-none d-md-inline\""
+">yönet</span>"
 
 #: templates/hyperkitty/overview.html:88
 msgid "Activity Summary"
@@ -931,19 +909,15 @@ msgid "Favorite"
 msgstr "Sık kullanılan"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:29
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                                by %(name)s\n"
-#| "                            "
+#, python-format
 msgid ""
 "\n"
 "                    by %(name)s\n"
 "                    "
 msgstr ""
 "\n"
-"                                %(name)s tarafından\n"
-"                            "
+"                    %(name)s tarafından\n"
+"                    "
 
 #: templates/hyperkitty/threads/summary_thread_large.html:39
 msgid "Most recent thread activity"
@@ -1200,13 +1174,11 @@ msgstr "Bu listeye (henüz) gönderi atmadınız."
 
 #: views/mlist.py:353
 msgid "You must be a staff member to delete a MailingList"
-msgstr ""
+msgstr "Bir posta listesini silmek için bir personel üyesi olmanız gerekir"
 
 #: views/mlist.py:367
-#, fuzzy
-#| msgid "Successfully deleted %(count)s messages."
 msgid "Successfully deleted {}"
-msgstr "%(count)s mesaj başarıyla silindi."
+msgstr "{} başarıyla silindi"
 
 #: views/search.py:115
 #, python-format
