@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Hyperkitty\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-17 17:11+0530\n"
-"PO-Revision-Date: 2020-12-03 03:32+0000\n"
-"Last-Translator: Michael Lorenzen <ml@m-lorenzen.de>\n"
+"PO-Revision-Date: 2020-12-16 22:45+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/de/>\n"
 "Language: de\n"
@@ -249,7 +249,7 @@ msgstr "Zur Listenübersicht springen"
 
 #: templates/hyperkitty/base.html:213
 msgid "Powered by"
-msgstr "Powered by"
+msgstr "Angetrieben von"
 
 #: templates/hyperkitty/base.html:213
 msgid "version"
