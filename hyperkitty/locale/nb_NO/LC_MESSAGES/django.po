@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-17 17:11+0530\n"
-"PO-Revision-Date: 2020-11-18 03:58+0000\n"
+"PO-Revision-Date: 2020-12-11 04:16+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "gnu-mailman/hyperkitty/nb_NO/>\n"
@@ -204,7 +204,7 @@ msgstr "Logg inn"
 
 #: templates/hyperkitty/base.html:81 templates/hyperkitty/base.html:137
 msgid "Sign Up"
-msgstr "Registrering"
+msgstr "Registrer"
 
 #: templates/hyperkitty/base.html:90
 msgid "Search this list"
@@ -333,9 +333,8 @@ msgid "Change sender"
 msgstr "Endre avsender"
 
 #: templates/hyperkitty/fragments/send_as.html:16
-#, fuzzy
 msgid "Link another address"
-msgstr "Lenk sammen en annen adresse"
+msgstr "Tilknytt en annen adresse"
 
 #: templates/hyperkitty/fragments/send_as.html:20
 msgid ""
