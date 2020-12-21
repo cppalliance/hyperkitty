@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hyperkitty\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-17 17:11+0530\n"
+"POT-Creation-Date: 2020-12-21 18:59+0530\n"
 "PO-Revision-Date: 2020-12-16 22:45+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -673,8 +673,8 @@ msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"d-none d-md-inline\">Mitglied</span><span class=\"d-md-none\""
-">s</span>chaft verwalten"
+"<span class=\"d-none d-md-inline\">Mitglied</span><span class=\"d-md-none"
+"\">s</span>chaft verwalten"
 
 #: templates/hyperkitty/overview.html:88
 msgid "Activity Summary"
@@ -1141,6 +1141,18 @@ msgstr "E-Mail Adressen:"
 #: views/message.py:76
 msgid "This message in gzipped mbox format"
 msgstr "Diese Nachricht in komprimierten (gzip) mbox-Format"
+
+#: views/message.py:200
+msgid "Your reply has been sent and is being processed."
+msgstr ""
+
+#: views/message.py:204
+#, fuzzy
+#| msgid "You have not posted to this list (yet)."
+msgid ""
+"\n"
+"  You have been subscribed to {} list."
+msgstr "Sie haben (noch) nichts an diese Liste gesendet."
 
 #: views/message.py:287
 #, python-format

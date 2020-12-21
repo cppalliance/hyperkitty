@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-17 17:12+0530\n"
+"POT-Creation-Date: 2020-12-21 19:00+0530\n"
 "PO-Revision-Date: 2020-04-01 23:49+0000\n"
 "Last-Translator: Derek Zhou <derek@3qin.us>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
@@ -1140,6 +1140,18 @@ msgstr "电子邮件地址:"
 #: views/message.py:76
 msgid "This message in gzipped mbox format"
 msgstr "gzip后的mbox格式下的本消息"
+
+#: views/message.py:200
+msgid "Your reply has been sent and is being processed."
+msgstr ""
+
+#: views/message.py:204
+#, fuzzy
+#| msgid "You have not posted to this list (yet)."
+msgid ""
+"\n"
+"  You have been subscribed to {} list."
+msgstr "你尚未对本列表发帖."
 
 #: views/message.py:287
 #, python-format

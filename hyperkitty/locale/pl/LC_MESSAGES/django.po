@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-17 17:11+0530\n"
+"POT-Creation-Date: 2020-12-21 19:00+0530\n"
 "PO-Revision-Date: 2020-05-13 19:20+0000\n"
 "Last-Translator: Szylu <chipolade@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -1170,6 +1170,18 @@ msgstr "Adresy email:"
 #: views/message.py:76
 msgid "This message in gzipped mbox format"
 msgstr "Ta wiadomość w formacie gzipped mbox"
+
+#: views/message.py:200
+msgid "Your reply has been sent and is being processed."
+msgstr ""
+
+#: views/message.py:204
+#, fuzzy
+#| msgid "You have not posted to this list (yet)."
+msgid ""
+"\n"
+"  You have been subscribed to {} list."
+msgstr "Nie publikowałeś w tej liście (jeszcze)."
 
 #: views/message.py:287
 #, python-format

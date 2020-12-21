@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-17 17:11+0530\n"
+"POT-Creation-Date: 2020-12-21 19:00+0530\n"
 "PO-Revision-Date: 2020-11-28 14:35+0000\n"
 "Last-Translator: Artem <KovalevArtem.ru@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -1186,6 +1186,18 @@ msgstr "Адрес электронной почты:"
 #: views/message.py:76
 msgid "This message in gzipped mbox format"
 msgstr "Это сообщение в архиве (gzip) в формате mbox"
+
+#: views/message.py:200
+msgid "Your reply has been sent and is being processed."
+msgstr ""
+
+#: views/message.py:204
+#, fuzzy
+#| msgid "You have not posted to this list (yet)."
+msgid ""
+"\n"
+"  You have been subscribed to {} list."
+msgstr "Вы не публиковали ничего в этот список (пока что)."
 
 #: views/message.py:287
 #, python-format

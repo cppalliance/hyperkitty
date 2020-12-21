@@ -197,11 +197,11 @@ def reply(request, mlist_fqdn, message_id_hash):
         t = loader.get_template('hyperkitty/ajax/temp_message.html')
         html = t.render({'email': email_reply}, request)
     # TODO: make the message below translatable.
-    result = {"result": "Your reply has been sent and is being processed.",
+    result = {"result": _("Your reply has been sent and is being processed."),
               "message_html": html}
     if subscribed_now:
         result['result'] += (
-            "\n  You have been subscribed to {} list.".format(mlist_fqdn))
+            _("\n  You have been subscribed to {} list.").format(mlist_fqdn))
     return HttpResponse(json.dumps(result),
                         content_type="application/javascript")
 
