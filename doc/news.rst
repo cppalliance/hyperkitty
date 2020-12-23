@@ -28,6 +28,8 @@ News / Changelog
   importing multiple mboxes. (Closes #318)
 - `` at `` is now only replaced with ``@`` in ``From:`` header values when
   necessary and not unconditionally. (Closes #320)
+- The wildcard notation for any host ``'*'`` is now supported into
+  ``MAILMAN_ARCHVER_FROM`` to disable Hyperkitty clients IP checking.
 
 1.3.3
 =====
