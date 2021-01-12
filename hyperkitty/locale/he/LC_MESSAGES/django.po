@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 18:59+0530\n"
-"PO-Revision-Date: 2020-11-18 03:58+0000\n"
+"PO-Revision-Date: 2020-12-21 20:06+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/he/>\n"
@@ -1128,15 +1128,15 @@ msgstr "הודעה זו ארוזה ב־gzip בתצורת mbox"
 
 #: views/message.py:200
 msgid "Your reply has been sent and is being processed."
-msgstr ""
+msgstr "התגובה שלך נשלחה והיא עוברת עיבוד."
 
 #: views/message.py:204
-#, fuzzy
-#| msgid "You have not posted to this list (yet)."
 msgid ""
 "\n"
 "  You have been subscribed to {} list."
-msgstr "לא פרסמת לרשימה זה (בינתיים)."
+msgstr ""
+"\n"
+"  נרשמת לרשימה {}."
 
 #: views/message.py:287
 #, python-format
