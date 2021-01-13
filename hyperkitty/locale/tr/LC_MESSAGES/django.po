@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 19:00+0530\n"
-"PO-Revision-Date: 2020-11-18 03:58+0000\n"
+"PO-Revision-Date: 2021-01-04 02:52+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -63,7 +63,7 @@ msgstr "başladı"
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
 msgid "last active:"
-msgstr "son aktivite:"
+msgstr "son etkinlik:"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:8
 msgid "see this thread"
@@ -369,7 +369,7 @@ msgstr "Son katılımcıların sayısına göre sırala"
 #: templates/hyperkitty/index.html:32 templates/hyperkitty/index.html:37
 #: templates/hyperkitty/index.html:75
 msgid "Most active"
-msgstr "En aktif"
+msgstr "En etkin"
 
 #: templates/hyperkitty/index.html:36
 msgid "Sort by number of recent discussions"
@@ -691,7 +691,7 @@ msgstr "son <strong>30</strong> gün:"
 
 #: templates/hyperkitty/overview.html:106
 msgid "Most active posters"
-msgstr "En aktif gönderi atanlar"
+msgstr "En etkin gönderi atanlar"
 
 #: templates/hyperkitty/overview.html:115
 msgid "Prominent posters"
@@ -703,7 +703,7 @@ msgstr "bravo"
 
 #: templates/hyperkitty/overview.html:176
 msgid "Recently active discussions"
-msgstr "Son zamanlarda aktif tartışmalar"
+msgstr "Son zamanlarda etkin tartışmalar"
 
 #: templates/hyperkitty/overview.html:183
 msgid "Most popular discussions"
@@ -711,7 +711,7 @@ msgstr "En popüler tartışmalar"
 
 #: templates/hyperkitty/overview.html:190
 msgid "Most active discussions"
-msgstr "En aktif tartışmalar"
+msgstr "En etkin tartışmalar"
 
 #: templates/hyperkitty/overview.html:197
 msgid "Discussions You've Flagged"
@@ -1136,15 +1136,15 @@ msgstr "Bu mesaj gzip'lenmiş mbox biçiminde"
 
 #: views/message.py:200
 msgid "Your reply has been sent and is being processed."
-msgstr ""
+msgstr "Yanıtınız gönderildi ve işleniyor."
 
 #: views/message.py:204
-#, fuzzy
-#| msgid "You have not posted to this list (yet)."
 msgid ""
 "\n"
 "  You have been subscribed to {} list."
-msgstr "Bu listeye (henüz) gönderi atmadınız."
+msgstr ""
+"\n"
+"  {} listesine abone oldunuz."
 
 #: views/message.py:287
 #, python-format

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Hyperkitty\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 18:59+0530\n"
-"PO-Revision-Date: 2020-12-16 22:45+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2020-12-22 15:28+0000\n"
+"Last-Translator: nautilusx <translate@disroot.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/de/>\n"
 "Language: de\n"
@@ -1144,15 +1144,15 @@ msgstr "Diese Nachricht in komprimierten (gzip) mbox-Format"
 
 #: views/message.py:200
 msgid "Your reply has been sent and is being processed."
-msgstr ""
+msgstr "Ihre Antwort wurde gesendet und wird bearbeitet."
 
 #: views/message.py:204
-#, fuzzy
-#| msgid "You have not posted to this list (yet)."
 msgid ""
 "\n"
 "  You have been subscribed to {} list."
-msgstr "Sie haben (noch) nichts an diese Liste gesendet."
+msgstr ""
+"\n"
+"  Sie haben die Liste {} abonniert."
 
 #: views/message.py:287
 #, python-format
