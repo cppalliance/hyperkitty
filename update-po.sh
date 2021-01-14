@@ -20,7 +20,7 @@ cd hyperkitty/
 
 cat locale/LINGUAS | while read lingua; do
 
-	django-admin makemessages -l "${lingua}"
+	django-admin makemessages -i 'tests/*' -l "${lingua}"
 
 done
 cd - 1>/dev/null
