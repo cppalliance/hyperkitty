@@ -30,6 +30,8 @@ News / Changelog
   necessary and not unconditionally. (Closes #320)
 - The wildcard notation for any host ``'*'`` is now supported into
   ``MAILMAN_ARCHVER_FROM`` to disable Hyperkitty clients IP checking.
+- Join the searchbar and search button  like it was before bootstrap 4 
+  migration. (See !301)
 
 1.3.3
 =====
