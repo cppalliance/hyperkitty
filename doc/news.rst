@@ -3,10 +3,10 @@ News / Changelog
 ================
 
 
-1.3.4
-=====
+1.3.4rc1
+========
 
-(2020-XX-XX)
+(2021-01-16)
 
 - Sync owners and moderators from Mailman Core for MailingList. (Fixes #302)
 - Implemented a new ``HYPERKITTY_JOBS_UPDATE_INDEX_LOCK_LIFE`` setting to set
