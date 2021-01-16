@@ -86,4 +86,9 @@ setup(
         "beautifulsoup4>=4.3.2",
         "django-debug-toolbar",
         ],
-    )
+    extras_require={
+        'dev': [
+            "Whoosh>=2.5.7",
+            "django-debug-toolbar"
+        ]
+    })
