@@ -32,6 +32,8 @@ News / Changelog
   ``MAILMAN_ARCHVER_FROM`` to disable Hyperkitty clients IP checking.
 - Join the searchbar and search button  like it was before bootstrap 4 
   migration. (See !301)
+- Use the umd builds for popper.js instead of the regular ones. (See !309)
+
 
 1.3.3
 =====
