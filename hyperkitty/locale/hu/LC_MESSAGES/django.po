@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 18:59+0530\n"
-"PO-Revision-Date: 2021-01-13 21:51+0000\n"
+"PO-Revision-Date: 2021-01-29 02:48+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -480,7 +480,7 @@ msgstr "Levelezési lista törlése"
 
 #: templates/hyperkitty/list_delete.html:20
 msgid "Delete Mailing List"
-msgstr "Levelezőlista törlése"
+msgstr "Lista archívum törlése"
 
 #: templates/hyperkitty/list_delete.html:26
 msgid ""
