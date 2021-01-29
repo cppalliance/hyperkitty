@@ -157,8 +157,8 @@ Make sure that the user running the Django process (for example, ``apache`` or
 
 
 If you want to disable support for gravatars_ in Hyperkitty, you can set
-``GRAVATAR_SECURE_URL = ''``. This will prevent Hyperkitty to go out to
-gravatar to load images for email senders.
+``HYPERKITTY_ENABLE_GRAVATAR = False``.  This prevents loading and displaying
+gravatar images.
 
 .. _gravatars: https://en.gravatar.com/
 
