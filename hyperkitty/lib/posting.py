@@ -21,6 +21,7 @@
 #
 
 import re
+from smtplib import SMTPResponseException
 
 from django.conf import settings
 from django.core.exceptions import SuspiciousOperation
@@ -104,7 +105,12 @@ def post_to_list(request, mlist, subject, message, headers=None,
             msg.attach(attach.name, attach.read())
     # XXX: Inject into the incoming queue instead?
     if not settings.DEBUG:
-        msg.send()  # Don't send mail in debug mode, just in case...
+        # Don't send mail in debug mode, just in case...
+        try:
+            msg.send()
+        except SMTPResponseException as e:
+            raise PostingFailed('Message not sent: SMTP error {} {}'.format(
+                                e.smtp_code, e.smtp_error))
     return subscribed_now
 
 
