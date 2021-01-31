@@ -33,6 +33,8 @@ News / Changelog
 - Join the searchbar and search button  like it was before bootstrap 4 
   migration. (See !301)
 - Use the umd builds for popper.js instead of the regular ones. (See !309)
+- Exceptions thrown by smtplib in sending replies are now caught and give an
+  appropriate error message.  (Closes #309)
 
 
 1.3.3
