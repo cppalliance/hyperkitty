@@ -19,5 +19,5 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-VERSION = "1.3.4"
+VERSION = "1.3.5b1"
 default_app_config = 'hyperkitty.apps.HyperKittyConfig'
