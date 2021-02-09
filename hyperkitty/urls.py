@@ -29,6 +29,7 @@ from hyperkitty.api import email as api_email
 from hyperkitty.api import mailinglist as api_mailinglist
 from hyperkitty.api import tag as api_tag
 from hyperkitty.api import thread as api_thread
+from hyperkitty.feed import MailingListFeed
 from hyperkitty.views import (
     accounts, categories, compat, index, mailman, message, mlist, search,
     tags, thread, users)
@@ -62,6 +63,7 @@ list_patterns = [
     url(r'^export/(?P<filename>[^/]+)\.mbox.gz$',
         mlist.export_mbox, name='hk_list_export_mbox'),
     url(r'delete/', mlist.delete, name='hk_list_delete'),
+    url(r'feed/', MailingListFeed(), name='hk_list_feed'),
 ]
 
 

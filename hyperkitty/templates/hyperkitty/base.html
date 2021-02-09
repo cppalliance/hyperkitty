@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/x-scss" media="all" href="{% static 'hyperkitty/sass/hyperkitty.scss' %}" />
         {% endcompress %}
         {% block additional_stylesheets %} {% endblock %}
+        {% block head_feed %}{% endblock %}
         {% include 'hyperkitty/headers.html' %}
     </head>
 
