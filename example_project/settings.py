@@ -483,6 +483,9 @@ HYPERKITTY_ALLOW_WEB_POSTING = True
 
 HYPERKITTY_ENABLE_GRAVATAR = True
 
+# Number of items in the mailing lists feeds
+HYPERKITTY_MLIST_FEED_LENGTH = 30
+
 try:
     from settings_local import *
 except ImportError:

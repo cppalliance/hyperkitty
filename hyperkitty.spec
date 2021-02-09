@@ -39,6 +39,7 @@ BuildRequires:  python-django-mailman3
 BuildRequires:  python-lockfile
 # Unit tests only
 BuildRequires:  python-beautifulsoup4
+BuildRequires:  python-lxml
 BuildRequires:  python-mock
 BuildRequires:  python-whoosh
 
