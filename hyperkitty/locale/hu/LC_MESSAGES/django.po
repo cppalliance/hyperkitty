@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 18:59+0530\n"
-"PO-Revision-Date: 2021-01-29 02:48+0000\n"
+"PO-Revision-Date: 2021-02-12 00:57+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/hu/>\n"
@@ -960,7 +960,7 @@ msgstr "Felhasználói beküldési tevékenység"
 #: templates/hyperkitty/user_public_profile.html:7
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "for"
-msgstr "-ért"
+msgstr "a következőnek"
 
 #: templates/hyperkitty/user_profile/base.html:22
 msgid "Favorites"
