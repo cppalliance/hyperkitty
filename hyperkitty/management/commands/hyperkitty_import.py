@@ -38,6 +38,7 @@ from django.core.management import call_command
 from django.core.management.base import BaseCommand, CommandError
 from django.db import Error as DatabaseError
 from django.db import transaction
+from django.utils.formats import date_format
 from django.utils.timezone import utc
 
 from dateutil import tz
@@ -326,6 +327,10 @@ class Command(BaseCommand):
             ).values("date").order_by("-date").first()
         if latest_email_date and not options["since"]:
             options["since"] = latest_email_date["date"]
+            self.stdout.write(
+                'Warning: not importing messages older than {}. '
+                'Use "--since=<date>" to import older messages.'.format(
+                    date_format(latest_email_date["date"])))
         if options["since"] and options["verbosity"] >= 2:
             self.stdout.write(
                 "Only emails after %s will be imported" % options["since"])
