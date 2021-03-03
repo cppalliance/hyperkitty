@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: Traducao_Hyperkitty1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 19:00+0530\n"
-"PO-Revision-Date: 2020-06-08 17:41+0000\n"
-"Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/gnu-"
-"mailman/hyperkitty/pt_BR/>\n"
+"PO-Revision-Date: 2021-03-01 04:56+0000\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"gnu-mailman/hyperkitty/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.5\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -211,10 +211,8 @@ msgid "Search this list"
 msgstr "Pesquisar esta lista"
 
 #: templates/hyperkitty/base.html:90
-#, fuzzy
-#| msgid "Search this list"
 msgid "Search all lists"
-msgstr "Pesquisar esta lista"
+msgstr "Pesquisar em todas as listas"
 
 #: templates/hyperkitty/base.html:148
 msgid "Manage this list"
@@ -226,35 +224,27 @@ msgstr "Gerenciar listas"
 
 #: templates/hyperkitty/base.html:191
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Atalhos de teclado"
 
 #: templates/hyperkitty/base.html:194
-#, fuzzy
-#| msgid "Thread"
 msgid "Thread View"
-msgstr "Tópico"
+msgstr "Visão de tópico"
 
 #: templates/hyperkitty/base.html:196
-#, fuzzy
-#| msgid "Delete message(s)"
 msgid "Next unread message"
-msgstr "Apagar mensagem"
+msgstr "Próxima mensagem não lida"
 
 #: templates/hyperkitty/base.html:197
 msgid "Previous unread message"
-msgstr ""
+msgstr "Mensagem não lida anterior"
 
 #: templates/hyperkitty/base.html:198
-#, fuzzy
-#| msgid "All Threads"
 msgid "Jump to all threads"
-msgstr "Todos os tópicos"
+msgstr "Pular para todos os tópicos"
 
 #: templates/hyperkitty/base.html:199
-#, fuzzy
-#| msgid "List overview"
 msgid "Jump to MailingList overview"
-msgstr "Visão geral da lista"
+msgstr "Pular para visão geral da lista"
 
 #: templates/hyperkitty/base.html:213
 msgid "Powered by"
@@ -300,16 +290,12 @@ msgid "You must be logged-in to vote."
 msgstr "Você deve estar logado para votar."
 
 #: templates/hyperkitty/fragments/month_list.html:6
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads by"
-msgstr "Tópico"
+msgstr "Tópicos por"
 
 #: templates/hyperkitty/fragments/month_list.html:6
-#, fuzzy
-#| msgid "This month"
 msgid " month"
-msgstr "Este mês"
+msgstr " mês"
 
 #: templates/hyperkitty/fragments/overview_threads.html:12
 msgid "New messages in this thread"
@@ -349,6 +335,7 @@ msgstr "Vincular outro endereço"
 msgid ""
 "If you aren't a current list member, sending this message will subscribe you."
 msgstr ""
+"Se você não é um membro atual da lista, o envio desta mensagem o assinará."
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:11
 msgid "List overview"
@@ -490,17 +477,18 @@ msgstr "Atividade nos últimos 30 dias"
 
 #: templates/hyperkitty/list_delete.html:7
 msgid "Delete MailingList"
-msgstr ""
+msgstr "Excluir lista de discussão"
 
 #: templates/hyperkitty/list_delete.html:20
 msgid "Delete Mailing List"
-msgstr ""
+msgstr "Excluir lista de discussão"
 
 #: templates/hyperkitty/list_delete.html:26
 msgid ""
 "will be deleted along with all the threads and messages. Do you want to "
 "continue?"
 msgstr ""
+"vai ser excluída junto com todos os tópicos e mensagens. Deseja continuar?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -660,10 +648,8 @@ msgid "Stats"
 msgstr "Estatísticas"
 
 #: templates/hyperkitty/overview.html:41
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads"
-msgstr "Tópico"
+msgstr "Tópicos"
 
 #: templates/hyperkitty/overview.html:47 templates/hyperkitty/overview.html:58
 #: templates/hyperkitty/thread_list.html:44
@@ -672,28 +658,20 @@ msgstr "Você deve estar logado para criar um tópico."
 
 #: templates/hyperkitty/overview.html:60
 #: templates/hyperkitty/thread_list.html:48
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Start a </span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">N</span>ew thread"
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">Começar um </span><span class=\"hidden-"
-"sm hidden-md hidden-lg\">N</span>ovo tópico"
+"<span class=\"d-none d-md-inline\">Começar um n</span><span class=\"d-md-"
+"none\">N</span>ovo tópico"
 
 #: templates/hyperkitty/overview.html:72
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">S</span>ubscription"
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">Gerenciar</span><span class=\"hidden-sm "
-"hidden-md hidden-lg\">A</span>ssinaturas"
+"<span class=\"d-none d-md-inline\">Gerenciar a</span><span class=\"d-md-"
+"none\">A</span>ssinaturas"
 
 #: templates/hyperkitty/overview.html:88
 msgid "Activity Summary"
@@ -934,19 +912,15 @@ msgid "Favorite"
 msgstr "Favorito"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:29
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                                by %(name)s\n"
-#| "                            "
+#, python-format
 msgid ""
 "\n"
 "                    by %(name)s\n"
 "                    "
 msgstr ""
 "\n"
-"                                por %(name)s\n"
-"                            "
+"                    por %(name)s\n"
+"                    "
 
 #: templates/hyperkitty/threads/summary_thread_large.html:39
 msgid "Most recent thread activity"
@@ -1141,7 +1115,7 @@ msgstr "Perfil do usuário"
 
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "User profile"
-msgstr "Perfil de usuário"
+msgstr "Perfil do usuário"
 
 #: templates/hyperkitty/user_public_profile.html:23
 msgid "Name:"
@@ -1165,15 +1139,15 @@ msgstr "Esta mensagem em formato gzipped mbox"
 
 #: views/message.py:200
 msgid "Your reply has been sent and is being processed."
-msgstr ""
+msgstr "Sua resposta foi enviada e está sendo processada."
 
 #: views/message.py:204
-#, fuzzy
-#| msgid "You have not posted to this list (yet)."
 msgid ""
 "\n"
 "  You have been subscribed to {} list."
-msgstr "Você não postou nesta lista (ainda)."
+msgstr ""
+"\n"
+"  Você não se inscreveu na lista {}."
 
 #: views/message.py:287
 #, python-format
@@ -1215,13 +1189,11 @@ msgstr "Você não postou nesta lista (ainda)."
 
 #: views/mlist.py:353
 msgid "You must be a staff member to delete a MailingList"
-msgstr ""
+msgstr "Você deve ser um membro da equipe para excluir uma lista de discussão"
 
 #: views/mlist.py:367
-#, fuzzy
-#| msgid "Successfully deleted %(count)s messages."
 msgid "Successfully deleted {}"
-msgstr "Excluído com sucesso %(count)s mensagens."
+msgstr "Excluída(s) com sucesso {}"
 
 #: views/search.py:115
 #, python-format
