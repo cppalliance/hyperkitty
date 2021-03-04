@@ -84,7 +84,7 @@
         </div> <!-- /container, navbar & search (tiny/xs screens), new thread button -->
     </div> <!-- /container, title/description + the elements above -->
 
-    <div class="stats col-12 order-3">
+    <div class="stats col-12">
         <div class="anchor-link">
             <a id="stats"></a>
         </div>
@@ -105,7 +105,7 @@
         </ul>
 
         <div class="row">
-        <section id="most-active-poster" class="col-12 col-sm-6 col-md-12">
+        <section id="most-active-poster" class="col-12">
             <h3>{% trans "Most active posters" %}</h3>
             <div data-load-from="{% url 'hk_list_overview_top_posters' mlist.name %}">
                 <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
