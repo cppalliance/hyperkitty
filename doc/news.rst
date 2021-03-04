@@ -11,6 +11,8 @@ News / Changelog
 
 - Added feed for mailing lists with an option to configure the number of items
   in those feeds using ```HYPERKITTY_MLIST_FEED_LENGTH``` which defaults to 30
+- Print a warning message when skipping older emails during
+  ``hyperkitty_import`` execution. (Closes #304)
 
 1.3.4
 =====
