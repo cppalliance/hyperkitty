@@ -13,6 +13,7 @@ News / Changelog
   in those feeds using ```HYPERKITTY_MLIST_FEED_LENGTH``` which defaults to 30
 - Print a warning message when skipping older emails during
   ``hyperkitty_import`` execution. (Closes #304)
+- Remove links to google fonts (Closes #344)
 
 1.3.4
 =====
