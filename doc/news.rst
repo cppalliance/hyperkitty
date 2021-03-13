@@ -14,6 +14,8 @@ News / Changelog
 - Print a warning message when skipping older emails during
   ``hyperkitty_import`` execution. (Closes #304)
 - Remove links to google fonts (Closes #344)
+- Scrubbed messages now have null bytes removed. (Fixed in django-mailman3)
+  (Closes #346)
 
 1.3.4
 =====
