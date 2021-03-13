@@ -36,6 +36,9 @@ class Sender(models.Model):
     address = models.EmailField(max_length=255, primary_key=True)
     mailman_id = models.CharField(max_length=255, null=True, db_index=True)
 
+    def __str__(self):
+        return self.address
+
     @property
     def name(self):
         try:

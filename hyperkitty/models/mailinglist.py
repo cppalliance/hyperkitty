@@ -98,8 +98,11 @@ class MailingList(models.Model):
                 ]
             ]
 
+    def __repr__(self):
+        return '<MailingList {} ({})>'.format(self.name, self.list_id)
+
     def __str__(self):
-        return '<MailingList {}>'.format(self.name)
+        return self.list_id
 
     @property
     def is_private(self):
