@@ -45,6 +45,7 @@ REQUIRES = [
     "pytz>=2012",
     "django-compressor>=1.3",
     "mailmanclient>=3.3.1",
+    "mistune>=2.0.0rc1",
     "python-dateutil >= 2.0",
     "networkx>=2.0",
     "django-haystack>=2.8.0",

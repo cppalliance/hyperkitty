@@ -23,6 +23,7 @@ Contents:
    news.rst
    install.rst
    development.rst
+   rendering.rst
 
 
 Why HyperKitty?

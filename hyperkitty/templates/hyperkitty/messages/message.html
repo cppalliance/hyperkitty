@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load hk_generic %}
+{% load decorate %}
 {% load tz %}
 
 {% is_message_new email.date as is_new %}
@@ -51,9 +52,8 @@
         </div>
         {% endif %}
     </div> <!-- /email-header: gravatar, author-info, date, peramlink, changed_subject -->
-
-    <div class="email-body {% if email.display_fixed %}fixed{% endif %}"
-      >{{ email.content|snip_quoted|snip_pgp|wordwrap:90|urlizetrunc:76|escapeemaillinks }}
+    <div class="email-body {% if email.display_fixed %}fixed{% endif %}">
+      {{ email.content|markdownify }}
     </div>
 
     {% if unfolded and email.attachments.count %}

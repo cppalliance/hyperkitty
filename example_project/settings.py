@@ -399,11 +399,15 @@ LOGGING = {
             'filename': os.path.join(BASE_DIR, 'hyperkitty.log'),
             'formatter': 'verbose',
         },
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_admins', 'file'],
-            'level': 'ERROR',
+            'handlers': ['mail_admins', 'file', 'console'],
+            'level': 'INFO',
             'propagate': True,
         },
         'django': {
@@ -412,8 +416,8 @@ LOGGING = {
             'propagate': True,
         },
         'hyperkitty': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
             'propagate': True,
         },
     },

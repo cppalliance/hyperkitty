@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load decorate %}
 {% load hk_generic %}
 
 <div class="temporary"
@@ -19,7 +20,7 @@
         </div>
 
         <div class="email-body">
-            {{ email.content|snip_quoted|wordwrap:90|urlizetrunc:76|escapeemaillinks }}
+            {{ email.content|markdownify }}
         </div>
 
         <div class="email-info">
