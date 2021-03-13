@@ -146,6 +146,11 @@ def snip_quoted(content, quotemsg="...",
     """
     # We don't want to go into infinite loop of quoting, so we limit the
     # quoting to 0-3, 4 levels only.
+
+    # XXX(maxking): This function is currently unused since we switched to
+    # using markdown rendering from decorate.py. I am going to keep this around
+    # for a white till we are sure using the markdown renderer is good to
+    # replace this.
     if quote_index > 3 or quote_index < 0:
         return content
     if autoescape:

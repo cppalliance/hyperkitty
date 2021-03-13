@@ -23,6 +23,7 @@ from unittest.mock import patch
 
 from django.test import override_settings
 
+from hyperkitty.lib.renderer import markdown_renderer
 from hyperkitty.templatetags.hk_generic import gravatar, snip_quoted
 from hyperkitty.templatetags.hk_haystack import nolongterms
 from hyperkitty.tests.utils import TestCase
@@ -58,7 +59,6 @@ On Fri, 09.11.12 11:27, Someone wrote:
 &gt; This is the second quoted line
 This is the response.
 """
-        result = snip_quoted(contents, self.quotemsg)
         expected = (
             """
 On Fri, 09.11.12 11:27, Someone wrote:
@@ -140,3 +140,82 @@ class TestGravatar(TestCase):
             resp = gravatar('aperson@example.com')
             self.assertFalse(mock_grav.called)
             self.assertEqual(resp, '')
+
+
+class TestDecorate(TestCase):
+
+    def setUp(self):
+        pass
+
+    def test_parse_quote(self):
+        contents = """
+On Fri, 09.11.12 11:27, Someone wrote:
+> This is the first quoted line
+> On Fri 07.25.12, Aperson wrote:
+>> This is the second quoted line.
+This is the response.
+"""
+        expected = (
+            '<p>On Fri, 09.11.12 11:27, Someone wrote:</p>\n'
+            '<div class="quoted-switch"><a href="#">...</a></div>'
+            '<blockquote class="blockquote quoted-text"><p>This is the first quoted line\nOn Fri 07.25.12, Aperson wrote:</p>\n'  # noqa: E501
+            '<div class="quoted-switch"><a href="#">...</a></div>'
+            '<blockquote class="blockquote quoted-text"><p>This is the second quoted line.</p>\n'   # noqa: E501
+            '</blockquote></blockquote>'
+            '<p>This is the response.</p>\n')
+        result = markdown_renderer(contents)
+        self.assertEqual(result.strip(), expected.strip())
+
+    def test_parse_heading_normal(self):
+        contents = """
+Heading 1
+=========
+"""
+        result = markdown_renderer(contents)
+        self.assertEqual(result.strip(), "<h1>Heading 1</h1>")
+
+    def test_parse_autolink(self):
+        contents = """
+https://some.url/llasdfjaksdgfjsdfgkjasdfbgksdfjgbsdfkgjbsdflkgjbsdflgksjdhfbgksdfgb
+"""
+        result = markdown_renderer(contents)
+        self.assertEqual(
+            result.strip(),
+            '<p><a target="_blank" href="https://some.url/llasdfjaksdgfjsdfgkjasdfbgksdfjgbsdfkgjbsdflkgjbsdflgksjdhfbgksdfgb">https://some.url/llasdfjaksdgfjsdfgkjasdfbgksdfjgbsdfkgjbsdflkgjbsdflgksjdhf...</a></p>')   # noqa: E501
+
+    def test_autolink_small_url(self):
+        # Test that autolink doesn't add ... to URLs that aren't truncated.
+        contents = """
+https://some.url/example
+"""
+        result = markdown_renderer(contents)
+        self.assertEqual(
+            result.strip(),
+            '<p><a target="_blank" href="https://some.url/example">https://some.url/example</a></p>')  # noqa: E501
+
+    def test_image_markdown(self):
+        contents = """
+![Image Alt Text](https://url.com/image.png "Alt Text")
+"""
+        result = markdown_renderer(contents)
+        self.assertEqual(
+            result.strip(),
+            '<p>![Image Alt Text](https://url.com/image.png "Alt Text")</p>')
+
+    def test_image_html(self):
+        contents = """
+![Image Alt Text](https://url.com/image.png "Image title")
+"""
+        with self.settings(HYPERKITTY_RENDER_INLINE_IMAGE=True):
+            result = markdown_renderer(contents)
+        self.assertEqual(
+            result.strip(), '<p><img src="https://url.com/image.png" alt="Image Alt Text" title="Image title" /></p>')  # noqa: E501
+
+    def test_header(self):
+        contents = """\
+# This is another sample text.
+"""
+        result = markdown_renderer(contents)
+        self.assertEqual(
+            result.strip(),
+            '<p># This is another sample text.</p>')

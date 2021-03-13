@@ -16,6 +16,9 @@ News / Changelog
 - Remove links to google fonts (Closes #344)
 - Scrubbed messages now have null bytes removed. (Fixed in django-mailman3)
   (Closes #346)
+- Add support for rendering Emails as rich text using Markdown parsing rules. (
+  See !324)
+
 
 1.3.4
 =====
