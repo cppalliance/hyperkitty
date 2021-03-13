@@ -63,6 +63,9 @@ class Thread(models.Model):
     class Meta:
         unique_together = ("mailinglist", "thread_id")
 
+    def __str__(self):
+        return self.subject
+
     @property
     def participants(self):
         """Set of email senders in this thread"""
