@@ -78,7 +78,7 @@
                 <a href="{% url 'hk_archives_latest' mlist_fqdn=mlist.name %}" class="btn btn-outline-primary">{% trans "All Threads" %}</a>
                 </br>
                 {% if user.is_staff or user.is_superuser %}
-                    <a href="{% url 'hk_list_delete' mlist_fqdn=mlist.name %}" class="btn btn-danger">{% trans "Delete" %}</a>
+                    <a href="{% url 'hk_list_delete' mlist_fqdn=mlist.name %}" class="btn btn-danger">{% trans "Delete Archive" %}</a>
                 {% endif %}
             </div>
         </div> <!-- /container, navbar & search (tiny/xs screens), new thread button -->
