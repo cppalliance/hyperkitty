@@ -193,6 +193,7 @@ def reply(request, mlist_fqdn, message_id_hash):
             "content": form.cleaned_data["message"],
             # no need to increment, level = thread_depth - 1
             "level": message.thread_depth,
+            "mailinglist": mlist,
         }
         t = loader.get_template('hyperkitty/ajax/temp_message.html')
         html = t.render({'email': email_reply}, request)

@@ -18,6 +18,7 @@ News / Changelog
   (Closes #346)
 - Add support for rendering Emails as rich text using Markdown parsing rules. (
   See !324)
+- Use markdown renderer based on MailingList settings. (Closes #352)
 
 
 1.3.4
