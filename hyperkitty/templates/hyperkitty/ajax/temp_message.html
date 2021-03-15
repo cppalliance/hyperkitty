@@ -20,7 +20,7 @@
         </div>
 
         <div class="email-body">
-            {{ email.content|markdownify }}
+            {{ email.content|render:email.mailinglist }}
         </div>
 
         <div class="email-info">

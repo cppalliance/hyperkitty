@@ -54,6 +54,14 @@ class ArchivePolicy(Enum):
     public = 2
 
 
+class ArchiveRenderingMode(Enum):
+    """Archive rendering mode determines if Hyperkitty renders archive as plain
+    text or markdown text.
+    """
+    text = 'text'
+    markdown = 'markdown'
+
+
 class MailingList(models.Model):
     """
     An archived mailing-list.
@@ -67,6 +75,7 @@ class MailingList(models.Model):
         choices=[(p.value, p.name) for p in ArchivePolicy],
         default=ArchivePolicy.public.value)
     created_at = models.DateTimeField(default=now)
+    archive_rendering_mode = models.CharField(max_length=255, null=True)
 
     owners = models.ManyToManyField(settings.AUTH_USER_MODEL,
                                     related_name='owned_lists')
@@ -76,7 +85,7 @@ class MailingList(models.Model):
 
     MAILMAN_ATTRIBUTES = (
         "display_name", "description", "subject_prefix",
-        "archive_policy", "created_at", "list_id",
+        "archive_policy", "created_at", "list_id", "archive_rendering_mode",
     )
 
     def __init__(self, *args, **kwargs):

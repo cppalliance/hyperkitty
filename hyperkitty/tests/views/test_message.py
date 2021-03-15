@@ -41,7 +41,7 @@ from mock import Mock, patch
 from hyperkitty.lib.incoming import add_to_list
 from hyperkitty.lib.utils import get_message_id_hash
 from hyperkitty.models.email import Attachment, Email
-from hyperkitty.models.mailinglist import MailingList
+from hyperkitty.models.mailinglist import ArchiveRenderingMode, MailingList
 from hyperkitty.models.thread import Thread
 from hyperkitty.tests.utils import TestCase, get_test_file
 from hyperkitty.utils import reverse
@@ -369,6 +369,32 @@ class MessageViewsTestCase(TestCase):
         response = self.client.get(url)
         self.assertNotContains(
             response, "someone-else@example.com", status_code=200)
+
+    def test_email_rendered_using_rendering_mode(self):
+        # Test that MailingList's archive_rendering_mode determines if the text
+        # is rendered as plaintext or not.
+        msg = EmailMessage()
+        msg["From"] = "someone-else@example.com"
+        msg["Subject"] = "Dummy Subject"
+        msg["Date"] = "Mon, 02 Feb 2015 13:00:00 +0300"
+        msg["Message-ID"] = "<msg2>"
+        msg.set_payload("**Dummy content**")
+        add_to_list("list@example.com", msg)
+        mlist = MailingList.objects.get(name="list@example.com")
+        mlist.archive_rendering_mode = ArchiveRenderingMode.text.name
+        mlist.save()
+        url = reverse('hk_message_index', args=("list@example.com",
+                      get_message_id_hash("msg2")))
+        response = self.client.get(url)
+        self.assertContains(response,
+                            "<p>**Dummy content**</p>",
+                            status_code=200)
+        mlist.archive_rendering_mode = ArchiveRenderingMode.markdown.name
+        mlist.save()
+        response = self.client.get(url)
+        self.assertContains(response,
+                            "<strong>**Dummy content**</strong>",
+                            status_code=200)
 
     def test_delete_forbidden(self):
         url = reverse('hk_message_delete', args=("list@example.com",
