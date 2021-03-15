@@ -98,7 +98,7 @@ Autolink Rule
 
 This recognizes the URLs in the text which may or may not be included in angle
 brackets (``<http://example.com>``) and converts them to Hyperlinks. It will
-also truncate the text to 76 characters with folliwing ``...`` characters if
+also truncate the text to 76 characters with following ``...`` characters if
 the length of the URL is longer than 76 characters.
 
 This rule will also convert Email addresses into ``mailto:aperson@example.com``
@@ -146,7 +146,7 @@ be very hard to read. This is caused by email client adding hard line breaks in
 the sentences when replying which makes it impossible to differentiate between
 the level of quote.
 
-Hyperkitty's current parser is unable to deal with these embarresing quote
+Hyperkitty's current parser is unable to deal with these embarrassing quote
 wraps and will unfortunately present the text as mixed levels of quotes. As the
 current parser evolves, it *might* be possible to provide a better rendering
 experience for this with some heuristics.
