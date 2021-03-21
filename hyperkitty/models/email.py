@@ -23,8 +23,10 @@
 import logging
 import os
 import re
+from email.generator import BytesGenerator
 from email.message import EmailMessage
 from email.utils import formataddr
+from io import BytesIO
 
 from django.conf import settings
 from django.db import IntegrityError, models
@@ -193,6 +195,20 @@ class Email(models.Model):
                                subtype=mimetype[1], filename=attachment.name)
 
         return msg
+
+    def as_bytes(self):
+        """Similar to EmailMessage.as_bytes() but sets mangle_from_=True.
+
+        Serialize the current email into bytes to be added into an mbox.
+        """
+        msg = self.as_message()
+        # We have to call BytesGenerator here to set
+        # mangle_from_=True, which is set to 'False' by default in
+        # EmailMessage.as_bytes() method.
+        fd = BytesIO()
+        gen = BytesGenerator(fd, mangle_from_=True)
+        gen.flatten(msg, unixfrom=True)
+        return fd.getvalue()
 
     @property
     def display_fixed(self):

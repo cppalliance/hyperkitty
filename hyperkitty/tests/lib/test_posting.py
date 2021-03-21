@@ -58,7 +58,7 @@ class PostingTestCase(TestCase):
         self.mm_user = Mock()
         self.mailman_client.get_user.side_effect = lambda name: self.mm_user
         self.mm_user.user_id = uuid.uuid1().int
-        self.mm_user.addresses = ["testuser@example.com"]
+        self.mm_user.addresses = [Mock(email="testuser@example.com")]
         self.mm_user.subscriptions = []
         self.request = RequestFactory().get("/")
         self.request.user = self.user

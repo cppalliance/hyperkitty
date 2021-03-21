@@ -250,6 +250,19 @@ class ExportMboxTestCase(TestCase):
         self.assertEqual(
             [m["Message-ID"] for m in mbox], ["<msg>", "<msg2>"])
 
+    def test_mangle_from_in_serialized_message(self):
+        msg = EmailMessage()
+        msg["From"] = "dummy@example.com"
+        msg["Message-ID"] = "<msg2>"
+        msg["In-Reply-To"] = "<msg>"
+        msg.set_payload("Dummy message\nFrom the sender of this message.")
+        add_to_list("list@example.com", msg)
+        thread_id = Email.objects.get(message_id="msg").thread.thread_id
+        mbox = self._get_mbox(qs="thread=%s" % thread_id)
+        self.assertEqual(len(mbox), 2)
+        self.assertEqual(
+            [m["Message-ID"] for m in mbox], ["<msg>", "<msg2>"])
+
     def test_message(self):
         msg = EmailMessage()
         msg["From"] = "dummy@example.com"
