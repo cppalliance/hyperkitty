@@ -332,8 +332,7 @@ def export_mbox(request, mlist_fqdn, filename):
         # Use the gzip format: http://www.zlib.net/manual.html#Advanced
         compressor = zlib.compressobj(6, zlib.DEFLATED, zlib.MAX_WBITS | 16)
         for email in query.order_by("archived_date").all():
-            msg = email.as_message()
-            yield compressor.compress(msg.as_bytes(unixfrom=True))
+            yield compressor.compress(email.as_bytes())
             yield compressor.compress(b"\n\n")
         yield compressor.flush()
     response = StreamingHttpResponse(

@@ -19,7 +19,7 @@ News / Changelog
 - Add support for rendering Emails as rich text using Markdown parsing rules. (
   See !324)
 - Use markdown renderer based on MailingList settings. (Closes #352)
-
+- Mangle lines starting with ``From`` when exporting mbox. (Closes #348)
 
 1.3.4
 =====
