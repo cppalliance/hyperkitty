@@ -64,7 +64,11 @@ def rebuild_mailinglist_cache_recent(mlist_name):
 
 
 def _rebuild_mailinglist_cache_recent(mlist_name):
-    mlist = MailingList.objects.get(name=mlist_name)
+    try:
+        mlist = MailingList.objects.get(name=mlist_name)
+    except MailingList.DoesNotExist:
+        log.warning('MailingList with name %s does not exist', mlist_name)
+        return
     for cached_value in mlist.recent_cached_values:
         cached_value.rebuild()
 
@@ -76,7 +80,11 @@ def rebuild_mailinglist_cache_for_month(mlist_name, year, month):
 
 
 def _rebuild_mailinglist_cache_for_month(mlist_name, year, month):
-    mlist = MailingList.objects.get(name=mlist_name)
+    try:
+        mlist = MailingList.objects.get(name=mlist_name)
+    except MailingList.DoesNotExist:
+        log.warning('MailingList with name %s does not exist', mlist_name)
+        return
     mlist.cached_values["participants_count_for_month"].rebuild(year, month)
 
 
@@ -106,7 +114,11 @@ def rebuild_cache_popular_threads(mlist_name):
 
 
 def _rebuild_cache_popular_threads(mlist_name):
-    mlist = MailingList.objects.get(name=mlist_name)
+    try:
+        mlist = MailingList.objects.get(name=mlist_name)
+    except MailingList.DoesNotExist:
+        log.warning('MailingList with name %s does not exist', mlist_name)
+        return
     mlist.cached_values["popular_threads"].rebuild()
 
 
@@ -133,7 +145,11 @@ def update_from_mailman(mlist_name):
 
 
 def _update_from_mailman(mlist_name):
-    mlist = MailingList.objects.get(name=mlist_name)
+    try:
+        mlist = MailingList.objects.get(name=mlist_name)
+    except MailingList.DoesNotExist:
+        log.warning('MailingList with name %s does not exist', mlist_name)
+        return
     mlist.update_from_mailman()
 
 
