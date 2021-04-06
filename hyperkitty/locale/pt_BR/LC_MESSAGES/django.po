@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Traducao_Hyperkitty1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 19:00+0530\n"
-"PO-Revision-Date: 2021-03-01 04:56+0000\n"
+"PO-Revision-Date: 2021-03-09 12:03+0000\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "gnu-mailman/hyperkitty/pt_BR/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.5.2-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -335,7 +335,7 @@ msgstr "Vincular outro endereço"
 msgid ""
 "If you aren't a current list member, sending this message will subscribe you."
 msgstr ""
-"Se você não é um membro atual da lista, o envio desta mensagem o assinará."
+"Se você não é um membro atual da lista, o envio desta mensagem o inscreverá."
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:11
 msgid "List overview"
@@ -670,8 +670,8 @@ msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"d-none d-md-inline\">Gerenciar a</span><span class=\"d-md-"
-"none\">A</span>ssinaturas"
+"<span class=\"d-none d-md-inline\">Gerenciar i</span><span class=\"d-md-"
+"none\">I</span>nscrição"
 
 #: templates/hyperkitty/overview.html:88
 msgid "Activity Summary"
@@ -980,7 +980,7 @@ msgstr "Votos"
 
 #: templates/hyperkitty/user_profile/base.html:34
 msgid "Subscriptions"
-msgstr "Assinaturas"
+msgstr "Inscrições"
 
 #: templates/hyperkitty/user_profile/favorites.html:24
 #: templates/hyperkitty/user_profile/last_views.html:27
@@ -1089,7 +1089,7 @@ msgstr "Mensagens para esta lista"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:76
 msgid "no subscriptions"
-msgstr "sem assinaturas"
+msgstr "sem inscrições"
 
 #: templates/hyperkitty/user_profile/votes.html:32
 #: templates/hyperkitty/user_profile/votes.html:70
