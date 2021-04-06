@@ -27,6 +27,7 @@ from mock import patch
 from hyperkitty import tasks
 from hyperkitty.lib.incoming import add_to_list
 from hyperkitty.models.email import Email
+from hyperkitty.models.mailinglist import MailingList
 from hyperkitty.models.thread import Thread
 from hyperkitty.tests.utils import TestCase
 
@@ -50,6 +51,30 @@ class TaskTestCase(TestCase):
             tasks.compute_thread_positions(42)
         except Thread.DoesNotExist:
             self.fail("No protection when the thread is deleted")
+
+    def test_rebuild_mailinglist_cache_recent_no_mailinglist(self):
+        try:
+            tasks.rebuild_mailinglist_cache_recent('42')
+        except MailingList.DoesNotExist:
+            self.fail("No protection when the mailing list is deleted")
+
+    def test_rebuild_mailinglist_cache_for_month_no_mailinglist(self):
+        try:
+            tasks.rebuild_mailinglist_cache_for_month('42', None, None)
+        except MailingList.DoesNotExist:
+            self.fail("No protection when the mailing list is deleted")
+
+    def test_update_from_mailman_no_mailinglist(self):
+        try:
+            tasks.update_from_mailman('42')
+        except MailingList.DoesNotExist:
+            self.fail("No protection when the mailing list is deleted")
+
+    def test_rebuild_cache_popular_threads_no_mailinglist(self):
+        try:
+            tasks.rebuild_cache_popular_threads('42')
+        except MailingList.DoesNotExist:
+            self.fail("No protection when the mailing list is deleted")
 
     def test_check_orphans_no_email(self):
         try:

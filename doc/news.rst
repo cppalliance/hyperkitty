@@ -20,6 +20,7 @@ News / Changelog
   See !324)
 - Use markdown renderer based on MailingList settings. (Closes #352)
 - Mangle lines starting with ``From`` when exporting mbox. (Closes #348)
+- Let tasks for non-existent mailing lists fail gracefully.
 
 1.3.4
 =====
