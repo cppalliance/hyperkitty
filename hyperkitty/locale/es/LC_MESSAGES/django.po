@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 18:59+0530\n"
-"PO-Revision-Date: 2021-02-20 11:50+0000\n"
+"PO-Revision-Date: 2021-03-28 08:29+0000\n"
 "Last-Translator: Guillermo Hernandez <guillermo@querysoft.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.6-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -114,7 +114,7 @@ msgstr "Estos son los formatos disponibles:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
-msgstr "Texto sin formato"
+msgstr "Texto plano"
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
