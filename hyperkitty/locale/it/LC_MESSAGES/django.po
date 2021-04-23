@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 18:59+0530\n"
-"PO-Revision-Date: 2021-04-06 19:37+0000\n"
-"Last-Translator: Massimo Zappalà <blackout69@catania.linux.it>\n"
+"PO-Revision-Date: 2021-04-15 11:27+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/it/>\n"
 "Language: it\n"
@@ -169,11 +169,11 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:50
 msgid "Tags"
-msgstr "Tag"
+msgstr "Etichette"
 
 #: templates/hyperkitty/api.html:53
 msgid "Using this address you will be able to retrieve the list of tags."
-msgstr "Con questo indirizzo puoi ricevere la lista dei tag."
+msgstr "Con questo indirizzo puoi ricevere la lista delle etichette."
 
 #: templates/hyperkitty/base.html:56 templates/hyperkitty/base.html:111
 msgid "Account"
@@ -923,11 +923,11 @@ msgstr "Conversazione più recente per attività"
 
 #: templates/hyperkitty/threads/tags.html:3
 msgid "tags"
-msgstr "tag"
+msgstr "etichette"
 
 #: templates/hyperkitty/threads/tags.html:9
 msgid "Search for tag"
-msgstr "Cerca per tag"
+msgstr "Cerca per etichetta"
 
 #: templates/hyperkitty/threads/tags.html:15
 msgid "Remove"
