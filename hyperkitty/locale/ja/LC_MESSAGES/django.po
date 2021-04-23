@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 18:59+0530\n"
-"PO-Revision-Date: 2021-01-13 21:51+0000\n"
+"PO-Revision-Date: 2021-04-22 15:32+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -116,13 +116,13 @@ msgstr "プレーンテキスト"
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
-msgstr ""
+msgstr "メーリングリストの一覧"
 
 #: templates/hyperkitty/api.html:27 templates/hyperkitty/api.html:33
 #: templates/hyperkitty/api.html:39 templates/hyperkitty/api.html:45
 #: templates/hyperkitty/api.html:51
 msgid "Endpoint:"
-msgstr ""
+msgstr "エンドポイント:"
 
 #: templates/hyperkitty/api.html:29
 msgid ""
@@ -144,7 +144,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:38
 msgid "Emails in a thread"
-msgstr ""
+msgstr "スレッド内のメール"
 
 #: templates/hyperkitty/api.html:41
 msgid ""
@@ -154,7 +154,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:44
 msgid "An email in a mailing list"
-msgstr ""
+msgstr "メーリングリスト内のメール"
 
 #: templates/hyperkitty/api.html:47
 msgid ""
@@ -200,10 +200,8 @@ msgid "Search this list"
 msgstr "このリストを検索"
 
 #: templates/hyperkitty/base.html:90
-#, fuzzy
-#| msgid "Search this list"
 msgid "Search all lists"
-msgstr "このリストを検索"
+msgstr "全てのリストを検索"
 
 #: templates/hyperkitty/base.html:148
 msgid "Manage this list"
@@ -218,30 +216,24 @@ msgid "Keyboard Shortcuts"
 msgstr "キーボードショートカット"
 
 #: templates/hyperkitty/base.html:194
-#, fuzzy
-#| msgid "Thread"
 msgid "Thread View"
-msgstr "スレッド"
+msgstr "スレッドビュー"
 
 #: templates/hyperkitty/base.html:196
-#, fuzzy
-#| msgid "Delete message(s)"
 msgid "Next unread message"
-msgstr "メッセージを削除"
+msgstr "次の未読メッセージ"
 
 #: templates/hyperkitty/base.html:197
 msgid "Previous unread message"
-msgstr ""
+msgstr "前の未読メッセージ"
 
 #: templates/hyperkitty/base.html:198
-#, fuzzy
-#| msgid "All Threads"
 msgid "Jump to all threads"
-msgstr "全てのスレッド"
+msgstr "全てのスレッドに移動"
 
 #: templates/hyperkitty/base.html:199
 msgid "Jump to MailingList overview"
-msgstr ""
+msgstr "メーリングリストの概要に移動"
 
 #: templates/hyperkitty/base.html:213
 msgid "Powered by"
@@ -337,7 +329,7 @@ msgstr ""
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:11
 msgid "List overview"
-msgstr ""
+msgstr "リスト概要"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:27 views/message.py:75
 #: views/mlist.py:102 views/thread.py:167
@@ -354,7 +346,7 @@ msgstr ""
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:34
 msgid "Entire archive"
-msgstr ""
+msgstr "アーカイブ全体"
 
 #: templates/hyperkitty/index.html:9 templates/hyperkitty/index.html:63
 msgid "Available lists"
@@ -641,8 +633,6 @@ msgid "Stats"
 msgstr "統計"
 
 #: templates/hyperkitty/overview.html:41
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads"
 msgstr "スレッド"
 
@@ -653,28 +643,20 @@ msgstr "スレッドを作成するにはログインが必要です。"
 
 #: templates/hyperkitty/overview.html:60
 #: templates/hyperkitty/thread_list.html:48
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Start a </span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">N</span>ew thread"
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">開始: </span><span class=\"hidden-sm "
-"hidden-md hidden-lg\">新</span>しいスレッド"
+"<span class=\"d-none d-md-inline\">開始: </span><span class=\"d-md-none\""
+">新</span>しいスレッド"
 
 #: templates/hyperkitty/overview.html:72
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">S</span>ubscription"
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">管理: </span><span class=\"hidden-sm "
-"hidden-md hidden-lg\">購</span>読"
+"<span class=\"d-none d-md-inline\">管理: </span><span class=\"d-md-none\""
+">購</span>読"
 
 #: templates/hyperkitty/overview.html:88
 msgid "Activity Summary"
@@ -686,7 +668,7 @@ msgstr "過去<strong>30</strong>日間の投稿量。"
 
 #: templates/hyperkitty/overview.html:95
 msgid "The following statistics are from"
-msgstr ""
+msgstr "統計期間"
 
 #: templates/hyperkitty/overview.html:96
 msgid "In"
@@ -714,11 +696,11 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:183
 msgid "Most popular discussions"
-msgstr ""
+msgstr "最も人気な議論"
 
 #: templates/hyperkitty/overview.html:190
 msgid "Most active discussions"
-msgstr ""
+msgstr "最も活発な議論"
 
 #: templates/hyperkitty/overview.html:197
 msgid "Discussions You've Flagged"
@@ -858,11 +840,11 @@ msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:12
 msgid "days inactive"
-msgstr ""
+msgstr "日間活動なし"
 
 #: templates/hyperkitty/threads/right_col.html:18
 msgid "days old"
-msgstr ""
+msgstr "日前に作成"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #: templates/hyperkitty/threads/summary_thread_large.html:52
@@ -899,7 +881,7 @@ msgstr "未読:"
 
 #: templates/hyperkitty/threads/right_col.html:115
 msgid "Go to:"
-msgstr ""
+msgstr "移動:"
 
 #: templates/hyperkitty/threads/right_col.html:115
 msgid "next"
@@ -926,8 +908,8 @@ msgid ""
 "                    "
 msgstr ""
 "\n"
-"                                by %(name)s\n"
-"                            "
+"                    by %(name)s\n"
+"                    "
 
 #: templates/hyperkitty/threads/summary_thread_large.html:39
 msgid "Most recent thread activity"
@@ -939,7 +921,7 @@ msgstr "タグ"
 
 #: templates/hyperkitty/threads/tags.html:9
 msgid "Search for tag"
-msgstr ""
+msgstr "タグで検索"
 
 #: templates/hyperkitty/threads/tags.html:15
 msgid "Remove"
