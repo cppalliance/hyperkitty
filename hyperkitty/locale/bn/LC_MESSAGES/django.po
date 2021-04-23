@@ -3,92 +3,95 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 18:59+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-04-23 18:39+0000\n"
+"Last-Translator: Aftabuzzaman <Leemon432@gmail.com>\n"
+"Language-Team: Bengali <https://hosted.weblate.org/projects/gnu-mailman/"
+"hyperkitty/bn/>\n"
+"Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
-msgstr ""
+msgstr "একটি ফাইল সংযুক্ত করুন"
 
 #: forms.py:65
 msgid "Attach another file"
-msgstr ""
+msgstr "আরেকটি ফাইল সংযুক্ত করুন"
 
 #: forms.py:66
 msgid "Remove this file"
-msgstr ""
+msgstr "এই ফাইলটি সরান"
 
 #: templates/hyperkitty/404.html:28
 msgid "Error 404"
-msgstr ""
+msgstr "ত্রুটি ৪০৪"
 
 #: templates/hyperkitty/404.html:30 templates/hyperkitty/500.html:31
 msgid "Oh No!"
-msgstr ""
+msgstr "ওহ ও!"
 
 #: templates/hyperkitty/404.html:32
 msgid "I can't find this page."
-msgstr ""
+msgstr "আমি এই পৃষ্ঠাটি খুঁজে পাচ্ছি না।"
 
 #: templates/hyperkitty/404.html:33 templates/hyperkitty/500.html:34
 msgid "Go back home"
-msgstr ""
+msgstr "প্রধান পাতায় ফিরে চলুন"
 
 #: templates/hyperkitty/500.html:29
 msgid "Error 500"
-msgstr ""
+msgstr "ত্রুটি ৫০০"
 
 #: templates/hyperkitty/500.html:33
 msgid "Sorry, but the requested page is unavailable due to a server hiccup."
-msgstr ""
+msgstr "দুঃখিত, তবে সার্ভারে সমস্যার কারণে অনুরোধ করা পৃষ্ঠাটি উপলব্ধ নয়।"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
 msgid "started"
-msgstr ""
+msgstr "শুরু হয়েছে"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
 msgid "last active:"
-msgstr ""
+msgstr "সর্বশেষ সক্রিয়:"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:8
 msgid "see this thread"
-msgstr ""
+msgstr "এই থ্রেডটি দেখুন"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:12
 msgid "(no suggestions)"
-msgstr ""
+msgstr "(কোনও পরামর্শ নেই)"
 
 #: templates/hyperkitty/ajax/temp_message.html:11
 msgid "Sent just now, not yet distributed"
-msgstr ""
+msgstr "এই মাত্র পাঠানো হয়েছে, এখনও বিতরণ করা হয়নি"
 
 #: templates/hyperkitty/api.html:5
 msgid "REST API"
-msgstr ""
+msgstr "REST এপিআই"
 
 #: templates/hyperkitty/api.html:7
 msgid ""
 "HyperKitty comes with a small REST API allowing you to programatically "
 "retrieve emails and information."
 msgstr ""
+"হাইপারকিটিতে একটি ছোট REST এপিআই রয়েছে, যা আপনাকে প্রোগ্রামগতভাবে ইমেল এবং "
+"তথ্য পুনরুদ্ধার করতে দেয়।"
 
 #: templates/hyperkitty/api.html:10
 msgid "Formats"
-msgstr ""
+msgstr "বিন্যাস"
 
 #: templates/hyperkitty/api.html:12
 msgid ""
@@ -100,24 +103,25 @@ msgstr ""
 msgid ""
 "To change the format, just add <em>?format=&lt;FORMAT&gt;</em> to the URL."
 msgstr ""
+"বিন্যাস পরিবর্তন করতে, ইউআরএলে শুধু <em>?format=&lt;FORMAT&gt;</em> যোগ করুন।"
 
 #: templates/hyperkitty/api.html:16
 msgid "The list of available formats is:"
-msgstr ""
+msgstr "উপলব্ধ বিন্যাসগুলির তালিকা:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
-msgstr ""
+msgstr "সরল পাঠ্য"
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
-msgstr ""
+msgstr "মেইলিং-তালিকাগুলির তালিকা"
 
 #: templates/hyperkitty/api.html:27 templates/hyperkitty/api.html:33
 #: templates/hyperkitty/api.html:39 templates/hyperkitty/api.html:45
 #: templates/hyperkitty/api.html:51
 msgid "Endpoint:"
-msgstr ""
+msgstr "শেষ বিন্দু:"
 
 #: templates/hyperkitty/api.html:29
 msgid ""
