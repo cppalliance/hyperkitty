@@ -375,14 +375,14 @@ $oddEmailColor: rgb(238, 238, 238);
 
 
 #thread-overview-info, #message-overview-info {
-        a {
-                color: #999;
+        a:hover  .fa {
+            color: #fff;
         }
         .fa {
                 color: #BFBFBF;
         }
         .postorius .fa {
-                color: black;
+                color: #007bff;
         }
 }
 
