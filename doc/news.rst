@@ -30,6 +30,15 @@ News / Changelog
 - Selecting threads by month now works on non-English mobile devices.
   (Closes #384)
 
+Security
+--------
+
+- Importing a private mailing list with ``hyperkitty_import`` will enforce
+  the visibility of the archives for the duration of the import. This fixes
+  a bug where the private archives would have public visibility during imports
+  which could lead to temporary information leakage.
+  (CVE-2021-33038, Closes #380)
+
 .. _news-1.3.4:
 
 1.3.4

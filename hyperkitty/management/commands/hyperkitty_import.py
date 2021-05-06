@@ -49,7 +49,7 @@ from hyperkitty.lib.incoming import DuplicateMessage, add_to_list
 from hyperkitty.lib.mailman import sync_with_mailman
 from hyperkitty.lib.utils import get_message_id
 from hyperkitty.management.utils import setup_logging
-from hyperkitty.models import Email, Thread
+from hyperkitty.models import Email, MailingList, Thread
 
 
 # Allow all wierd line endings.
@@ -338,6 +338,11 @@ class Command(BaseCommand):
         # if (settings.DATABASES["default"]["ENGINE"]
         #     != "django.db.backends.sqlite3":
         #     transaction.set_autocommit(False)
+        # Sync list settings with Mailman before importing messages:
+        if not options["no_sync_mailman"]:
+            mlist = MailingList.objects.get_or_create(name=list_address)[0]
+            mlist.update_from_mailman()
+            mlist.save()
         settings.HYPERKITTY_BATCH_MODE = True
         # Only import emails newer than the latest email in the DB
         latest_email_date = Email.objects.filter(
