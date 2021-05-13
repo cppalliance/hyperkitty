@@ -21,6 +21,8 @@ News / Changelog
 - Use markdown renderer based on MailingList settings. (Closes #352)
 - Mangle lines starting with ``From`` when exporting mbox. (Closes #348)
 - Let tasks for non-existent mailing lists fail gracefully.
+- ``hyperkitty_import`` now does clean-up of incoming Message-ID headers.
+  (Closes #382)
 
 1.3.4
 =====

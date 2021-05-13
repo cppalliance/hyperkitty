@@ -4,7 +4,7 @@ import mailbox
 import os.path
 import sys
 from datetime import datetime
-from email import message_from_file
+from email import message_from_file, message_from_string
 from email.message import EmailMessage
 from io import StringIO
 from traceback import format_exc
@@ -154,6 +154,31 @@ class CommandTestCase(TestCase):
                      os.path.join(self.tmpdir, "test.mbox"), **kw)
         # Both messages should be archived.
         self.assertEqual(Email.objects.count(), 2)
+
+    def test_wierd_message_id(self):
+        # Message-IDs like this have been seen.
+        msg = message_from_string("""\
+From: dummy@example.com
+Date: 01 Feb 2015 12:00:00
+Message-ID: <58482FD7034976FE@example.com> (added by
+ postmaster@example.com)
+
+msg1
+""", EmailMessage)
+        mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
+        mbox.add(msg)
+        mbox.close()
+        # do the import
+        output = StringIO()
+        kw = self.common_cmd_args.copy()
+        kw["stdout"] = kw["stderr"] = output
+        call_command('hyperkitty_import',
+                     os.path.join(self.tmpdir, "test.mbox"), **kw)
+        # The message should be archived.
+        self.assertEqual(Email.objects.count(), 1)
+        # Its Message-ID should be clean
+        archived_mid = Email.objects.get().as_message()['message-id']
+        self.assertEqual(archived_mid, '<58482FD7034976FE@example.com>')
 
     def test_wrong_encoding(self):
         """badly encoded message, only fails on PostgreSQL"""
