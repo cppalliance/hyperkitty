@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 18:59+0530\n"
-"PO-Revision-Date: 2019-11-19 12:04+0000\n"
-"Last-Translator: hyunwoo shin <harryshin96@gmail.com>\n"
+"PO-Revision-Date: 2021-05-13 23:57+0000\n"
+"Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/ko/>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -53,7 +53,7 @@ msgstr "에러 500"
 
 #: templates/hyperkitty/500.html:33
 msgid "Sorry, but the requested page is unavailable due to a server hiccup."
-msgstr "죄송합니다, 서버 오류로 인해 요청한 페이지를 불러올수 없습니다."
+msgstr "죄송합니다, 서버 오류로 인해 요청한 페이지를 불러올 수 없습니다."
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
@@ -113,7 +113,7 @@ msgstr "다음은 이용가능한 포멧입니다:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
-msgstr "일반 문서"
+msgstr "일반 텍스트"
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
@@ -196,17 +196,15 @@ msgstr "로그인"
 
 #: templates/hyperkitty/base.html:81 templates/hyperkitty/base.html:137
 msgid "Sign Up"
-msgstr "서명하다"
+msgstr "회원가입"
 
 #: templates/hyperkitty/base.html:90
 msgid "Search this list"
 msgstr "이 목록에서 검색하기"
 
 #: templates/hyperkitty/base.html:90
-#, fuzzy
-#| msgid "Search this list"
 msgid "Search all lists"
-msgstr "이 목록에서 검색하기"
+msgstr "모든 목록에서 검색하기"
 
 #: templates/hyperkitty/base.html:148
 msgid "Manage this list"
@@ -218,39 +216,32 @@ msgstr "목록 관리하기"
 
 #: templates/hyperkitty/base.html:191
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "키보드 단축키"
 
 #: templates/hyperkitty/base.html:194
-#, fuzzy
-#| msgid "Thread"
 msgid "Thread View"
-msgstr "스레드"
+msgstr "스레드 보기"
 
 #: templates/hyperkitty/base.html:196
-#, fuzzy
-#| msgid "Delete message(s)"
 msgid "Next unread message"
-msgstr "삭제된 메세지"
+msgstr "다음 안 읽은 메시지"
 
 #: templates/hyperkitty/base.html:197
 msgid "Previous unread message"
-msgstr ""
+msgstr "이전 안 읽은 메시지"
 
 #: templates/hyperkitty/base.html:198
-#, fuzzy
-#| msgid "All Threads"
 msgid "Jump to all threads"
-msgstr "모든 스레드"
+msgstr "모든 스레드로 이동"
 
 #: templates/hyperkitty/base.html:199
-#, fuzzy
-#| msgid "List overview"
 msgid "Jump to MailingList overview"
-msgstr "목록 개요"
+msgstr "목록 개요로 이동"
 
 #: templates/hyperkitty/base.html:213
+#, fuzzy
 msgid "Powered by"
-msgstr "에 의해 구동"
+msgstr "구동"
 
 #: templates/hyperkitty/base.html:213
 msgid "version"
@@ -292,16 +283,12 @@ msgid "You must be logged-in to vote."
 msgstr "투표하기 위해서 로그인을 해야합니다."
 
 #: templates/hyperkitty/fragments/month_list.html:6
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads by"
-msgstr "스레드"
+msgstr "스레드 구분:"
 
 #: templates/hyperkitty/fragments/month_list.html:6
-#, fuzzy
-#| msgid "This month"
 msgid " month"
-msgstr "이번 달"
+msgstr " 작성 월"
 
 #: templates/hyperkitty/fragments/overview_threads.html:12
 msgid "New messages in this thread"
@@ -340,7 +327,7 @@ msgstr "다른 주소 링크하기"
 #: templates/hyperkitty/fragments/send_as.html:20
 msgid ""
 "If you aren't a current list member, sending this message will subscribe you."
-msgstr ""
+msgstr "현재 목록 멤버가 아닌 경우 이 메시지를 보내면 구독됩니다."
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:11
 msgid "List overview"
@@ -379,7 +366,7 @@ msgstr "최근 참가자들의 수로 정렬하기"
 #: templates/hyperkitty/index.html:32 templates/hyperkitty/index.html:37
 #: templates/hyperkitty/index.html:75
 msgid "Most active"
-msgstr "활발함순"
+msgstr "활발한순"
 
 #: templates/hyperkitty/index.html:36
 msgid "Sort by number of recent discussions"
@@ -482,17 +469,18 @@ msgstr "지난 30일간 활동 목록"
 
 #: templates/hyperkitty/list_delete.html:7
 msgid "Delete MailingList"
-msgstr ""
+msgstr "메일링 목록 삭제"
 
 #: templates/hyperkitty/list_delete.html:20
+#, fuzzy
 msgid "Delete Mailing List"
-msgstr ""
+msgstr "메일링 목록 삭제"
 
 #: templates/hyperkitty/list_delete.html:26
 msgid ""
 "will be deleted along with all the threads and messages. Do you want to "
 "continue?"
-msgstr ""
+msgstr "모든 스레드 및 메시지와 함께 삭제됩니다. 계속하시겠습니까?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -660,28 +648,20 @@ msgstr "스레드를 만들기 위해서 로그인되어야 합니다."
 
 #: templates/hyperkitty/overview.html:60
 #: templates/hyperkitty/thread_list.html:48
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Start a </span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">N</span>ew thread"
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">시작하세요</span><span class=\"hidden-sm "
-"hidden-md hidden-lg\">새</span>로운 스레드를"
+"<span class=\"d-none d-md-inline\">새 스레드를 시작</span><span class=\"d-md-none\""
+">(N)</span>"
 
 #: templates/hyperkitty/overview.html:72
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">S</span>ubscription"
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-sm "
-"hidden-md hidden-lg\">S</span>비구독"
+"<span class=\"d-none d-md-inline\">구독 관리</span><span class=\"d-md-none\""
+">(S)</span>"
 
 #: templates/hyperkitty/overview.html:88
 msgid "Activity Summary"
@@ -878,7 +858,7 @@ msgstr "댓글"
 
 #: templates/hyperkitty/threads/right_col.html:48
 msgid "unread"
-msgstr "안읽음"
+msgstr "안 읽은"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
@@ -922,19 +902,15 @@ msgid "Favorite"
 msgstr "즐겨찾기"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:29
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                                by %(name)s\n"
-#| "                            "
+#, python-format
 msgid ""
 "\n"
 "                    by %(name)s\n"
 "                    "
 msgstr ""
 "\n"
-"                                작성자 %(name)s\n"
-"                            "
+"                    작성자 %(name)s\n"
+"                    "
 
 #: templates/hyperkitty/threads/summary_thread_large.html:39
 msgid "Most recent thread activity"
@@ -976,7 +952,7 @@ msgstr "사용자의 게시글 활동내역"
 #: templates/hyperkitty/user_public_profile.html:7
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "for"
-msgstr "위해"
+msgstr "-"
 
 #: templates/hyperkitty/user_profile/base.html:22
 msgid "Favorites"
@@ -994,7 +970,7 @@ msgstr "투표"
 
 #: templates/hyperkitty/user_profile/base.html:34
 msgid "Subscriptions"
-msgstr "가입목록"
+msgstr "구독 목록"
 
 #: templates/hyperkitty/user_profile/favorites.html:24
 #: templates/hyperkitty/user_profile/last_views.html:27
@@ -1153,15 +1129,15 @@ msgstr "이 메세지는 gzip mobx 포멧으로 압축되었습니다"
 
 #: views/message.py:200
 msgid "Your reply has been sent and is being processed."
-msgstr ""
+msgstr "답장이 전송되어 처리 중입니다."
 
 #: views/message.py:204
-#, fuzzy
-#| msgid "You have not posted to this list (yet)."
 msgid ""
 "\n"
 "  You have been subscribed to {} list."
-msgstr "이 목록에 아직 글을 쓰지 않았습니다."
+msgstr ""
+"\n"
+"  {} 목록을 아직 구독하지 않았습니다."
 
 #: views/message.py:287
 #, python-format
@@ -1203,13 +1179,11 @@ msgstr "이 목록에 아직 글을 쓰지 않았습니다."
 
 #: views/mlist.py:353
 msgid "You must be a staff member to delete a MailingList"
-msgstr ""
+msgstr "메일링 목록을 삭제하려면 스태프 멤버여야 합니다"
 
 #: views/mlist.py:367
-#, fuzzy
-#| msgid "Successfully deleted %(count)s messages."
 msgid "Successfully deleted {}"
-msgstr "성공적으로 삭제했습니다 ( %(count)s 개)."
+msgstr "성공적으로 삭제했습니다 {}"
 
 #: views/search.py:115
 #, python-format
@@ -1218,7 +1192,7 @@ msgstr "파싱(Parsing) 에러:%(error)s"
 
 #: views/thread.py:168
 msgid "This thread in gzipped mbox format"
-msgstr "이 스레드는  gzip mbox 포멧으로 압축되었습니다"
+msgstr "이 스레드는 gzip mbox 포멧으로 압축되었습니다"
 
 #~ msgid "Go to"
 #~ msgstr "이동"
