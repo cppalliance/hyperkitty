@@ -141,6 +141,22 @@ class DbImporter(object):
 
         return date
 
+    def _fix_mid(self, mid):
+        # Message-IDs of the form
+        # Message-ID: <58C6B8A302CF0E71@example.com> (added by
+        #  postmaster@example.com)
+        # have been seen.  First remove whitespace. Then if the Message-ID
+        # starts with '<' remove everything after the first '>'. Then ensure
+        # it has '<' and '>' at beginning and end.
+        mid = re.sub(r'\s', '', mid)
+        if mid.startswith('<'):
+            mid = re.sub('>.*', '>', mid)
+        else:
+            mid = '<' + mid
+        if not mid.endswith('>'):
+            mid += '>'
+        return mid
+
     def from_mbox(self, mbfile, report_name):
         """
         Insert all the emails contained in an mbox file into the database.
@@ -199,6 +215,8 @@ class DbImporter(object):
                 message.set_unixfrom(unixfrom)
             if message['message-id'] is None:
                 message['Message-ID'] = make_msgid('generated')
+            message.replace_header(
+                'Message-ID', self._fix_mid(message['message-id']))
             # Now insert the message
             try:
                 with transaction.atomic():
