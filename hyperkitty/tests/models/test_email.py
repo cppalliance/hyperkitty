@@ -23,6 +23,7 @@
 import os
 import tempfile
 from datetime import datetime
+from email import message_from_string
 from email.message import EmailMessage
 from mimetypes import guess_all_extensions
 
@@ -179,6 +180,22 @@ class EmailTestCase(TestCase):
                       content="Dummy message")
         msg = email.as_message()
         self.assertEqual(msg['from'], '"Team: J.Q. Doe" <dummy@example.com>')
+
+    def test_as_message_bogus_message_id(self):
+        msg_in = message_from_string("""\
+From: dummy@example.com
+Message-ID: <58482E590C74B47D@example.com> (added by
+ postmaster@example.com)
+Date: Fri, 02 Nov 2012 16:07:54 +0400
+
+Dummy message
+""", EmailMessage)
+        add_to_list("list@example.com", msg_in)
+        email = Email.objects.get()
+        msg = email.as_message()
+        self.assertEqual(msg["Date"], msg_in["Date"])
+        self.assertTrue(
+            msg["Message-ID"].startswith("<58482E590C74B47D@example.com"))
 
 
 class EmailSetParentTestCase(TestCase):
