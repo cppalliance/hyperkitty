@@ -3,6 +3,7 @@ News / Changelog
 ================
 
 
+.. _news-1.3.5:
 
 1.3.5
 =====
@@ -25,6 +26,8 @@ News / Changelog
   (Closes #382)
 - The ``Email.as_message()`` method removes some bogus characters from the
   Message-ID.  (Closes #383)
+
+.. _news-1.3.4:
 
 1.3.4
 =====
@@ -59,6 +62,7 @@ News / Changelog
 - Exceptions thrown by smtplib in sending replies are now caught and give an
   appropriate error message.  (Closes #309)
 
+.. _news-1.3.3:
 
 1.3.3
 =====
