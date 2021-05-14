@@ -177,7 +177,8 @@ class Email(models.Model):
         header_date = self.date.astimezone(tz).replace(microsecond=0)
         # Date format: http://tools.ietf.org/html/rfc5322#section-3.3
         msg["Date"] = header_date.strftime("%a, %d %b %Y %H:%M:%S %z")
-        msg["Message-ID"] = "<%s>" % self.message_id
+        # Clean bogus characters from Message-ID.
+        msg["Message-ID"] = "<%s>" % re.sub(r'[\s<>()]', '', self.message_id)
         if self.in_reply_to:
             msg["In-Reply-To"] = "<%s>" % unfold(self.in_reply_to)
 

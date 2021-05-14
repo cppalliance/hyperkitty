@@ -23,6 +23,8 @@ News / Changelog
 - Let tasks for non-existent mailing lists fail gracefully.
 - ``hyperkitty_import`` now does clean-up of incoming Message-ID headers.
   (Closes #382)
+- The ``Email.as_message()`` method removes some bogus characters from the
+  Message-ID.  (Closes #383)
 
 1.3.4
 =====
