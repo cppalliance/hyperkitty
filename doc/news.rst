@@ -26,7 +26,9 @@ News / Changelog
   (Closes #382)
 - The ``Email.as_message()`` method removes some bogus characters from the
   Message-ID.  (Closes #383)
-- Bump jQuery to 3.6.0. 
+- Bump jQuery to 3.6.0.
+- Selecting threads by month now works on non-English mobile devices.
+  (Closes #384)
 
 .. _news-1.3.4:
 
