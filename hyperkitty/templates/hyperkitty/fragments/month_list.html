@@ -23,7 +23,7 @@
     {% for year, months in months_list|sort %}
     <option disabled>----- {{ year }} -----</option>
     {% for ar_month in months %}
-    <option{% if month and year == month.year and ar_month == month.month %} selected="selected"{% endif %}>{{ ar_month|monthtodate:year|date:"F Y" }}</option>
+    <option{% if month and year == month.year and ar_month == month.month %} selected="selected"{% endif %} value="{{ ar_month }}">{{ ar_month|monthtodate:year|date:"F Y" }}</option>
     {% endfor %}
     {% endfor %}
 </select>
