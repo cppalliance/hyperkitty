@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 18:59+0530\n"
-"PO-Revision-Date: 2021-05-13 23:57+0000\n"
+"PO-Revision-Date: 2021-05-19 11:33+0000\n"
 "Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/ko/>\n"
@@ -71,11 +71,11 @@ msgstr "스레드 보기"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:12
 msgid "(no suggestions)"
-msgstr "(댓글 없음)"
+msgstr "(추천 없음)"
 
 #: templates/hyperkitty/ajax/temp_message.html:11
 msgid "Sent just now, not yet distributed"
-msgstr "전송됨(분류 안됨)"
+msgstr "방금 보냈지만 아직 처리되지 않았습니다"
 
 #: templates/hyperkitty/api.html:5
 msgid "REST API"
@@ -85,31 +85,26 @@ msgstr "REST API"
 msgid ""
 "HyperKitty comes with a small REST API allowing you to programatically "
 "retrieve emails and information."
-msgstr ""
-"냥냥메일은 당신이 프로그램을 이용해서 이메일과 정보를 회수할 수 있도록 작은 "
-"REST API를 함께 제공합니다."
+msgstr "허이퍼키티는 당신이 프로그램을 이용해서 이메일과 정보를 불러올 수 있도록 간단한 REST API를 함께 제공합니다."
 
 #: templates/hyperkitty/api.html:10
 msgid "Formats"
-msgstr "포멧"
+msgstr "포맷"
 
 #: templates/hyperkitty/api.html:12
 msgid ""
 "This REST API can return the information into several formats.  The default "
 "format is html to allow human readibility."
-msgstr ""
-"REST API는 여러 포멧으로 정보를 불러올수 있습니다. 초기 포멧은 사람이 읽을 "
-"수 있는 html 형식입니다."
+msgstr "REST API는 여러 포맷으로 정보를 불러올 수 있습니다.  기본 포맷은 사람이 읽을 수 있는 html 형식입니다."
 
 #: templates/hyperkitty/api.html:14
 msgid ""
 "To change the format, just add <em>?format=&lt;FORMAT&gt;</em> to the URL."
-msgstr ""
-"포멧을 변경하고 싶으면,  <em>?format=&lt;포멧&gt;</em>을 URL에 추가하세요."
+msgstr "포맷을 변경하고 싶으면, <em>?format=&lt;FORMAT&gt;</em>을 URL에 추가하세요."
 
 #: templates/hyperkitty/api.html:16
 msgid "The list of available formats is:"
-msgstr "다음은 이용가능한 포멧입니다:"
+msgstr "다음은 이용 가능한 포맷입니다:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
@@ -472,7 +467,6 @@ msgid "Delete MailingList"
 msgstr "메일링 목록 삭제"
 
 #: templates/hyperkitty/list_delete.html:20
-#, fuzzy
 msgid "Delete Mailing List"
 msgstr "메일링 목록 삭제"
 
@@ -636,8 +630,6 @@ msgid "Stats"
 msgstr "통계"
 
 #: templates/hyperkitty/overview.html:41
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads"
 msgstr "스레드"
 
