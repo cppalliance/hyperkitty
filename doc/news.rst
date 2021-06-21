@@ -38,6 +38,10 @@ Security
   a bug where the private archives would have public visibility during imports
   which could lead to temporary information leakage.
   (CVE-2021-33038, Closes #380)
+- Check the secret archiver key in a way that is resistant to timing attacks.
+  (CVE-2021-35057, Closes #387)
+- Pass the secret archiver key in a HTTP header instead of a GET query
+  parameter so it doesn't appear in logs. (CVE-2021-35058, Closes #387)
 
 .. _news-1.3.4:
 

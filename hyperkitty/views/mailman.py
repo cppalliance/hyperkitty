@@ -20,6 +20,7 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
+import hmac
 import json
 import logging
 from email import message_from_binary_file
@@ -71,7 +72,39 @@ def key_and_ip_auth(func):
                  assigned to MAILMAN_ARCHIVER_FROM in the settings file.
                 </p></body></html>""",
                 content_type="text/html", status=403)
-        if request.GET.get("key") != settings.MAILMAN_ARCHIVER_KEY:
+        authorization = request.headers.get('Authorization')
+        if authorization is None:
+            if request.GET.get('key') is not None:
+                # Old authentication method used, need to upgrade
+                # mailman-hyperkitty
+                logger.error(
+                    'The MAILMAN_ARCHIVER_KEY is now required to be '
+                    'sent over the Authorization HTTP header, you need to '
+                    'upgrade the mailman-hyperkitty plugin/package.'
+                )
+                return HttpResponse(
+                    """<html><title>Auth required</title><body>
+                    <h1>Authorization Required</h1><p>The archiver key is now
+                     required to be sent over the Authorization HTTP header.
+                     You need to upgrade the mailman-hyperkitty plugin/package.
+                    </p></body></html>""",
+                    content_type="text/html", status=401)
+            else:
+                # No auth provided over header nor GET param
+                logger.error(
+                    'The MAILMAN_ARCHIVER_KEY was not sent as the '
+                    'Authorization HTTP header.'
+                )
+                return HttpResponse(
+                    """<html><title>Auth required</title><body>
+                    <h1>Authorization Required</h1><p>The archiver key must be
+                     sent over the Authorization HTTP header.
+                    </p></body></html>""",
+                    content_type="text/html", status=401)
+
+        # Use timing-attack safe comparison of secret key
+        if not hmac.compare_digest(authorization,
+                                   settings.MAILMAN_ARCHIVER_KEY):
             return HttpResponse(
                 """<html><title>Auth required</title><body>
                 <h1>Authorization Required</h1><p>Please check whether
