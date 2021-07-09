@@ -3,127 +3,137 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 19:00+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-06-29 01:34+0000\n"
+"Last-Translator: Patsagorn Yuenyong <manpatsagorny@gmail.com>\n"
+"Language-Team: Thai <https://hosted.weblate.org/projects/gnu-mailman/"
+"hyperkitty/th/>\n"
+"Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.7.1-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
-msgstr ""
+msgstr "แนบไฟล์"
 
 #: forms.py:65
 msgid "Attach another file"
-msgstr ""
+msgstr "แนบไฟล์อื่นเพิ่ม"
 
 #: forms.py:66
 msgid "Remove this file"
-msgstr ""
+msgstr "นำไฟล์นี้ออก"
 
 #: templates/hyperkitty/404.html:28
 msgid "Error 404"
-msgstr ""
+msgstr "ข้อผิดพลาด 404"
 
 #: templates/hyperkitty/404.html:30 templates/hyperkitty/500.html:31
 msgid "Oh No!"
-msgstr ""
+msgstr "โอ้ไม่นะ!"
 
 #: templates/hyperkitty/404.html:32
 msgid "I can't find this page."
-msgstr ""
+msgstr "ฉันหาหน้านี้ไม่เจอ"
 
 #: templates/hyperkitty/404.html:33 templates/hyperkitty/500.html:34
 msgid "Go back home"
-msgstr ""
+msgstr "กลับหน้าหลัก"
 
 #: templates/hyperkitty/500.html:29
 msgid "Error 500"
-msgstr ""
+msgstr "ข้อผิดพลาด 500"
 
 #: templates/hyperkitty/500.html:33
 msgid "Sorry, but the requested page is unavailable due to a server hiccup."
 msgstr ""
+"ขออภัย แต่คุณจะไม่สามารถเข้าเข้าถึงหน้าที่คุณพยายามอยู่ได้เพราะข้อผิดพลาดของเ"
+"ซิร์ฟเวอร์"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
 msgid "started"
-msgstr ""
+msgstr "เริ่มพูดคุยเมื่อ"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
 msgid "last active:"
-msgstr ""
+msgstr "เคลื่อนไหวล่าสุดเมื่อ:"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:8
 msgid "see this thread"
-msgstr ""
+msgstr "ดูเธรดนี้"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:12
 msgid "(no suggestions)"
-msgstr ""
+msgstr "(ไม่มีคำแนะนำ)"
 
 #: templates/hyperkitty/ajax/temp_message.html:11
 msgid "Sent just now, not yet distributed"
-msgstr ""
+msgstr "ส่งแล้วเมื่อสักครู่ แต่ยังไม่ได้เผยแพร่"
 
 #: templates/hyperkitty/api.html:5
 msgid "REST API"
-msgstr ""
+msgstr "REST API"
 
 #: templates/hyperkitty/api.html:7
 msgid ""
 "HyperKitty comes with a small REST API allowing you to programatically "
 "retrieve emails and information."
 msgstr ""
+"HyperKitty มาพร้อมกับ REST API เล็ก ๆ ที่ให้คุณเข้าถึงข้อมูลอีเมลต่าง ๆ "
+"ได้โดยทางโปรแกรม"
 
 #: templates/hyperkitty/api.html:10
 msgid "Formats"
-msgstr ""
+msgstr "รูปแบบ"
 
 #: templates/hyperkitty/api.html:12
 msgid ""
 "This REST API can return the information into several formats.  The default "
 "format is html to allow human readibility."
 msgstr ""
+"REST API นี้สามารถส่งกลับข้อมูลได้หลายรูปแบบ รูปแบบปริยายคือ HTML "
+"เพื่อให้มนุษย์อ่านได้อย่างสะดวก"
 
 #: templates/hyperkitty/api.html:14
 msgid ""
 "To change the format, just add <em>?format=&lt;FORMAT&gt;</em> to the URL."
 msgstr ""
+"ในการเปลี่ยนรูปแบบ เพียงเพิ่ม <em>?format=&lt;รูปแบบ&gt;</em> ในยูอาร์แอล"
 
 #: templates/hyperkitty/api.html:16
 msgid "The list of available formats is:"
-msgstr ""
+msgstr "รูปแบบที่มีอยู่มีดังนี้:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
-msgstr ""
+msgstr "ข้อความดิบ"
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
-msgstr ""
+msgstr "รายการอีเมลจ่าหน้า"
 
 #: templates/hyperkitty/api.html:27 templates/hyperkitty/api.html:33
 #: templates/hyperkitty/api.html:39 templates/hyperkitty/api.html:45
 #: templates/hyperkitty/api.html:51
 msgid "Endpoint:"
-msgstr ""
+msgstr "จุดเชื่อมปลาย:"
 
 #: templates/hyperkitty/api.html:29
 msgid ""
 "Using this address you will be able to retrieve the information known about "
 "all the mailing lists."
 msgstr ""
+"การใช้ที่อยู่นี้จะทำให้คุณสามารถเข้าถึงข้อมูลเกี่ยวกับอีเมลจ่าหน้าทั้งหมดที่ม"
+"ีอยู่ได้"
 
 #: templates/hyperkitty/api.html:32
 msgid "Threads in a mailing list"
