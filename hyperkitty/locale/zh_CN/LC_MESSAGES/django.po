@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-21 19:00+0530\n"
-"PO-Revision-Date: 2020-04-01 23:49+0000\n"
-"Last-Translator: Derek Zhou <derek@3qin.us>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
-"mailman/hyperkitty/zh_Hans/>\n"
+"PO-Revision-Date: 2021-08-20 10:45+0000\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"gnu-mailman/hyperkitty/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.8-dev\n"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -191,57 +191,47 @@ msgstr "注册"
 
 #: templates/hyperkitty/base.html:90
 msgid "Search this list"
-msgstr "在列表里搜索"
+msgstr "搜索此列表"
 
 #: templates/hyperkitty/base.html:90
-#, fuzzy
-#| msgid "Search this list"
 msgid "Search all lists"
-msgstr "在列表里搜索"
+msgstr "搜索全部列表"
 
 #: templates/hyperkitty/base.html:148
 msgid "Manage this list"
-msgstr "管理这个列表"
+msgstr "管理此列表"
 
 #: templates/hyperkitty/base.html:153
 msgid "Manage lists"
-msgstr "管理所有列表"
+msgstr "管理全部列表"
 
 #: templates/hyperkitty/base.html:191
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "快捷键"
 
 #: templates/hyperkitty/base.html:194
-#, fuzzy
-#| msgid "Thread"
 msgid "Thread View"
-msgstr "线索"
+msgstr "会话视图"
 
 #: templates/hyperkitty/base.html:196
-#, fuzzy
-#| msgid "Delete message(s)"
 msgid "Next unread message"
-msgstr "删除消息"
+msgstr "下一条未读消息"
 
 #: templates/hyperkitty/base.html:197
 msgid "Previous unread message"
-msgstr ""
+msgstr "上一条未读消息"
 
 #: templates/hyperkitty/base.html:198
-#, fuzzy
-#| msgid "All Threads"
 msgid "Jump to all threads"
-msgstr "所有线索"
+msgstr "跳转到全部会话"
 
 #: templates/hyperkitty/base.html:199
-#, fuzzy
-#| msgid "List overview"
 msgid "Jump to MailingList overview"
-msgstr "列表概述"
+msgstr "跳转到邮件列表概览"
 
 #: templates/hyperkitty/base.html:213
 msgid "Powered by"
-msgstr "基于"
+msgstr "技术支持"
 
 #: templates/hyperkitty/base.html:213
 msgid "version"
@@ -257,7 +247,7 @@ msgstr "未实现"
 
 #: templates/hyperkitty/errors/notimplemented.html:14
 msgid "This feature has not been implemented yet, sorry."
-msgstr "对不起, 这项功能尚未实现."
+msgstr "对不起，这项功能尚未实现。"
 
 #: templates/hyperkitty/errors/private.html:7
 msgid "Error: private list"
