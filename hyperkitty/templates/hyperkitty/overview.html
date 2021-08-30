@@ -149,25 +149,25 @@
       <ul class="nav nav-pills" role="tablist">
 
         <li class="nav-item">
-          <a href="#most-recent" aria-controls="most-recent" role="tab" data-toggle="pill" class="nav-link active" aria-selected="true">Recent</a>
+          <a href="#most-recent" aria-controls="most-recent" role="tab" data-toggle="pill" class="nav-link active" aria-selected="true">{% trans 'Recent' %}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#most-active" aria-controls="most-active" role="tab" data-toggle="pill" aria-selected="false">Most Active</a>
+          <a class="nav-link" href="#most-active" aria-controls="most-active" role="tab" data-toggle="pill" aria-selected="false">{% trans 'Most Active' %}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#most-popular" aria-controls="most-popular" role="tab" data-toggle="pill" aria-selected="false">Most Popular</a>
+          <a class="nav-link" href="#most-popular" aria-controls="most-popular" role="tab" data-toggle="pill" aria-selected="false">{% trans 'Most Popular' %}</a>
         </li>
 
         {% if user.is_authenticated %}
 
         <li class="nav-item">
-          <a class="nav-link" href="#flagged" aria-controls="flagged" role="tab" data-toggle="pill" aria-selected="false">Favorites</a>
+          <a class="nav-link" href="#flagged" aria-controls="flagged" role="tab" data-toggle="pill" aria-selected="false">{% trans 'Favorites' %}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#posted-to" aria-controls="posted-to" role="tab" data-toggle="pill" aria-selected="false">Posted</a>
+          <a class="nav-link" href="#posted-to" aria-controls="posted-to" role="tab" data-toggle="pill" aria-selected="false">{% trans 'Posted' %}</a>
         </li>
         {% endif %}
       </ul>
