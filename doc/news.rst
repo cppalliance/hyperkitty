@@ -39,6 +39,11 @@ Security
   which could lead to temporary information leakage.
   (CVE-2021-33038, Closes #380)
 
+- Fix a vulnerability added in !320, which exposes the archives of Private
+  Mailing lists through the new RSS Feeds API due to missing authn/authz checks
+  in the new view. (See !362)
+
+
 .. _news-1.3.4:
 
 1.3.4
