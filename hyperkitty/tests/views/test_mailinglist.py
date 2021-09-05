@@ -129,18 +129,3 @@ class DeleteMailingListTestCase(TestCase):
             soup = BeautifulSoup(response.content, "html.parser")
             self.assertEqual(len(soup.find_all(
                 "span", string=re.compile("Start a n"))), 0)
-
-    def test_feed(self):
-        msg = EmailMessage()
-        msg["From"] = "Dummy Sender <dummy@example.com>"
-        msg["Subject"] = "First Subject"
-        msg["Date"] = "Mon, 02 Feb 2015 13:00:00 +0300"
-        msg["Message-ID"] = "<msg>"
-        msg.set_payload("Dummy message")
-        add_to_list("list@example.com", msg)
-        url = reverse('hk_list_feed', args=('list@example.com', ))
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        soup = BeautifulSoup(response.content, "lxml")
-        self.assertEqual(len(soup.find_all("title",
-                                           string="First Subject")), 1)
