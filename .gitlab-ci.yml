@@ -71,10 +71,10 @@ py39-django32:
   script:
     - tox -e py39-django32
 
-lint:
+qa:
   stage: quality-assurance
   script:
-    - tox -e lint
+    - tox -e qa
 
 lint-js:
   image: node:latest
@@ -91,7 +91,7 @@ docs:
 coverage:
   stage: quality-assurance
   script:
-    - tox -e py39-django32-coverage
+    - tox -e py39-django32-cov
 
 include:
   - template: SAST.gitlab-ci.yml

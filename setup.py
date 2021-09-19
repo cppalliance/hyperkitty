@@ -60,8 +60,8 @@ setup(
     version=__version__,
     description="A web interface to access GNU Mailman v3 archives",
     long_description=open('README.rst').read(),
-    author='HyperKitty Developers',
-    author_email='hyperkitty-devel@lists.fedorahosted.org',
+    author='Mailman Developers',
+    author_email='mailman-developers@python.org',
     url="https://gitlab.com/mailman/hyperkitty",
     license="GPLv3",
     classifiers=[
