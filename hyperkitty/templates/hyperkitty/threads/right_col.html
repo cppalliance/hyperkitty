@@ -37,16 +37,16 @@
     <p class="thread-overview-details">
     <div>
         <i class="fa fa-fw fa-comment"></i>
-        {{ num_comments }} {% trans "comments" %}
+        {% blocktrans %}{{ num_comments }} comments{% endblocktrans %}
     </div>
     <div>
         <i class="fa fa-fw fa-user"></i>
-        {{ thread.participants_count }} {% trans "participants" %}
+        {% blocktrans %}{{ thread.participants_count }} participants{% endblocktrans %}
     </div>
     {% if user.is_authenticated %}
     <div>
-        <i class="fa fa-fw fa-envelope"></i> {{ unread_count }} {% trans "unread" %}
-        <span class="hidden-sm"> {% trans "messages" %}</span>
+        <i class="fa fa-fw fa-envelope"></i>
+        {% blocktrans %}{{ unread_count }} unread <span class="hidden-sm">messages</span>{% endblocktrans %}
     </div>
     {% endif %}
     </p>
