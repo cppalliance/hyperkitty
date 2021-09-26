@@ -29,6 +29,7 @@ News / Changelog
 - Bump jQuery to 3.6.0.
 - Selecting threads by month now works on non-English mobile devices.
   (Closes #384)
+- Replace control characters in RSS feed with HTML entities.  (Closes #388)
 
 Security
 --------

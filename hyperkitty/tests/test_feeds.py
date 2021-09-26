@@ -54,6 +54,21 @@ class TestMailingListFeed(TestCase):
         self.assertEqual(len(soup.find_all("title",
                                            string="First Subject")), 1)
 
+    def test_control_chars(self):
+        msg = EmailMessage()
+        msg["From"] = "Dummy\x01 Sender <dummy@example.com>"
+        msg["Subject"] = "First\x01 Subject"
+        msg["Date"] = "Mon, 02 Feb 2015 13:00:00 +0300"
+        msg["Message-ID"] = "<msg>"
+        msg.set_payload("Dummy\x01 message")
+        add_to_list("list@example.com", msg)
+        url = reverse('hk_list_feed', args=('list@example.com', ))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        soup = BeautifulSoup(response.content, "lxml")
+        self.assertEqual(len(soup.find_all("title",
+                                           string="First&#1; Subject")), 1)
+
     def test_private_feed_authentication(self):
         """Test the authentication checks for a private mailinglist's feed"""
         mlist = MailingList.objects.create(name='list@example.com')
