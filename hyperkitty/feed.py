@@ -34,7 +34,7 @@ def chr2entity(mo):
 
 def sanitize(x):
     if isinstance(x, str):
-        return re.sub(r'([\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\xff])',
+        return re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\xa0]',
                       chr2entity, x)
     else:
         return x
