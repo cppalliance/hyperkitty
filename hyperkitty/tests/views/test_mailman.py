@@ -73,10 +73,9 @@ class ArchiveTestCase(TestCase):
         msg["Date"] = "Fri, 02 Nov 2012 16:07:54"
         msg.set_payload("Fake Message")
         self.message = BytesIO(msg.as_string().encode("utf-8"))
-        self.url = "{}?key={}".format(
-            reverse('hk_mailman_archive'),
-            settings.MAILMAN_ARCHIVER_KEY,
-        )
+        # Pass archiver key using Authorization HTTP header
+        self.auth = {'HTTP_AUTHORIZATION': settings.MAILMAN_ARCHIVER_KEY}
+        self.url = reverse('hk_mailman_archive')
 
     def test_basic(self):
         response = self.client.post(
@@ -85,7 +84,8 @@ class ArchiveTestCase(TestCase):
                 "mlist": "list@example.com",
                 "name": "email.txt",
                 "message": self.message,
-            }
+            },
+            **self.auth,
         )
         self.assertEqual(response.status_code, 200)
         result = json.loads(response.content.decode(response.charset))
@@ -104,10 +104,59 @@ class ArchiveTestCase(TestCase):
                     "mlist": "list@example.com",
                     "name": "email.txt",
                     "message": self.message,
-                }
+                },
+                **self.auth
             )
         self.assertEqual(response.status_code, 400)
         result = json.loads(response.content.decode(response.charset))
         self.assertEqual(result, {
             "error": "test error",
         })
+
+    def test_missing_auth(self):
+        response = self.client.post(
+            self.url,
+            data={
+                'mlist': 'list@example.com',
+                'name': 'email.txt',
+                'message': self.message,
+            },
+        )
+        self.assertContains(
+            response,
+            'The archiver key must be',
+            status_code=401,
+            )
+
+    def test_wrong_auth(self):
+        response = self.client.post(
+            self.url,
+            data={
+                'mlist': 'list@example.com',
+                'name': 'email.txt',
+                'message': self.message,
+            },
+            HTTP_AUTHORIZATION='IncorrectArchiverKey'
+        )
+        self.assertContains(
+            response,
+            'the MAILMAN_ARCHIVER_KEY is provided by you and it is correct',
+            status_code=401,
+            )
+
+    def test_old_auth(self):
+        """Sending key as a GET param tells you to upgrade
+        mailman-hyperkitty"""
+        response = self.client.post(
+            self.url + '?key=foo',
+            data={
+                'mlist': 'list@example.com',
+                'name': 'email.txt',
+                'message': self.message,
+            },
+        )
+        self.assertContains(
+            response,
+            'You need to upgrade the mailman-hyperkitty plugin/package',
+            status_code=401,
+            )
