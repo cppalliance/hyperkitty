@@ -41,9 +41,8 @@ Security
   (CVE-2021-33038, Closes #380)
 - Check the secret archiver key in a way that is resistant to timing attacks.
   (CVE-2021-35057, Closes #387)
-- Pass the secret archiver key in a HTTP header instead of a GET query
-  parameter so it doesn't appear in logs. (CVE-2021-35058, Closes #387)
-
+- Pass the secret archiver key in a HTTP Authorization header instead of a GET
+  query parameter so it doesn't appear in logs. (CVE-2021-35058, Closes #387)
 - Fix a vulnerability added in !320, which exposes the archives of Private
   Mailing lists through the new RSS Feeds API due to missing authn/authz checks
   in the new view. (See !362)

@@ -72,6 +72,7 @@ def key_and_ip_auth(func):
                  assigned to MAILMAN_ARCHIVER_FROM in the settings file.
                 </p></body></html>""",
                 content_type="text/html", status=403)
+
         authorization = request.headers.get('Authorization')
         if authorization is None:
             if request.GET.get('key') is not None:
@@ -80,13 +81,14 @@ def key_and_ip_auth(func):
                 logger.error(
                     'The MAILMAN_ARCHIVER_KEY is now required to be '
                     'sent over the Authorization HTTP header, you need to '
-                    'upgrade the mailman-hyperkitty plugin/package.'
+                    'upgrade the mailman-hyperkitty package to 1.2.0 or newer.'
                 )
                 return HttpResponse(
                     """<html><title>Auth required</title><body>
                     <h1>Authorization Required</h1><p>The archiver key is now
                      required to be sent over the Authorization HTTP header.
-                     You need to upgrade the mailman-hyperkitty plugin/package.
+                     You need to upgrade the mailman-hyperkitty package to
+                     1.2.0 or newer.
                     </p></body></html>""",
                     content_type="text/html", status=401)
             else:
@@ -102,9 +104,11 @@ def key_and_ip_auth(func):
                     </p></body></html>""",
                     content_type="text/html", status=401)
 
+        auth = authorization.split()
         # Use timing-attack safe comparison of secret key
-        if not hmac.compare_digest(authorization,
-                                   settings.MAILMAN_ARCHIVER_KEY):
+        if (len(auth) != 2 or auth[0] != 'Token' or
+                not hmac.compare_digest(
+                    auth[1], settings.MAILMAN_ARCHIVER_KEY)):
             return HttpResponse(
                 """<html><title>Auth required</title><body>
                 <h1>Authorization Required</h1><p>Please check whether
