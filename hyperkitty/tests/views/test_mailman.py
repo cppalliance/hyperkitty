@@ -74,7 +74,8 @@ class ArchiveTestCase(TestCase):
         msg.set_payload("Fake Message")
         self.message = BytesIO(msg.as_string().encode("utf-8"))
         # Pass archiver key using Authorization HTTP header
-        self.auth = {'HTTP_AUTHORIZATION': settings.MAILMAN_ARCHIVER_KEY}
+        self.auth = {
+            'HTTP_AUTHORIZATION': f'Token {settings.MAILMAN_ARCHIVER_KEY}'}
         self.url = reverse('hk_mailman_archive')
 
     def test_basic(self):
@@ -87,7 +88,7 @@ class ArchiveTestCase(TestCase):
             },
             **self.auth,
         )
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200, response.content.decode())
         result = json.loads(response.content.decode(response.charset))
         self.assertEqual(result, {
             "url": "https://example.com/list/list@example.com/message/"
@@ -107,7 +108,7 @@ class ArchiveTestCase(TestCase):
                 },
                 **self.auth
             )
-        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.status_code, 400, response.content.decode())
         result = json.loads(response.content.decode(response.charset))
         self.assertEqual(result, {
             "error": "test error",
@@ -136,7 +137,7 @@ class ArchiveTestCase(TestCase):
                 'name': 'email.txt',
                 'message': self.message,
             },
-            HTTP_AUTHORIZATION='IncorrectArchiverKey'
+            HTTP_AUTHORIZATION='Token IncorrectArchiverKey'
         )
         self.assertContains(
             response,
@@ -157,6 +158,6 @@ class ArchiveTestCase(TestCase):
         )
         self.assertContains(
             response,
-            'You need to upgrade the mailman-hyperkitty plugin/package',
+            'You need to upgrade the mailman-hyperkitty package',
             status_code=401,
             )
