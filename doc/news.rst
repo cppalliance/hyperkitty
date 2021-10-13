@@ -8,7 +8,7 @@ News / Changelog
 1.3.5
 =====
 
-(2021-XX-XX)
+(2021-10-12)
 
 - Added feed for mailing lists with an option to configure the number of items
   in those feeds using ```HYPERKITTY_MLIST_FEED_LENGTH``` which defaults to 30
