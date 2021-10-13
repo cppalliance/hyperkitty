@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-21 19:00+0530\n"
+"POT-Creation-Date: 2021-10-12 18:55-0700\n"
 "PO-Revision-Date: 2020-11-28 14:35+0000\n"
 "Last-Translator: Artem <KovalevArtem.ru@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -20,6 +20,18 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Generator: Weblate 4.4-dev\n"
+
+#: forms.py:53
+msgid "Add a tag..."
+msgstr ""
+
+#: forms.py:55
+msgid "Add"
+msgstr ""
+
+#: forms.py:56
+msgid "use commas to add multiple tags"
+msgstr ""
 
 #: forms.py:64
 msgid "Attach a file"
@@ -76,7 +88,7 @@ msgstr "посмотреть эту ветку"
 msgid "(no suggestions)"
 msgstr "(нет предложений)"
 
-#: templates/hyperkitty/ajax/temp_message.html:11
+#: templates/hyperkitty/ajax/temp_message.html:12
 #, fuzzy
 msgid "Sent just now, not yet distributed"
 msgstr "Отправлено, но не доставлено"
@@ -184,87 +196,87 @@ msgstr "Теги"
 msgid "Using this address you will be able to retrieve the list of tags."
 msgstr "Используя этот адрес, вы сможете получить список тегов."
 
-#: templates/hyperkitty/base.html:56 templates/hyperkitty/base.html:111
+#: templates/hyperkitty/base.html:57 templates/hyperkitty/base.html:112
 msgid "Account"
 msgstr "Аккаунт"
 
-#: templates/hyperkitty/base.html:61 templates/hyperkitty/base.html:116
+#: templates/hyperkitty/base.html:62 templates/hyperkitty/base.html:117
 msgid "Mailman settings"
 msgstr "Настройки Mailman"
 
-#: templates/hyperkitty/base.html:66 templates/hyperkitty/base.html:121
+#: templates/hyperkitty/base.html:67 templates/hyperkitty/base.html:122
 #: templates/hyperkitty/user_profile/base.html:17
 #, fuzzy
 msgid "Posting activity"
 msgstr "История публикаций"
 
-#: templates/hyperkitty/base.html:71 templates/hyperkitty/base.html:126
+#: templates/hyperkitty/base.html:72 templates/hyperkitty/base.html:127
 msgid "Logout"
 msgstr "Выйти"
 
-#: templates/hyperkitty/base.html:77 templates/hyperkitty/base.html:133
+#: templates/hyperkitty/base.html:78 templates/hyperkitty/base.html:134
 msgid "Sign In"
 msgstr "Войти"
 
-#: templates/hyperkitty/base.html:81 templates/hyperkitty/base.html:137
+#: templates/hyperkitty/base.html:82 templates/hyperkitty/base.html:138
 msgid "Sign Up"
 msgstr "Регистрация"
 
-#: templates/hyperkitty/base.html:90
+#: templates/hyperkitty/base.html:91
 msgid "Search this list"
 msgstr "Поиск по этому списку"
 
-#: templates/hyperkitty/base.html:90
+#: templates/hyperkitty/base.html:91
 #, fuzzy
 #| msgid "Search this list"
 msgid "Search all lists"
 msgstr "Поиск по этому списку"
 
-#: templates/hyperkitty/base.html:148
+#: templates/hyperkitty/base.html:149
 msgid "Manage this list"
 msgstr "Управление данным списком"
 
-#: templates/hyperkitty/base.html:153
+#: templates/hyperkitty/base.html:154
 msgid "Manage lists"
 msgstr "Управление списками"
 
-#: templates/hyperkitty/base.html:191
+#: templates/hyperkitty/base.html:192
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: templates/hyperkitty/base.html:194
+#: templates/hyperkitty/base.html:195
 #, fuzzy
 #| msgid "Thread"
 msgid "Thread View"
 msgstr "Ветка"
 
-#: templates/hyperkitty/base.html:196
+#: templates/hyperkitty/base.html:197
 #, fuzzy
 #| msgid "Delete message(s)"
 msgid "Next unread message"
 msgstr "Удалить сообщение(ия)"
 
-#: templates/hyperkitty/base.html:197
+#: templates/hyperkitty/base.html:198
 msgid "Previous unread message"
 msgstr ""
 
-#: templates/hyperkitty/base.html:198
+#: templates/hyperkitty/base.html:199
 #, fuzzy
 #| msgid "All Threads"
 msgid "Jump to all threads"
 msgstr "Все Ветки"
 
-#: templates/hyperkitty/base.html:199
+#: templates/hyperkitty/base.html:200
 #, fuzzy
 #| msgid "List overview"
 msgid "Jump to MailingList overview"
 msgstr "Обзор списка"
 
-#: templates/hyperkitty/base.html:213
+#: templates/hyperkitty/base.html:214
 msgid "Powered by"
 msgstr "На базе"
 
-#: templates/hyperkitty/base.html:213
+#: templates/hyperkitty/base.html:214
 msgid "version"
 msgstr "версия"
 
@@ -320,7 +332,7 @@ msgstr "Новые сообщения в этой ветке"
 
 #: templates/hyperkitty/fragments/overview_threads.html:37
 #: templates/hyperkitty/fragments/thread_left_nav.html:18
-#: templates/hyperkitty/overview.html:75
+#: templates/hyperkitty/overview.html:78
 msgid "All Threads"
 msgstr "Все Ветки"
 
@@ -447,28 +459,27 @@ msgid "inactive"
 msgstr "неактивные"
 
 #: templates/hyperkitty/index.html:142 templates/hyperkitty/index.html:232
-#: templates/hyperkitty/overview.html:91 templates/hyperkitty/overview.html:108
-#: templates/hyperkitty/overview.html:178
-#: templates/hyperkitty/overview.html:185
-#: templates/hyperkitty/overview.html:192
-#: templates/hyperkitty/overview.html:201
-#: templates/hyperkitty/overview.html:209 templates/hyperkitty/reattach.html:39
+#: templates/hyperkitty/overview.html:94 templates/hyperkitty/overview.html:111
+#: templates/hyperkitty/overview.html:181
+#: templates/hyperkitty/overview.html:188
+#: templates/hyperkitty/overview.html:195
+#: templates/hyperkitty/overview.html:204
+#: templates/hyperkitty/overview.html:212 templates/hyperkitty/reattach.html:39
 #: templates/hyperkitty/thread.html:111
 msgid "Loading..."
 msgstr "Загрузка..."
 
 #: templates/hyperkitty/index.html:148 templates/hyperkitty/index.html:221
-#: templates/hyperkitty/overview.html:100
-#: templates/hyperkitty/thread_list.html:36
-#: templates/hyperkitty/threads/right_col.html:44
+#: templates/hyperkitty/overview.html:103
+#: templates/hyperkitty/thread_list.html:40
 #: templates/hyperkitty/threads/right_col.html:97
 #: templates/hyperkitty/threads/summary_thread_large.html:47
 msgid "participants"
 msgstr "участники"
 
 #: templates/hyperkitty/index.html:153 templates/hyperkitty/index.html:226
-#: templates/hyperkitty/overview.html:101
-#: templates/hyperkitty/thread_list.html:41
+#: templates/hyperkitty/overview.html:104
+#: templates/hyperkitty/thread_list.html:45
 msgid "discussions"
 msgstr "обсуждения"
 
@@ -509,7 +520,6 @@ msgstr ""
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
-#: templates/hyperkitty/overview.html:78
 msgid "Delete"
 msgstr "Удалить"
 
@@ -564,20 +574,20 @@ msgstr "в"
 msgid "Send"
 msgstr "Отправить"
 
-#: templates/hyperkitty/messages/message.html:17
+#: templates/hyperkitty/messages/message.html:18
 #, fuzzy, python-format
 msgid "See the profile for %(name)s"
 msgstr "Посмотреть профиль для %(name)s"
 
-#: templates/hyperkitty/messages/message.html:27
+#: templates/hyperkitty/messages/message.html:28
 msgid "Unread"
 msgstr "Непрочитанные"
 
-#: templates/hyperkitty/messages/message.html:44
+#: templates/hyperkitty/messages/message.html:45
 msgid "Sender's time:"
 msgstr "Имя отправителя:"
 
-#: templates/hyperkitty/messages/message.html:50
+#: templates/hyperkitty/messages/message.html:51
 msgid "New subject:"
 msgstr "Новая тема:"
 
@@ -664,27 +674,27 @@ msgstr ""
 "                                от %(name)s\n"
 "                            "
 
-#: templates/hyperkitty/overview.html:35
+#: templates/hyperkitty/overview.html:38
 msgid "Home"
 msgstr "Главная страница"
 
-#: templates/hyperkitty/overview.html:38 templates/hyperkitty/thread.html:78
+#: templates/hyperkitty/overview.html:41 templates/hyperkitty/thread.html:78
 msgid "Stats"
 msgstr "Статистика"
 
-#: templates/hyperkitty/overview.html:41
+#: templates/hyperkitty/overview.html:44
 #, fuzzy
 #| msgid "Thread"
 msgid "Threads"
 msgstr "Ветка"
 
-#: templates/hyperkitty/overview.html:47 templates/hyperkitty/overview.html:58
-#: templates/hyperkitty/thread_list.html:44
+#: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
+#: templates/hyperkitty/thread_list.html:48
 msgid "You must be logged-in to create a thread."
 msgstr "Для создания ветки необходимо войти в систему."
 
-#: templates/hyperkitty/overview.html:60
-#: templates/hyperkitty/thread_list.html:48
+#: templates/hyperkitty/overview.html:63
+#: templates/hyperkitty/thread_list.html:52
 #, fuzzy
 #| msgid ""
 #| "<span class=\"hidden-tn hidden-xs\">Start a </span><span class=\"hidden-"
@@ -696,7 +706,7 @@ msgstr ""
 "<span class=\"hidden-tn hidden-xs\">Создать </span><span class=\"hidden-sm "
 "hidden-md hidden-lg\">Н</span>овую ветку"
 
-#: templates/hyperkitty/overview.html:72
+#: templates/hyperkitty/overview.html:75
 #, fuzzy
 #| msgid ""
 #| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
@@ -708,57 +718,88 @@ msgstr ""
 "<span class=\"hidden-tn hidden-xs\">Управление</span><span class=\"hidden-sm "
 "hidden-md hidden-lg\">П</span>одпиской"
 
-#: templates/hyperkitty/overview.html:88
+#: templates/hyperkitty/overview.html:81
+#, fuzzy
+#| msgid "Entire archive"
+msgid "Delete Archive"
+msgstr "Весь архив"
+
+#: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
 msgstr "Информация о пользовательской активности"
 
-#: templates/hyperkitty/overview.html:90
+#: templates/hyperkitty/overview.html:93
 msgid "Post volume over the past <strong>30</strong> days."
 msgstr "Количество публикаций за последние <strong>30</strong> дней."
 
-#: templates/hyperkitty/overview.html:95
+#: templates/hyperkitty/overview.html:98
 msgid "The following statistics are from"
 msgstr "Следующие статистические данные взяты из"
 
-#: templates/hyperkitty/overview.html:96
+#: templates/hyperkitty/overview.html:99
 msgid "In"
 msgstr "В"
 
-#: templates/hyperkitty/overview.html:97
+#: templates/hyperkitty/overview.html:100
 msgid "the past <strong>30</strong> days:"
 msgstr "последние <strong>30</strong> дней:"
 
-#: templates/hyperkitty/overview.html:106
+#: templates/hyperkitty/overview.html:109
 #, fuzzy
 msgid "Most active posters"
 msgstr "Пользователи с наибольшим количеством публикаций"
 
-#: templates/hyperkitty/overview.html:115
+#: templates/hyperkitty/overview.html:118
 msgid "Prominent posters"
 msgstr "Выдающиеся пользователи"
 
-#: templates/hyperkitty/overview.html:130
+#: templates/hyperkitty/overview.html:133
 #, fuzzy
 msgid "kudos"
 msgstr "поздравления"
 
-#: templates/hyperkitty/overview.html:176
+#: templates/hyperkitty/overview.html:152
+msgid "Recent"
+msgstr ""
+
+#: templates/hyperkitty/overview.html:156
+#, fuzzy
+#| msgid "Most active"
+msgid "Most Active"
+msgstr "Наиболее активные"
+
+#: templates/hyperkitty/overview.html:160
+#, fuzzy
+#| msgid "Most popular"
+msgid "Most Popular"
+msgstr "Наиболее популярные"
+
+#: templates/hyperkitty/overview.html:166
+#: templates/hyperkitty/user_profile/base.html:22
+msgid "Favorites"
+msgstr "Избранное"
+
+#: templates/hyperkitty/overview.html:170
+msgid "Posted"
+msgstr ""
+
+#: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
 msgstr "Последние активные обсуждения"
 
-#: templates/hyperkitty/overview.html:183
+#: templates/hyperkitty/overview.html:186
 msgid "Most popular discussions"
 msgstr "Наиболее популярные обсуждения"
 
-#: templates/hyperkitty/overview.html:190
+#: templates/hyperkitty/overview.html:193
 msgid "Most active discussions"
 msgstr "Наиболее активные обсуждения"
 
-#: templates/hyperkitty/overview.html:197
+#: templates/hyperkitty/overview.html:200
 msgid "Discussions You've Flagged"
 msgstr "Обсуждения, которые Вы отметили"
 
-#: templates/hyperkitty/overview.html:205
+#: templates/hyperkitty/overview.html:208
 msgid "Discussions You've Posted to"
 msgstr "Обсуждения, в которых Вы писали"
 
@@ -821,7 +862,6 @@ msgid "for query"
 msgstr "для запроса"
 
 #: templates/hyperkitty/search_results.html:44
-#: templates/hyperkitty/threads/right_col.html:49
 #: templates/hyperkitty/user_posts.html:34
 msgid "messages"
 msgstr "сообщения"
@@ -879,7 +919,7 @@ msgstr "Показать ответы по ветке"
 msgid "Show replies by date"
 msgstr "Показать ответы по дате"
 
-#: templates/hyperkitty/thread_list.html:56
+#: templates/hyperkitty/thread_list.html:60
 #, fuzzy
 msgid "Sorry no email threads could be found"
 msgstr "К сожалению, не было найдено ни одной ветки электронной почты"
@@ -907,13 +947,19 @@ msgid "days old"
 msgstr "дней от начала"
 
 #: templates/hyperkitty/threads/right_col.html:40
-#: templates/hyperkitty/threads/summary_thread_large.html:52
-msgid "comments"
-msgstr "комментарии"
+#, python-format
+msgid "%(num_comments)s comments"
+msgstr ""
 
-#: templates/hyperkitty/threads/right_col.html:48
-msgid "unread"
-msgstr "непрочитанные"
+#: templates/hyperkitty/threads/right_col.html:44
+#, python-format
+msgid "%(thread.participants_count)s participants"
+msgstr ""
+
+#: templates/hyperkitty/threads/right_col.html:49
+#, python-format
+msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
+msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
@@ -972,6 +1018,10 @@ msgstr ""
 msgid "Most recent thread activity"
 msgstr "Последняя пользовательская активность в ветке"
 
+#: templates/hyperkitty/threads/summary_thread_large.html:52
+msgid "comments"
+msgstr "комментарии"
+
 #: templates/hyperkitty/threads/tags.html:3
 msgid "tags"
 msgstr "теги"
@@ -1010,10 +1060,6 @@ msgstr "История публикаций пользователя"
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "for"
 msgstr "для"
-
-#: templates/hyperkitty/user_profile/base.html:22
-msgid "Favorites"
-msgstr "Избранное"
 
 #: templates/hyperkitty/user_profile/base.html:26
 msgid "Threads you have read"
@@ -1187,11 +1233,11 @@ msgstr "Адрес электронной почты:"
 msgid "This message in gzipped mbox format"
 msgstr "Это сообщение в архиве (gzip) в формате mbox"
 
-#: views/message.py:200
+#: views/message.py:201
 msgid "Your reply has been sent and is being processed."
 msgstr ""
 
-#: views/message.py:204
+#: views/message.py:205
 #, fuzzy
 #| msgid "You have not posted to this list (yet)."
 msgid ""
@@ -1199,12 +1245,12 @@ msgid ""
 "  You have been subscribed to {} list."
 msgstr "Вы не публиковали ничего в этот список (пока что)."
 
-#: views/message.py:287
+#: views/message.py:288
 #, python-format
 msgid "Could not delete message %(msg_id_hash)s: %(error)s"
 msgstr "Не удалось удалить сообщение %(msg_id_hash)s: %(error)s"
 
-#: views/message.py:296
+#: views/message.py:297
 #, python-format
 msgid "Successfully deleted %(count)s messages."
 msgstr "Успешно удалено %(count)s сообщений."
@@ -1238,11 +1284,11 @@ msgstr "Вы не отметили ни одного обсуждения (по�
 msgid "You have not posted to this list (yet)."
 msgstr "Вы не публиковали ничего в этот список (пока что)."
 
-#: views/mlist.py:353
+#: views/mlist.py:352
 msgid "You must be a staff member to delete a MailingList"
 msgstr ""
 
-#: views/mlist.py:367
+#: views/mlist.py:366
 #, fuzzy
 #| msgid "Successfully deleted %(count)s messages."
 msgid "Successfully deleted {}"
@@ -1256,6 +1302,9 @@ msgstr "Ошибка парсинга: %(error)s"
 #: views/thread.py:168
 msgid "This thread in gzipped mbox format"
 msgstr "Эта ветка в архиве (gzip) в формате mbox"
+
+#~ msgid "unread"
+#~ msgstr "непрочитанные"
 
 #~ msgid "Go to"
 #~ msgstr "Перейти в"
