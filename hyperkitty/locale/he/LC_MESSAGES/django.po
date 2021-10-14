@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 18:55-0700\n"
-"PO-Revision-Date: 2020-12-21 20:06+0000\n"
+"PO-Revision-Date: 2021-10-13 07:40+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/he/>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr ""
+msgstr "הוספת תגית…"
 
 #: forms.py:55
 msgid "Add"
-msgstr ""
+msgstr "הוספה"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "אפשר להפריד בין תגיות עם פסיק"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -673,10 +673,8 @@ msgstr ""
 "span>ינוי"
 
 #: templates/hyperkitty/overview.html:81
-#, fuzzy
-#| msgid "Entire archive"
 msgid "Delete Archive"
-msgstr "כל הארכיון"
+msgstr "מחיקת הארכיון"
 
 #: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
@@ -712,17 +710,13 @@ msgstr "תודות"
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
-msgstr ""
+msgstr "אחרונים"
 
 #: templates/hyperkitty/overview.html:156
-#, fuzzy
-#| msgid "Most active"
 msgid "Most Active"
-msgstr "הפעיל ביותר"
+msgstr "הפעילים ביותר"
 
 #: templates/hyperkitty/overview.html:160
-#, fuzzy
-#| msgid "Most popular"
 msgid "Most Popular"
 msgstr "הנפוצים ביותר"
 
@@ -733,7 +727,7 @@ msgstr "מועדפים"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
-msgstr ""
+msgstr "פרסום"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
@@ -893,17 +887,17 @@ msgstr "ימי ותק"
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s הערות"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(thread.participants_count)s participants"
-msgstr ""
+msgstr "%(thread.participants_count)s משתתפים"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
-msgstr ""
+msgstr "%(unread_count)s <span class=\"hidden-sm\">הודעות</span> שלא נקראו"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
