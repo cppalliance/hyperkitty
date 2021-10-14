@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 18:55-0700\n"
-"PO-Revision-Date: 2021-01-04 02:52+0000\n"
+"PO-Revision-Date: 2021-10-14 00:23+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/tr/>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr ""
+msgstr "Etiket ekle..."
 
 #: forms.py:55
 msgid "Add"
-msgstr ""
+msgstr "Ekle"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "birden çok etiket eklemek için virgül kullanın"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -680,10 +680,8 @@ msgstr ""
 "\">yönet</span>"
 
 #: templates/hyperkitty/overview.html:81
-#, fuzzy
-#| msgid "Entire archive"
 msgid "Delete Archive"
-msgstr "Tüm arşiv"
+msgstr "Arşivi Sil"
 
 #: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
@@ -719,28 +717,24 @@ msgstr "bravo"
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
-msgstr ""
+msgstr "Yeni"
 
 #: templates/hyperkitty/overview.html:156
-#, fuzzy
-#| msgid "Most active"
 msgid "Most Active"
-msgstr "En etkin"
+msgstr "En Etkin"
 
 #: templates/hyperkitty/overview.html:160
-#, fuzzy
-#| msgid "Most popular"
 msgid "Most Popular"
-msgstr "En popüler"
+msgstr "En Popüler"
 
 #: templates/hyperkitty/overview.html:166
 #: templates/hyperkitty/user_profile/base.html:22
 msgid "Favorites"
-msgstr "Sık kullanılanlar"
+msgstr "Sık Kullanılanlar"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
-msgstr ""
+msgstr "Gönderildi"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
@@ -900,17 +894,17 @@ msgstr "günlük"
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s yorum"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(thread.participants_count)s participants"
-msgstr ""
+msgstr "%(thread.participants_count)s katılımcı"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
-msgstr ""
+msgstr "%(unread_count)s okunmamış <span class=\"hidden-sm\">mesaj</span>"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
