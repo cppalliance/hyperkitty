@@ -141,6 +141,7 @@ class CommandTestCase(TestCase):
         msg2 = EmailMessage()
         msg2["From"] = "dummy@example.com"
         msg2["Date"] = "01 Feb 2015 12:00:00"
+        msg2["Message-ID"] = ''
         msg2.set_payload("msg2")
         mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
         mbox.add(msg)
