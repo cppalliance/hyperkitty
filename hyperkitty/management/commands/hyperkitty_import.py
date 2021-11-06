@@ -215,8 +215,11 @@ class DbImporter(object):
                 message.set_unixfrom(unixfrom)
             if message['message-id'] is None:
                 message['Message-ID'] = make_msgid('generated')
-            message.replace_header(
-                'Message-ID', self._fix_mid(message['message-id']))
+            if message['message-id'].strip() == '':
+                message.replace_header('Message-ID', make_msgid('generated'))
+            if message['message-id'] != self._fix_mid(message['message-id']):
+                message.replace_header(
+                    'Message-ID', self._fix_mid(message['message-id']))
             # Now insert the message
             try:
                 with transaction.atomic():

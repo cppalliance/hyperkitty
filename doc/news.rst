@@ -3,6 +3,16 @@ News / Changelog
 ================
 
 
+.. _news-1.3.6:
+
+1.3.6
+=====
+
+(xxxx-xx-xx)
+
+- Fixed an issue in hyperkitty_import with an empty Message-ID.  (Closes #396)
+
+
 .. _news-1.3.5:
 
 1.3.5
