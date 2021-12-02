@@ -207,7 +207,7 @@ class FindTestCase(TestCase):
         response = self.client.get(reverse("hk_root"))
         self.assertEqual(response.status_code, 200)
         self.assertTrue(
-            '<label><input type="checkbox" value="inactive" />Hide inactive'
+            '<label><input type="checkbox" value="inactive" /> Hide inactive'
             '</label>' in
             str(response.content))
 
@@ -218,7 +218,7 @@ class FindTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(
             '<label><input type="checkbox" value="inactive" checked="checked"'
-            '/>Hide inactive</label>' in
+            '/> Hide inactive</label>' in
             str(response.content))
 
 
