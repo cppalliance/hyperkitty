@@ -4,7 +4,7 @@ from django.conf import settings
 
 import mistune
 from mistune.plugins.extra import plugin_url
-from mistune.scanner import escape_html, escape_url
+from mistune.util import escape_html, escape_url
 
 
 class MyRenderer(mistune.HTMLRenderer):
