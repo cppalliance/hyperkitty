@@ -368,6 +368,7 @@ REST_FRAMEWORK = {
 #
 Q_CLUSTER = {
     'timeout': 300,
+    'retry': 360,
     'save_limit': 100,
     'orm': 'default',
 }
