@@ -12,6 +12,7 @@ News / Changelog
 
 - Fixed an issue in hyperkitty_import with an empty Message-ID.  (Closes #396)
 - Set Q_CLUSTER retry > timeout in example_project.  (Closes #402)
+- Set DEFAULT_AUTO_FIELD to silence errors with Django >= 3.2.
 
 
 .. _news-1.3.5:
