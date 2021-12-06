@@ -307,6 +307,8 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 # Asynchronous tasks
 #
 Q_CLUSTER = {
+    'retry': 60,
+    'timeout': 30,
     'orm': 'default',
     'sync': True,
 }
