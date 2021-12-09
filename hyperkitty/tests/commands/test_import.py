@@ -226,7 +226,12 @@ msg1
         # The message should be archived.
         self.assertEqual(Email.objects.count(), 1)
         # But there should be an error message.
-        self.assertIn("Can't get date header in message", output.getvalue())
+        if sys.hexversion < 0x30a0000:
+            self.assertIn("Can't get date header in message",
+                          output.getvalue())
+        else:
+            self.assertIn("Bad datetime in date header in message",
+                          output.getvalue())
 
     def test_no_date_but_resent_date(self):
         # If there's no Dete: header, fall back to Resent-Date:.
