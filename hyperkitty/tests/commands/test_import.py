@@ -234,7 +234,7 @@ msg1
                           output.getvalue())
 
     def test_no_date_but_resent_date(self):
-        # If there's no Dete: header, fall back to Resent-Date:.
+        # If there's no Date: header, fall back to Resent-Date:.
         with open(get_test_file("resent-date.txt")) as email_file:
             msg = message_from_file(email_file)
         mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
@@ -289,7 +289,7 @@ msg1
                      os.path.join(self.tmpdir, "test.mbox"), **kw)
         # The message should be archived.
         self.assertEqual(Email.objects.count(), 1)
-        # The archived_date should be Dec  1 00:56:19 1999 1999
+        # The archived_date should be Dec  1 00:56:19 1999.
         self.assertEqual(Email.objects.all()[0].date,
                          datetime(1999, 12, 1, 0, 56, 19, tzinfo=utc))
 
