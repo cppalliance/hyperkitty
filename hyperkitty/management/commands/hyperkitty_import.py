@@ -145,7 +145,6 @@ class DbImporter(object):
                         header, unquote(message.get("message-id", 'n/a')),
                         report_name, e))
             return None
-
         return date
 
     def _fix_mid(self, mid):
