@@ -131,7 +131,14 @@ class DbImporter(object):
     def _get_date(self, message, header, report_name):
         try:
             date = message.get(header)
-        except (TypeError, ValueError) as e:
+            if date and not date.datetime:
+                if self.verbose:
+                    self.stderr.write(
+                        "Bad datetime in {} header in message {}{}.".format(
+                            header, unquote(message.get("message-id", 'n/a')),
+                            report_name))
+                return None
+        except (AttributeError, TypeError, ValueError) as e:
             if self.verbose:
                 self.stderr.write(
                     "Can't get {} header in message {}{}: {}.".format(

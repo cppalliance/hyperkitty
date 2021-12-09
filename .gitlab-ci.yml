@@ -71,6 +71,17 @@ py39-django32:
   script:
     - tox -e py39-django32
 
+py310-django32:
+  stage: test
+  # TODO: at the time of writing the container in use shipped a python 3.10
+  # alpha which seemed to cause issues for the discovery of the lxml package.
+  # Running tests locally with a stable python 3.10 release did not exhibit any
+  # issues, so the allow_failure should be removed once the container is
+  # updated.
+  allow_failure: true
+  script:
+    - tox -e py310-django32
+
 qa:
   stage: quality-assurance
   script:
