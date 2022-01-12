@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 18:55-0700\n"
-"PO-Revision-Date: 2021-08-27 11:48+0000\n"
-"Last-Translator: Cube Kassaki <2524737581@qq.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
-"mailman/hyperkitty/zh_Hans/>\n"
+"PO-Revision-Date: 2021-11-18 00:53+0000\n"
+"Last-Translator: Eric <spice2wolf@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"gnu-mailman/hyperkitty/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8.1-dev\n"
+"X-Generator: Weblate 4.9.1-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -284,10 +284,8 @@ msgid "You must be logged-in to vote."
 msgstr "你必须先登录才能投票."
 
 #: templates/hyperkitty/fragments/month_list.html:6
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads by"
-msgstr "线索"
+msgstr "帖子发起人"
 
 #: templates/hyperkitty/fragments/month_list.html:6
 msgid " month"
@@ -636,10 +634,8 @@ msgid "Stats"
 msgstr "统计"
 
 #: templates/hyperkitty/overview.html:44
-#, fuzzy
-#| msgid "Thread"
 msgid "Threads"
-msgstr "线索"
+msgstr "帖子"
 
 #: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
 #: templates/hyperkitty/thread_list.html:48
@@ -648,34 +644,24 @@ msgstr "你登录后才能创建线索."
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:52
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Start a </span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">N</span>ew thread"
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">启用一个</span><span class=\"hidden-sm "
-"hidden-md hidden-lg\"></span>新线索"
+"<span class=\"d-none d-md-inline\">开个</span><span class=\"d-md-none\""
+">新</span>帖"
 
 #: templates/hyperkitty/overview.html:75
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">S</span>ubscription"
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">管理</span><span class=\"hidden-sm "
-"hidden-md hidden-lg\"></span>订阅"
+"<span class=\"d-none d-md-inline\">管理</span><span class=\"d-md-none\""
+">订</span>阅"
 
 #: templates/hyperkitty/overview.html:81
-#, fuzzy
-#| msgid "Entire archive"
 msgid "Delete Archive"
-msgstr "全部档案"
+msgstr "删除存档"
 
 #: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
@@ -714,14 +700,10 @@ msgid "Recent"
 msgstr ""
 
 #: templates/hyperkitty/overview.html:156
-#, fuzzy
-#| msgid "Most active"
 msgid "Most Active"
 msgstr "最活跃的"
 
 #: templates/hyperkitty/overview.html:160
-#, fuzzy
-#| msgid "Most popular"
 msgid "Most Popular"
 msgstr "最流行的"
 
