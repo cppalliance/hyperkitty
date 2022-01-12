@@ -8,28 +8,28 @@ msgstr ""
 "Project-Id-Version: Traducao_Hyperkitty1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 18:55-0700\n"
-"PO-Revision-Date: 2021-08-31 21:34+0000\n"
-"Last-Translator: Luiz Angelo Daros de Luca <luizluca@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/gnu-"
-"mailman/hyperkitty/pt_BR/>\n"
+"PO-Revision-Date: 2021-10-15 01:36+0000\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"gnu-mailman/hyperkitty/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.8.1-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr ""
+msgstr "Adicionar uma etiqueta..."
 
 #: forms.py:55
 msgid "Add"
-msgstr ""
+msgstr "Adicionar"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "use vírgulas para adicionar várias etiquetas"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -684,10 +684,8 @@ msgstr ""
 "\">I</span>nscrição"
 
 #: templates/hyperkitty/overview.html:81
-#, fuzzy
-#| msgid "Entire archive"
 msgid "Delete Archive"
-msgstr "Arquivo inteiro"
+msgstr "Excluir arquivo"
 
 #: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
@@ -723,19 +721,15 @@ msgstr "elogios"
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
-msgstr ""
+msgstr "Recentes"
 
 #: templates/hyperkitty/overview.html:156
-#, fuzzy
-#| msgid "Most active"
 msgid "Most Active"
-msgstr "Mais ativo"
+msgstr "Mais ativos"
 
 #: templates/hyperkitty/overview.html:160
-#, fuzzy
-#| msgid "Most popular"
 msgid "Most Popular"
-msgstr "Mais popular"
+msgstr "Mais populares"
 
 #: templates/hyperkitty/overview.html:166
 #: templates/hyperkitty/user_profile/base.html:22
@@ -744,7 +738,7 @@ msgstr "Favoritos"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
-msgstr ""
+msgstr "Postado"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
@@ -904,17 +898,17 @@ msgstr "dias antigos"
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s comentários"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(thread.participants_count)s participants"
-msgstr ""
+msgstr "%(thread.participants_count)s participantes"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
-msgstr ""
+msgstr "%(unread_count)s <span class=\"hidden-sm\">mensagens</span> não lidas"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
