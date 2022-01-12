@@ -3,422 +3,440 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 18:55-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-01-12 21:55+0000\n"
+"Last-Translator: Sebastian Machat <sebi@outlook.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
+"hyperkitty/cs/>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr ""
+msgstr "Přidat tag..."
 
 #: forms.py:55
 msgid "Add"
-msgstr ""
+msgstr "Přidat"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "jako oddělovač vkládaných tagů použijte čárku"
 
 #: forms.py:64
 msgid "Attach a file"
-msgstr ""
+msgstr "Přiložit soubor"
 
 #: forms.py:65
 msgid "Attach another file"
-msgstr ""
+msgstr "Přiložit další soubor"
 
 #: forms.py:66
 msgid "Remove this file"
-msgstr ""
+msgstr "Odstranit soubor"
 
 #: templates/hyperkitty/404.html:28
 msgid "Error 404"
-msgstr ""
+msgstr "Chyba 404"
 
 #: templates/hyperkitty/404.html:30 templates/hyperkitty/500.html:31
 msgid "Oh No!"
-msgstr ""
+msgstr "Ale ne!"
 
 #: templates/hyperkitty/404.html:32
 msgid "I can't find this page."
-msgstr ""
+msgstr "Stránku nemohu najít."
 
 #: templates/hyperkitty/404.html:33 templates/hyperkitty/500.html:34
 msgid "Go back home"
-msgstr ""
+msgstr "Zpět domů"
 
 #: templates/hyperkitty/500.html:29
 msgid "Error 500"
-msgstr ""
+msgstr "Chyba 500"
 
 #: templates/hyperkitty/500.html:33
 msgid "Sorry, but the requested page is unavailable due to a server hiccup."
 msgstr ""
+"Omlouváme se, ale kvůli chybce na serveru je požadovaná stránka nedostupná."
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
+#, fuzzy
 msgid "started"
-msgstr ""
+msgstr "začal"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
 msgid "last active:"
-msgstr ""
+msgstr "naposledy aktivní:"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:8
 msgid "see this thread"
-msgstr ""
+msgstr "zobrazit toto vlákno"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:12
 msgid "(no suggestions)"
-msgstr ""
+msgstr "(žádné návrhy)"
 
 #: templates/hyperkitty/ajax/temp_message.html:12
 msgid "Sent just now, not yet distributed"
-msgstr ""
+msgstr "Čerstvě odeslán, ale zatím nerozeslán"
 
 #: templates/hyperkitty/api.html:5
 msgid "REST API"
-msgstr ""
+msgstr "REST API"
 
 #: templates/hyperkitty/api.html:7
 msgid ""
 "HyperKitty comes with a small REST API allowing you to programatically "
 "retrieve emails and information."
 msgstr ""
+"HyperKitty obsahuje jednoduché REST API, které Vám umožňuje získávat emaily "
+"a informace vlastním kódem."
 
 #: templates/hyperkitty/api.html:10
 msgid "Formats"
-msgstr ""
+msgstr "Formáty"
 
 #: templates/hyperkitty/api.html:12
 msgid ""
 "This REST API can return the information into several formats.  The default "
 "format is html to allow human readibility."
 msgstr ""
+"Toto REST API umí vrátit informace v různých formátech. Výchozím formátem "
+"je, pro srozumitelnost lidem, html."
 
 #: templates/hyperkitty/api.html:14
 msgid ""
 "To change the format, just add <em>?format=&lt;FORMAT&gt;</em> to the URL."
 msgstr ""
+"Pro změnu formátu jednoduše do URL přidejte <em>?format=&lt;FORMAT&gt;</em>."
 
 #: templates/hyperkitty/api.html:16
 msgid "The list of available formats is:"
-msgstr ""
+msgstr "Seznam dostupných formátů:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
-msgstr ""
+msgstr "Plain text"
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
-msgstr ""
+msgstr "Seznam mailing-listů"
 
 #: templates/hyperkitty/api.html:27 templates/hyperkitty/api.html:33
 #: templates/hyperkitty/api.html:39 templates/hyperkitty/api.html:45
 #: templates/hyperkitty/api.html:51
 msgid "Endpoint:"
-msgstr ""
+msgstr "Endpoint:"
 
 #: templates/hyperkitty/api.html:29
 msgid ""
 "Using this address you will be able to retrieve the information known about "
 "all the mailing lists."
 msgstr ""
+"Pomocí této adresy budete moci získat dostupné informace o všech mailing-"
+"listech."
 
 #: templates/hyperkitty/api.html:32
 msgid "Threads in a mailing list"
-msgstr ""
+msgstr "Vlákna v mailing-listu"
 
 #: templates/hyperkitty/api.html:35
 msgid ""
 "Using this address you will be able to retrieve information about all the "
 "threads on the specified mailing list."
 msgstr ""
+"Pomocí této adresy budete moci získat dostupné informace o všech vláknech v "
+"daném mailing-listu."
 
 #: templates/hyperkitty/api.html:38
 msgid "Emails in a thread"
-msgstr ""
+msgstr "Emaily ve vlákně"
 
 #: templates/hyperkitty/api.html:41
 msgid ""
 "Using this address you will be able to retrieve the list of emails in a "
 "mailing list thread."
 msgstr ""
+"Pomocí této adresy budete moci získat seznam emailů ve vlákně mailing-listu."
 
 #: templates/hyperkitty/api.html:44
 msgid "An email in a mailing list"
-msgstr ""
+msgstr "Email v mailing-listu"
 
 #: templates/hyperkitty/api.html:47
 msgid ""
 "Using this address you will be able to retrieve the information known about "
 "a specific email on the specified mailing list."
 msgstr ""
+"Pomocí této adresy budete moci získat dostupné informace o konkrétním emailu "
+"v daném mailing-listu."
 
 #: templates/hyperkitty/api.html:50
 msgid "Tags"
-msgstr ""
+msgstr "Tagy"
 
 #: templates/hyperkitty/api.html:53
 msgid "Using this address you will be able to retrieve the list of tags."
-msgstr ""
+msgstr "Pomocí této adresy budete moci získat seznam tagů."
 
 #: templates/hyperkitty/base.html:57 templates/hyperkitty/base.html:112
 msgid "Account"
-msgstr ""
+msgstr "Účet"
 
 #: templates/hyperkitty/base.html:62 templates/hyperkitty/base.html:117
 msgid "Mailman settings"
-msgstr ""
+msgstr "Nastavení Mailmanu"
 
 #: templates/hyperkitty/base.html:67 templates/hyperkitty/base.html:122
 #: templates/hyperkitty/user_profile/base.html:17
 msgid "Posting activity"
-msgstr ""
+msgstr "Příspěvková aktivita"
 
 #: templates/hyperkitty/base.html:72 templates/hyperkitty/base.html:127
 msgid "Logout"
-msgstr ""
+msgstr "Odhlásit se"
 
 #: templates/hyperkitty/base.html:78 templates/hyperkitty/base.html:134
 msgid "Sign In"
-msgstr ""
+msgstr "Přihlásit se"
 
 #: templates/hyperkitty/base.html:82 templates/hyperkitty/base.html:138
 msgid "Sign Up"
-msgstr ""
+msgstr "Zaregistrovat se"
 
 #: templates/hyperkitty/base.html:91
 msgid "Search this list"
-msgstr ""
+msgstr "Prohledat tento list"
 
 #: templates/hyperkitty/base.html:91
 msgid "Search all lists"
-msgstr ""
+msgstr "Prohledat všechny listy"
 
 #: templates/hyperkitty/base.html:149
 msgid "Manage this list"
-msgstr ""
+msgstr "Spravovat tento list"
 
 #: templates/hyperkitty/base.html:154
 msgid "Manage lists"
-msgstr ""
+msgstr "Spravovat listy"
 
 #: templates/hyperkitty/base.html:192
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Klávesové zkratky"
 
 #: templates/hyperkitty/base.html:195
 msgid "Thread View"
-msgstr ""
+msgstr "Zobrazení vláken"
 
 #: templates/hyperkitty/base.html:197
 msgid "Next unread message"
-msgstr ""
+msgstr "Následující nepřečtená zpráva"
 
 #: templates/hyperkitty/base.html:198
 msgid "Previous unread message"
-msgstr ""
+msgstr "Předchozí nepřečtená zpráva"
 
 #: templates/hyperkitty/base.html:199
 msgid "Jump to all threads"
-msgstr ""
+msgstr "Přejít na všechna vlákna"
 
 #: templates/hyperkitty/base.html:200
 msgid "Jump to MailingList overview"
-msgstr ""
+msgstr "Přejít na přehled Mailing-listu"
 
 #: templates/hyperkitty/base.html:214
 msgid "Powered by"
-msgstr ""
+msgstr "Běží na"
 
 #: templates/hyperkitty/base.html:214
 msgid "version"
-msgstr ""
+msgstr "verze"
 
 #: templates/hyperkitty/errors/notimplemented.html:7
 msgid "Not implemented yet"
-msgstr ""
+msgstr "Zatím nebylo vyvinuto"
 
 #: templates/hyperkitty/errors/notimplemented.html:12
 msgid "Not implemented"
-msgstr ""
+msgstr "Nevyvinuto"
 
 #: templates/hyperkitty/errors/notimplemented.html:14
 msgid "This feature has not been implemented yet, sorry."
-msgstr ""
+msgstr "Omlouváme se, tato funkce zatím nebyla vyvinuta."
 
 #: templates/hyperkitty/errors/private.html:7
 msgid "Error: private list"
-msgstr ""
+msgstr "Chyba: soukromý list"
 
 #: templates/hyperkitty/errors/private.html:19
 msgid ""
 "This mailing list is private. You must be subscribed to view the archives."
 msgstr ""
+"Tento mailing-list je soukromý. Pro zobrazení archivu se musíte přihlásit."
 
 #: templates/hyperkitty/fragments/like_form.html:16
 msgid "You like it (cancel)"
-msgstr ""
+msgstr "Toto se Vám líbí (zrušit)"
 
 #: templates/hyperkitty/fragments/like_form.html:24
 msgid "You dislike it (cancel)"
-msgstr ""
+msgstr "Toto se Vám nelíbí (zrušit)"
 
 #: templates/hyperkitty/fragments/like_form.html:27
 #: templates/hyperkitty/fragments/like_form.html:31
 msgid "You must be logged-in to vote."
-msgstr ""
+msgstr "Pro hlasování se musíte přihlásit."
 
 #: templates/hyperkitty/fragments/month_list.html:6
 msgid "Threads by"
-msgstr ""
+msgstr "Vlákna podle"
 
 #: templates/hyperkitty/fragments/month_list.html:6
 msgid " month"
-msgstr ""
+msgstr " měsíc"
 
 #: templates/hyperkitty/fragments/overview_threads.html:12
 msgid "New messages in this thread"
-msgstr ""
+msgstr "Nové zprávy v tomto vlákně"
 
 #: templates/hyperkitty/fragments/overview_threads.html:37
 #: templates/hyperkitty/fragments/thread_left_nav.html:18
 #: templates/hyperkitty/overview.html:78
 msgid "All Threads"
-msgstr ""
+msgstr "Všechna vlákna"
 
 #: templates/hyperkitty/fragments/overview_top_posters.html:18
 msgid "See the profile"
-msgstr ""
+msgstr "Zobrazit profil"
 
 #: templates/hyperkitty/fragments/overview_top_posters.html:24
 msgid "posts"
-msgstr ""
+msgstr "příspěvky"
 
 #: templates/hyperkitty/fragments/overview_top_posters.html:29
 msgid "No posters this month (yet)."
-msgstr ""
+msgstr "Tento měsíc zatím nikdo nepřispěl."
 
 #: templates/hyperkitty/fragments/send_as.html:5
 msgid "This message will be sent as:"
-msgstr ""
+msgstr "Tato zpráva bude odeslána jako:"
 
 #: templates/hyperkitty/fragments/send_as.html:6
 msgid "Change sender"
-msgstr ""
+msgstr "Změna odesílatele"
 
 #: templates/hyperkitty/fragments/send_as.html:16
 msgid "Link another address"
-msgstr ""
+msgstr "Propojit jinou adresu"
 
 #: templates/hyperkitty/fragments/send_as.html:20
 msgid ""
 "If you aren't a current list member, sending this message will subscribe you."
 msgstr ""
+"Pokud nejste v současnosti členem mail-listu, odeslání této zprávy Vás k "
+"odběru automaticky přihlásí."
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:11
 msgid "List overview"
-msgstr ""
+msgstr "Přehled listů"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:27 views/message.py:75
 #: views/mlist.py:102 views/thread.py:167
 msgid "Download"
-msgstr ""
+msgstr "Stáhnout"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:30
 msgid "Past 30 days"
-msgstr ""
+msgstr "Uplynulých 30 dní"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:31
 msgid "This month"
-msgstr ""
+msgstr "Tento měsíc"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:34
 msgid "Entire archive"
-msgstr ""
+msgstr "Celý archiv"
 
 #: templates/hyperkitty/index.html:9 templates/hyperkitty/index.html:63
 msgid "Available lists"
-msgstr ""
+msgstr "Dostupné listy"
 
 #: templates/hyperkitty/index.html:22 templates/hyperkitty/index.html:27
 #: templates/hyperkitty/index.html:72
 msgid "Most popular"
-msgstr ""
+msgstr "Nejoblíbenější"
 
 #: templates/hyperkitty/index.html:26
 msgid "Sort by number of recent participants"
-msgstr ""
+msgstr "Seřadit podle počtu nedávných účastníků"
 
 #: templates/hyperkitty/index.html:32 templates/hyperkitty/index.html:37
 #: templates/hyperkitty/index.html:75
 msgid "Most active"
-msgstr ""
+msgstr "Nejaktivnější"
 
 #: templates/hyperkitty/index.html:36
 msgid "Sort by number of recent discussions"
-msgstr ""
+msgstr "Seřadit dle počtu nedávných diskuzí"
 
 #: templates/hyperkitty/index.html:42 templates/hyperkitty/index.html:47
 #: templates/hyperkitty/index.html:78
 msgid "By name"
-msgstr ""
+msgstr "Dle jména"
 
 #: templates/hyperkitty/index.html:46
 msgid "Sort alphabetically"
-msgstr ""
+msgstr "Abecedně seřadit"
 
 #: templates/hyperkitty/index.html:52 templates/hyperkitty/index.html:57
 #: templates/hyperkitty/index.html:81
 msgid "Newest"
-msgstr ""
+msgstr "Nejnovější"
 
 #: templates/hyperkitty/index.html:56
 msgid "Sort by list creation date"
-msgstr ""
+msgstr "Seřadit podle data vytvoření"
 
 #: templates/hyperkitty/index.html:68
 msgid "Sort by"
-msgstr ""
+msgstr "Seřadit podle"
 
 #: templates/hyperkitty/index.html:91
 msgid "Hide inactive"
-msgstr ""
+msgstr "Schovat neaktivní"
 
 #: templates/hyperkitty/index.html:92
 msgid "Hide private"
-msgstr ""
+msgstr "Skrýt soukromé"
 
 #: templates/hyperkitty/index.html:99
 msgid "Find list"
-msgstr ""
+msgstr "Vyhledat list"
 
 #: templates/hyperkitty/index.html:123 templates/hyperkitty/index.html:193
 #: templates/hyperkitty/user_profile/last_views.html:34
 #: templates/hyperkitty/user_profile/last_views.html:73
 msgid "new"
-msgstr ""
+msgstr "nový"
 
 #: templates/hyperkitty/index.html:134 templates/hyperkitty/index.html:204
 msgid "private"
-msgstr ""
+msgstr "soukromé"
 
 #: templates/hyperkitty/index.html:136 templates/hyperkitty/index.html:206
 msgid "inactive"
-msgstr ""
+msgstr "neaktivní"
 
 #: templates/hyperkitty/index.html:142 templates/hyperkitty/index.html:232
 #: templates/hyperkitty/overview.html:94 templates/hyperkitty/overview.html:111
@@ -429,7 +447,7 @@ msgstr ""
 #: templates/hyperkitty/overview.html:212 templates/hyperkitty/reattach.html:39
 #: templates/hyperkitty/thread.html:111
 msgid "Loading..."
-msgstr ""
+msgstr "Načítání..."
 
 #: templates/hyperkitty/index.html:148 templates/hyperkitty/index.html:221
 #: templates/hyperkitty/overview.html:103
@@ -437,17 +455,17 @@ msgstr ""
 #: templates/hyperkitty/threads/right_col.html:97
 #: templates/hyperkitty/threads/summary_thread_large.html:47
 msgid "participants"
-msgstr ""
+msgstr "účastníci"
 
 #: templates/hyperkitty/index.html:153 templates/hyperkitty/index.html:226
 #: templates/hyperkitty/overview.html:104
 #: templates/hyperkitty/thread_list.html:45
 msgid "discussions"
-msgstr ""
+msgstr "diskuze"
 
 #: templates/hyperkitty/index.html:162 templates/hyperkitty/index.html:240
 msgid "No archived list yet."
-msgstr ""
+msgstr "Žádné listy zatím nebyly archivovány."
 
 #: templates/hyperkitty/index.html:174
 #: templates/hyperkitty/user_profile/favorites.html:40
@@ -456,41 +474,41 @@ msgstr ""
 #: templates/hyperkitty/user_profile/subscriptions.html:41
 #: templates/hyperkitty/user_profile/votes.html:46
 msgid "List"
-msgstr ""
+msgstr "List"
 
 #: templates/hyperkitty/index.html:175
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
 #: templates/hyperkitty/index.html:176
 msgid "Activity in the past 30 days"
-msgstr ""
+msgstr "Aktivita v posledních 30 dnech"
 
 #: templates/hyperkitty/list_delete.html:7
 msgid "Delete MailingList"
-msgstr ""
+msgstr "Smazat mailing-list"
 
 #: templates/hyperkitty/list_delete.html:20
 msgid "Delete Mailing List"
-msgstr ""
+msgstr "Smazat mailing-list"
 
 #: templates/hyperkitty/list_delete.html:26
 msgid ""
 "will be deleted along with all the threads and messages. Do you want to "
 "continue?"
-msgstr ""
+msgstr "bude smazán i se všemi vlákny a zprávami. Chcete pokračovat?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
 msgid "Delete"
-msgstr ""
+msgstr "Smazat"
 
 #: templates/hyperkitty/list_delete.html:34
 #: templates/hyperkitty/message_delete.html:45
 #: templates/hyperkitty/message_new.html:53
 #: templates/hyperkitty/messages/message.html:146
 msgid "or"
-msgstr ""
+msgstr "nebo"
 
 #: templates/hyperkitty/list_delete.html:36
 #: templates/hyperkitty/message_delete.html:45
@@ -499,16 +517,16 @@ msgstr ""
 #: templates/hyperkitty/user_profile/votes.html:36
 #: templates/hyperkitty/user_profile/votes.html:74
 msgid "cancel"
-msgstr ""
+msgstr "storno"
 
 #: templates/hyperkitty/message.html:22
 msgid "thread"
-msgstr ""
+msgstr "vlákno"
 
 #: templates/hyperkitty/message_delete.html:7
 #: templates/hyperkitty/message_delete.html:20
 msgid "Delete message(s)"
-msgstr ""
+msgstr "Smazat zprávu/zprávy"
 
 #: templates/hyperkitty/message_delete.html:25
 #, python-format
@@ -517,59 +535,62 @@ msgid ""
 "        %(count)s message(s) will be deleted. Do you want to continue?\n"
 "        "
 msgstr ""
+"\n"
+"        %(count)s zpráv bude smazáno. Chcete pokračovat?\n"
+"        "
 
 #: templates/hyperkitty/message_new.html:8
 #: templates/hyperkitty/message_new.html:21
 msgid "Create a new thread"
-msgstr ""
+msgstr "Vytvořit nové vlákno"
 
 #: templates/hyperkitty/message_new.html:22
 #: templates/hyperkitty/user_posts.html:22
 msgid "in"
-msgstr ""
+msgstr "v"
 
 #: templates/hyperkitty/message_new.html:52
 #: templates/hyperkitty/messages/message.html:145
 msgid "Send"
-msgstr ""
+msgstr "Odeslat"
 
 #: templates/hyperkitty/messages/message.html:18
 #, python-format
 msgid "See the profile for %(name)s"
-msgstr ""
+msgstr "Zobrazit profil uživatele %(name)s"
 
 #: templates/hyperkitty/messages/message.html:28
 msgid "Unread"
-msgstr ""
+msgstr "Nepřečteno"
 
 #: templates/hyperkitty/messages/message.html:45
 msgid "Sender's time:"
-msgstr ""
+msgstr "Čas odesílatele:"
 
 #: templates/hyperkitty/messages/message.html:51
 msgid "New subject:"
-msgstr ""
+msgstr "Nový předmět:"
 
 #: templates/hyperkitty/messages/message.html:61
 msgid "Attachments:"
-msgstr ""
+msgstr "Přílohy:"
 
 #: templates/hyperkitty/messages/message.html:76
 msgid "Display in fixed font"
-msgstr ""
+msgstr "Zobrazit ve fontu s fixní šířkou"
 
 #: templates/hyperkitty/messages/message.html:79
 msgid "Permalink for this message"
-msgstr ""
+msgstr "Permalink k této zprávě"
 
 #: templates/hyperkitty/messages/message.html:90
 #: templates/hyperkitty/messages/message.html:96
 msgid "Reply"
-msgstr ""
+msgstr "Odpovědět"
 
 #: templates/hyperkitty/messages/message.html:93
 msgid "Sign in to reply online"
-msgstr ""
+msgstr "Pro online odpověď se přihlašte"
 
 #: templates/hyperkitty/messages/message.html:105
 #, python-format
@@ -582,31 +603,41 @@ msgid_plural ""
 "                %(email.attachments.count)s attachments\n"
 "                "
 msgstr[0] ""
+"\n"
+"                %(email.attachments.count)s příloha\n"
+"                "
 msgstr[1] ""
+"\n"
+"                %(email.attachments.count)s přílohy\n"
+"                "
+msgstr[2] ""
+"\n"
+"                %(email.attachments.count)s přílohy\n"
+"                "
 
 #: templates/hyperkitty/messages/message.html:131
 msgid "Quote"
-msgstr ""
+msgstr "Citace"
 
 #: templates/hyperkitty/messages/message.html:132
 msgid "Create new thread"
-msgstr ""
+msgstr "Vytvořit nové vlákno"
 
 #: templates/hyperkitty/messages/message.html:135
 msgid "Use email software"
-msgstr ""
+msgstr "Použít emailového klienta"
 
 #: templates/hyperkitty/messages/right_col.html:11
 msgid "Back to the thread"
-msgstr ""
+msgstr "Zpět do vlákna"
 
 #: templates/hyperkitty/messages/right_col.html:18
 msgid "Back to the list"
-msgstr ""
+msgstr "Zpět do listu"
 
 #: templates/hyperkitty/messages/right_col.html:27
 msgid "Delete this message"
-msgstr ""
+msgstr "Smazat tuto zprávu"
 
 #: templates/hyperkitty/messages/summary_message.html:23
 #, python-format
@@ -615,23 +646,26 @@ msgid ""
 "                                by %(name)s\n"
 "                            "
 msgstr ""
+"\n"
+"                                z %(name)s\n"
+"                            "
 
 #: templates/hyperkitty/overview.html:38
 msgid "Home"
-msgstr ""
+msgstr "Domů"
 
 #: templates/hyperkitty/overview.html:41 templates/hyperkitty/thread.html:78
 msgid "Stats"
-msgstr ""
+msgstr "Statistiky"
 
 #: templates/hyperkitty/overview.html:44
 msgid "Threads"
-msgstr ""
+msgstr "Vlákna"
 
 #: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
 #: templates/hyperkitty/thread_list.html:48
 msgid "You must be logged-in to create a thread."
-msgstr ""
+msgstr "Pro vytvoření vlákna se musíte přihlásit."
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:52
@@ -639,280 +673,284 @@ msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
+"<span class=\"d-none d-md-inline\">Zahájit</span><span class=\"d-md-none\""
+">N</span>ové vlákno"
 
 #: templates/hyperkitty/overview.html:75
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
+"<span class=\"d-none d-md-inline\">Spravovat s</span><span class=\"d-md-"
+"none\">O</span>dběr"
 
 #: templates/hyperkitty/overview.html:81
 msgid "Delete Archive"
-msgstr ""
+msgstr "Smazat archiv"
 
 #: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
-msgstr ""
+msgstr "Souhrn aktivity"
 
 #: templates/hyperkitty/overview.html:93
 msgid "Post volume over the past <strong>30</strong> days."
-msgstr ""
+msgstr "Počet zpráv v posledních <strong>30</strong> dnech."
 
 #: templates/hyperkitty/overview.html:98
 msgid "The following statistics are from"
-msgstr ""
+msgstr "Následující statistiky jsou od"
 
 #: templates/hyperkitty/overview.html:99
 msgid "In"
-msgstr ""
+msgstr "V"
 
 #: templates/hyperkitty/overview.html:100
 msgid "the past <strong>30</strong> days:"
-msgstr ""
+msgstr "posledních <strong>30</strong> dnech:"
 
 #: templates/hyperkitty/overview.html:109
 msgid "Most active posters"
-msgstr ""
+msgstr "Nejaktivnější přispěvatelé"
 
 #: templates/hyperkitty/overview.html:118
 msgid "Prominent posters"
-msgstr ""
+msgstr "Významní přispěvatelé"
 
 #: templates/hyperkitty/overview.html:133
 msgid "kudos"
-msgstr ""
+msgstr "kudos"
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
-msgstr ""
+msgstr "Nedávné"
 
 #: templates/hyperkitty/overview.html:156
 msgid "Most Active"
-msgstr ""
+msgstr "Nejaktivnější"
 
 #: templates/hyperkitty/overview.html:160
 msgid "Most Popular"
-msgstr ""
+msgstr "Nejoblíbenější"
 
 #: templates/hyperkitty/overview.html:166
 #: templates/hyperkitty/user_profile/base.html:22
 msgid "Favorites"
-msgstr ""
+msgstr "Oblíbené"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
-msgstr ""
+msgstr "Odesláno"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
-msgstr ""
+msgstr "Diskuze s nedávnou aktivitou"
 
 #: templates/hyperkitty/overview.html:186
 msgid "Most popular discussions"
-msgstr ""
+msgstr "Nejoblíbenější diskuze"
 
 #: templates/hyperkitty/overview.html:193
 msgid "Most active discussions"
-msgstr ""
+msgstr "Nejaktivnější diskuze"
 
 #: templates/hyperkitty/overview.html:200
 msgid "Discussions You've Flagged"
-msgstr ""
+msgstr "Diskuze které jste si označili"
 
 #: templates/hyperkitty/overview.html:208
 msgid "Discussions You've Posted to"
-msgstr ""
+msgstr "Diskuze do kterých jste přispěli"
 
 #: templates/hyperkitty/reattach.html:9
 msgid "Reattach a thread"
-msgstr ""
+msgstr "Napojit vlákno"
 
 #: templates/hyperkitty/reattach.html:20
 msgid "Re-attach a thread to another"
-msgstr ""
+msgstr "Přepojit vlákno k jinému"
 
 #: templates/hyperkitty/reattach.html:22
 msgid "Thread to re-attach:"
-msgstr ""
+msgstr "Vlákno k přepojení:"
 
 #: templates/hyperkitty/reattach.html:29
 msgid "Re-attach it to:"
-msgstr ""
+msgstr "Přepojit jej k:"
 
 #: templates/hyperkitty/reattach.html:31
 msgid "Search for the parent thread"
-msgstr ""
+msgstr "Vyhledat nadřazené vlákno"
 
 #: templates/hyperkitty/reattach.html:32
 msgid "Search"
-msgstr ""
+msgstr "Vyhledat"
 
 #: templates/hyperkitty/reattach.html:44
 msgid "this thread ID:"
-msgstr ""
+msgstr "ID tohoto vlákna:"
 
 #: templates/hyperkitty/reattach.html:50
 msgid "Do it"
-msgstr ""
+msgstr "Provést"
 
 #: templates/hyperkitty/reattach.html:50
 msgid "(there's no undoing!), or"
-msgstr ""
+msgstr "(není to možné vrátit), nebo"
 
 #: templates/hyperkitty/reattach.html:52
 msgid "go back to the thread"
-msgstr ""
+msgstr "vrátit se do vlákna"
 
 #: templates/hyperkitty/search_results.html:8
 msgid "Search results for"
-msgstr ""
+msgstr "Výsledky hledání po"
 
 #: templates/hyperkitty/search_results.html:30
 msgid "search results"
-msgstr ""
+msgstr "výsledky hledání"
 
 #: templates/hyperkitty/search_results.html:32
 msgid "Search results"
-msgstr ""
+msgstr "Výsledky hledání"
 
 #: templates/hyperkitty/search_results.html:34
 msgid "for query"
-msgstr ""
+msgstr "pro dotaz"
 
 #: templates/hyperkitty/search_results.html:44
 #: templates/hyperkitty/user_posts.html:34
 msgid "messages"
-msgstr ""
+msgstr "zprávy"
 
 #: templates/hyperkitty/search_results.html:57
 msgid "sort by score"
-msgstr ""
+msgstr "seřadit dle skóre"
 
 #: templates/hyperkitty/search_results.html:60
 msgid "sort by latest first"
-msgstr ""
+msgstr "seřadit od nejnovějších"
 
 #: templates/hyperkitty/search_results.html:63
 msgid "sort by earliest first"
-msgstr ""
+msgstr "seřadit od nejstarších"
 
 #: templates/hyperkitty/search_results.html:84
 msgid "Sorry no email could be found for this query."
-msgstr ""
+msgstr "Na tento dotaz nebyl nalezen žádný email."
 
 #: templates/hyperkitty/search_results.html:87
 msgid "Sorry but your query looks empty."
-msgstr ""
+msgstr "Váš dotaz je, bohužel, prázdný."
 
 #: templates/hyperkitty/search_results.html:88
 msgid "these are not the messages you are looking for"
-msgstr ""
+msgstr "toto nejsou zprávy které jste hledali"
 
 #: templates/hyperkitty/thread.html:30
 msgid "newer"
-msgstr ""
+msgstr "novější"
 
 #: templates/hyperkitty/thread.html:44
 msgid "older"
-msgstr ""
+msgstr "starší"
 
 #: templates/hyperkitty/thread.html:72
 msgid "First Post"
-msgstr ""
+msgstr "První příspěvek"
 
 #: templates/hyperkitty/thread.html:75
 #: templates/hyperkitty/user_profile/favorites.html:45
 #: templates/hyperkitty/user_profile/last_views.html:50
 msgid "Replies"
-msgstr ""
+msgstr "Odpovědi"
 
 #: templates/hyperkitty/thread.html:97
 msgid "Show replies by thread"
-msgstr ""
+msgstr "Zobrazit odpovědi podle vlákna"
 
 #: templates/hyperkitty/thread.html:100
 msgid "Show replies by date"
-msgstr ""
+msgstr "Zobrazit odpovědi podle data"
 
 #: templates/hyperkitty/thread_list.html:60
 msgid "Sorry no email threads could be found"
-msgstr ""
+msgstr "Žádná emailová vlákna nebyla, bohužel, nalezena"
 
 #: templates/hyperkitty/threads/category.html:7
 msgid "Click to edit"
-msgstr ""
+msgstr "Pro úpravu klikněte"
 
 #: templates/hyperkitty/threads/category.html:9
 msgid "You must be logged-in to edit."
-msgstr ""
+msgstr "Pro úpravy musíte být přihlášený."
 
 #: templates/hyperkitty/threads/category.html:15
 msgid "no category"
-msgstr ""
+msgstr "žádné kategorie"
 
 #: templates/hyperkitty/threads/right_col.html:12
 msgid "days inactive"
-msgstr ""
+msgstr "dní neaktivní"
 
 #: templates/hyperkitty/threads/right_col.html:18
 msgid "days old"
-msgstr ""
+msgstr "dní starý"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s komentářů"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(thread.participants_count)s participants"
-msgstr ""
+msgstr "%(thread.participants_count)s účastníků"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
-msgstr ""
+msgstr "%(unread_count)s nepřečtených <span class=\"hidden-sm\">zpráv</span>"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
-msgstr ""
+msgstr "Pro použití funkce oblíbených se musíte nejdřív přihlásit."
 
 #: templates/hyperkitty/threads/right_col.html:60
 msgid "Add to favorites"
-msgstr ""
+msgstr "Přidat do oblíbených"
 
 #: templates/hyperkitty/threads/right_col.html:62
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Odebrat z oblíbených"
 
 #: templates/hyperkitty/threads/right_col.html:71
 msgid "Reattach this thread"
-msgstr ""
+msgstr "Znovupřipojit toto vlákno"
 
 #: templates/hyperkitty/threads/right_col.html:75
 msgid "Delete this thread"
-msgstr ""
+msgstr "Smazat toto vlákno"
 
 #: templates/hyperkitty/threads/right_col.html:113
 msgid "Unreads:"
-msgstr ""
+msgstr "Nepřečtených:"
 
 #: templates/hyperkitty/threads/right_col.html:115
 msgid "Go to:"
-msgstr ""
+msgstr "Přejít na:"
 
 #: templates/hyperkitty/threads/right_col.html:115
 msgid "next"
-msgstr ""
+msgstr "následující"
 
 #: templates/hyperkitty/threads/right_col.html:116
 msgid "prev"
-msgstr ""
+msgstr "předcházející"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:21
 #: templates/hyperkitty/threads/summary_thread_large.html:23
 msgid "Favorite"
-msgstr ""
+msgstr "Oblíbené"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:29
 #, python-format
@@ -921,283 +959,288 @@ msgid ""
 "                    by %(name)s\n"
 "                    "
 msgstr ""
+"\n"
+"                    podle %(name)s\n"
+"                    "
 
 #: templates/hyperkitty/threads/summary_thread_large.html:39
 msgid "Most recent thread activity"
-msgstr ""
+msgstr "Nejčerstvější aktivita vlákna"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:52
 msgid "comments"
-msgstr ""
+msgstr "komentáře"
 
 #: templates/hyperkitty/threads/tags.html:3
 msgid "tags"
-msgstr ""
+msgstr "tagy"
 
 #: templates/hyperkitty/threads/tags.html:9
 msgid "Search for tag"
-msgstr ""
+msgstr "Vyhledat tag"
 
 #: templates/hyperkitty/threads/tags.html:15
 msgid "Remove"
-msgstr ""
+msgstr "Odstranit"
 
 #: templates/hyperkitty/user_posts.html:8
 #: templates/hyperkitty/user_posts.html:21
 #: templates/hyperkitty/user_posts.html:25
 msgid "Messages by"
-msgstr ""
+msgstr "Zprávy podle"
 
 #: templates/hyperkitty/user_posts.html:38
 #, python-format
 msgid "Back to %(fullname)s's profile"
-msgstr ""
+msgstr "Zpět na profil %(fullname)s"
 
 #: templates/hyperkitty/user_posts.html:48
 msgid "Sorry no email could be found by this user."
-msgstr ""
+msgstr "Žádný email od tohoto uživatele nebyl, bohužel, nalezen."
 
 #: templates/hyperkitty/user_profile/base.html:5
 #: templates/hyperkitty/user_profile/base.html:12
 msgid "User posting activity"
-msgstr ""
+msgstr "Kolik příspěvků uživatele odeslal"
 
 #: templates/hyperkitty/user_profile/base.html:12
 #: templates/hyperkitty/user_public_profile.html:7
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "for"
-msgstr ""
+msgstr "pro"
 
 #: templates/hyperkitty/user_profile/base.html:26
 msgid "Threads you have read"
-msgstr ""
+msgstr "Vlákna které jste přečetli"
 
 #: templates/hyperkitty/user_profile/base.html:30
 #: templates/hyperkitty/user_profile/profile.html:18
 #: templates/hyperkitty/user_profile/subscriptions.html:45
 msgid "Votes"
-msgstr ""
+msgstr "Hlasy"
 
 #: templates/hyperkitty/user_profile/base.html:34
 msgid "Subscriptions"
-msgstr ""
+msgstr "Odběry"
 
 #: templates/hyperkitty/user_profile/favorites.html:24
 #: templates/hyperkitty/user_profile/last_views.html:27
 #: templates/hyperkitty/user_profile/votes.html:23
 msgid "Original author:"
-msgstr ""
+msgstr "Původní autor:"
 
 #: templates/hyperkitty/user_profile/favorites.html:26
 #: templates/hyperkitty/user_profile/last_views.html:29
 #: templates/hyperkitty/user_profile/votes.html:25
 msgid "Started on:"
-msgstr ""
+msgstr "Zahájeno:"
 
 #: templates/hyperkitty/user_profile/favorites.html:28
 #: templates/hyperkitty/user_profile/last_views.html:31
 msgid "Last activity:"
-msgstr ""
+msgstr "Poslední aktivita:"
 
 #: templates/hyperkitty/user_profile/favorites.html:30
 #: templates/hyperkitty/user_profile/last_views.html:33
 msgid "Replies:"
-msgstr ""
+msgstr "Odpovědi:"
 
 #: templates/hyperkitty/user_profile/favorites.html:41
 #: templates/hyperkitty/user_profile/last_views.html:46
 #: templates/hyperkitty/user_profile/profile.html:16
 #: templates/hyperkitty/user_profile/votes.html:47
 msgid "Subject"
-msgstr ""
+msgstr "Předmět"
 
 #: templates/hyperkitty/user_profile/favorites.html:42
 #: templates/hyperkitty/user_profile/last_views.html:47
 #: templates/hyperkitty/user_profile/votes.html:48
 msgid "Original author"
-msgstr ""
+msgstr "Původní autor"
 
 #: templates/hyperkitty/user_profile/favorites.html:43
 #: templates/hyperkitty/user_profile/last_views.html:48
 #: templates/hyperkitty/user_profile/votes.html:49
 msgid "Start date"
-msgstr ""
+msgstr "Datum zahájení"
 
 #: templates/hyperkitty/user_profile/favorites.html:44
 #: templates/hyperkitty/user_profile/last_views.html:49
 msgid "Last activity"
-msgstr ""
+msgstr "Poslední aktivita"
 
 #: templates/hyperkitty/user_profile/favorites.html:71
 msgid "No favorites yet."
-msgstr ""
+msgstr "Nemáte zatím žádné oblíbené."
 
 #: templates/hyperkitty/user_profile/last_views.html:22
 #: templates/hyperkitty/user_profile/last_views.html:59
 msgid "New comments"
-msgstr ""
+msgstr "Nové komentáře"
 
 #: templates/hyperkitty/user_profile/last_views.html:82
 msgid "Nothing read yet."
-msgstr ""
+msgstr "Nic nepřečteno."
 
 #: templates/hyperkitty/user_profile/profile.html:9
 msgid "Last posts"
-msgstr ""
+msgstr "Poslední příspěvky"
 
 #: templates/hyperkitty/user_profile/profile.html:17
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: templates/hyperkitty/user_profile/profile.html:19
 msgid "Thread"
-msgstr ""
+msgstr "Vlákno"
 
 #: templates/hyperkitty/user_profile/profile.html:20
 msgid "Last thread activity"
-msgstr ""
+msgstr "Poslední aktivita ve vlákně"
 
 #: templates/hyperkitty/user_profile/profile.html:49
 msgid "No posts yet."
-msgstr ""
+msgstr "Zatím žádné příspěvky."
 
 #: templates/hyperkitty/user_profile/subscriptions.html:24
 msgid "since first post"
-msgstr ""
+msgstr "od prvního příspěvku"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:26
 #: templates/hyperkitty/user_profile/subscriptions.html:63
 msgid "post"
-msgstr ""
+msgstr "příspěvek"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:31
 #: templates/hyperkitty/user_profile/subscriptions.html:69
 msgid "no post yet"
-msgstr ""
+msgstr "zatím žádný příspěvek"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:42
 msgid "Time since the first activity"
-msgstr ""
+msgstr "Čas od první aktivity"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:43
 msgid "First post"
-msgstr ""
+msgstr "První příspěvek"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:44
 msgid "Posts to this list"
-msgstr ""
+msgstr "Příspěvky do tohoto listu"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:76
 msgid "no subscriptions"
-msgstr ""
+msgstr "žádné odběry"
 
 #: templates/hyperkitty/user_profile/votes.html:32
 #: templates/hyperkitty/user_profile/votes.html:70
 msgid "You like it"
-msgstr ""
+msgstr "Líbí se Vám"
 
 #: templates/hyperkitty/user_profile/votes.html:34
 #: templates/hyperkitty/user_profile/votes.html:72
 msgid "You dislike it"
-msgstr ""
+msgstr "Nelíbí se Vám"
 
 #: templates/hyperkitty/user_profile/votes.html:50
 msgid "Vote"
-msgstr ""
+msgstr "Hlasovat"
 
 #: templates/hyperkitty/user_profile/votes.html:83
 msgid "No vote yet."
-msgstr ""
+msgstr "Zatím žádné hlasy."
 
 #: templates/hyperkitty/user_public_profile.html:7
 msgid "User Profile"
-msgstr ""
+msgstr "Uživatelský profil"
 
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "User profile"
-msgstr ""
+msgstr "Uživatelský profil"
 
 #: templates/hyperkitty/user_public_profile.html:23
 msgid "Name:"
-msgstr ""
+msgstr "Jméno:"
 
 #: templates/hyperkitty/user_public_profile.html:28
 msgid "Creation:"
-msgstr ""
+msgstr "Vytvořen:"
 
 #: templates/hyperkitty/user_public_profile.html:33
 msgid "Votes for this user:"
-msgstr ""
+msgstr "Hlasy pro tohoto uživatele:"
 
 #: templates/hyperkitty/user_public_profile.html:41
 msgid "Email addresses:"
-msgstr ""
+msgstr "Emailové adresy:"
 
 #: views/message.py:76
 msgid "This message in gzipped mbox format"
-msgstr ""
+msgstr "Tato zpráva v gzipovaném formátu mbox"
 
 #: views/message.py:201
 msgid "Your reply has been sent and is being processed."
-msgstr ""
+msgstr "Vaše odpověď byla odeslána a nyní se zpracovává."
 
 #: views/message.py:205
 msgid ""
 "\n"
 "  You have been subscribed to {} list."
 msgstr ""
+"\n"
+"  Byli jste přihlášeni k listu {}."
 
 #: views/message.py:288
 #, python-format
 msgid "Could not delete message %(msg_id_hash)s: %(error)s"
-msgstr ""
+msgstr "Zprávu %(msg_id_hash)s se nepovedlo smazat: %(error)s"
 
 #: views/message.py:297
 #, python-format
 msgid "Successfully deleted %(count)s messages."
-msgstr ""
+msgstr "%(count)s zpráv bylo úspěšně smazáno."
 
 #: views/mlist.py:88
 msgid "for this month"
-msgstr ""
+msgstr "pro tento měsíc"
 
 #: views/mlist.py:91
 msgid "for this day"
-msgstr ""
+msgstr "pro tento den"
 
 #: views/mlist.py:103
 msgid "This month in gzipped mbox format"
-msgstr ""
+msgstr "Tento měsíc v gzipovaném mbox formátu"
 
 #: views/mlist.py:200 views/mlist.py:224
 msgid "No discussions this month (yet)."
-msgstr ""
+msgstr "V tomto měsíci (zatím) nebyly žádné diskuze."
 
 #: views/mlist.py:212
 msgid "No vote has been cast this month (yet)."
-msgstr ""
+msgstr "V tomto měsíci neproběhlo žádné hlasování."
 
 #: views/mlist.py:241
 msgid "You have not flagged any discussions (yet)."
-msgstr ""
+msgstr "Neovlaječkovali jste žádné diskuze."
 
 #: views/mlist.py:264
 msgid "You have not posted to this list (yet)."
-msgstr ""
+msgstr "Do tohoto listu jste zatím nepřispěli."
 
 #: views/mlist.py:352
 msgid "You must be a staff member to delete a MailingList"
-msgstr ""
+msgstr "Pro smazání mailing-listu musíte být jedním ze správců"
 
 #: views/mlist.py:366
 msgid "Successfully deleted {}"
-msgstr ""
+msgstr "{} úspěšně smazáno"
 
 #: views/search.py:115
 #, python-format
 msgid "Parsing error: %(error)s"
-msgstr ""
+msgstr "Chyba parsování: %(error)s"
 
 #: views/thread.py:168
 msgid "This thread in gzipped mbox format"
-msgstr ""
+msgstr "Toto vlákno v gzipovaném formátu mbox"
