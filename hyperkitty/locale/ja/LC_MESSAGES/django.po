@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 18:55-0700\n"
-"PO-Revision-Date: 2021-07-07 15:34+0000\n"
+"PO-Revision-Date: 2021-12-08 14:51+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/ja/>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr ""
+msgstr "タグを追加..."
 
 #: forms.py:55
 msgid "Add"
-msgstr ""
+msgstr "追加"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "複数のタグを追加するにはカンマを使います"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -97,7 +97,7 @@ msgstr "REST API"
 msgid ""
 "HyperKitty comes with a small REST API allowing you to programatically "
 "retrieve emails and information."
-msgstr ""
+msgstr "HyperKitty には簡単な REST API が付属しておりメールや情報をプログラムで取得できます。"
 
 #: templates/hyperkitty/api.html:10
 msgid "Formats"
@@ -140,7 +140,7 @@ msgstr "エンドポイント:"
 msgid ""
 "Using this address you will be able to retrieve the information known about "
 "all the mailing lists."
-msgstr ""
+msgstr "このアドレスを使うことで全てのメーリングリストについての情報を取得することができます。"
 
 #: templates/hyperkitty/api.html:32
 msgid "Threads in a mailing list"
@@ -180,7 +180,7 @@ msgstr "タグ"
 
 #: templates/hyperkitty/api.html:53
 msgid "Using this address you will be able to retrieve the list of tags."
-msgstr ""
+msgstr "このアドレスを使うことでタグのリストを取得できます。"
 
 #: templates/hyperkitty/base.html:57 templates/hyperkitty/base.html:112
 msgid "Account"
@@ -302,7 +302,7 @@ msgstr ""
 
 #: templates/hyperkitty/fragments/overview_threads.html:12
 msgid "New messages in this thread"
-msgstr ""
+msgstr "このスレッドの新規メッセージ"
 
 #: templates/hyperkitty/fragments/overview_threads.html:37
 #: templates/hyperkitty/fragments/thread_left_nav.html:18
@@ -354,7 +354,7 @@ msgstr "過去30日間"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:31
 msgid "This month"
-msgstr ""
+msgstr "今月"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:34
 msgid "Entire archive"
@@ -789,7 +789,7 @@ msgstr ""
 
 #: templates/hyperkitty/reattach.html:52
 msgid "go back to the thread"
-msgstr ""
+msgstr "スレッドに戻る"
 
 #: templates/hyperkitty/search_results.html:8
 msgid "Search results for"
@@ -856,11 +856,11 @@ msgstr "返信"
 
 #: templates/hyperkitty/thread.html:97
 msgid "Show replies by thread"
-msgstr ""
+msgstr "スレッド順で返信を表示"
 
 #: templates/hyperkitty/thread.html:100
 msgid "Show replies by date"
-msgstr ""
+msgstr "日付順で返信を表示"
 
 #: templates/hyperkitty/thread_list.html:60
 msgid "Sorry no email threads could be found"
@@ -889,21 +889,21 @@ msgstr "日前に作成"
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s コメント"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(thread.participants_count)s participants"
-msgstr ""
+msgstr "%(thread.participants_count)s 参加者"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
-msgstr ""
+msgstr "%(unread_count)s 未読 <span class=\"hidden-sm\">メッセージ</span>"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
-msgstr ""
+msgstr "お気に入りを保存するにはログインする必要があります。"
 
 #: templates/hyperkitty/threads/right_col.html:60
 msgid "Add to favorites"
@@ -1037,7 +1037,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/favorites.html:30
 #: templates/hyperkitty/user_profile/last_views.html:33
 msgid "Replies:"
-msgstr ""
+msgstr "返信:"
 
 #: templates/hyperkitty/user_profile/favorites.html:41
 #: templates/hyperkitty/user_profile/last_views.html:46
@@ -1116,7 +1116,7 @@ msgstr ""
 
 #: templates/hyperkitty/user_profile/subscriptions.html:43
 msgid "First post"
-msgstr ""
+msgstr "最初の投稿"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:44
 msgid "Posts to this list"

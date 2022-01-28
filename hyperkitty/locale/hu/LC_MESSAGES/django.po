@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 18:55-0700\n"
-"PO-Revision-Date: 2021-02-12 00:57+0000\n"
+"PO-Revision-Date: 2021-10-20 00:02+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/hu/>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr ""
+msgstr "Címke hozzáadása..."
 
 #: forms.py:55
 msgid "Add"
-msgstr ""
+msgstr "Hozzáadás"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "használjon vesszőt több címke hozzáadásához"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -682,10 +682,8 @@ msgstr ""
 "\">F</span>eliratkozást"
 
 #: templates/hyperkitty/overview.html:81
-#, fuzzy
-#| msgid "Entire archive"
 msgid "Delete Archive"
-msgstr "Teljes archívum"
+msgstr "Archívum törlése"
 
 #: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
@@ -721,17 +719,13 @@ msgstr "dicsőség"
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
-msgstr ""
+msgstr "Legutóbbi"
 
 #: templates/hyperkitty/overview.html:156
-#, fuzzy
-#| msgid "Most active"
 msgid "Most Active"
 msgstr "Legaktívabbak"
 
 #: templates/hyperkitty/overview.html:160
-#, fuzzy
-#| msgid "Most popular"
 msgid "Most Popular"
 msgstr "Legnépszerűbb"
 
@@ -742,7 +736,7 @@ msgstr "Kedvencek"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
-msgstr ""
+msgstr "Közzétéve"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
@@ -902,17 +896,17 @@ msgstr "napja"
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s megjegyzés"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(thread.participants_count)s participants"
-msgstr ""
+msgstr "%(thread.participants_count)s résztvevő"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
-msgstr ""
+msgstr "%(unread_count)s olvasatlan <span class=\"hidden-sm\">üzenetek</span>"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."

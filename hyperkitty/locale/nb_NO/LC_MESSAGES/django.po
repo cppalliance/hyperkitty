@@ -8,28 +8,29 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 18:55-0700\n"
-"PO-Revision-Date: 2020-12-11 04:16+0000\n"
+"PO-Revision-Date: 2021-11-05 02:18+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/gnu-"
-"mailman/hyperkitty/nb_NO/>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"gnu-mailman/hyperkitty/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms.py:53
+#, fuzzy
 msgid "Add a tag..."
-msgstr ""
+msgstr "Legg til en etikett …"
 
 #: forms.py:55
 msgid "Add"
-msgstr ""
+msgstr "Legg til"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "bruk komma for å legge til flere etiketter"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -740,7 +741,7 @@ msgstr "Kudos"
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
-msgstr ""
+msgstr "Nylig"
 
 #: templates/hyperkitty/overview.html:156
 #, fuzzy
@@ -760,7 +761,7 @@ msgstr "Favoritter"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
-msgstr ""
+msgstr "Postet"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
@@ -925,17 +926,17 @@ msgstr "dager gammel"
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s kommentarer"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(thread.participants_count)s participants"
-msgstr ""
+msgstr "%(thread.participants_count)s deltagere"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
-msgstr ""
+msgstr "%(unread_count)s uleste <span class=\"hidden-sm\">meldinger</span>"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
@@ -1213,7 +1214,7 @@ msgstr "Denne meldingen i gzippet MBOX-format"
 
 #: views/message.py:201
 msgid "Your reply has been sent and is being processed."
-msgstr ""
+msgstr "Svaret ditt har blitt sendt og behandles nå."
 
 #: views/message.py:205
 #, fuzzy
