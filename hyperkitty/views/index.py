@@ -119,12 +119,23 @@ def index(request):
 
 
 def find_list(request):
+    """Get a list of mailing list matching the query parameter 'term'.
+
+    This serves the API that the list search uses, powered by jquery's
+    autocomplete.
+
+    The default returned content_type is `application/javascript`.
+    """
     term = request.GET.get('term')
     result = []
     if term:
         query = MailingList.objects.filter(
             Q(name__icontains=term) | Q(display_name__icontains=term)
-            ).order_by("name").values("name", "display_name")
+            )
+        if not request.user.is_superuser:
+            query = query.filter(
+                archive_policy=ArchivePolicy.public.value)
+        query = query.order_by("name").values("name", "display_name")
         for line in query[:20]:
             result.append({
                 "value": line["name"],
