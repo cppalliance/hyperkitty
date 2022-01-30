@@ -17,6 +17,11 @@ News / Changelog
 - Adapt parsing of emails to be compatible with python 3.10. (Closes #401)
 - Add gitlab-ci integration for python 3.10.
 
+Third Party
+-----------
+
+- Bump Jquery-ui to 1.13.1 to fix the broken search. (Closes #411)
+
 
 .. _news-1.3.5:
 
