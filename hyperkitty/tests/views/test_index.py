@@ -159,6 +159,8 @@ class FindTestCase(TestCase):
         MailingList.objects.create(name="list-one@example.com")
         MailingList.objects.create(name="list-two@example.com",
                                    display_name="List Two")
+        MailingList.objects.create(name="private@example.com",
+                                   archive_policy=ArchivePolicy.private.value)
 
     def test_find(self):
         response = self.client.get("%s?term=one" % reverse("hk_find_list"))

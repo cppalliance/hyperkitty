@@ -16,6 +16,7 @@ News / Changelog
 - Require mistune >= 2.0.0 and fix a problem with importing from it. (Closes #395)
 - Adapt parsing of emails to be compatible with python 3.10. (Closes #401)
 - Add gitlab-ci integration for python 3.10.
+- Skip lists with private archives in the find list search. (Closes #237)
 
 Third Party
 -----------
