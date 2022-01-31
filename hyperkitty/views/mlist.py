@@ -308,6 +308,11 @@ def recent_activity(request, mlist_fqdn):
 
 @check_mlist_private
 def export_mbox(request, mlist_fqdn, filename):
+    # If the settings HYPERKITTY_MBOX_EXPORT is set to False, then
+    # disable download of archives.
+    if not getattr(settings, "HYPERKITTY_MBOX_EXPORT", True):
+        return HttpResponseBadRequest("Archive download disabled.")
+
     mlist = get_object_or_404(MailingList, name=mlist_fqdn)
     query = mlist.emails
     try:

@@ -1,6 +1,7 @@
 {% load i18n %}
 {% load hk_generic %}
 
+{% settings_value_equals "HYPERKITTY_MBOX_EXPORT" True as export_allowed %}
 {% if mlist %}
 <div class="d-none d-md-inline col-12 col-md-2">
     <div class="row d-flex justify-content-center flex-column align-items-center">
@@ -20,6 +21,7 @@
     </br>
     <!-- Download as mbox -->
     {% if pagename == 'overview' %}
+    {% if export_allowed %}
     <div class="btn-group">
         <button type="button" class="btn btn-outline-primary dropdown-toggle p-2 m-2" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
@@ -34,7 +36,8 @@
                 {% trans "Entire archive" %} <small>(mbox)</small></a></li>
         </ul>
     </div>
-    {% elif export %}
+    {% endif %}
+    {% elif export and export_allowed %}
     <a href="{{ export.url }}" title="{{ export.title }}"
           class="btn btn-outline-primary p-2 m-2">
         <i class="fa fa-download"></i> {{ export.message }}</a>
