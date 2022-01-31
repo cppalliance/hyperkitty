@@ -17,6 +17,9 @@ News / Changelog
 - Adapt parsing of emails to be compatible with python 3.10. (Closes #401)
 - Add gitlab-ci integration for python 3.10.
 - Skip lists with private archives in the find list search. (Closes #237)
+- Add a new setting ``HYPERKITTY_MBOX_EXPORT`` which, when set to false,
+  removes the :guilabel:`Download` button and disables the export view. (
+  Fixes #386)
 
 Third Party
 -----------

@@ -31,6 +31,7 @@ from email.message import EmailMessage
 
 from django.contrib.auth.models import User
 from django.core.cache import cache
+from django.test import override_settings
 
 from bs4 import BeautifulSoup
 from django_mailman3.tests.utils import FakeMMList, FakeMMMember
@@ -210,6 +211,15 @@ class ExportMboxTestCase(TestCase):
         self.assertTrue(email.is_multipart())
         content = email.get_payload()[0]
         self.assertEqual(content.get_payload(), "Dummy message\n")
+
+    @override_settings(HYPERKITTY_MBOX_EXPORT=False)
+    def test_basic_with_export_disabled(self):
+        url = reverse(
+            "hk_list_export_mbox", args=["list@example.com", "dummy"])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.content.decode(),
+                         "Archive download disabled.")
 
     def test_with_sender_name(self):
         email = Email.objects.get(message_id="msg")

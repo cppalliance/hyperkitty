@@ -305,3 +305,9 @@ def gravatar(*args, **kw):
     if not getattr(settings, 'HYPERKITTY_ENABLE_GRAVATAR', True):
         return mark_safe('')
     return gravatar_orig(*args, **kw)
+
+
+@register.simple_tag()
+def settings_value_equals(name, value):
+    """Get the settings value to use in templates."""
+    return getattr(settings, name, "") == value
