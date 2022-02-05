@@ -25,7 +25,7 @@ import re
 
 from django.conf import settings
 from django.db.models import Q
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseBadRequest
 from django.shortcuts import redirect, render
 
 from django_mailman3.lib.mailman import get_subscriptions
@@ -35,9 +35,27 @@ from django_mailman3.models import MailDomain
 from hyperkitty.models import ArchivePolicy, MailingList
 
 
+class SortMode:
+    """All the Sort modes the Index page supports."""
+    CREATION = "creation"
+    POPULAR = "popular"
+    NAME = "name"
+    ACTIVE = "active"
+
+    DEFAULT = POPULAR
+
+    @classmethod
+    def all(self):
+        """Return all the Sort modes."""
+        return (self.NAME, self.ACTIVE, self.POPULAR, self.CREATION)
+
+
 def index(request):
     mlists = MailingList.objects.all()
-    sort_mode = request.GET.get("sort", "popular")
+    sort_mode = request.GET.get("sort", SortMode.DEFAULT)
+
+    if sort_mode not in SortMode.all():
+        return HttpResponseBadRequest("Wrong sort mode parameter")
 
     # Domain filtering
     if getattr(settings, 'FILTER_VHOST', False):
@@ -63,7 +81,7 @@ def index(request):
     # Name filtering
     name_filter = request.GET.get('name')
     if name_filter:
-        sort_mode = "name"
+        sort_mode = SortMode.NAME
         mlists = mlists.filter(
             Q(name__icontains=name_filter) |
             Q(display_name__icontains=name_filter)
@@ -89,19 +107,16 @@ def index(request):
             archive_policy=ArchivePolicy.public.value)
 
     # Sorting
-    if sort_mode == "name":
-        mlists = mlists.order_by("name")
-    elif sort_mode == "active":
+    if sort_mode == SortMode.NAME:
+        mlists = mlists.order_by(SortMode.NAME)
+    elif sort_mode == SortMode.ACTIVE:
         mlists = list(mlists)
         mlists.sort(key=lambda l: l.recent_threads_count, reverse=True)
-    elif sort_mode == "popular":
+    elif sort_mode == SortMode.POPULAR:
         mlists = list(mlists)
         mlists.sort(key=lambda l: l.recent_participants_count, reverse=True)
-    elif sort_mode == "creation":
+    elif sort_mode == SortMode.CREATION:
         mlists = mlists.order_by("-created_at")
-    else:
-        return HttpResponse("Wrong search parameter",
-                            content_type="text/plain", status=500)
 
     # Inactive List Setting
     show_inactive = getattr(settings, 'SHOW_INACTIVE_LISTS_DEFAULT', False)

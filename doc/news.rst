@@ -20,6 +20,7 @@ News / Changelog
 - Add a new setting ``HYPERKITTY_MBOX_EXPORT`` which, when set to false,
   removes the :guilabel:`Download` button and disables the export view. (
   Fixes #386)
+- Return 400 instead of 500 when the sort mode is invalid. (Fixes #270)
 
 Third Party
 -----------

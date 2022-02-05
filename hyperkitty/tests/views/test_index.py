@@ -152,6 +152,12 @@ class PrivateListTestCase(TestCase):
         self.client.login(username='superuser', password='testPass')
         self._do_test_contains("creation")
 
+    def test_sort_mode_invalid_parameter(self):
+        # Test that invalid sort parameter returns in 400 not 500 like before.
+        self.client.login(username='superuser', password='testPass')
+        response = self.client.get(reverse("hk_root"), {"sort": "badValue"})
+        self.assertEqual(response.status_code, 400)
+
 
 class FindTestCase(TestCase):
 
