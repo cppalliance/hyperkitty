@@ -331,7 +331,7 @@ class Attachment(models.Model):
 
     def get_content(self):
         folder = self._get_folder()
-        if folder is None:
+        if folder is None or self.content is not None:
             return bytes(self.content)
         filepath = os.path.join(folder, str(self.counter))
         if not os.path.exists(filepath):

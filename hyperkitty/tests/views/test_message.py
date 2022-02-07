@@ -532,7 +532,10 @@ class MessageViewsTestCase(TestCase):
             email=msg, counter=1, name="testattach.txt",
             content_type="text/plain", encoding="ascii",
         )
-        att.set_content("test_content")
+        contents = "test_content"
+        # Don't set the attachment object's content so we get it from the fs,
+        # but do set it's size.
+        att.size = len(contents)
         att.save()
         # Create the attachment on the filesystem
         attachment_folder = os.path.join(self.tmpdir, "attachments")
@@ -541,7 +544,6 @@ class MessageViewsTestCase(TestCase):
             str(msg.id),
         )
         os.makedirs(filedir)
-        contents = "test content"
         with open(os.path.join(filedir, "1"), "w") as f:
             f.write(contents)
         # Now get it.
