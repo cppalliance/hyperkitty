@@ -140,6 +140,38 @@ class EmailTestCase(TestCase):
                         fd.read(),
                         "<html><body>Dummy message</body></html>\n")
 
+    def test_as_message_attachments_in_db_with_folder(self):
+        # This tests that when we add HYPERKITTY_ATTACHMENT_FOLDER that
+        # we can still retrieve prior attachments from the database.
+        # Add a message with attachments in the database.
+        msg_in = EmailMessage()
+        msg_in["From"] = "dummy@example.com"
+        msg_in["Message-ID"] = "<msg>"
+        msg_in.set_content("Hello World.")
+        msg_in.add_attachment("Dummy message", subtype='plain')
+        msg_in.add_attachment("<html><body>Dummy message</body></html>",
+                              subtype='html')
+        add_to_list("list@example.com", msg_in)
+        # Set HYPERKITTY_ATTACHMENT_FOLDER and verify we can still get the
+        # message with attachments.
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with self.settings(HYPERKITTY_ATTACHMENT_FOLDER=tmpdir):
+                email = Email.objects.get(message_id="msg")
+                msg = email.as_message()
+                self.assertEqual(msg["From"], "dummy@example.com")
+                self.assertEqual(msg["Message-ID"], "<msg>")
+                self.assertTrue(msg.is_multipart())
+                payload = msg.get_payload()
+                self.assertEqual(len(payload), 3)
+                self.assertEqual(
+                    payload[0].get_content(), "Hello World.\n\n\n\n\n")
+                self.assertEqual(
+                    payload[1].get_content(), "Dummy message\n")
+                self.assertEqual(payload[2].get_content_type(), "text/html")
+                self.assertEqual(
+                    payload[2].get_content(),
+                    "<html><body>Dummy message</body></html>\n")
+
     def test_as_message_timezone(self):
         msg_in = EmailMessage()
         msg_in["From"] = "dummy@example.com"

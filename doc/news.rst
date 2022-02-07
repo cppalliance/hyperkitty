@@ -21,6 +21,8 @@ News / Changelog
   removes the :guilabel:`Download` button and disables the export view. (
   Fixes #386)
 - Return 400 instead of 500 when the sort mode is invalid. (Fixes #270)
+- Allow HyperKitty to find attachments in either the database or the
+  ``HYPERKITTY_ATTACHMENT_FOLDER``.  (Closes #213)
 
 Third Party
 -----------
