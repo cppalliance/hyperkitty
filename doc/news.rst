@@ -23,6 +23,9 @@ News / Changelog
 - Return 400 instead of 500 when the sort mode is invalid. (Fixes #270)
 - Allow HyperKitty to find attachments in either the database or the
   ``HYPERKITTY_ATTACHMENT_FOLDER``.  (Closes #213)
+- Implemented a new ``attachments_to_file`` management command to move
+  attachment content to the file system after setting
+  ``HYPERKITTY_ATTACHMENT_FOLDER``.  (Closes #413)
 
 Third Party
 -----------
