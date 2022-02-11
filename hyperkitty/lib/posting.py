@@ -22,6 +22,7 @@
 
 import re
 from smtplib import SMTPResponseException
+from urllib.error import HTTPError
 
 from django.conf import settings
 from django.core.exceptions import SuspiciousOperation
@@ -87,6 +88,9 @@ def post_to_list(request, mlist, subject, message, headers=None,
     except MailmanConnectionError:
         raise PostingFailed("Can't connect to Mailman's REST server, "
                             "your message has not been sent.")
+    except HTTPError as e:
+        raise PostingFailed("Failed to post message: %s", str(e))
+
     # send the message
     headers["User-Agent"] = (
         "HyperKitty on %s" % request.build_absolute_uri("/"))
