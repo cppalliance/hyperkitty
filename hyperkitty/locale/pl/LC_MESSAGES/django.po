@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 18:55-0700\n"
-"PO-Revision-Date: 2020-05-13 19:20+0000\n"
-"Last-Translator: Szylu <chipolade@gmail.com>\n"
+"PO-Revision-Date: 2022-02-10 18:33+0000\n"
+"Last-Translator: Tomasz Chiliński <tomasz.chilinski@chilan.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/pl/>\n"
 "Language: pl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
 "%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -690,16 +690,12 @@ msgstr "Musisz być zalogowany, aby stworzyć wątek."
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:52
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Start a </span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">N</span>ew thread"
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">rozpicznij </span><span class=\"hidden-"
-"sm hidden-md hidden-lg\">N</span>owy wątek"
+"<span class=\"d-none d-md-inline\">Rozpocznij n</span><span class=\"d-md-"
+"none\">N</span>owy wątek"
 
 #: templates/hyperkitty/overview.html:75
 #, fuzzy
@@ -762,8 +758,6 @@ msgid "Most Active"
 msgstr "Najbardziej aktywni"
 
 #: templates/hyperkitty/overview.html:160
-#, fuzzy
-#| msgid "Most popular"
 msgid "Most Popular"
 msgstr "Najpopularniejsze"
 
