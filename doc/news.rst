@@ -26,6 +26,8 @@ News / Changelog
 - Implemented a new ``attachments_to_file`` management command to move
   attachment content to the file system after setting
   ``HYPERKITTY_ATTACHMENT_FOLDER``.  (Closes #413)
+- Handle exception when a banned address tries to post. (Fixes #325)
+
 
 Third Party
 -----------
