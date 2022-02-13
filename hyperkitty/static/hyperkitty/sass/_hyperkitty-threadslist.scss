@@ -34,7 +34,16 @@
 
     @extend .bordered-vertical;
 
-    padding: 1em;
+    padding: 5px;
+
+    .thread-summary {
+        width: 100%;
+    }
+
+    .thread-email-content {
+        // 5px for the padding and 50px for the gravtar.
+        padding-left: 65px;
+    }
 
     .thread-title {
         font-weight: bold;
@@ -166,16 +175,8 @@
 
 .thread-email {
 
-  .list-stats {
-    margin-top: 1.5em;
-  }
-
   .expander.collapsed {
     white-space: normal;
-  }
-
-  .gravatar {
-      margin-left:5px;
   }
 }
 
@@ -199,13 +200,13 @@
 
 // for small screen sizes
 // @media (max-width: 991px) {
-@include media-breakpoint-down(sm) {
-		// for monthly thread list, to align
-		// collapsed right column underneath
-		// left in smaller screen width
-		.thread-email {
-				.thread-date {
-						margin-top: 1.5em;
-				}
-		}
-}
+// @include media-breakpoint-down(sm) {
+// 	// for monthly thread list, to align
+// 	// collapsed right column underneath
+// 	// left in smaller screen width
+// 	.thread-email {
+// 		.thread-date {
+// 			margin-top: 1.5em;
+// 		}
+// 	}
+// }

@@ -34,6 +34,11 @@ Third Party
 
 - Bump Jquery-ui to 1.13.1 to fix the broken search. (Closes #411)
 
+UI
+--
+
+- Change the design of the thread list page and some minor tweaks
+  to the index page. (See !398)
 
 .. _news-1.3.5:
 

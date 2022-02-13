@@ -130,28 +130,26 @@
                                  {{ mlist.name|until:"@" }}
                              {% endif %}
                          </a>
+                        <span class="list-address">{{ mlist.name }}</span>
                         {% if mlist.is_private %}
                         <span class="list-tags">{% trans "private" %}</span>
                         {% elif mlist.recent_threads_count == 0 %}
                         <span class="list-tags">{% trans "inactive" %}</span>
                         {% endif %}
                         <br />
-                        <span class="list-address">{{ mlist.name }}</span>
+
                         <span class="list-description">{{ mlist.description|default_if_none:"" }}</span>
                         <div class="chart d-xs-none">
                             <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
                         </div>
-                        <ul class="list-stats list-unstyled">
-                            <li>
+                            <span class="badge badge-secondary">
                                 <i class="fa fa-user"></i>
                                 {{ mlist.recent_participants_count|default_if_none:"..." }}
-                                {% trans 'participants' %}
-                            </li>
-                            <li>
+                            </span>
+                            <span class="badge badge-secondary">
                                 <i class="fa fa-comments"></i>
                                 {{ mlist.recent_threads_count|default_if_none:"..." }}
-                                {% trans 'discussions' %}
-                            </li>
+                            </span>
                         </ul>
                     </td>
                 </tr>
@@ -205,7 +203,6 @@
                         {% elif mlist.recent_threads_count == 0 %}
                         <span class="list-tags">{% trans "inactive" %}</span>
                         {% endif %}
-                        <br />
                         <span class="list-address">
                             {{ mlist.name }}
                         </span>
