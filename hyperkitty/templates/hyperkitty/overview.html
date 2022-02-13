@@ -17,22 +17,20 @@
 
 <div class="row">
 
-  <div class="overview col-tn-12 col-sm-12">
+<div class="overview col-tn-12 col-sm-12">
     <div class="row">
-      <div class="col-md-3 discussions order-1">
+    <div class="col-md-3">
+    <div class="col-12">
         <section id="title">
-          <h2>
-            {% if mlist.display_name %}
-            {{ mlist.display_name }}
-            {% else %}
-            {{ mlist.name|until:"@" }}
-            {% endif %}
-          </h2>
-          <p id="description">{{ mlist.description|default_if_none:"" }}</p>
+            <h2>
+                {% if mlist.display_name %}
+                    {{ mlist.display_name }}
+                {% else %}
+                    {{ mlist.name|until:"@" }}
+                {% endif %}
+            </h2>
+            <p id="description">{{ mlist.description|default_if_none:"" }}</p>
         </section> <!-- /title & description -->
-      </div>
-      <div class="col-md-3 order-3">
-        <div class="col-12">
 
         <!-- Overview Page for small screens. -->
         <ul class="nav nav-tabs d-md-none">
@@ -48,7 +46,7 @@
             {% if posting_enabled %}
             <li class="nav-item">
               <a href="{% url "hk_message_new" mlist_fqdn=mlist.name %}"
-                 class=" nav-link{% if not user.is_authenticated %} disabled"
+                 class=" nav-link{% if not user.is_authenticated %}disabled"
                  title="{% trans 'You must be logged-in to create a thread.' %}{% endif %}"><i class="fa fa-plus"></i> New</a>
             </li>
             {% endif %}
@@ -144,7 +142,7 @@
     </div> <!-- /container, for list stats -->
     </div> <!-- col-3 -->
 
-    <div class="col-md-9 order-2">
+    <div class="col-md-9">
 
     <div class="discussions col-12">
 
