@@ -18,6 +18,7 @@
 # USA.
 
 import re
+from contextlib import ExitStack
 from email.message import EmailMessage
 from unittest.mock import Mock, patch
 
@@ -95,11 +96,16 @@ class DeleteMailingListTestCase(TestCase):
         msg.set_payload("Dummy message")
         add_to_list("list@example.com", msg)
         url = reverse('hk_list_delete', args=("list@example.com",))
-        with patch('hyperkitty.views.mlist.get_object_or_404') as mock_obj:
+        with ExitStack() as stack:
+            mock_obj = stack.enter_context(
+                patch('hyperkitty.lib.view_helpers.MailingList'))
+            mock_authorized = stack.enter_context(
+                patch('hyperkitty.lib.view_helpers.is_mlist_authorized'))
+            mock_authorized.return_value = True
             mock_mlist = Mock()
             mock_mlist.delete.side_effect = IntegrityError('Error Deleting')
             mock_mlist.name = "list@example.com"
-            mock_obj.return_value = mock_mlist
+            mock_obj.objects.get.return_value = mock_mlist   # noqa: E501
 
             resp = self.client.post(url)
             self.assertTrue(mock_mlist.delete.called)

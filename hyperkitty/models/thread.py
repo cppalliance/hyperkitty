@@ -119,14 +119,14 @@ class Thread(models.Model):
     @property
     def prev_thread(self):  # TODO: Make it a relationship
         return Thread.objects.filter(
-                mailinglist=self.mailinglist,
+                mailinglist__id=self.mailinglist_id,
                 date_active__lt=self.date_active
             ).order_by("-date_active").first()
 
     @property
     def next_thread(self):  # TODO: Make it a relationship
         return Thread.objects.filter(
-                mailinglist=self.mailinglist,
+                mailinglist__id=self.mailinglist_id,
                 date_active__gt=self.date_active
             ).order_by("date_active").first()
 

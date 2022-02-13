@@ -53,7 +53,7 @@
         {% endif %}
     </div> <!-- /email-header: gravatar, author-info, date, peramlink, changed_subject -->
     <div class="email-body {% if email.display_fixed %}fixed{% endif %}">
-      {{ email.content|render:email.mailinglist }}
+      {{ email.content|render:mlist }}
     </div>
 
     {% if unfolded and email.attachments.count %}
@@ -61,7 +61,7 @@
         <p class="attachments">{% trans "Attachments:" %}</p>
         <ul class="attachments-list list-unstyled">
         {% for attachment in email.attachments.all %}
-            <li><a href="{% url 'hk_message_attachment' mlist_fqdn=email.mailinglist.name message_id_hash=email.message_id_hash counter=attachment.counter filename=attachment.name %}">{{attachment.name}}</a>
+            <li><a href="{% url 'hk_message_attachment' mlist_fqdn=mlist.name message_id_hash=email.message_id_hash counter=attachment.counter filename=attachment.name %}">{{attachment.name}}</a>
                 ({{attachment.content_type}} &mdash; {{attachment.size|filesizeformat}})
             </li>
         {% endfor %}
@@ -75,11 +75,11 @@
           <span class="fa fa-font cursor-pointer toggle-font"
                 title="{% trans "Display in fixed font" %}"
                 data-toggle="tooltip" data-placement="bottom"></span>
-          <a href="{% url 'hk_message_index' mlist_fqdn=email.mailinglist.name message_id_hash=email.message_id_hash %}"
+          <a href="{% url 'hk_message_index' mlist_fqdn=mlist.name message_id_hash=email.message_id_hash %}"
              title="{% trans "Permalink for this message" %}"
              data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link"></i></a>
         </div>
-        {% include "hyperkitty/fragments/like_form.html" with message_id_hash=email.message_id_hash object=email %}
+        {% include "hyperkitty/fragments/like_form.html" with message_id_hash=email.message_id_hash object=email mlist=mlist %}
         </div>
 
         <!-- Reply link -->
@@ -91,7 +91,7 @@
         </a>
         {% else %}
         <a class="reply reply-mailto" title="{% trans "Sign in to reply online" %}"
-           href="mailto:{{ email.mailinglist.name }}?Subject={{ email.subject|reply_subject|urlencode }}&amp;In-Reply-To=&lt;{{ email.message_id|urlencode }}&gt;">
+           href="mailto:{{ mlist.name }}?Subject={{ email.subject|reply_subject|urlencode }}&amp;In-Reply-To=&lt;{{ email.message_id|urlencode }}&gt;">
             <i class="fa fa-reply"></i>
             {% trans "Reply" %}
         </a>
@@ -112,7 +112,7 @@
             </a>
             <ul class="attachments-list list-unstyled dropdown-menu">
             {% for attachment in email.attachments.all %}
-                <li><a href="{% url 'hk_message_attachment' mlist_fqdn=email.mailinglist.name message_id_hash=email.message_id_hash counter=attachment.counter filename=attachment.name %}"
+                <li><a href="{% url 'hk_message_attachment' mlist_fqdn=mlist.name message_id_hash=email.message_id_hash counter=attachment.counter filename=attachment.name %}"
                         title="{{attachment.content_type|escape}}, {{attachment.size|filesizeformat}}"
                         >{{attachment.name}}
                     </a>
@@ -125,13 +125,13 @@
         {% if user.is_authenticated and posting_enabled %}
         <div class="reply-form dropdown">
             <form method="post" enctype="multipart/form-data"
-                  action="{% url 'hk_message_reply' mlist_fqdn=email.mailinglist.name message_id_hash=email.message_id_hash %}">
+                  action="{% url 'hk_message_reply' mlist_fqdn=mlist.name message_id_hash=email.message_id_hash %}">
                 {% csrf_token %}
                 <ul class="list-inline reply-tools">
                     <li><a class="btn btn-sm btn-secondary quote" href="#">{% trans "Quote" %}</a></li>
                     <li class="checkbox"><label>{{ reply_form.newthread }} {% trans "Create new thread" %}</label></li>
                     <li><a class="btn btn-sm btn-secondary reply-mailto"
-                       href="mailto:{{ email.mailinglist.name }}?Subject={{ email.subject|reply_subject|urlencode }}&amp;In-Reply-To=&lt;{{ email.message_id|urlencode }}&gt;"
+                       href="mailto:{{ mlist.name }}?Subject={{ email.subject|reply_subject|urlencode }}&amp;In-Reply-To=&lt;{{ email.message_id|urlencode }}&gt;"
                        >{% trans 'Use email software' %}</a></li>
                 </ul>
                 {{ reply_form.non_field_errors }}

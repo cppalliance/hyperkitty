@@ -43,8 +43,7 @@ from hyperkitty.forms import AddTagForm, ReplyForm
 from hyperkitty.lib.utils import stripped_subject
 from hyperkitty.lib.view_helpers import (
     check_mlist_private, get_category_widget, get_months, get_posting_form)
-from hyperkitty.models import (
-    Favorite, LastView, MailingList, Tag, Tagging, Thread)
+from hyperkitty.models import Favorite, LastView, Tag, Tagging, Thread
 
 
 REPLY_RE = re.compile(r'^(re:\s*)*', re.IGNORECASE)
@@ -102,7 +101,9 @@ def _get_thread_replies(request, thread, limit, offset=0):
 @check_mlist_private
 def thread_index(request, mlist_fqdn, threadid, month=None, year=None):
     ''' Displays all the email for a given thread identifier '''
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    # The check_mlist_private decorator sets the .mlist attribute
+    # on the request.
+    mlist = request.mlist
     thread = get_object_or_404(Thread, mailinglist=mlist, thread_id=threadid)
     starting_email = thread.starting_email
 
@@ -206,9 +207,10 @@ def replies(request, mlist_fqdn, threadid):
     # chunk_size must be an even number, or the even/odd cycle will be broken.
     chunk_size = 6
     offset = int(request.GET.get("offset", "0"))
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    # This is set by the @check_mlist_private decorator.
+    mlist = request.mlist
     thread = get_object_or_404(
-        Thread, mailinglist__name=mlist_fqdn, thread_id=threadid)
+        Thread, mailinglist=request.mlist, thread_id=threadid)
     # Last view
     last_view = request.GET.get("last_view")
     if last_view:
@@ -217,6 +219,7 @@ def replies(request, mlist_fqdn, threadid):
         except ValueError:
             last_view = None
     context = {
+        'mlist': mlist,
         'threadid': thread,
         'reply_form': get_posting_form(ReplyForm, request, mlist),
         'last_view': last_view,
@@ -248,7 +251,7 @@ def tags(request, mlist_fqdn, threadid):
         return HttpResponse('You must be logged in to add a tag',
                             content_type="text/plain", status=403)
     thread = get_object_or_404(
-        Thread, mailinglist__name=mlist_fqdn, thread_id=threadid)
+        Thread, mailinglist=request.mlist, thread_id=threadid)
 
     action = request.POST.get("action")
 
@@ -317,7 +320,7 @@ def favorite(request, mlist_fqdn, threadid):
                             content_type="text/plain", status=403)
 
     thread = get_object_or_404(
-        Thread, mailinglist__name=mlist_fqdn, thread_id=threadid)
+        Thread, mailinglist=request.mlist, thread_id=threadid)
     if request.POST["action"] == "add":
         Favorite.objects.get_or_create(thread=thread, user=request.user)
     elif request.POST["action"] == "rm":
@@ -336,7 +339,7 @@ def set_category(request, mlist_fqdn, threadid):
                             content_type="text/plain", status=403)
 
     thread = get_object_or_404(
-        Thread, mailinglist__name=mlist_fqdn, thread_id=threadid)
+        Thread, mailinglist=request.mlist, thread_id=threadid)
     category, category_form = get_category_widget(request)
     if not category and thread.category:
         thread.category = None
@@ -359,7 +362,7 @@ def reattach(request, mlist_fqdn, threadid):
     if not request.user.is_staff and not request.user.is_superuser:
         return HttpResponse('You must be a staff member to reattach a thread',
                             content_type="text/plain", status=403)
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     thread = get_object_or_404(Thread, mailinglist=mlist, thread_id=threadid)
     context = {
         'mlist': mlist,
@@ -407,7 +410,7 @@ def reattach(request, mlist_fqdn, threadid):
 
 @check_mlist_private
 def reattach_suggest(request, mlist_fqdn, threadid):
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     thread = get_object_or_404(Thread, mailinglist=mlist, thread_id=threadid)
 
     default_search_query = stripped_subject(

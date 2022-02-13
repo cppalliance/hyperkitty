@@ -43,7 +43,6 @@ from hyperkitty.lib.posting import PostingFailed, post_to_list, reply_subject
 from hyperkitty.lib.view_helpers import (
     check_mlist_private, get_months, get_posting_form)
 from hyperkitty.models.email import Attachment, Email
-from hyperkitty.models.mailinglist import MailingList
 from hyperkitty.models.thread import Thread
 
 
@@ -56,7 +55,7 @@ def index(request, mlist_fqdn, message_id_hash):
     Displays a single message identified by its message_id_hash (derived from
     message_id)
     '''
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     message = get_object_or_404(
         Email, mailinglist=mlist, message_id_hash=message_id_hash)
     if request.user.is_authenticated:
@@ -96,7 +95,7 @@ def attachment(request, mlist_fqdn, message_id_hash, counter, filename):
     Sends the numbered attachment for download. The filename is not used for
     lookup, but validated nonetheless for security reasons.
     """
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     message = get_object_or_404(
         Email, mailinglist=mlist, message_id_hash=message_id_hash)
     att = get_object_or_404(
@@ -122,7 +121,7 @@ def vote(request, mlist_fqdn, message_id_hash):
     if not request.user.is_authenticated:
         return HttpResponse('You must be logged in to vote',
                             content_type="text/plain", status=403)
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     message = get_object_or_404(
         Email, mailinglist=mlist, message_id_hash=message_id_hash)
 
@@ -133,9 +132,10 @@ def vote(request, mlist_fqdn, message_id_hash):
     message.myvote = message.votes.filter(user=request.user).first()
     t = loader.get_template('hyperkitty/fragments/like_form.html')
     html = t.render({
-            "object": message,
-            "message_id_hash": message_id_hash,
-            }, request)
+        "mlist": mlist,
+        "object": message,
+        "message_id_hash": message_id_hash,
+    }, request)
 
     votes = message.get_votes()
     result = {"like": votes["likes"], "dislike": votes["dislikes"],
@@ -152,7 +152,7 @@ def reply(request, mlist_fqdn, message_id_hash):
     if not getattr(settings, 'HYPERKITTY_ALLOW_WEB_POSTING', True):
         return HttpResponse('Posting via Hyperkitty is disabled',
                             content_type="text/plain", status=403)
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     form = get_posting_form(ReplyForm, request, mlist, request.POST)
     if not form.is_valid():
         return HttpResponse(form.errors.as_text(),
@@ -214,7 +214,7 @@ def new_message(request, mlist_fqdn):
     if not getattr(settings, 'HYPERKITTY_ALLOW_WEB_POSTING', True):
         return HttpResponse('Posting via Hyperkitty is disabled',
                             content_type="text/plain", status=403)
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     if request.method == 'POST':
         form = get_posting_form(PostForm, request, mlist, request.POST)
         if form.is_valid():
@@ -254,7 +254,7 @@ def delete(request, mlist_fqdn, threadid=None, message_id_hash=None):
     if not request.user.is_staff and not request.user.is_superuser:
         return HttpResponse('You must be a staff member to delete a message',
                             content_type="text/plain", status=403)
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     if threadid is not None:
         thread = get_object_or_404(
             Thread, mailinglist=mlist, thread_id=threadid)
