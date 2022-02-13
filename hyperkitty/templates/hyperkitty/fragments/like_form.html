@@ -24,7 +24,7 @@
 				<span class="hidden-tn hidden-xs">{% trans "You dislike it (cancel)" %}</span>
 			</a>
 		{% else %}
-			<a class="youlike vote{% if not user.is_authenticated %} disabled" title="{% trans 'You must be logged-in to vote.' %}{% endif %}"
+			<a class="youlike vote {% if not user.is_authenticated %} disabled" title="{% trans 'You must be logged-in to vote.' %}{% endif %}"
 			href="#like" data-vote="1">
 					<i class="fa fa-thumbs-o-up"></i> {{ votes.likes }}
 			</a>

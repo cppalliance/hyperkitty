@@ -2,62 +2,70 @@
 {% load hk_generic %}
 
 {% with starting_email=thread.starting_email %}
-<div class="thread{% if thread|is_unread_by:request.user %} unread{% endif %}">
-    <div class="thread-info">
-        <div class="thread-email row">
-            <div class="d-none d-sm-flex sender gravatar circle p-1">
-                {% if starting_email.sender.address %}
-                {% gravatar starting_email.sender.address 120 %}
-                <br />
-                {% else %}
-                <div class="gravatar-placeholder">&nbsp;</div>
-                {% endif %}
-            </div>
-            <div class="col-12 col-sm-10 col-lg-8 col-xl-9 p-7 ">
-                <span class="thread-title">
-                    <a name="{{thread.thread_id}}"
-                       href="{% url 'hk_thread' threadid=thread.thread_id mlist_fqdn=mlist.name %}">
-                        {% if thread.favorite %}
-                        <i class="fa fa-star saved" title="{% trans 'Favorite' %}"></i>
+    <div class="thread{% if thread|is_unread_by:request.user %} unread{% endif %}">
+        <div class="thread-info">
+            <div class="thread-email row d-flex w-100">
+                <div class="thread-summary d-flex">
+                    <div class="p-2 sender gravatar circle">
+                        {% if starting_email.sender.address %}
+                            {% gravatar starting_email.sender.address 120 %}
                         {% else %}
-                        <i class="fa fa-star-o notsaved" title="{% trans 'Favorite' %}"></i>
+                            <div class="gravatar-placeholder">&nbsp;</div>
                         {% endif %}
-                        {{ starting_email.subject|strip_subject:mlist }}
-                    </a>
-                </span>
-                <div>
-                    {% blocktrans with name=thread.starting_email.sender_name|default:thread.starting_email.sender.address|escapeemail %}
-                    by {{ name }}
-                    {% endblocktrans %}
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <a name="{{thread.thread_id}}"
+                           href="{% url 'hk_thread' threadid=thread.thread_id mlist_fqdn=mlist.name %}"
+                           class="thread-title">
+                            {% if thread.favorite %}
+                                <i class="fa fa-star saved" title="{% trans 'Favorite' %}"></i>
+                            {% else %}
+                                <i class="fa fa-star-o notsaved" title="{% trans 'Favorite' %}"></i>
+                            {% endif %}
+                            {{ starting_email.subject|strip_subject:mlist }}
+                        </a>
+                        <br />
+                        <span class="sender-name align-center">
+                            by {{ thread.starting_email.sender_name|default:thread.starting_email.sender.address|escapeemail }}
+                        </span>
+                        <span class="d-flex d-md-none pull-right text-muted" title="{{ thread.date_active|date:'l, j F Y H:i:s' }}">
+                          {{ thread.date_active|date:"d M 'y" }}
+                        </span>
+                    </div>
+                    <div class="ml-auto p-2 d-none d-md-flex">
+                      <br/ >
+                        <span class="thread-date pull-right" title="{{ thread.date_active|date:'l, j F Y H:i:s' }}">
+                          <i class="fa fa-clock-o" title="{% trans 'Most recent thread activity' %}"></i>
+                          {{ thread.date_active|date:"d M 'y" }}
+                        </span>
+                    </div>                    
                 </div>
-                <span class="expander collapsed d-none d-sm-block" style="color: #999">
-                    {{ starting_email.content|urlizetrunc:76|escapeemaillinks }}
-                </span>
-            </div>
-            <div class="col-10 col-sm-10 col-lg-2 col-xl-2 thread-date p-2 d-flex flex-column flex-sm-row align-items-baseline justify-content-center">
-                <div class="threa-date m-2" title="{{ thread.date_active|date:'l, j F Y H:i:s' }}">
-                    <i class="fa fa-clock-o" title="{% trans 'Most recent thread activity' %}"></i>
-                    {{ thread.date_active|timesince }}
-                </div>
-                <div class="list-stats m-2">
-                    <ul class="list-unstyled list-stats">
-                        <li>
+                <div class="d-none d-md-flex flex-row w-100">
+                  <div class="col-10 thread-email-content d-flex">
+                    <span class="expander collapsed" style="color: #999">
+                        {{ starting_email.content|urlizetrunc:76|escapeemaillinks }}
+                    </span>
+                  </div>
+                  <div class="col-2">
+                        <div class="list-stats pull-right">
+                          <span class="badge badge-secondary">
                             <i class="fa fa-user"></i>
                             {{ thread.participants_count }}
                             <!-- {% trans "participants" %} -->
-                        </li>
-                        <li>
+                          </span>
+                          <span class="badge badge-secondary">
                             <i class="fa fa-comment"></i>
                             {{ thread|num_comments }}
                             <!-- {% trans "comments" %} -->
-                        </li>
-                        <li>
+                          </span>
+                          <span class="d-block d-md-flex">
                             {% include "hyperkitty/fragments/like_form.html" with message_id_hash=starting_email.message_id_hash object=thread %}
-                        </li>
-                    </ul>
+                          </span>                            
+                        </div>
+                    </div>                   
                 </div>
+
             </div>
         </div>
     </div>
-</div>
 {% endwith %}
