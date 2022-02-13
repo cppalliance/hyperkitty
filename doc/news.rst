@@ -27,7 +27,8 @@ News / Changelog
   attachment content to the file system after setting
   ``HYPERKITTY_ATTACHMENT_FOLDER``.  (Closes #413)
 - Handle exception when a banned address tries to post. (Fixes #325)
-
+- Add an index on the 'name' column (fqdn)for the MailingList table since it is
+  most frequently used to query the MailingList object.
 
 Third Party
 -----------
@@ -39,6 +40,8 @@ UI
 
 - Change the design of the thread list page and some minor tweaks
   to the index page. (See !398)
+- Remove the counter in the "Top posters" section and all the list of threads
+  in the list of overview page. (Fixes #31)
 
 .. _news-1.3.5:
 
