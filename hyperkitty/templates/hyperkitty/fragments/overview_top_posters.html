@@ -3,9 +3,6 @@
 
 {% for poster in mlist.top_posters %}
 <div class="maker row">
-    <div class=" maker-id col-1">
-        #{{forloop.counter}}
-    </div>
     <div class="gravatar col-sm-auto">
         {% gravatar poster.address 120 %}
         <br />

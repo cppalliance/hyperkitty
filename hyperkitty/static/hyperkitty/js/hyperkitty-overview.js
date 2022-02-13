@@ -66,19 +66,6 @@ function setup_overview(recent_activity_url) {
     $('#flagged h3').click(collapsibleDivs);
     $('#posted-to h3').click(collapsibleDivs);
 
-    // "More threads" links
-    $(".overview").on("click", ".more-threads", function(e) {
-        e.preventDefault();
-        //var more_block = $(this).parent('.more-threads');
-        var more_block = $(this).parent().next();
-        more_block.children().slice(0, 5)
-            .hide().insertBefore($(this)).slideDown();
-        if (more_block.children().length === 0) {
-            more_block.remove();
-            $(this).remove();
-        }
-    });
-
     // Page fragments
     $('div[data-load-from]').each(function() {
         $(this).load($(this).attr("data-load-from"));
