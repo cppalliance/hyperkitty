@@ -131,6 +131,9 @@ def check_mlist_private(func):
                 request, "hyperkitty/errors/private.html", {
                     "mlist": mlist,
                 }, status=403)
+        # Set this here so that the view doesn't have to fetch and create
+        # the mlist object again.
+        request.mlist = mlist
         return func(request, *args, **kwargs)
     return inner
 

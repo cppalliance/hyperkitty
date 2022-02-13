@@ -59,7 +59,7 @@
                             <!-- {% trans "comments" %} -->
                           </span>
                           <span class="d-block d-md-flex">
-                            {% include "hyperkitty/fragments/like_form.html" with message_id_hash=starting_email.message_id_hash object=thread %}
+                            {% include "hyperkitty/fragments/like_form.html" with message_id_hash=starting_email.message_id_hash object=thread mlist=mlist %}
                           </span>                            
                         </div>
                     </div>                   

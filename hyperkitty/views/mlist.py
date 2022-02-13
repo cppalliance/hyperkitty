@@ -31,7 +31,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError, transaction
 from django.http import (
     Http404, HttpResponse, HttpResponseBadRequest, StreamingHttpResponse)
-from django.shortcuts import get_object_or_404, redirect, render
+from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils import formats, timezone
 from django.utils.dateformat import format as date_format
@@ -44,7 +44,7 @@ from django_mailman3.lib.paginator import paginate
 from hyperkitty.lib.view_helpers import (
     check_mlist_private, daterange, get_category_widget,
     get_display_dates, get_months)
-from hyperkitty.models import Email, Favorite, MailingList
+from hyperkitty.models import Email, Favorite
 from hyperkitty.signals import silenced_email_pre_delete
 
 
@@ -55,7 +55,7 @@ def archives(request, mlist_fqdn, year=None, month=None, day=None):
     If year & month is None, we return *all* the threads and render a view with
     all the threads of a MailingList.
     """
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
 
     if year is None and month is None:
         # If the year and month is None, we set the begin date to the date of
@@ -148,7 +148,7 @@ def _thread_list(request, mlist, threads,
 def overview(request, mlist_fqdn=None):
     if not mlist_fqdn:
         return redirect('/')
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
 
     # top authors are the ones that have the most kudos.  How do we determine
     # that?  Most likes for their post?
@@ -193,7 +193,7 @@ def overview(request, mlist_fqdn=None):
 # @cache_page(3600 * 12)  # cache for 12 hours
 def overview_recent_threads(request, mlist_fqdn):
     """Return the most recently updated threads."""
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     return render(request, "hyperkitty/fragments/overview_threads.html", {
         'mlist': mlist,
         'threads': mlist.recent_threads[:20],
@@ -205,7 +205,7 @@ def overview_recent_threads(request, mlist_fqdn):
 # @cache_page(3600 * 12)  # cache for 12 hours
 def overview_pop_threads(request, mlist_fqdn):
     """Return the threads with the most votes."""
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     return render(request, "hyperkitty/fragments/overview_threads.html", {
         'mlist': mlist,
         'threads': mlist.popular_threads,
@@ -217,7 +217,7 @@ def overview_pop_threads(request, mlist_fqdn):
 # @cache_page(3600 * 12)  # cache for 12 hours
 def overview_top_threads(request, mlist_fqdn):
     """Return the threads with the most answers."""
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     return render(request, "hyperkitty/fragments/overview_threads.html", {
         'mlist': mlist,
         'threads': mlist.top_threads,
@@ -229,7 +229,7 @@ def overview_top_threads(request, mlist_fqdn):
 # @cache_page(3600 * 12)  # cache for 12 hours
 def overview_favorites(request, mlist_fqdn):
     """Return the threads that the logged-in user has set as favorite."""
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     if request.user.is_authenticated:
         favorites = [f.thread for f in Favorite.objects.filter(
             thread__mailinglist=mlist, user=request.user)]
@@ -246,7 +246,7 @@ def overview_favorites(request, mlist_fqdn):
 # @cache_page(3600 * 12)  # cache for 12 hours
 def overview_posted_to(request, mlist_fqdn):
     """Return the threads that the logged-in user has posted to."""
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     if request.user.is_authenticated:
         mm_user_id = get_mailman_user_id(request.user)
         threads_posted_to = []
@@ -269,7 +269,7 @@ def overview_posted_to(request, mlist_fqdn):
 # @cache_page(3600 * 12)  # cache for 12 hours
 def overview_top_posters(request, mlist_fqdn):
     """Return the authors that sent the most emails."""
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     return render(request, "hyperkitty/fragments/overview_top_posters.html", {
         'mlist': mlist,
         })
@@ -279,7 +279,7 @@ def overview_top_posters(request, mlist_fqdn):
 @cache_page(3600 * 12)  # cache for 12 hours
 def recent_activity(request, mlist_fqdn):
     """Return the number of emails posted in the last 30 days"""
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     begin_date, end_date = mlist.get_recent_dates()
     days = daterange(begin_date, end_date)
 
@@ -313,7 +313,7 @@ def export_mbox(request, mlist_fqdn, filename):
     if not getattr(settings, "HYPERKITTY_MBOX_EXPORT", True):
         return HttpResponseBadRequest("Archive download disabled.")
 
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     query = mlist.emails
     try:
         if "start" in request.GET:
@@ -351,7 +351,7 @@ def export_mbox(request, mlist_fqdn, filename):
 @check_mlist_private
 @transaction.atomic
 def delete(request, mlist_fqdn):
-    mlist = get_object_or_404(MailingList, name=mlist_fqdn)
+    mlist = request.mlist
     if not request.user.is_staff and not request.user.is_superuser:
         return HttpResponse(
             _('You must be a staff member to delete a MailingList'),
