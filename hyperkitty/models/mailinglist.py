@@ -66,7 +66,7 @@ class MailingList(models.Model):
     """
     An archived mailing-list.
     """
-    name = models.CharField(max_length=254, unique=True)
+    name = models.CharField(db_index=True, max_length=254, unique=True)
     list_id = models.CharField(max_length=254, null=True, unique=True)
     display_name = models.CharField(max_length=255)
     description = models.TextField(null=True)
