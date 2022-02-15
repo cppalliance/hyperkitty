@@ -45,7 +45,7 @@
     </div>
     <div>
         <i class="fa fa-fw fa-user"></i>
-        {% blocktrans %}{{ thread.participants_count }} participants{% endblocktrans %}
+        {% blocktrans with participants_count=thread.participants_count %}{{ participants_count }} participants{% endblocktrans %}
     </div>
     {% if user.is_authenticated %}
     <div>
