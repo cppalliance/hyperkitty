@@ -461,3 +461,22 @@ class ThreadTestCase(TestCase):
             self.assertEqual(
                 resp['replies_html'].count(
                     'a class="reply"'), 0)
+
+    def test_download_button(self):
+        msg = EmailMessage()
+        msg["From"] = "Dummy Sender <dummy@example.com>"
+        msg["Subject"] = "Dummy Subject"
+        msg["Date"] = "Mon, 02 Feb 2015 13:00:00 +0300"
+        msg["Message-ID"] = "<msgid2>"
+        msg["In-Reply-To"] = "<msgid>"
+        msg.set_payload("Email message.")
+        add_to_list("list@example.com", msg)
+        url = reverse('hk_thread', args=["list@example.com", self.threadid])
+        response = self.client.get(url)
+        self.assertIn(
+            'This thread in gzipped mbox format', response.content.decode())
+        # With the settings set to False, the Download button should be gone.
+        with override_settings(HYPERKITTY_MBOX_EXPORT=False):
+            response = self.client.get(url)
+            self.assertFalse('This thread in gzipped mbox format' in
+                             response.content.decode())

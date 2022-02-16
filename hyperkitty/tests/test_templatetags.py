@@ -24,7 +24,8 @@ from unittest.mock import patch
 from django.test import override_settings
 
 from hyperkitty.lib.renderer import markdown_renderer
-from hyperkitty.templatetags.hk_generic import gravatar, snip_quoted
+from hyperkitty.templatetags.hk_generic import (
+    export_allowed, gravatar, settings_value_equals, snip_quoted)
 from hyperkitty.templatetags.hk_haystack import nolongterms
 from hyperkitty.tests.utils import TestCase
 
@@ -219,3 +220,28 @@ https://some.url/example
         self.assertEqual(
             result.strip(),
             '<p># This is another sample text.</p>')
+
+
+class SettingsValuesTest(TestCase):
+
+    def test_settings_value_equals(self):
+        # Simple test to ensure the method works as expected.
+        # When the values aren't set, it imples empty string.
+        self.assertFalse(settings_value_equals('MY_SETTING', True))
+        self.assertTrue(settings_value_equals('MY_SETTING', ''))
+        with override_settings(HYPERKITTY_ENABLE_GRAVATAR=False):
+            self.assertTrue(settings_value_equals(
+                'HYPERKITTY_ENABLE_GRAVATAR', False))
+        with override_settings(MY_SETTING='SOME_VALUE'):
+            self.assertFalse(settings_value_equals('MY_SETTING', 'Anything'))
+            self.assertTrue(settings_value_equals('MY_SETTING', 'SOME_VALUE'))
+
+    def test_export_allowed(self):
+        # Test when value is not set.
+        self.assertTrue(export_allowed())
+        # Test when set to True.
+        with override_settings(HYPERKITTY_MBOX_EXPORT=True):
+            self.assertTrue(export_allowed())
+        # Test when set to False.
+        with override_settings(HYPERKITTY_MBOX_EXPORT=False):
+            self.assertFalse(export_allowed())

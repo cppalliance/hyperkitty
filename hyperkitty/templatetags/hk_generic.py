@@ -309,5 +309,15 @@ def gravatar(*args, **kw):
 
 @register.simple_tag()
 def settings_value_equals(name, value):
-    """Get the settings value to use in templates."""
-    return getattr(settings, name, "") == value
+    """Get the settings value to use in templates.
+
+    Default value is set to empty string, which might not work for all settings
+    types.
+    """
+    return getattr(settings, name, '') == value
+
+
+@register.simple_tag
+def export_allowed():
+    """Returns the HYPERKITTY_MBOX_EXPORT settings value. Defaults to True."""
+    return getattr(settings, 'HYPERKITTY_MBOX_EXPORT', True)
