@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load hk_generic %}
 
-{% settings_value_equals "HYPERKITTY_MBOX_EXPORT" True as export_allowed %}
+{% export_allowed as export_allowed %}
 {% if mlist %}
 <div class="d-none d-md-inline col-12 col-md-2">
     <div class="row d-flex justify-content-center flex-column align-items-center">
