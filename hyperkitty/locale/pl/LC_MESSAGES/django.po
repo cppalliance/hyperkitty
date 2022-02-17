@@ -223,7 +223,6 @@ msgstr "Szukaj na tej liście"
 
 #: templates/hyperkitty/base.html:91
 #, fuzzy
-#| msgid "Search this list"
 msgid "Search all lists"
 msgstr "Szukaj na tej liście"
 
@@ -241,7 +240,6 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:195
 #, fuzzy
-#| msgid "Thread"
 msgid "Thread View"
 msgstr "Wątek"
 
@@ -255,13 +253,11 @@ msgstr "Poprzednia nieprzeczytana wiadomość"
 
 #: templates/hyperkitty/base.html:199
 #, fuzzy
-#| msgid "All Threads"
 msgid "Jump to all threads"
 msgstr "Wszystkie wątki"
 
 #: templates/hyperkitty/base.html:200
 #, fuzzy
-#| msgid "List overview"
 msgid "Jump to MailingList overview"
 msgstr "Przegląd listy"
 
@@ -311,7 +307,6 @@ msgstr "Musisz być zalogowany, aby głosować."
 
 #: templates/hyperkitty/fragments/month_list.html:6
 #, fuzzy
-#| msgid "Thread"
 msgid "Threads by"
 msgstr "Wątek"
 
@@ -675,7 +670,6 @@ msgstr "Statystyki"
 
 #: templates/hyperkitty/overview.html:44
 #, fuzzy
-#| msgid "Thread"
 msgid "Threads"
 msgstr "Wątek"
 
@@ -690,16 +684,16 @@ msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
-"<span class=\"d-none d-md-inline\">Rozpocznij n</span><span class=\"d-md-"
-"none\">N</span>owy wątek"
+"<span class=\"d-none d-md-inline\">Rozpocznij n</span><span class=\"d-md-none"
+"\">N</span>owy wątek"
 
 #: templates/hyperkitty/overview.html:75
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"d-none d-md-inline\">Zarządzaj s</span><span class=\"d-md-"
-"none\">S</span>ubskrypcją"
+"<span class=\"d-none d-md-inline\">Zarządzaj s</span><span class=\"d-md-none"
+"\">S</span>ubskrypcją"
 
 #: templates/hyperkitty/overview.html:81
 msgid "Delete Archive"
@@ -972,10 +966,6 @@ msgstr "Ulubione"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:29
 #, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                                by %(name)s\n"
-#| "                            "
 msgid ""
 "\n"
 "                    by %(name)s\n"
@@ -1206,7 +1196,6 @@ msgstr ""
 
 #: views/message.py:205
 #, fuzzy
-#| msgid "You have not posted to this list (yet)."
 msgid ""
 "\n"
 "  You have been subscribed to {} list."
@@ -1256,7 +1245,6 @@ msgstr ""
 
 #: views/mlist.py:366
 #, fuzzy
-#| msgid "Successfully deleted %(count)s messages."
 msgid "Successfully deleted {}"
 msgstr "Pomyślnie usunięto %(count)s wiadomości."
 
