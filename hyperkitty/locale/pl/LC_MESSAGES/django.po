@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 18:55-0700\n"
-"PO-Revision-Date: 2022-02-11 23:24+0000\n"
+"PO-Revision-Date: 2022-02-17 06:39+0000\n"
 "Last-Translator: Piotr Frankowski <piotr@ten.net.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/pl/>\n"
@@ -128,7 +128,7 @@ msgstr "Lista dostępnych formatów:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
-msgstr "Plain text"
+msgstr "Zwykły tekst"
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
@@ -246,14 +246,12 @@ msgid "Thread View"
 msgstr "Wątek"
 
 #: templates/hyperkitty/base.html:197
-#, fuzzy
-#| msgid "Delete message(s)"
 msgid "Next unread message"
-msgstr "Usuń wiadomość(i)"
+msgstr "Następna nieprzeczytana wiadomość"
 
 #: templates/hyperkitty/base.html:198
 msgid "Previous unread message"
-msgstr ""
+msgstr "Poprzednia nieprzeczytana wiadomość"
 
 #: templates/hyperkitty/base.html:199
 #, fuzzy
@@ -318,10 +316,8 @@ msgid "Threads by"
 msgstr "Wątek"
 
 #: templates/hyperkitty/fragments/month_list.html:6
-#, fuzzy
-#| msgid "This month"
 msgid " month"
-msgstr "Ten miesiąc"
+msgstr " miesiąc"
 
 #: templates/hyperkitty/fragments/overview_threads.html:12
 msgid "New messages in this thread"
@@ -698,16 +694,12 @@ msgstr ""
 "none\">N</span>owy wątek"
 
 #: templates/hyperkitty/overview.html:75
-#, fuzzy
-#| msgid ""
-#| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
-#| "sm hidden-md hidden-lg\">S</span>ubscription"
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"hidden-tn hidden-xs\">Zarządzaj</span><span class=\"hidden-sm "
-"hidden-md hidden-lg\">S</span>ubskrypcją"
+"<span class=\"d-none d-md-inline\">Zarządzaj s</span><span class=\"d-md-"
+"none\">S</span>ubskrypcją"
 
 #: templates/hyperkitty/overview.html:81
 msgid "Delete Archive"
@@ -747,11 +739,11 @@ msgstr "sława"
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
-msgstr ""
+msgstr "Ostatnie"
 
 #: templates/hyperkitty/overview.html:156
 msgid "Most Active"
-msgstr "Najbardziej Aktywne"
+msgstr "Najaktywniejsze"
 
 #: templates/hyperkitty/overview.html:160
 msgid "Most Popular"
@@ -764,7 +756,7 @@ msgstr "Ulubione"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
-msgstr ""
+msgstr "Komentowane"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
@@ -924,17 +916,18 @@ msgstr "dni"
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s komentarze"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(thread.participants_count)s participants"
-msgstr ""
+msgstr "%(thread.participants_count)s uczestnicy"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
 msgstr ""
+"%(unread_count)s nieprzeczytane <span class=\"hidden-sm\">wiadomości</span>"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
