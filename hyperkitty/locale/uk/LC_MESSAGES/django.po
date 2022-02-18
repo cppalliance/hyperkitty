@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-12 18:55-0700\n"
+"POT-Creation-Date: 2022-02-17 16:55-0800\n"
 "PO-Revision-Date: 2021-05-30 22:30+0000\n"
 "Last-Translator: AtaZh <ipomoea@hilarious.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -307,25 +307,25 @@ msgstr "Гілки за"
 msgid " month"
 msgstr " місяцем"
 
-#: templates/hyperkitty/fragments/overview_threads.html:12
+#: templates/hyperkitty/fragments/overview_threads.html:11
 msgid "New messages in this thread"
 msgstr "Нові повідомлення у цій гілці"
 
-#: templates/hyperkitty/fragments/overview_threads.html:37
-#: templates/hyperkitty/fragments/thread_left_nav.html:18
+#: templates/hyperkitty/fragments/overview_threads.html:36
+#: templates/hyperkitty/fragments/thread_left_nav.html:19
 #: templates/hyperkitty/overview.html:78
 msgid "All Threads"
 msgstr "Усі гілки"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:18
+#: templates/hyperkitty/fragments/overview_top_posters.html:15
 msgid "See the profile"
 msgstr "Див. профіль"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:24
+#: templates/hyperkitty/fragments/overview_top_posters.html:21
 msgid "posts"
 msgstr "дописи"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:29
+#: templates/hyperkitty/fragments/overview_top_posters.html:26
 msgid "No posters this month (yet)."
 msgstr "Цього місяця (ще) не було дописувачів."
 
@@ -348,24 +348,24 @@ msgstr ""
 "Якщо ви не є поточним членом списку, то надіславши це повідомлення ви на "
 "нього підпишетеся."
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:11
+#: templates/hyperkitty/fragments/thread_left_nav.html:12
 msgid "List overview"
 msgstr "Огляд списку"
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:27 views/message.py:75
-#: views/mlist.py:102 views/thread.py:167
+#: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
+#: views/mlist.py:102 views/thread.py:168
 msgid "Download"
 msgstr "Завантажити"
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:30
+#: templates/hyperkitty/fragments/thread_left_nav.html:32
 msgid "Past 30 days"
 msgstr "Минулі 30 днів"
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:31
+#: templates/hyperkitty/fragments/thread_left_nav.html:33
 msgid "This month"
 msgstr "Цього місяця"
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:34
+#: templates/hyperkitty/fragments/thread_left_nav.html:36
 msgid "Entire archive"
 msgstr "Увесь архів"
 
@@ -425,21 +425,21 @@ msgstr "Приховати приватні"
 msgid "Find list"
 msgstr "Знайти список"
 
-#: templates/hyperkitty/index.html:123 templates/hyperkitty/index.html:193
+#: templates/hyperkitty/index.html:123 templates/hyperkitty/index.html:191
 #: templates/hyperkitty/user_profile/last_views.html:34
 #: templates/hyperkitty/user_profile/last_views.html:73
 msgid "new"
 msgstr "новий"
 
-#: templates/hyperkitty/index.html:134 templates/hyperkitty/index.html:204
+#: templates/hyperkitty/index.html:135 templates/hyperkitty/index.html:202
 msgid "private"
 msgstr "приватний"
 
-#: templates/hyperkitty/index.html:136 templates/hyperkitty/index.html:206
+#: templates/hyperkitty/index.html:137 templates/hyperkitty/index.html:204
 msgid "inactive"
 msgstr "неактивний"
 
-#: templates/hyperkitty/index.html:142 templates/hyperkitty/index.html:232
+#: templates/hyperkitty/index.html:143 templates/hyperkitty/index.html:229
 #: templates/hyperkitty/overview.html:94 templates/hyperkitty/overview.html:111
 #: templates/hyperkitty/overview.html:181
 #: templates/hyperkitty/overview.html:188
@@ -450,25 +450,11 @@ msgstr "неактивний"
 msgid "Loading..."
 msgstr "Завантажується…"
 
-#: templates/hyperkitty/index.html:148 templates/hyperkitty/index.html:221
-#: templates/hyperkitty/overview.html:103
-#: templates/hyperkitty/thread_list.html:40
-#: templates/hyperkitty/threads/right_col.html:97
-#: templates/hyperkitty/threads/summary_thread_large.html:47
-msgid "participants"
-msgstr "учасники"
-
-#: templates/hyperkitty/index.html:153 templates/hyperkitty/index.html:226
-#: templates/hyperkitty/overview.html:104
-#: templates/hyperkitty/thread_list.html:45
-msgid "discussions"
-msgstr "обговорення"
-
-#: templates/hyperkitty/index.html:162 templates/hyperkitty/index.html:240
+#: templates/hyperkitty/index.html:160 templates/hyperkitty/index.html:237
 msgid "No archived list yet."
 msgstr "Ще не архівований список."
 
-#: templates/hyperkitty/index.html:174
+#: templates/hyperkitty/index.html:172
 #: templates/hyperkitty/user_profile/favorites.html:40
 #: templates/hyperkitty/user_profile/last_views.html:45
 #: templates/hyperkitty/user_profile/profile.html:15
@@ -477,13 +463,25 @@ msgstr "Ще не архівований список."
 msgid "List"
 msgstr "Список"
 
-#: templates/hyperkitty/index.html:175
+#: templates/hyperkitty/index.html:173
 msgid "Description"
 msgstr "Опис"
 
-#: templates/hyperkitty/index.html:176
+#: templates/hyperkitty/index.html:174
 msgid "Activity in the past 30 days"
 msgstr "Активність за минулі 30 днів"
+
+#: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
+#: templates/hyperkitty/thread_list.html:40
+#: templates/hyperkitty/threads/right_col.html:101
+#: templates/hyperkitty/threads/summary_thread_large.html:54
+msgid "participants"
+msgstr "учасники"
+
+#: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
+#: templates/hyperkitty/thread_list.html:45
+msgid "discussions"
+msgstr "обговорення"
 
 #: templates/hyperkitty/list_delete.html:7
 msgid "Delete MailingList"
@@ -896,62 +894,76 @@ msgstr "Ви маєте увійти в систему, щоб редагува�
 msgid "no category"
 msgstr "без категорії"
 
-#: templates/hyperkitty/threads/right_col.html:12
-msgid "days inactive"
-msgstr "дні(в) неактивності"
+#: templates/hyperkitty/threads/right_col.html:10
+#, python-format
+msgid ""
+"\n"
+"            <span class=\"days-num\">%(days_inactive)s</span>\n"
+"            <div class=\"days-text\">\n"
+"                days inactive\n"
+"            </div>\n"
+"        "
+msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:18
-msgid "days old"
-msgstr "дні(в)"
-
-#: templates/hyperkitty/threads/right_col.html:40
 #, python-format
-msgid "%(num_comments)s comments"
+msgid ""
+"\n"
+"            <span class=\"days-num\">%(days_old)s</span>\n"
+"            <div class=\"days-text\">\n"
+"                days old\n"
+"            </div>\n"
+"        "
 msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
-msgid "%(thread.participants_count)s participants"
+msgid "%(num_comments)s comments"
 msgstr ""
 
-#: templates/hyperkitty/threads/right_col.html:49
+#: templates/hyperkitty/threads/right_col.html:48
+#, python-format
+msgid "%(participants_count)s participants"
+msgstr ""
+
+#: templates/hyperkitty/threads/right_col.html:53
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
 msgstr ""
 
-#: templates/hyperkitty/threads/right_col.html:59
+#: templates/hyperkitty/threads/right_col.html:63
 msgid "You must be logged-in to have favorites."
 msgstr "Ви маєте увійти в систему, щоб позначати улюблене."
 
-#: templates/hyperkitty/threads/right_col.html:60
+#: templates/hyperkitty/threads/right_col.html:64
 msgid "Add to favorites"
 msgstr "Додати до улюбленого"
 
-#: templates/hyperkitty/threads/right_col.html:62
+#: templates/hyperkitty/threads/right_col.html:66
 msgid "Remove from favorites"
 msgstr "Вилучити з улюбленого"
 
-#: templates/hyperkitty/threads/right_col.html:71
+#: templates/hyperkitty/threads/right_col.html:75
 msgid "Reattach this thread"
 msgstr "Переприкріпити цю гілку"
 
-#: templates/hyperkitty/threads/right_col.html:75
+#: templates/hyperkitty/threads/right_col.html:79
 msgid "Delete this thread"
 msgstr "Вилучити цю гілку"
 
-#: templates/hyperkitty/threads/right_col.html:113
+#: templates/hyperkitty/threads/right_col.html:117
 msgid "Unreads:"
 msgstr "Непрочитаних:"
 
-#: templates/hyperkitty/threads/right_col.html:115
+#: templates/hyperkitty/threads/right_col.html:119
 msgid "Go to:"
 msgstr "Перейти до:"
 
-#: templates/hyperkitty/threads/right_col.html:115
+#: templates/hyperkitty/threads/right_col.html:119
 msgid "next"
 msgstr "далі"
 
-#: templates/hyperkitty/threads/right_col.html:116
+#: templates/hyperkitty/threads/right_col.html:120
 msgid "prev"
 msgstr "назад"
 
@@ -960,22 +972,11 @@ msgstr "назад"
 msgid "Favorite"
 msgstr "Улюблене"
 
-#: templates/hyperkitty/threads/summary_thread_large.html:29
-#, python-format
-msgid ""
-"\n"
-"                    by %(name)s\n"
-"                    "
-msgstr ""
-"\n"
-"                    від %(name)s\n"
-"                    "
-
-#: templates/hyperkitty/threads/summary_thread_large.html:39
+#: templates/hyperkitty/threads/summary_thread_large.html:38
 msgid "Most recent thread activity"
 msgstr "Найсвіжіша активність у гілці"
 
-#: templates/hyperkitty/threads/summary_thread_large.html:52
+#: templates/hyperkitty/threads/summary_thread_large.html:59
 msgid "comments"
 msgstr "коментарі(в)"
 
@@ -1182,7 +1183,7 @@ msgstr "Голоси за цього користувача:"
 msgid "Email addresses:"
 msgstr "Електронні адреси:"
 
-#: views/message.py:76
+#: views/message.py:75
 msgid "This message in gzipped mbox format"
 msgstr "Це повідомлення у gzipped mbox-форматі"
 
@@ -1236,11 +1237,11 @@ msgstr "Ви (ще) не скаржилися на жодні обговорен
 msgid "You have not posted to this list (yet)."
 msgstr "Ви (ще) не дописували у цей список."
 
-#: views/mlist.py:352
+#: views/mlist.py:357
 msgid "You must be a staff member to delete a MailingList"
 msgstr "Ви повинні бути працівником, щоб вилучити список розсилки"
 
-#: views/mlist.py:366
+#: views/mlist.py:371
 msgid "Successfully deleted {}"
 msgstr "Успішно вилучено {}"
 
@@ -1249,9 +1250,25 @@ msgstr "Успішно вилучено {}"
 msgid "Parsing error: %(error)s"
 msgstr "Помилка парсингу: %(error)s"
 
-#: views/thread.py:168
+#: views/thread.py:169
 msgid "This thread in gzipped mbox format"
 msgstr "Ця гілка у gzipped mbox-форматі"
+
+#~ msgid "days inactive"
+#~ msgstr "дні(в) неактивності"
+
+#~ msgid "days old"
+#~ msgstr "дні(в)"
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "                    by %(name)s\n"
+#~ "                    "
+#~ msgstr ""
+#~ "\n"
+#~ "                    від %(name)s\n"
+#~ "                    "
 
 #~ msgid "unread"
 #~ msgstr "непрочитано"
