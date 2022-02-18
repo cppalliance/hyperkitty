@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-12 18:55-0700\n"
+"POT-Creation-Date: 2022-02-17 16:55-0800\n"
 "PO-Revision-Date: 2021-11-02 09:36+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -310,25 +310,25 @@ msgstr "Rrjedha nga"
 msgid " month"
 msgstr " muaj"
 
-#: templates/hyperkitty/fragments/overview_threads.html:12
+#: templates/hyperkitty/fragments/overview_threads.html:11
 msgid "New messages in this thread"
 msgstr "Mesazhe të rinj në këtë rrjedhë"
 
-#: templates/hyperkitty/fragments/overview_threads.html:37
-#: templates/hyperkitty/fragments/thread_left_nav.html:18
+#: templates/hyperkitty/fragments/overview_threads.html:36
+#: templates/hyperkitty/fragments/thread_left_nav.html:19
 #: templates/hyperkitty/overview.html:78
 msgid "All Threads"
 msgstr "Krejt Rrjedhat"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:18
+#: templates/hyperkitty/fragments/overview_top_posters.html:15
 msgid "See the profile"
 msgstr "Shihni profilin"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:24
+#: templates/hyperkitty/fragments/overview_top_posters.html:21
 msgid "posts"
 msgstr "postime"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:29
+#: templates/hyperkitty/fragments/overview_top_posters.html:26
 msgid "No posters this month (yet)."
 msgstr "(Ende) Pa postues këtë muaj."
 
@@ -351,24 +351,24 @@ msgstr ""
 "Nëse s’jeni një anëtar i tanishëm i listës, dërgimi i këtij mesazhi do të "
 "kryejë pajtimin tuaj në të."
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:11
+#: templates/hyperkitty/fragments/thread_left_nav.html:12
 msgid "List overview"
 msgstr "Përmbledhje liste"
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:27 views/message.py:75
-#: views/mlist.py:102 views/thread.py:167
+#: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
+#: views/mlist.py:102 views/thread.py:168
 msgid "Download"
 msgstr "Shkarkim"
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:30
+#: templates/hyperkitty/fragments/thread_left_nav.html:32
 msgid "Past 30 days"
 msgstr "30 ditët e shkuara"
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:31
+#: templates/hyperkitty/fragments/thread_left_nav.html:33
 msgid "This month"
 msgstr "Këtë muaj"
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:34
+#: templates/hyperkitty/fragments/thread_left_nav.html:36
 msgid "Entire archive"
 msgstr "Krejt arkivën"
 
@@ -428,21 +428,21 @@ msgstr "Fshih privatet"
 msgid "Find list"
 msgstr "Gjeni listë"
 
-#: templates/hyperkitty/index.html:123 templates/hyperkitty/index.html:193
+#: templates/hyperkitty/index.html:123 templates/hyperkitty/index.html:191
 #: templates/hyperkitty/user_profile/last_views.html:34
 #: templates/hyperkitty/user_profile/last_views.html:73
 msgid "new"
 msgstr "e re"
 
-#: templates/hyperkitty/index.html:134 templates/hyperkitty/index.html:204
+#: templates/hyperkitty/index.html:135 templates/hyperkitty/index.html:202
 msgid "private"
 msgstr "private"
 
-#: templates/hyperkitty/index.html:136 templates/hyperkitty/index.html:206
+#: templates/hyperkitty/index.html:137 templates/hyperkitty/index.html:204
 msgid "inactive"
 msgstr "joaktive"
 
-#: templates/hyperkitty/index.html:142 templates/hyperkitty/index.html:232
+#: templates/hyperkitty/index.html:143 templates/hyperkitty/index.html:229
 #: templates/hyperkitty/overview.html:94 templates/hyperkitty/overview.html:111
 #: templates/hyperkitty/overview.html:181
 #: templates/hyperkitty/overview.html:188
@@ -453,25 +453,11 @@ msgstr "joaktive"
 msgid "Loading..."
 msgstr "Po ngarkohet…"
 
-#: templates/hyperkitty/index.html:148 templates/hyperkitty/index.html:221
-#: templates/hyperkitty/overview.html:103
-#: templates/hyperkitty/thread_list.html:40
-#: templates/hyperkitty/threads/right_col.html:97
-#: templates/hyperkitty/threads/summary_thread_large.html:47
-msgid "participants"
-msgstr "pjesëmarrës"
-
-#: templates/hyperkitty/index.html:153 templates/hyperkitty/index.html:226
-#: templates/hyperkitty/overview.html:104
-#: templates/hyperkitty/thread_list.html:45
-msgid "discussions"
-msgstr "diskutime"
-
-#: templates/hyperkitty/index.html:162 templates/hyperkitty/index.html:240
+#: templates/hyperkitty/index.html:160 templates/hyperkitty/index.html:237
 msgid "No archived list yet."
 msgstr "Ende pa listë të arkivuar."
 
-#: templates/hyperkitty/index.html:174
+#: templates/hyperkitty/index.html:172
 #: templates/hyperkitty/user_profile/favorites.html:40
 #: templates/hyperkitty/user_profile/last_views.html:45
 #: templates/hyperkitty/user_profile/profile.html:15
@@ -480,13 +466,25 @@ msgstr "Ende pa listë të arkivuar."
 msgid "List"
 msgstr "Listë"
 
-#: templates/hyperkitty/index.html:175
+#: templates/hyperkitty/index.html:173
 msgid "Description"
 msgstr "Përshkrim"
 
-#: templates/hyperkitty/index.html:176
+#: templates/hyperkitty/index.html:174
 msgid "Activity in the past 30 days"
 msgstr "Veprimtari gjatë 30 ditëve të shkuara"
+
+#: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
+#: templates/hyperkitty/thread_list.html:40
+#: templates/hyperkitty/threads/right_col.html:101
+#: templates/hyperkitty/threads/summary_thread_large.html:54
+msgid "participants"
+msgstr "pjesëmarrës"
+
+#: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
+#: templates/hyperkitty/thread_list.html:45
+msgid "discussions"
+msgstr "diskutime"
 
 #: templates/hyperkitty/list_delete.html:7
 msgid "Delete MailingList"
@@ -888,62 +886,77 @@ msgstr "Që të përpunoni, duhet të keni bërë hyrjen."
 msgid "no category"
 msgstr "s’ka kategori"
 
-#: templates/hyperkitty/threads/right_col.html:12
-msgid "days inactive"
-msgstr "ditë joaktiv"
+#: templates/hyperkitty/threads/right_col.html:10
+#, python-format
+msgid ""
+"\n"
+"            <span class=\"days-num\">%(days_inactive)s</span>\n"
+"            <div class=\"days-text\">\n"
+"                days inactive\n"
+"            </div>\n"
+"        "
+msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:18
-msgid "days old"
-msgstr "ditë i vjetër"
+#, python-format
+msgid ""
+"\n"
+"            <span class=\"days-num\">%(days_old)s</span>\n"
+"            <div class=\"days-text\">\n"
+"                days old\n"
+"            </div>\n"
+"        "
+msgstr ""
 
-#: templates/hyperkitty/threads/right_col.html:40
+#: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s komente"
 
-#: templates/hyperkitty/threads/right_col.html:44
-#, python-format
-msgid "%(thread.participants_count)s participants"
+#: templates/hyperkitty/threads/right_col.html:48
+#, fuzzy, python-format
+#| msgid "%(thread.participants_count)s participants"
+msgid "%(participants_count)s participants"
 msgstr "%(thread.participants_count)s pjesëmarrës"
 
-#: templates/hyperkitty/threads/right_col.html:49
+#: templates/hyperkitty/threads/right_col.html:53
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
 msgstr "%(unread_count)s <span class=\"hidden-sm\">mesazhe</span> të palexuar"
 
-#: templates/hyperkitty/threads/right_col.html:59
+#: templates/hyperkitty/threads/right_col.html:63
 msgid "You must be logged-in to have favorites."
 msgstr "Që të keni të parapëlqyer, duhet të keni bërë hyrjen."
 
-#: templates/hyperkitty/threads/right_col.html:60
+#: templates/hyperkitty/threads/right_col.html:64
 msgid "Add to favorites"
 msgstr "Shtoje te të parapëlqyerit"
 
-#: templates/hyperkitty/threads/right_col.html:62
+#: templates/hyperkitty/threads/right_col.html:66
 msgid "Remove from favorites"
 msgstr "Hiqe prej të parapëlqyerve"
 
-#: templates/hyperkitty/threads/right_col.html:71
+#: templates/hyperkitty/threads/right_col.html:75
 msgid "Reattach this thread"
 msgstr "Ribashkëngjit këtë rrjedhë"
 
-#: templates/hyperkitty/threads/right_col.html:75
+#: templates/hyperkitty/threads/right_col.html:79
 msgid "Delete this thread"
 msgstr "Fshije këtë rrjedhë"
 
-#: templates/hyperkitty/threads/right_col.html:113
+#: templates/hyperkitty/threads/right_col.html:117
 msgid "Unreads:"
 msgstr "Të palexuar:"
 
-#: templates/hyperkitty/threads/right_col.html:115
+#: templates/hyperkitty/threads/right_col.html:119
 msgid "Go to:"
 msgstr "Shko te:"
 
-#: templates/hyperkitty/threads/right_col.html:115
+#: templates/hyperkitty/threads/right_col.html:119
 msgid "next"
 msgstr "pasuesi"
 
-#: templates/hyperkitty/threads/right_col.html:116
+#: templates/hyperkitty/threads/right_col.html:120
 msgid "prev"
 msgstr "i mëparshmi"
 
@@ -952,22 +965,11 @@ msgstr "i mëparshmi"
 msgid "Favorite"
 msgstr ""
 
-#: templates/hyperkitty/threads/summary_thread_large.html:29
-#, python-format
-msgid ""
-"\n"
-"                    by %(name)s\n"
-"                    "
-msgstr ""
-"\n"
-"                    nga %(name)s\n"
-"                    "
-
-#: templates/hyperkitty/threads/summary_thread_large.html:39
+#: templates/hyperkitty/threads/summary_thread_large.html:38
 msgid "Most recent thread activity"
 msgstr "Veprimtaria më e freskët në rrjedhë"
 
-#: templates/hyperkitty/threads/summary_thread_large.html:52
+#: templates/hyperkitty/threads/summary_thread_large.html:59
 msgid "comments"
 msgstr "komente"
 
@@ -1174,7 +1176,7 @@ msgstr "Vota për këtë përdorues:"
 msgid "Email addresses:"
 msgstr "Adresa email:"
 
-#: views/message.py:76
+#: views/message.py:75
 msgid "This message in gzipped mbox format"
 msgstr "Këtë mesazh në format mbox gzipp"
 
@@ -1228,11 +1230,11 @@ msgstr "S’i keni vënë shenjë ndonjë diskutimi (ende)."
 msgid "You have not posted to this list (yet)."
 msgstr "S’keni postuar te kjo listë (ende)."
 
-#: views/mlist.py:352
+#: views/mlist.py:357
 msgid "You must be a staff member to delete a MailingList"
 msgstr "Duhet të jeni pjesëtar i stafit që të fshini një Listë Postimesh"
 
-#: views/mlist.py:366
+#: views/mlist.py:371
 msgid "Successfully deleted {}"
 msgstr "U fshinë me sukses {}"
 
@@ -1241,9 +1243,25 @@ msgstr "U fshinë me sukses {}"
 msgid "Parsing error: %(error)s"
 msgstr "Gabim në përtypje: %(error)s"
 
-#: views/thread.py:168
+#: views/thread.py:169
 msgid "This thread in gzipped mbox format"
 msgstr "Këtë rrjedhë në format mbox gzipp"
+
+#~ msgid "days inactive"
+#~ msgstr "ditë joaktiv"
+
+#~ msgid "days old"
+#~ msgstr "ditë i vjetër"
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "                    by %(name)s\n"
+#~ "                    "
+#~ msgstr ""
+#~ "\n"
+#~ "                    nga %(name)s\n"
+#~ "                    "
 
 #~ msgid "unread"
 #~ msgstr "të palexuara"
