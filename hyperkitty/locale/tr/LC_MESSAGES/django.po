@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-17 16:55-0800\n"
-"PO-Revision-Date: 2021-10-14 00:23+0000\n"
+"PO-Revision-Date: 2022-02-19 19:53+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -891,6 +891,12 @@ msgid ""
 "            </div>\n"
 "        "
 msgstr ""
+"\n"
+"            <span class=\"days-num\">%(days_inactive)s</span>\n"
+"            <div class=\"days-text\">\n"
+"                gün etkin değil\n"
+"            </div>\n"
+"        "
 
 #: templates/hyperkitty/threads/right_col.html:18
 #, python-format
@@ -902,6 +908,12 @@ msgid ""
 "            </div>\n"
 "        "
 msgstr ""
+"\n"
+"            <span class=\"days-num\">%(days_old)s</span>\n"
+"            <div class=\"days-text\">\n"
+"                günlük\n"
+"            </div>\n"
+"        "
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
@@ -909,10 +921,9 @@ msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s yorum"
 
 #: templates/hyperkitty/threads/right_col.html:48
-#, fuzzy, python-format
-#| msgid "%(thread.participants_count)s participants"
+#, python-format
 msgid "%(participants_count)s participants"
-msgstr "%(thread.participants_count)s katılımcı"
+msgstr "%(participants_count)s katılımcı"
 
 #: templates/hyperkitty/threads/right_col.html:53
 #, python-format
