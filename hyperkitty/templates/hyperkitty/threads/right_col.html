@@ -6,21 +6,17 @@
 <section id="thread-overview-info">
     <!-- Start stats re: dates -->
     <div id="thread-date-info" class="row">
-      <div class="col-tn-6">
-        {% blocktrans %}
-            <span class="days-num">{{ days_inactive }}</span>
-            <div class="days-text">
-                days inactive
-            </div>
-        {% endblocktrans %}
+      <div class="col">
+        <span class="days-num">{{ days_inactive }}</span>
+        <div class="days-text">
+          {% trans 'Age (days ago)' %}
+        </div>
       </div>
-      <div class="col-tn-6">
-        {% blocktrans %}
-            <span class="days-num">{{ days_old }}</span>
-            <div class="days-text">
-                days old
-            </div>
-        {% endblocktrans %}
+      <div class="col">
+        <span class="days-num">{{ days_old }}</span>
+        <div class="days-text">
+          {% trans 'Last active (days ago)' %}
+        </div>
         </div>
     </div> <!-- /Stats re: dates -->
 
