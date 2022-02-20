@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-17 16:55-0800\n"
-"PO-Revision-Date: 2021-11-19 15:51+0000\n"
-"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
-"mailman/hyperkitty/zh_Hans/>\n"
+"PO-Revision-Date: 2022-02-19 19:53+0000\n"
+"Last-Translator: Eric <alchemillatruth@purelymail.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"gnu-mailman/hyperkitty/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.9.1\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -871,6 +871,12 @@ msgid ""
 "            </div>\n"
 "        "
 msgstr ""
+"\n"
+"            <span class=\"days-num\">%(days_inactive)s</span>\n"
+"            <div class=\"days-text\">\n"
+"                天不活跃\n"
+"            </div>\n"
+"        "
 
 #: templates/hyperkitty/threads/right_col.html:18
 #, python-format
@@ -882,6 +888,12 @@ msgid ""
 "            </div>\n"
 "        "
 msgstr ""
+"\n"
+"            <span class=\"days-num\">%(days_old)s</span>\n"
+"            <div class=\"days-text\">\n"
+"                天了\n"
+"            </div>\n"
+"        "
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
@@ -889,10 +901,9 @@ msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s 条评论"
 
 #: templates/hyperkitty/threads/right_col.html:48
-#, fuzzy, python-format
-#| msgid "%(thread.participants_count)s participants"
+#, python-format
 msgid "%(participants_count)s participants"
-msgstr "%(thread.participants_count)s 个参与者"
+msgstr "%(participants_count)s 名参与者"
 
 #: templates/hyperkitty/threads/right_col.html:53
 #, python-format
