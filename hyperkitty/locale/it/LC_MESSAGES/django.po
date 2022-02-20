@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-17 16:54-0800\n"
+"POT-Creation-Date: 2022-02-20 11:22-0800\n"
 "PO-Revision-Date: 2021-12-01 07:53+0000\n"
 "Last-Translator: Leonardo Robol <leo@robol.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -468,7 +468,7 @@ msgstr "Attività nei giorni precendenti"
 
 #: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
 #: templates/hyperkitty/thread_list.html:40
-#: templates/hyperkitty/threads/right_col.html:101
+#: templates/hyperkitty/threads/right_col.html:97
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "partecipanti"
@@ -884,77 +884,65 @@ msgstr "Accedi per modificare."
 msgid "no category"
 msgstr "nessuna categoria"
 
-#: templates/hyperkitty/threads/right_col.html:10
-#, python-format
-msgid ""
-"\n"
-"            <span class=\"days-num\">%(days_inactive)s</span>\n"
-"            <div class=\"days-text\">\n"
-"                days inactive\n"
-"            </div>\n"
-"        "
+#: templates/hyperkitty/threads/right_col.html:12
+msgid "Age (days ago)"
 msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:18
-#, python-format
-msgid ""
-"\n"
-"            <span class=\"days-num\">%(days_old)s</span>\n"
-"            <div class=\"days-text\">\n"
-"                days old\n"
-"            </div>\n"
-"        "
-msgstr ""
+#, fuzzy
+#| msgid "Last activity"
+msgid "Last active (days ago)"
+msgstr "Ultimo attività"
 
-#: templates/hyperkitty/threads/right_col.html:44
+#: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s commenti"
 
-#: templates/hyperkitty/threads/right_col.html:48
+#: templates/hyperkitty/threads/right_col.html:44
 #, fuzzy, python-format
 #| msgid "%(thread.participants_count)s participants"
 msgid "%(participants_count)s participants"
 msgstr "%(thread.participants_count)s partecipanti"
 
-#: templates/hyperkitty/threads/right_col.html:53
+#: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
 msgstr "%(unread_count)s <span class=\"hidden-sm\">messaggi</span> non letti"
 
-#: templates/hyperkitty/threads/right_col.html:63
+#: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
 msgstr "Devi fare l'accesso per appuntarti i preferiti."
 
-#: templates/hyperkitty/threads/right_col.html:64
+#: templates/hyperkitty/threads/right_col.html:60
 msgid "Add to favorites"
 msgstr "Aggiungi ai preferiti"
 
-#: templates/hyperkitty/threads/right_col.html:66
+#: templates/hyperkitty/threads/right_col.html:62
 msgid "Remove from favorites"
 msgstr "Rimuovi dai preferiti"
 
-#: templates/hyperkitty/threads/right_col.html:75
+#: templates/hyperkitty/threads/right_col.html:71
 msgid "Reattach this thread"
 msgstr "Riattacca questa conversazione"
 
-#: templates/hyperkitty/threads/right_col.html:79
+#: templates/hyperkitty/threads/right_col.html:75
 msgid "Delete this thread"
 msgstr "Elimina questa conversazione"
 
-#: templates/hyperkitty/threads/right_col.html:117
+#: templates/hyperkitty/threads/right_col.html:113
 msgid "Unreads:"
 msgstr "Non letti:"
 
-#: templates/hyperkitty/threads/right_col.html:119
+#: templates/hyperkitty/threads/right_col.html:115
 msgid "Go to:"
 msgstr "Vai a:"
 
-#: templates/hyperkitty/threads/right_col.html:119
+#: templates/hyperkitty/threads/right_col.html:115
 msgid "next"
 msgstr "successivo"
 
-#: templates/hyperkitty/threads/right_col.html:120
+#: templates/hyperkitty/threads/right_col.html:116
 msgid "prev"
 msgstr "precedente"
 
