@@ -29,6 +29,9 @@ News / Changelog
 - Handle exception when a banned address tries to post. (Fixes #325)
 - Add an index on the 'name' column (fqdn)for the MailingList table since it is
   most frequently used to query the MailingList object.
+- Add the ability to view a thread without Javascript enabled. This uses the
+  same mechanism we use with bot-detection and rendering of the entire page at
+  once, which will be slow to load but allow reading. (See #422)
 
 Third Party
 -----------

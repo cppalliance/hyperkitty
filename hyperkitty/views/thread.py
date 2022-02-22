@@ -48,6 +48,10 @@ from hyperkitty.models import Favorite, LastView, Tag, Tagging, Thread
 
 REPLY_RE = re.compile(r'^(re:\s*)*', re.IGNORECASE)
 
+#: GET request parameter that signifies the backend to respond with a page that
+#: doesn't require Javascript to function.
+NO_SCRIPT = 'noscript'
+
 
 def _get_thread_replies(request, thread, limit, offset=0):
     '''
@@ -169,6 +173,8 @@ def thread_index(request, mlist_fqdn, threadid, month=None, year=None):
         "title": _("This thread in gzipped mbox format"),
     }
 
+    is_noscript = NO_SCRIPT in request.GET
+
     context = {
         'mlist': mlist,
         'thread': thread,
@@ -183,6 +189,7 @@ def thread_index(request, mlist_fqdn, threadid, month=None, year=None):
         'fav_action': fav_action,
         'reply_form': get_posting_form(ReplyForm, request, mlist),
         'is_bot': is_bot,
+        'is_noscript': is_noscript,
         'num_comments': thread.emails_count - 1,
         'last_view': last_view,
         'unread_count': unread_count,
@@ -193,7 +200,7 @@ def thread_index(request, mlist_fqdn, threadid, month=None, year=None):
             settings, 'HYPERKITTY_ALLOW_WEB_POSTING', True),
     }
 
-    if is_bot:
+    if is_bot or is_noscript:
         # Don't rely on AJAX to load the replies
         # The limit is a safety measure, don't let a bot kill the DB
         context["replies"] = _get_thread_replies(request, thread, limit=1000)

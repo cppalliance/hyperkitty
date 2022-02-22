@@ -105,10 +105,13 @@
                         <a id="replies"></a>
                     </div>
                     <div class="replies">
-                        {% if is_bot %}
+                        {% if is_bot or is_noscript %}
                             {% include 'hyperkitty/ajax/replies.html' %}
                         {% else %}
                             <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
+                            <noscript>
+                              <a href="{% url 'hk_thread' threadid=thread.thread_id mlist_fqdn=mlist.name %}?noscript">{% trans 'Visit here for a non-javascript version of this page.' %}</a>
+                            </noscript>
                         {% endif %}
                     </div>
 
