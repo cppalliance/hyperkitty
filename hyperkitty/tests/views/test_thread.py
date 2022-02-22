@@ -280,6 +280,24 @@ class ThreadTestCase(TestCase):
         self.assertTrue("num_comments" in response.context)
         self.assertEqual(response.context["num_comments"], 3)
 
+    def test_noscript(self):
+        self._make_msg("msgid2", {"In-Reply-To": "<msgid>"})
+        self._make_msg("msgid3", {"In-Reply-To": "<msgid2>"})
+        self._make_msg("msgid4", {"In-Reply-To": "<msgid3>"})
+        url = reverse('hk_thread', args=["list@example.com", self.threadid])
+        # Request with a user-agent set so that Code doesn't think you are a
+        # bot.
+        response = self.client.get(url, HTTP_USER_AGENT='requests/hyperkitty')
+        self.assertEqual(response.status_code, 200)
+        # By default, the thread doesn't load the replies.
+        self.assertFalse("replies" in response.context)
+        url = url + '?noscript'
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        # By default, the thread doesn't load the replies.
+        self.assertTrue('replies' in response.context)
+        self.assertEqual(len(response.context.get('replies')), 3)
+
     def test_reply_button(self):
         def check_mailto(link):
             self.assertTrue(link is not None)
