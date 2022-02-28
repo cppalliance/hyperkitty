@@ -19,6 +19,9 @@
 #
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
+# XXX(maxking): Category system is entirely un-used in Hyperkitty currently, we
+# should figure out what do we want it to look like and then re-enable it at
+# some point.
 
 import re
 

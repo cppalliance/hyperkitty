@@ -449,6 +449,11 @@ LOGGING = {
 #    }
 #}
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    }
+}
 
 # When DEBUG is True, don't actually send emails to the SMTP server, just store
 # them in a directory. This way you won't accidentally spam your mailing-lists

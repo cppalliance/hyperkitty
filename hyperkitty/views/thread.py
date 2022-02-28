@@ -128,7 +128,7 @@ def thread_index(request, mlist_fqdn, threadid, month=None, year=None):
         fav_action = "rm"
 
     # Category
-    category, category_form = get_category_widget(request, thread.category)
+    # category, category_form = get_category_widget(request, thread.category)
 
     # Extract relative dates
     today = datetime.date.today()
@@ -193,8 +193,11 @@ def thread_index(request, mlist_fqdn, threadid, month=None, year=None):
         'num_comments': thread.emails_count - 1,
         'last_view': last_view,
         'unread_count': unread_count,
-        'category_form': category_form,
-        'category': category,
+        # XX(abraj): Commenting it out, since we don't need this. We aren't
+        # really using. At some point we can remove this but I am commenting.
+        #
+        # 'category_form': category_form,
+        # 'category': category,
         'export': export,
         'posting_enabled': getattr(
             settings, 'HYPERKITTY_ALLOW_WEB_POSTING', True),

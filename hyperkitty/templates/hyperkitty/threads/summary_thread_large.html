@@ -2,7 +2,7 @@
 {% load hk_generic %}
 
 {% with starting_email=thread.starting_email %}
-    <div class="thread{% if thread|is_unread_by:request.user %} unread{% endif %}">
+    <div class="thread{% if thread.is_unread %} unread{% endif %}">
         <div class="thread-info">
             <div class="thread-email row d-flex w-100">
                 <div class="thread-summary d-flex">
