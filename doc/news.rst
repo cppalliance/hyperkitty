@@ -32,6 +32,8 @@ News / Changelog
 - Add the ability to view a thread without Javascript enabled. This uses the
   same mechanism we use with bot-detection and rendering of the entire page at
   once, which will be slow to load but allow reading. (See #422)
+- Improve the performance of the thread view for logged-in users by optimizing
+  the total database calls made. (See !409)
 
 Third Party
 -----------

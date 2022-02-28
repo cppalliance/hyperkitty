@@ -42,9 +42,8 @@ from django_mailman3.lib.mailman import get_mailman_user_id
 from django_mailman3.lib.paginator import paginate
 
 from hyperkitty.lib.view_helpers import (
-    check_mlist_private, daterange, get_category_widget,
-    get_display_dates, get_months)
-from hyperkitty.models import Email, Favorite
+    check_mlist_private, daterange, get_display_dates, get_months)
+from hyperkitty.models import Email, Favorite, LastView
 from hyperkitty.signals import silenced_email_pre_delete
 
 
@@ -63,9 +62,16 @@ def archives(request, mlist_fqdn, year=None, month=None, day=None):
         end_date = datetime.date.today()
         # Since we don't need any special filtering, just return *all* the
         # threads ordered by date_active.
-        threads = mlist.threads.order_by("-date_active")
+        threads = (mlist
+                   .threads
+                   .order_by("-date_active")
+                   .select_related('starting_email')
+                   .select_related('starting_email__sender'))
         if threads:
-            begin_date = Email.objects.order_by('date').first().date
+            begin_date = (Email
+                          .objects
+                          .order_by('date')
+                          .values_list('date', flat=True)[0])
         else:
             begin_date = end_date
         # Set the month and year to be today's.
@@ -73,7 +79,7 @@ def archives(request, mlist_fqdn, year=None, month=None, day=None):
         month = end_date.month
         # The list title for all the threads.
         list_title = ""
-        no_results_text = "for this MailingList"
+        no_results_text = _("for this MailingList")
     else:
         try:
             begin_date, end_date = get_display_dates(year, month, day)
@@ -118,21 +124,59 @@ def archives(request, mlist_fqdn, year=None, month=None, day=None):
 def _thread_list(request, mlist, threads,
                  template_name='hyperkitty/thread_list.html',
                  extra_context=None):
-    threads = paginate(threads, request.GET.get('page'),
+    threads = paginate(threads,
+                       request.GET.get('page'),
                        request.GET.get('count'))
-    for thread in threads:
-        # Favorites
-        thread.favorite = False
-        if request.user.is_authenticated:
-            try:
-                Favorite.objects.get(thread=thread, user=request.user)
-            except Favorite.DoesNotExist:
-                pass
+
+    # We need to set favorites only if the user is logged in.
+    if request.user.is_authenticated:
+        # First, make a list of all the threads.
+        thread_ids = [thread.id for thread in threads]
+        # Then, get all the rows in the favs table which correspond to the
+        # current user but the thread ids is from the above list. This will
+        # get us which of the above threads are favorited, on which we should
+        # set the favorite to be true.
+        favs = (Favorite
+                .objects
+                .filter(thread_id__in=thread_ids, user=request.user)
+                .values_list('thread_id', flat=True))
+
+        # Do the same dance for un-read thing of the user.
+
+        # This is a re-implementation of Thread.is_unread_by method that gets
+        # multiple values in a single query and does the actual computation in
+        # memory for unread count.
+        last_views = (LastView
+                      .objects
+                      .filter(thread_id__in=thread_ids, user=request.user)
+                      .values_list('id', 'thread_id', 'view_date'))
+
+        # If there are more than one entry for single thread, delete the older
+        # one and keep only the new one.
+        lvs = {}
+        for view_id, thread_id, view_date in last_views:
+            # If we've seen this thread_id, i.e. this user has duplicate
+            # LastView entries for this thread, so just delete the older one.
+            if thread_id in lvs:
+                if lvs[thread_id][1] > view_date:
+                    del_id = view_id
+                    lvs[thread_id] = (view_id, view_date)
+                else:
+                    # The one in lvs is the older one, so we'll delete that.
+                    del_id = lvs[thread_id][0]
+                LastView.objects.delete(pk=del_id)
             else:
-                thread.favorite = True
-        # Category
-        thread.category_hk, thread.category_form = \
-            get_category_widget(request, thread.category)
+                lvs[thread_id] = (view_id, view_date)
+
+        for thread in threads:
+            # Set if the user favorited this thread.
+            thread.favorite = thread.id in favs
+            # Sef if the user read this thread based on LastViews.
+            if thread.id not in lvs:
+                thread.is_unread = True
+            else:
+                thread.is_unread = (
+                    thread.date_active.replace(tzinfo=timezone.utc) > lvs.get(thread.id)[1])  # noqa: E501
 
     context = {
         'mlist': mlist,

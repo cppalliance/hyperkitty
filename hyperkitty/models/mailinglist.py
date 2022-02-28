@@ -146,10 +146,12 @@ class MailingList(models.Model):
             date of the first email.
         :param end_date: The cutoff for the newest thread.
         """
-        return self.threads.filter(
-            starting_email__date__lt=end_date,
-            date_active__gte=begin_date
-            ).order_by("-date_active")
+        return (self.threads.filter(
+            starting_email__date__lt=end_date, date_active__gte=begin_date)
+                .order_by("-date_active")
+                .select_related('starting_email')
+                .select_related('starting_email__sender')
+                )
 
     @property
     def recent_participants_count(self):
