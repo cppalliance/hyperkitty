@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 11:22-0800\n"
-"PO-Revision-Date: 2022-02-19 19:53+0000\n"
+"PO-Revision-Date: 2022-02-22 02:54+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/he/>\n"
@@ -876,13 +876,11 @@ msgstr "אין קטגוריה"
 
 #: templates/hyperkitty/threads/right_col.html:12
 msgid "Age (days ago)"
-msgstr ""
+msgstr "גיל (לפני כמה ימים)"
 
 #: templates/hyperkitty/threads/right_col.html:18
-#, fuzzy
-#| msgid "Last activity"
 msgid "Last active (days ago)"
-msgstr "פעילות אחרונה"
+msgstr "פעילות אחרונה (לפני כמה ימים)"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format

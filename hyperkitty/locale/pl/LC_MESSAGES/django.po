@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 11:23-0800\n"
-"PO-Revision-Date: 2022-02-19 19:53+0000\n"
+"PO-Revision-Date: 2022-02-23 16:56+0000\n"
 "Last-Translator: Tomasz Chiliński <tomasz.chilinski@chilan.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/pl/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr ""
+msgstr "Dodaj znacznik..."
 
 #: forms.py:55
 msgid "Add"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "użyj przecinków, aby dodać wiele znaczników"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -289,8 +289,8 @@ msgstr "Błąd: prywatna lista"
 msgid ""
 "This mailing list is private. You must be subscribed to view the archives."
 msgstr ""
-"Ta lista mailingowa jest prywatna. Musisz być subskrybentem, aby zobaczyć "
-"archiwum."
+"Ta lista mailingowa jest prywatna. Musisz być na nią zapisany, aby "
+"przeglądać jej archiwa."
 
 #: templates/hyperkitty/fragments/like_form.html:16
 msgid "You like it (cancel)"
@@ -1184,11 +1184,12 @@ msgid "Your reply has been sent and is being processed."
 msgstr ""
 
 #: views/message.py:205
-#, fuzzy
 msgid ""
 "\n"
 "  You have been subscribed to {} list."
-msgstr "Nie publikowałeś w tej liście (jeszcze)."
+msgstr ""
+"\n"
+"  Zostałeś zapisany na listę {}."
 
 #: views/message.py:288
 #, python-format
