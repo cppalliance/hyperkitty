@@ -9,14 +9,14 @@
 		<i class="icomoon likestatus {{ votes.status }}"></i> -->
 
 		<!-- <span>+{{ votes.likes }}/-{{ votes.dislikes }}</span> -->
-		{% if object.myvote and object.myvote.value == 1 %}
+		{% if object.myvote == 1 %}
 			<!-- if you like it, highlight thumbs up, disable thumbs down -->
 			<a href="#cancelvote" class="vote" data-vote="0">
 				<i class="fa fa-thumbs-up selected"></i> {{ votes.likes }}
 				<span class="hidden-tn hidden-xs">{% trans "You like it (cancel)" %}</span>
 			</a>
 			<i class="fa fa-thumbs-down disabled"></i> {{ votes.dislikes }}
-		{% elif object.myvote and object.myvote.value == -1 %}
+		{% elif object.myvote == -1 %}
 			<!-- if you don't like it, highlight thumbs down, disable thumbs up -->
 			<i class="fa fa-thumbs-up disabled">{{ votes.likes }}</i>
 			<a href="#cancelvote" class="vote" data-vote="0">
