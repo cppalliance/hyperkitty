@@ -28,6 +28,7 @@ import re
 from django.conf import settings
 from django.contrib import messages
 from django.core.exceptions import SuspiciousOperation
+from django.db.models import Count
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template import loader
@@ -43,7 +44,7 @@ from hyperkitty.forms import AddTagForm, ReplyForm
 from hyperkitty.lib.utils import stripped_subject
 from hyperkitty.lib.view_helpers import (
     check_mlist_private, get_category_widget, get_months, get_posting_form)
-from hyperkitty.models import Favorite, LastView, Tag, Tagging, Thread
+from hyperkitty.models import Favorite, LastView, Tag, Tagging, Thread, Vote
 
 
 REPLY_RE = re.compile(r'^(re:\s*)*', re.IGNORECASE)
@@ -66,15 +67,23 @@ def _get_thread_replies(request, thread, limit, offset=0):
     if sort_mode == "thread":
         sort_mode = "thread_order"
 
-    mlist = thread.mailinglist
+    mlist = request.mlist
     initial_subject = stripped_subject(mlist, thread.starting_email.subject)
-    emails = list(thread.emails.exclude(
-            pk=thread.starting_email.pk
-        ).order_by(sort_mode)[offset:offset+limit])
+    emails = list(thread
+                  .emails
+                  .exclude(pk=thread.starting_email.pk)
+                  .select_related('sender')
+                  .annotate(attachments_count=Count('attachments'))
+                  .order_by(sort_mode)[offset:offset+limit])
+    email_ids = [email.id for email in emails]
+    votes = dict(Vote
+                 .objects
+                 .filter(email_id__in=email_ids, user_id=request.user.id)
+                 .values_list('email_id', 'value'))
     for email in emails:
         # Extract all the votes for this message
         if request.user.is_authenticated:
-            email.myvote = email.votes.filter(user=request.user).first()
+            email.myvote = votes.get(email.id)
         else:
             email.myvote = None
         # Threading position
@@ -109,12 +118,22 @@ def thread_index(request, mlist_fqdn, threadid, month=None, year=None):
     # on the request.
     mlist = request.mlist
     thread = get_object_or_404(Thread, mailinglist=mlist, thread_id=threadid)
+    # Note(maxking): The query below fetches the thread along with it's
+    # starting_email in a single complex query, instead of two rather simple
+    # ones. We _could_ use the one below, but with simple tests in dev
+    # environment, there isn't a major speed bump that I am seeing, so I am
+    # going to keep it commented out.
+    #
+    # thread = Thread.objects.select_related('starting_email').get(
+    #      mailinglist=mlist, thread_id=threadid)
+
     starting_email = thread.starting_email
 
     sort_mode = request.GET.get("sort", "thread")
     if request.user.is_authenticated:
-        starting_email.myvote = starting_email.votes.filter(
-            user=request.user).first()
+        myvote = starting_email.votes.filter(user=request.user).first()
+        if myvote is not None:
+            starting_email.myvote = myvote.value
     else:
         starting_email.myvote = None
 
@@ -219,8 +238,7 @@ def replies(request, mlist_fqdn, threadid):
     offset = int(request.GET.get("offset", "0"))
     # This is set by the @check_mlist_private decorator.
     mlist = request.mlist
-    thread = get_object_or_404(
-        Thread, mailinglist=request.mlist, thread_id=threadid)
+    thread = get_object_or_404(Thread, mailinglist=mlist, thread_id=threadid)
     # Last view
     last_view = request.GET.get("last_view")
     if last_view:
