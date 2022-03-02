@@ -67,7 +67,7 @@ def archives(request, mlist_fqdn, year=None, month=None, day=None):
                    .order_by("-date_active")
                    .select_related('starting_email')
                    .select_related('starting_email__sender'))
-        if threads:
+        if threads.count():
             begin_date = (Email
                           .objects
                           .order_by('date')
