@@ -3,24 +3,25 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 11:22-0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-03-04 03:37+0000\n"
+"Last-Translator: dpa-weblate@aegee.org <dpa-weblate@aegee.org>\n"
+"Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
+"hyperkitty/bg/>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.11.1-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr ""
+msgstr "Добави етикет…"
 
 #: forms.py:55
 msgid "Add"
@@ -28,7 +29,7 @@ msgstr ""
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "раздели етикетите със запетая"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -44,7 +45,7 @@ msgstr ""
 
 #: templates/hyperkitty/404.html:28
 msgid "Error 404"
-msgstr ""
+msgstr "Грешка 404"
 
 #: templates/hyperkitty/404.html:30 templates/hyperkitty/500.html:31
 msgid "Oh No!"
@@ -52,7 +53,7 @@ msgstr ""
 
 #: templates/hyperkitty/404.html:32
 msgid "I can't find this page."
-msgstr ""
+msgstr "Не мога да намеря тази страница."
 
 #: templates/hyperkitty/404.html:33 templates/hyperkitty/500.html:34
 msgid "Go back home"
@@ -60,7 +61,7 @@ msgstr ""
 
 #: templates/hyperkitty/500.html:29
 msgid "Error 500"
-msgstr ""
+msgstr "Грешка 500"
 
 #: templates/hyperkitty/500.html:33
 msgid "Sorry, but the requested page is unavailable due to a server hiccup."
@@ -82,7 +83,7 @@ msgstr ""
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:12
 msgid "(no suggestions)"
-msgstr ""
+msgstr "(без предложения)"
 
 #: templates/hyperkitty/ajax/temp_message.html:12
 msgid "Sent just now, not yet distributed"
@@ -97,10 +98,12 @@ msgid ""
 "HyperKitty comes with a small REST API allowing you to programatically "
 "retrieve emails and information."
 msgstr ""
+"HyperKitty има малък REST интерфейс, позволяващ да се изтеглят автоматично "
+"електронни писма и информация."
 
 #: templates/hyperkitty/api.html:10
 msgid "Formats"
-msgstr ""
+msgstr "Формати"
 
 #: templates/hyperkitty/api.html:12
 msgid ""
@@ -115,7 +118,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:16
 msgid "The list of available formats is:"
-msgstr ""
+msgstr "Списъкът с наличните формати е:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
@@ -123,7 +126,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
-msgstr ""
+msgstr "Списък с пощенски списъци"
 
 #: templates/hyperkitty/api.html:27 templates/hyperkitty/api.html:33
 #: templates/hyperkitty/api.html:39 templates/hyperkitty/api.html:45
@@ -169,7 +172,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:50
 msgid "Tags"
-msgstr ""
+msgstr "Етикети"
 
 #: templates/hyperkitty/api.html:53
 msgid "Using this address you will be able to retrieve the list of tags."
@@ -177,11 +180,11 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:57 templates/hyperkitty/base.html:112
 msgid "Account"
-msgstr ""
+msgstr "Регистрация"
 
 #: templates/hyperkitty/base.html:62 templates/hyperkitty/base.html:117
 msgid "Mailman settings"
-msgstr ""
+msgstr "Настройки на Mailman"
 
 #: templates/hyperkitty/base.html:67 templates/hyperkitty/base.html:122
 #: templates/hyperkitty/user_profile/base.html:17
@@ -214,7 +217,7 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:154
 msgid "Manage lists"
-msgstr ""
+msgstr "Управление на списъците"
 
 #: templates/hyperkitty/base.html:192
 msgid "Keyboard Shortcuts"
@@ -246,7 +249,7 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:214
 msgid "version"
-msgstr ""
+msgstr "версия"
 
 #: templates/hyperkitty/errors/notimplemented.html:7
 msgid "Not implemented yet"
@@ -288,7 +291,7 @@ msgstr ""
 
 #: templates/hyperkitty/fragments/month_list.html:6
 msgid " month"
-msgstr ""
+msgstr " месец"
 
 #: templates/hyperkitty/fragments/overview_threads.html:11
 msgid "New messages in this thread"
@@ -298,7 +301,7 @@ msgstr ""
 #: templates/hyperkitty/fragments/thread_left_nav.html:19
 #: templates/hyperkitty/overview.html:78
 msgid "All Threads"
-msgstr ""
+msgstr "Всички нишки"
 
 #: templates/hyperkitty/fragments/overview_top_posters.html:15
 msgid "See the profile"
@@ -336,7 +339,7 @@ msgstr ""
 #: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
 #: views/mlist.py:102 views/thread.py:168
 msgid "Download"
-msgstr ""
+msgstr "Изтегли"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:32
 msgid "Past 30 days"
@@ -344,15 +347,15 @@ msgstr ""
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:33
 msgid "This month"
-msgstr ""
+msgstr "Този месец"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:36
 msgid "Entire archive"
-msgstr ""
+msgstr "Целият архив"
 
 #: templates/hyperkitty/index.html:9 templates/hyperkitty/index.html:63
 msgid "Available lists"
-msgstr ""
+msgstr "Налични списъци"
 
 #: templates/hyperkitty/index.html:22 templates/hyperkitty/index.html:27
 #: templates/hyperkitty/index.html:72
@@ -388,7 +391,7 @@ msgstr ""
 
 #: templates/hyperkitty/index.html:56
 msgid "Sort by list creation date"
-msgstr ""
+msgstr "Сортирай по дата на създаване на списъка"
 
 #: templates/hyperkitty/index.html:68
 msgid "Sort by"
@@ -429,11 +432,11 @@ msgstr ""
 #: templates/hyperkitty/overview.html:212 templates/hyperkitty/reattach.html:39
 #: templates/hyperkitty/thread.html:111
 msgid "Loading..."
-msgstr ""
+msgstr "Зареждам…"
 
 #: templates/hyperkitty/index.html:160 templates/hyperkitty/index.html:237
 msgid "No archived list yet."
-msgstr ""
+msgstr "Още няма архивирани списъци"
 
 #: templates/hyperkitty/index.html:172
 #: templates/hyperkitty/user_profile/favorites.html:40
@@ -442,11 +445,11 @@ msgstr ""
 #: templates/hyperkitty/user_profile/subscriptions.html:41
 #: templates/hyperkitty/user_profile/votes.html:46
 msgid "List"
-msgstr ""
+msgstr "Списък"
 
 #: templates/hyperkitty/index.html:173
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: templates/hyperkitty/index.html:174
 msgid "Activity in the past 30 days"
@@ -488,7 +491,7 @@ msgstr ""
 #: templates/hyperkitty/message_new.html:53
 #: templates/hyperkitty/messages/message.html:146
 msgid "or"
-msgstr ""
+msgstr "или"
 
 #: templates/hyperkitty/list_delete.html:36
 #: templates/hyperkitty/message_delete.html:45
@@ -506,7 +509,7 @@ msgstr ""
 #: templates/hyperkitty/message_delete.html:7
 #: templates/hyperkitty/message_delete.html:20
 msgid "Delete message(s)"
-msgstr ""
+msgstr "Изтрий съобщение/я"
 
 #: templates/hyperkitty/message_delete.html:25
 #, python-format
@@ -624,7 +627,7 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:44
 msgid "Threads"
-msgstr ""
+msgstr "Нишки"
 
 #: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
 #: templates/hyperkitty/thread_list.html:48
@@ -646,7 +649,7 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:81
 msgid "Delete Archive"
-msgstr ""
+msgstr "Изтрий архив"
 
 #: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
@@ -658,7 +661,7 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:98
 msgid "The following statistics are from"
-msgstr ""
+msgstr "Следващите статистики са от"
 
 #: templates/hyperkitty/overview.html:99
 msgid "In"
@@ -822,7 +825,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/favorites.html:45
 #: templates/hyperkitty/user_profile/last_views.html:50
 msgid "Replies"
-msgstr ""
+msgstr "Отговори"
 
 #: templates/hyperkitty/thread.html:97
 msgid "Show replies by thread"
@@ -999,7 +1002,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/profile.html:16
 #: templates/hyperkitty/user_profile/votes.html:47
 msgid "Subject"
-msgstr ""
+msgstr "Тема"
 
 #: templates/hyperkitty/user_profile/favorites.html:42
 #: templates/hyperkitty/user_profile/last_views.html:47
@@ -1109,7 +1112,7 @@ msgstr ""
 
 #: templates/hyperkitty/user_public_profile.html:23
 msgid "Name:"
-msgstr ""
+msgstr "Име:"
 
 #: templates/hyperkitty/user_public_profile.html:28
 msgid "Creation:"
@@ -1121,7 +1124,7 @@ msgstr ""
 
 #: templates/hyperkitty/user_public_profile.html:41
 msgid "Email addresses:"
-msgstr ""
+msgstr "Електронни адреси:"
 
 #: views/message.py:75
 msgid "This message in gzipped mbox format"
@@ -1149,15 +1152,15 @@ msgstr ""
 
 #: views/mlist.py:88
 msgid "for this month"
-msgstr ""
+msgstr "за този месец"
 
 #: views/mlist.py:91
 msgid "for this day"
-msgstr ""
+msgstr "за този ден"
 
 #: views/mlist.py:103
 msgid "This month in gzipped mbox format"
-msgstr ""
+msgstr "Този месец в gzip-архивиран mbox формат"
 
 #: views/mlist.py:200 views/mlist.py:224
 msgid "No discussions this month (yet)."
