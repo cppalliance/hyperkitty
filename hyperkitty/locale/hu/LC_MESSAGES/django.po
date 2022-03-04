@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 11:22-0800\n"
-"PO-Revision-Date: 2021-10-20 00:02+0000\n"
+"PO-Revision-Date: 2022-03-02 05:50+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.11.1-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -885,13 +885,11 @@ msgstr "nincs kategória"
 
 #: templates/hyperkitty/threads/right_col.html:12
 msgid "Age (days ago)"
-msgstr ""
+msgstr "Kor (napokkal ezelőtt)"
 
 #: templates/hyperkitty/threads/right_col.html:18
-#, fuzzy
-#| msgid "Last activity"
 msgid "Last active (days ago)"
-msgstr "Utolsó tevékenység"
+msgstr "Utoljára aktív (napokkal ezelőtt)"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
@@ -899,10 +897,9 @@ msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s megjegyzés"
 
 #: templates/hyperkitty/threads/right_col.html:44
-#, fuzzy, python-format
-#| msgid "%(thread.participants_count)s participants"
+#, python-format
 msgid "%(participants_count)s participants"
-msgstr "%(thread.participants_count)s résztvevő"
+msgstr "%(participants_count)s résztvevő"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
