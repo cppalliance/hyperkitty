@@ -7,5 +7,9 @@
 @weekly  apache  django-admin runjobs weekly  --pythonpath /path/to/project --settings settings
 @monthly apache  django-admin runjobs monthly --pythonpath /path/to/project --settings settings
 @yearly  apache  django-admin runjobs yearly  --pythonpath /path/to/project --settings settings
+
+# Currently Hyperkitty has no minutely and quarter_hourly jobs.  The purpose of
+# the next lines is to ease the upgrading process, in the eventual case that
+# Hyperkitty will utilize minutely or quarter_hourly jobs.
 2,17,32,47 * * * * apache  django-admin runjobs quarter_hourly --pythonpath /path/to/project --settings settings
 * * * * *  apache  django-admin runjobs minutely  --pythonpath /path/to/project --settings settings
