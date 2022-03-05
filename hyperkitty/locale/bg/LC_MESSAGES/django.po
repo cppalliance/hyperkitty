@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 11:22-0800\n"
-"PO-Revision-Date: 2022-03-04 03:37+0000\n"
+"PO-Revision-Date: 2022-03-04 16:01+0000\n"
 "Last-Translator: dpa-weblate@aegee.org <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/bg/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.1-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -436,7 +436,7 @@ msgstr "Зареждам…"
 
 #: templates/hyperkitty/index.html:160 templates/hyperkitty/index.html:237
 msgid "No archived list yet."
-msgstr "Още няма архивирани списъци"
+msgstr "Още няма архивирани списъци."
 
 #: templates/hyperkitty/index.html:172
 #: templates/hyperkitty/user_profile/favorites.html:40
@@ -500,7 +500,7 @@ msgstr "или"
 #: templates/hyperkitty/user_profile/votes.html:36
 #: templates/hyperkitty/user_profile/votes.html:74
 msgid "cancel"
-msgstr ""
+msgstr "отказ"
 
 #: templates/hyperkitty/message.html:22
 msgid "thread"
