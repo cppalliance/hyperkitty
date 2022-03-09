@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 11:23-0800\n"
-"PO-Revision-Date: 2022-02-22 02:54+0000\n"
-"Last-Translator: Eric <alchemillatruth@purelymail.com>\n"
+"PO-Revision-Date: 2022-03-09 21:42+0000\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnu-mailman/hyperkitty/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -863,11 +863,11 @@ msgstr "无分类"
 
 #: templates/hyperkitty/threads/right_col.html:12
 msgid "Age (days ago)"
-msgstr "年龄（多少天前）"
+msgstr "发帖时间（多少天前）"
 
 #: templates/hyperkitty/threads/right_col.html:18
 msgid "Last active (days ago)"
-msgstr "最后活跃（多少天前）"
+msgstr "最后活动（多少天前）"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
