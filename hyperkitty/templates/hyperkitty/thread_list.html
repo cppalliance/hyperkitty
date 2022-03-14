@@ -2,6 +2,7 @@
 {% load i18n %}
 {% load hk_generic %}
 {% load pagination %}
+{% load cache %}
 
 
 {% block head_title %}
@@ -16,7 +17,14 @@
 
 <div class="row">
 
-{% include 'hyperkitty/fragments/month_list.html' %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{# Cache the month list for 24hrs. #}
+{% cache 86400 month_list LANGUAGE_CODE months_list mlist.name %}
+    {% include 'hyperkitty/fragments/month_list.html' %}
+{% endcache %}
+
     <div id="thread-list" class="col-sm-12 col-md-10">
         <div class="thread-list-header row">
             <h1 class="col-12">
@@ -29,7 +37,9 @@
                 </a>
                 <small class="d-none d-md-block">{{ list_title }}</small>
                 <div class="d-md-none">
-                    {% include 'hyperkitty/fragments/month_list.html' with show_select='True' %}
+                  {% cache 86400 month_list_select LANGUAGE_CODE months_list mlist.name %}
+                     {% include 'hyperkitty/fragments/month_list.html' with show_select='True' %}
+                  {% endcache %}
                 </div>
             </h1>
             <span class="list-address col-12">{{ mlist.name }}</span>
@@ -60,7 +70,10 @@
             <p>{% trans "Sorry no email threads could be found" %} {{ no_results_text }}.</p>
         {% endfor %}
 
-        {% paginator threads bydate=True %}
+        {# Cache the pagination template rendering for the mailing list for 24hrs. #}
+        {% cache 86400 threads_paginator threads LANGUAGE_CODE %}
+            {% paginator threads bydate=True %}
+        {% endcache %}
 
     </div>
 
