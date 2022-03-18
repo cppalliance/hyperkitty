@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 11:22-0800\n"
-"PO-Revision-Date: 2022-03-04 16:01+0000\n"
+"PO-Revision-Date: 2022-03-17 06:59+0000\n"
 "Last-Translator: dpa-weblate@aegee.org <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/bg/>\n"
@@ -25,7 +25,7 @@ msgstr "Добави етикет…"
 
 #: forms.py:55
 msgid "Add"
-msgstr ""
+msgstr "Добави"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
@@ -33,15 +33,15 @@ msgstr "раздели етикетите със запетая"
 
 #: forms.py:64
 msgid "Attach a file"
-msgstr ""
+msgstr "Прикачи файл"
 
 #: forms.py:65
 msgid "Attach another file"
-msgstr ""
+msgstr "Прикачи друг файл"
 
 #: forms.py:66
 msgid "Remove this file"
-msgstr ""
+msgstr "Премахни този файл"
 
 #: templates/hyperkitty/404.html:28
 msgid "Error 404"
@@ -49,7 +49,7 @@ msgstr "Грешка 404"
 
 #: templates/hyperkitty/404.html:30 templates/hyperkitty/500.html:31
 msgid "Oh No!"
-msgstr ""
+msgstr "Ужас!"
 
 #: templates/hyperkitty/404.html:32
 msgid "I can't find this page."
@@ -70,16 +70,16 @@ msgstr ""
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
 msgid "started"
-msgstr ""
+msgstr "започнало"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
 msgid "last active:"
-msgstr ""
+msgstr "последно деен:"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:8
 msgid "see this thread"
-msgstr ""
+msgstr "виж тази нишка"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:12
 msgid "(no suggestions)"
@@ -87,7 +87,7 @@ msgstr "(без предложения)"
 
 #: templates/hyperkitty/ajax/temp_message.html:12
 msgid "Sent just now, not yet distributed"
-msgstr ""
+msgstr "Току-що изпратено, още не е разпространено"
 
 #: templates/hyperkitty/api.html:5
 msgid "REST API"
@@ -115,6 +115,7 @@ msgstr ""
 msgid ""
 "To change the format, just add <em>?format=&lt;FORMAT&gt;</em> to the URL."
 msgstr ""
+"За да промениш формата добави <em>?format=&lt;FORMAT&gt;</em> към адреса."
 
 #: templates/hyperkitty/api.html:16
 msgid "The list of available formats is:"
@@ -142,7 +143,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:32
 msgid "Threads in a mailing list"
-msgstr ""
+msgstr "Нишки в пощенски списък"
 
 #: templates/hyperkitty/api.html:35
 msgid ""
@@ -152,7 +153,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:38
 msgid "Emails in a thread"
-msgstr ""
+msgstr "Писма в нишка"
 
 #: templates/hyperkitty/api.html:41
 msgid ""
@@ -162,7 +163,7 @@ msgstr ""
 
 #: templates/hyperkitty/api.html:44
 msgid "An email in a mailing list"
-msgstr ""
+msgstr "Писмо в пощенски списък"
 
 #: templates/hyperkitty/api.html:47
 msgid ""
@@ -193,7 +194,7 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:72 templates/hyperkitty/base.html:127
 msgid "Logout"
-msgstr ""
+msgstr "Изход"
 
 #: templates/hyperkitty/base.html:78 templates/hyperkitty/base.html:134
 msgid "Sign In"
@@ -201,19 +202,19 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:82 templates/hyperkitty/base.html:138
 msgid "Sign Up"
-msgstr ""
+msgstr "Нова регистрация"
 
 #: templates/hyperkitty/base.html:91
 msgid "Search this list"
-msgstr ""
+msgstr "Търси в този пощенски списък"
 
 #: templates/hyperkitty/base.html:91
 msgid "Search all lists"
-msgstr ""
+msgstr "Търси във всички списъци"
 
 #: templates/hyperkitty/base.html:149
 msgid "Manage this list"
-msgstr ""
+msgstr "Управлявай този пощенски списък"
 
 #: templates/hyperkitty/base.html:154
 msgid "Manage lists"
@@ -229,15 +230,15 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:197
 msgid "Next unread message"
-msgstr ""
+msgstr "Следващо непрочетено съобщение"
 
 #: templates/hyperkitty/base.html:198
 msgid "Previous unread message"
-msgstr ""
+msgstr "Предишно непрочетено съобщение"
 
 #: templates/hyperkitty/base.html:199
 msgid "Jump to all threads"
-msgstr ""
+msgstr "Скочи до всички нишки"
 
 #: templates/hyperkitty/base.html:200
 msgid "Jump to MailingList overview"
@@ -245,7 +246,7 @@ msgstr ""
 
 #: templates/hyperkitty/base.html:214
 msgid "Powered by"
-msgstr ""
+msgstr "Задвижван от"
 
 #: templates/hyperkitty/base.html:214
 msgid "version"
@@ -265,7 +266,7 @@ msgstr ""
 
 #: templates/hyperkitty/errors/private.html:7
 msgid "Error: private list"
-msgstr ""
+msgstr "Грешка: скрит списък"
 
 #: templates/hyperkitty/errors/private.html:19
 msgid ""
@@ -287,7 +288,7 @@ msgstr ""
 
 #: templates/hyperkitty/fragments/month_list.html:6
 msgid "Threads by"
-msgstr ""
+msgstr "Нишки по"
 
 #: templates/hyperkitty/fragments/month_list.html:6
 msgid " month"
@@ -295,7 +296,7 @@ msgstr " месец"
 
 #: templates/hyperkitty/fragments/overview_threads.html:11
 msgid "New messages in this thread"
-msgstr ""
+msgstr "Нови съобщения в тази нишка"
 
 #: templates/hyperkitty/fragments/overview_threads.html:36
 #: templates/hyperkitty/fragments/thread_left_nav.html:19
@@ -305,36 +306,37 @@ msgstr "Всички нишки"
 
 #: templates/hyperkitty/fragments/overview_top_posters.html:15
 msgid "See the profile"
-msgstr ""
+msgstr "Виж профила"
 
 #: templates/hyperkitty/fragments/overview_top_posters.html:21
 msgid "posts"
-msgstr ""
+msgstr "съобщения"
 
 #: templates/hyperkitty/fragments/overview_top_posters.html:26
 msgid "No posters this month (yet)."
-msgstr ""
+msgstr "Още никой не е писал този месец."
 
 #: templates/hyperkitty/fragments/send_as.html:5
 msgid "This message will be sent as:"
-msgstr ""
+msgstr "Това съобщение ще бъде изпратено като:"
 
 #: templates/hyperkitty/fragments/send_as.html:6
 msgid "Change sender"
-msgstr ""
+msgstr "Промени подателя"
 
 #: templates/hyperkitty/fragments/send_as.html:16
 msgid "Link another address"
-msgstr ""
+msgstr "Вържи друг адрес"
 
 #: templates/hyperkitty/fragments/send_as.html:20
 msgid ""
 "If you aren't a current list member, sending this message will subscribe you."
 msgstr ""
+"Ако не си абонат на списъка, изпращането на това съобщение ще те абонира."
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:12
 msgid "List overview"
-msgstr ""
+msgstr "Преглед на списъка"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
 #: views/mlist.py:102 views/thread.py:168
@@ -343,7 +345,7 @@ msgstr "Изтегли"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:32
 msgid "Past 30 days"
-msgstr ""
+msgstr "Последните 30 дни"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:33
 msgid "This month"
@@ -360,34 +362,34 @@ msgstr "Налични списъци"
 #: templates/hyperkitty/index.html:22 templates/hyperkitty/index.html:27
 #: templates/hyperkitty/index.html:72
 msgid "Most popular"
-msgstr ""
+msgstr "Най-известни"
 
 #: templates/hyperkitty/index.html:26
 msgid "Sort by number of recent participants"
-msgstr ""
+msgstr "Подреди по брой на скорошни участници"
 
 #: templates/hyperkitty/index.html:32 templates/hyperkitty/index.html:37
 #: templates/hyperkitty/index.html:75
 msgid "Most active"
-msgstr ""
+msgstr "Най-дейни"
 
 #: templates/hyperkitty/index.html:36
 msgid "Sort by number of recent discussions"
-msgstr ""
+msgstr "Подреди по брой скорошни дискусии"
 
 #: templates/hyperkitty/index.html:42 templates/hyperkitty/index.html:47
 #: templates/hyperkitty/index.html:78
 msgid "By name"
-msgstr ""
+msgstr "По име"
 
 #: templates/hyperkitty/index.html:46
 msgid "Sort alphabetically"
-msgstr ""
+msgstr "Подреди по азбучен ред"
 
 #: templates/hyperkitty/index.html:52 templates/hyperkitty/index.html:57
 #: templates/hyperkitty/index.html:81
 msgid "Newest"
-msgstr ""
+msgstr "Най-нови"
 
 #: templates/hyperkitty/index.html:56
 msgid "Sort by list creation date"
@@ -395,7 +397,7 @@ msgstr "Сортирай по дата на създаване на списък
 
 #: templates/hyperkitty/index.html:68
 msgid "Sort by"
-msgstr ""
+msgstr "Подреди по"
 
 #: templates/hyperkitty/index.html:91
 msgid "Hide inactive"
@@ -403,21 +405,21 @@ msgstr ""
 
 #: templates/hyperkitty/index.html:92
 msgid "Hide private"
-msgstr ""
+msgstr "Скрий частните"
 
 #: templates/hyperkitty/index.html:99
 msgid "Find list"
-msgstr ""
+msgstr "Намери списък"
 
 #: templates/hyperkitty/index.html:123 templates/hyperkitty/index.html:191
 #: templates/hyperkitty/user_profile/last_views.html:34
 #: templates/hyperkitty/user_profile/last_views.html:73
 msgid "new"
-msgstr ""
+msgstr "нов"
 
 #: templates/hyperkitty/index.html:135 templates/hyperkitty/index.html:202
 msgid "private"
-msgstr ""
+msgstr "частен"
 
 #: templates/hyperkitty/index.html:137 templates/hyperkitty/index.html:204
 msgid "inactive"
@@ -453,19 +455,19 @@ msgstr "Описание"
 
 #: templates/hyperkitty/index.html:174
 msgid "Activity in the past 30 days"
-msgstr ""
+msgstr "Дейност през последните 30 дни"
 
 #: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
 #: templates/hyperkitty/thread_list.html:40
 #: templates/hyperkitty/threads/right_col.html:97
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
-msgstr ""
+msgstr "участници"
 
 #: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
 #: templates/hyperkitty/thread_list.html:45
 msgid "discussions"
-msgstr ""
+msgstr "дискусии"
 
 #: templates/hyperkitty/list_delete.html:7
 msgid "Delete MailingList"
@@ -473,18 +475,19 @@ msgstr ""
 
 #: templates/hyperkitty/list_delete.html:20
 msgid "Delete Mailing List"
-msgstr ""
+msgstr "Изтрий пощенски списък"
 
 #: templates/hyperkitty/list_delete.html:26
 msgid ""
 "will be deleted along with all the threads and messages. Do you want to "
 "continue?"
 msgstr ""
+"ще бъде изтрит заедно с всички нишки и съобщения. Искаш ли да продължиш?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
 msgid "Delete"
-msgstr ""
+msgstr "Изтрий"
 
 #: templates/hyperkitty/list_delete.html:34
 #: templates/hyperkitty/message_delete.html:45
@@ -504,7 +507,7 @@ msgstr "отказ"
 
 #: templates/hyperkitty/message.html:22
 msgid "thread"
-msgstr ""
+msgstr "нишка"
 
 #: templates/hyperkitty/message_delete.html:7
 #: templates/hyperkitty/message_delete.html:20
@@ -518,11 +521,14 @@ msgid ""
 "        %(count)s message(s) will be deleted. Do you want to continue?\n"
 "        "
 msgstr ""
+"\n"
+"        %(count)sсъобщение/я ще бъдат изтрити.  Искаш ли да продължиш?\n"
+"        "
 
 #: templates/hyperkitty/message_new.html:8
 #: templates/hyperkitty/message_new.html:21
 msgid "Create a new thread"
-msgstr ""
+msgstr "Създай нова нишка"
 
 #: templates/hyperkitty/message_new.html:22
 #: templates/hyperkitty/user_posts.html:22
@@ -532,16 +538,16 @@ msgstr ""
 #: templates/hyperkitty/message_new.html:52
 #: templates/hyperkitty/messages/message.html:145
 msgid "Send"
-msgstr ""
+msgstr "Изпрати"
 
 #: templates/hyperkitty/messages/message.html:18
 #, python-format
 msgid "See the profile for %(name)s"
-msgstr ""
+msgstr "Виж профила на %(name)s"
 
 #: templates/hyperkitty/messages/message.html:28
 msgid "Unread"
-msgstr ""
+msgstr "Непрочетени"
 
 #: templates/hyperkitty/messages/message.html:45
 msgid "Sender's time:"
@@ -549,24 +555,24 @@ msgstr ""
 
 #: templates/hyperkitty/messages/message.html:51
 msgid "New subject:"
-msgstr ""
+msgstr "Нова тема:"
 
 #: templates/hyperkitty/messages/message.html:61
 msgid "Attachments:"
-msgstr ""
+msgstr "Прикачени файлове:"
 
 #: templates/hyperkitty/messages/message.html:76
 msgid "Display in fixed font"
-msgstr ""
+msgstr "Покажи с шрифт с еднаква ширина на всички букви"
 
 #: templates/hyperkitty/messages/message.html:79
 msgid "Permalink for this message"
-msgstr ""
+msgstr "Постоянна връзка към това съобщение"
 
 #: templates/hyperkitty/messages/message.html:90
 #: templates/hyperkitty/messages/message.html:96
 msgid "Reply"
-msgstr ""
+msgstr "Отговори"
 
 #: templates/hyperkitty/messages/message.html:93
 msgid "Sign in to reply online"
@@ -591,7 +597,7 @@ msgstr ""
 
 #: templates/hyperkitty/messages/message.html:132
 msgid "Create new thread"
-msgstr ""
+msgstr "Създай нова нишка"
 
 #: templates/hyperkitty/messages/message.html:135
 msgid "Use email software"
@@ -603,11 +609,11 @@ msgstr ""
 
 #: templates/hyperkitty/messages/right_col.html:18
 msgid "Back to the list"
-msgstr ""
+msgstr "Обратно към списъка"
 
 #: templates/hyperkitty/messages/right_col.html:27
 msgid "Delete this message"
-msgstr ""
+msgstr "Изтрий това съобщение"
 
 #: templates/hyperkitty/messages/summary_message.html:23
 #, python-format
@@ -616,14 +622,17 @@ msgid ""
 "                                by %(name)s\n"
 "                            "
 msgstr ""
+"\n"
+"                                по %(name)s\n"
+"                            "
 
 #: templates/hyperkitty/overview.html:38
 msgid "Home"
-msgstr ""
+msgstr "У дома"
 
 #: templates/hyperkitty/overview.html:41 templates/hyperkitty/thread.html:78
 msgid "Stats"
-msgstr ""
+msgstr "Статистики"
 
 #: templates/hyperkitty/overview.html:44
 msgid "Threads"
@@ -657,7 +666,7 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:93
 msgid "Post volume over the past <strong>30</strong> days."
-msgstr ""
+msgstr "Количество съобщения за последните <strong>30</strong> дни."
 
 #: templates/hyperkitty/overview.html:98
 msgid "The following statistics are from"
@@ -673,7 +682,7 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:109
 msgid "Most active posters"
-msgstr ""
+msgstr "Най-дейни изпращачи"
 
 #: templates/hyperkitty/overview.html:118
 msgid "Prominent posters"
@@ -685,7 +694,7 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
-msgstr ""
+msgstr "Скорошни"
 
 #: templates/hyperkitty/overview.html:156
 msgid "Most Active"
@@ -698,7 +707,7 @@ msgstr ""
 #: templates/hyperkitty/overview.html:166
 #: templates/hyperkitty/user_profile/base.html:22
 msgid "Favorites"
-msgstr ""
+msgstr "Любими"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
@@ -718,11 +727,11 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:200
 msgid "Discussions You've Flagged"
-msgstr ""
+msgstr "Дискусии, в които си маркиран"
 
 #: templates/hyperkitty/overview.html:208
 msgid "Discussions You've Posted to"
-msgstr ""
+msgstr "Дискусии, в които си писал"
 
 #: templates/hyperkitty/reattach.html:9
 msgid "Reattach a thread"
@@ -746,7 +755,7 @@ msgstr ""
 
 #: templates/hyperkitty/reattach.html:32
 msgid "Search"
-msgstr ""
+msgstr "Търси"
 
 #: templates/hyperkitty/reattach.html:44
 msgid "this thread ID:"
@@ -766,40 +775,40 @@ msgstr ""
 
 #: templates/hyperkitty/search_results.html:8
 msgid "Search results for"
-msgstr ""
+msgstr "Резултати от търсене за"
 
 #: templates/hyperkitty/search_results.html:30
 msgid "search results"
-msgstr ""
+msgstr "резултати от търсенето"
 
 #: templates/hyperkitty/search_results.html:32
 msgid "Search results"
-msgstr ""
+msgstr "Резултати от търсенето"
 
 #: templates/hyperkitty/search_results.html:34
 msgid "for query"
-msgstr ""
+msgstr "за заявка"
 
 #: templates/hyperkitty/search_results.html:44
 #: templates/hyperkitty/user_posts.html:34
 msgid "messages"
-msgstr ""
+msgstr "съобщения"
 
 #: templates/hyperkitty/search_results.html:57
 msgid "sort by score"
-msgstr ""
+msgstr "подреди по точки"
 
 #: templates/hyperkitty/search_results.html:60
 msgid "sort by latest first"
-msgstr ""
+msgstr "Подреди първо последните"
 
 #: templates/hyperkitty/search_results.html:63
 msgid "sort by earliest first"
-msgstr ""
+msgstr "Подреди първо най-скорошните"
 
 #: templates/hyperkitty/search_results.html:84
 msgid "Sorry no email could be found for this query."
-msgstr ""
+msgstr "Съжалявам, но не намерих съобщения за това търсене."
 
 #: templates/hyperkitty/search_results.html:87
 msgid "Sorry but your query looks empty."
@@ -807,19 +816,19 @@ msgstr ""
 
 #: templates/hyperkitty/search_results.html:88
 msgid "these are not the messages you are looking for"
-msgstr ""
+msgstr "това не са съобщенията, които търсиш"
 
 #: templates/hyperkitty/thread.html:30
 msgid "newer"
-msgstr ""
+msgstr "по-нови"
 
 #: templates/hyperkitty/thread.html:44
 msgid "older"
-msgstr ""
+msgstr "по-стари"
 
 #: templates/hyperkitty/thread.html:72
 msgid "First Post"
-msgstr ""
+msgstr "Първо съобщение"
 
 #: templates/hyperkitty/thread.html:75
 #: templates/hyperkitty/user_profile/favorites.html:45
@@ -829,15 +838,15 @@ msgstr "Отговори"
 
 #: templates/hyperkitty/thread.html:97
 msgid "Show replies by thread"
-msgstr ""
+msgstr "Покажи отговорите по нишка"
 
 #: templates/hyperkitty/thread.html:100
 msgid "Show replies by date"
-msgstr ""
+msgstr "Покажи отговори подредени по дата"
 
 #: templates/hyperkitty/thread_list.html:60
 msgid "Sorry no email threads could be found"
-msgstr ""
+msgstr "Съжалявам, но не намерих никакви нишки"
 
 #: templates/hyperkitty/threads/category.html:7
 msgid "Click to edit"
@@ -849,11 +858,11 @@ msgstr ""
 
 #: templates/hyperkitty/threads/category.html:15
 msgid "no category"
-msgstr ""
+msgstr "без категория"
 
 #: templates/hyperkitty/threads/right_col.html:12
 msgid "Age (days ago)"
-msgstr ""
+msgstr "Възраст (преди дни)"
 
 #: templates/hyperkitty/threads/right_col.html:18
 msgid "Last active (days ago)"
@@ -862,12 +871,12 @@ msgstr ""
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s коментари"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(participants_count)s participants"
-msgstr ""
+msgstr "%(participants_count)s участници"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
@@ -892,7 +901,7 @@ msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:75
 msgid "Delete this thread"
-msgstr ""
+msgstr "Изтрий нишката"
 
 #: templates/hyperkitty/threads/right_col.html:113
 msgid "Unreads:"
@@ -900,15 +909,15 @@ msgstr ""
 
 #: templates/hyperkitty/threads/right_col.html:115
 msgid "Go to:"
-msgstr ""
+msgstr "Отиди:"
 
 #: templates/hyperkitty/threads/right_col.html:115
 msgid "next"
-msgstr ""
+msgstr "следващо"
 
 #: templates/hyperkitty/threads/right_col.html:116
 msgid "prev"
-msgstr ""
+msgstr "предно"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:21
 #: templates/hyperkitty/threads/summary_thread_large.html:23
@@ -921,15 +930,15 @@ msgstr ""
 
 #: templates/hyperkitty/threads/summary_thread_large.html:59
 msgid "comments"
-msgstr ""
+msgstr "коментари"
 
 #: templates/hyperkitty/threads/tags.html:3
 msgid "tags"
-msgstr ""
+msgstr "етикети"
 
 #: templates/hyperkitty/threads/tags.html:9
 msgid "Search for tag"
-msgstr ""
+msgstr "Търси за етикет"
 
 #: templates/hyperkitty/threads/tags.html:15
 msgid "Remove"
@@ -959,11 +968,11 @@ msgstr ""
 #: templates/hyperkitty/user_public_profile.html:7
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "for"
-msgstr ""
+msgstr "за"
 
 #: templates/hyperkitty/user_profile/base.html:26
 msgid "Threads you have read"
-msgstr ""
+msgstr "Прочетени от теб нишки"
 
 #: templates/hyperkitty/user_profile/base.html:30
 #: templates/hyperkitty/user_profile/profile.html:18
@@ -973,7 +982,7 @@ msgstr ""
 
 #: templates/hyperkitty/user_profile/base.html:34
 msgid "Subscriptions"
-msgstr ""
+msgstr "Абонаменти"
 
 #: templates/hyperkitty/user_profile/favorites.html:24
 #: templates/hyperkitty/user_profile/last_views.html:27
@@ -995,7 +1004,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/favorites.html:30
 #: templates/hyperkitty/user_profile/last_views.html:33
 msgid "Replies:"
-msgstr ""
+msgstr "Отговори:"
 
 #: templates/hyperkitty/user_profile/favorites.html:41
 #: templates/hyperkitty/user_profile/last_views.html:46
@@ -1028,11 +1037,11 @@ msgstr ""
 #: templates/hyperkitty/user_profile/last_views.html:22
 #: templates/hyperkitty/user_profile/last_views.html:59
 msgid "New comments"
-msgstr ""
+msgstr "Нови коментари"
 
 #: templates/hyperkitty/user_profile/last_views.html:82
 msgid "Nothing read yet."
-msgstr ""
+msgstr "Още нищо не е прочетено."
 
 #: templates/hyperkitty/user_profile/profile.html:9
 msgid "Last posts"
@@ -1044,7 +1053,7 @@ msgstr ""
 
 #: templates/hyperkitty/user_profile/profile.html:19
 msgid "Thread"
-msgstr ""
+msgstr "Нишка"
 
 #: templates/hyperkitty/user_profile/profile.html:20
 msgid "Last thread activity"
@@ -1066,7 +1075,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/subscriptions.html:31
 #: templates/hyperkitty/user_profile/subscriptions.html:69
 msgid "no post yet"
-msgstr ""
+msgstr "още няма съобщения"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:42
 msgid "Time since the first activity"
@@ -1104,11 +1113,11 @@ msgstr ""
 
 #: templates/hyperkitty/user_public_profile.html:7
 msgid "User Profile"
-msgstr ""
+msgstr "Потребителски профил"
 
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "User profile"
-msgstr ""
+msgstr "Потребителски профил"
 
 #: templates/hyperkitty/user_public_profile.html:23
 msgid "Name:"
