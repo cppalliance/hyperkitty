@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 11:22-0800\n"
-"PO-Revision-Date: 2022-03-17 06:59+0000\n"
+"PO-Revision-Date: 2022-03-20 17:16+0000\n"
 "Last-Translator: dpa-weblate@aegee.org <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/bg/>\n"
@@ -57,7 +57,7 @@ msgstr "Не мога да намеря тази страница."
 
 #: templates/hyperkitty/404.html:33 templates/hyperkitty/500.html:34
 msgid "Go back home"
-msgstr ""
+msgstr "Обратно вкъщи"
 
 #: templates/hyperkitty/500.html:29
 msgid "Error 500"
@@ -123,7 +123,7 @@ msgstr "Списъкът с наличните формати е:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
-msgstr ""
+msgstr "Чист текст"
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
@@ -140,6 +140,8 @@ msgid ""
 "Using this address you will be able to retrieve the information known about "
 "all the mailing lists."
 msgstr ""
+"Използвайки този адрес може да получиш информация, известна за всички "
+"пощенски списъци."
 
 #: templates/hyperkitty/api.html:32
 msgid "Threads in a mailing list"
@@ -150,6 +152,8 @@ msgid ""
 "Using this address you will be able to retrieve information about all the "
 "threads on the specified mailing list."
 msgstr ""
+"Използвайки този адрес може да получиш информация за всички нишки в избрания "
+"пощенски списък."
 
 #: templates/hyperkitty/api.html:38
 msgid "Emails in a thread"
@@ -160,6 +164,8 @@ msgid ""
 "Using this address you will be able to retrieve the list of emails in a "
 "mailing list thread."
 msgstr ""
+"Използвайки този адрес може да получиш списъка с електронни адреси от нишка "
+"в пощенски списък."
 
 #: templates/hyperkitty/api.html:44
 msgid "An email in a mailing list"
@@ -170,6 +176,8 @@ msgid ""
 "Using this address you will be able to retrieve the information known about "
 "a specific email on the specified mailing list."
 msgstr ""
+"Използвайки този адрес може да получиш информация за определено съобщение в "
+"даден пощенски списък."
 
 #: templates/hyperkitty/api.html:50
 msgid "Tags"
@@ -177,7 +185,7 @@ msgstr "Етикети"
 
 #: templates/hyperkitty/api.html:53
 msgid "Using this address you will be able to retrieve the list of tags."
-msgstr ""
+msgstr "Използвайки този адрес може да получиш списък с всички етикети."
 
 #: templates/hyperkitty/base.html:57 templates/hyperkitty/base.html:112
 msgid "Account"
@@ -190,7 +198,7 @@ msgstr "Настройки на Mailman"
 #: templates/hyperkitty/base.html:67 templates/hyperkitty/base.html:122
 #: templates/hyperkitty/user_profile/base.html:17
 msgid "Posting activity"
-msgstr ""
+msgstr "Пишеща дейност"
 
 #: templates/hyperkitty/base.html:72 templates/hyperkitty/base.html:127
 msgid "Logout"
@@ -222,7 +230,7 @@ msgstr "Управление на списъците"
 
 #: templates/hyperkitty/base.html:192
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Клавиатурни съкращения"
 
 #: templates/hyperkitty/base.html:195
 msgid "Thread View"
@@ -254,15 +262,15 @@ msgstr "версия"
 
 #: templates/hyperkitty/errors/notimplemented.html:7
 msgid "Not implemented yet"
-msgstr ""
+msgstr "Още не програмирано"
 
 #: templates/hyperkitty/errors/notimplemented.html:12
 msgid "Not implemented"
-msgstr ""
+msgstr "Не е програмирано"
 
 #: templates/hyperkitty/errors/notimplemented.html:14
 msgid "This feature has not been implemented yet, sorry."
-msgstr ""
+msgstr "Съжалявам, тази функция още не е програмирана."
 
 #: templates/hyperkitty/errors/private.html:7
 msgid "Error: private list"
@@ -271,7 +279,7 @@ msgstr "Грешка: скрит списък"
 #: templates/hyperkitty/errors/private.html:19
 msgid ""
 "This mailing list is private. You must be subscribed to view the archives."
-msgstr ""
+msgstr "Пощенският списък е скрит. Трябва да се абонираш, за да видиш архивите."
 
 #: templates/hyperkitty/fragments/like_form.html:16
 msgid "You like it (cancel)"
@@ -284,7 +292,7 @@ msgstr ""
 #: templates/hyperkitty/fragments/like_form.html:27
 #: templates/hyperkitty/fragments/like_form.html:31
 msgid "You must be logged-in to vote."
-msgstr ""
+msgstr "Трябва да се регистрираш за да гласуваш."
 
 #: templates/hyperkitty/fragments/month_list.html:6
 msgid "Threads by"
@@ -401,7 +409,7 @@ msgstr "Подреди по"
 
 #: templates/hyperkitty/index.html:91
 msgid "Hide inactive"
-msgstr ""
+msgstr "Скрий бездействащите"
 
 #: templates/hyperkitty/index.html:92
 msgid "Hide private"
@@ -415,7 +423,7 @@ msgstr "Намери списък"
 #: templates/hyperkitty/user_profile/last_views.html:34
 #: templates/hyperkitty/user_profile/last_views.html:73
 msgid "new"
-msgstr "нов"
+msgstr "новo"
 
 #: templates/hyperkitty/index.html:135 templates/hyperkitty/index.html:202
 msgid "private"
@@ -423,7 +431,7 @@ msgstr "частен"
 
 #: templates/hyperkitty/index.html:137 templates/hyperkitty/index.html:204
 msgid "inactive"
-msgstr ""
+msgstr "бездействащи"
 
 #: templates/hyperkitty/index.html:143 templates/hyperkitty/index.html:229
 #: templates/hyperkitty/overview.html:94 templates/hyperkitty/overview.html:111
@@ -471,7 +479,7 @@ msgstr "дискусии"
 
 #: templates/hyperkitty/list_delete.html:7
 msgid "Delete MailingList"
-msgstr ""
+msgstr "Изтрий пощенски списък"
 
 #: templates/hyperkitty/list_delete.html:20
 msgid "Delete Mailing List"
@@ -533,7 +541,7 @@ msgstr "Създай нова нишка"
 #: templates/hyperkitty/message_new.html:22
 #: templates/hyperkitty/user_posts.html:22
 msgid "in"
-msgstr ""
+msgstr "в"
 
 #: templates/hyperkitty/message_new.html:52
 #: templates/hyperkitty/messages/message.html:145
@@ -576,7 +584,7 @@ msgstr "Отговори"
 
 #: templates/hyperkitty/messages/message.html:93
 msgid "Sign in to reply online"
-msgstr ""
+msgstr "Влез, за да отговориш онлайн"
 
 #: templates/hyperkitty/messages/message.html:105
 #, python-format
@@ -593,7 +601,7 @@ msgstr[1] ""
 
 #: templates/hyperkitty/messages/message.html:131
 msgid "Quote"
-msgstr ""
+msgstr "Цитат"
 
 #: templates/hyperkitty/messages/message.html:132
 msgid "Create new thread"
@@ -605,7 +613,7 @@ msgstr ""
 
 #: templates/hyperkitty/messages/right_col.html:11
 msgid "Back to the thread"
-msgstr ""
+msgstr "Обратно към нишката"
 
 #: templates/hyperkitty/messages/right_col.html:18
 msgid "Back to the list"
@@ -641,7 +649,7 @@ msgstr "Нишки"
 #: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
 #: templates/hyperkitty/thread_list.html:48
 msgid "You must be logged-in to create a thread."
-msgstr ""
+msgstr "Трябва да се регистрираш, за да създадеш нишка."
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:52
@@ -942,7 +950,7 @@ msgstr "Търси за етикет"
 
 #: templates/hyperkitty/threads/tags.html:15
 msgid "Remove"
-msgstr ""
+msgstr "Отстрани"
 
 #: templates/hyperkitty/user_posts.html:8
 #: templates/hyperkitty/user_posts.html:21
@@ -1083,33 +1091,33 @@ msgstr ""
 
 #: templates/hyperkitty/user_profile/subscriptions.html:43
 msgid "First post"
-msgstr ""
+msgstr "Първо писмо"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:44
 msgid "Posts to this list"
-msgstr ""
+msgstr "Пиши до този пощенски списък"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:76
 msgid "no subscriptions"
-msgstr ""
+msgstr "няма абонаменти"
 
 #: templates/hyperkitty/user_profile/votes.html:32
 #: templates/hyperkitty/user_profile/votes.html:70
 msgid "You like it"
-msgstr ""
+msgstr "Харесваш го"
 
 #: templates/hyperkitty/user_profile/votes.html:34
 #: templates/hyperkitty/user_profile/votes.html:72
 msgid "You dislike it"
-msgstr ""
+msgstr "Не го харесваш"
 
 #: templates/hyperkitty/user_profile/votes.html:50
 msgid "Vote"
-msgstr ""
+msgstr "Гласувай"
 
 #: templates/hyperkitty/user_profile/votes.html:83
 msgid "No vote yet."
-msgstr ""
+msgstr "Още няма гласове."
 
 #: templates/hyperkitty/user_public_profile.html:7
 msgid "User Profile"
@@ -1125,11 +1133,11 @@ msgstr "Име:"
 
 #: templates/hyperkitty/user_public_profile.html:28
 msgid "Creation:"
-msgstr ""
+msgstr "Създаване:"
 
 #: templates/hyperkitty/user_public_profile.html:33
 msgid "Votes for this user:"
-msgstr ""
+msgstr "Гласове за този потребител:"
 
 #: templates/hyperkitty/user_public_profile.html:41
 msgid "Email addresses:"
@@ -1141,7 +1149,7 @@ msgstr ""
 
 #: views/message.py:201
 msgid "Your reply has been sent and is being processed."
-msgstr ""
+msgstr "Отговорът ти е приет и се обработва."
 
 #: views/message.py:205
 msgid ""
@@ -1152,12 +1160,12 @@ msgstr ""
 #: views/message.py:288
 #, python-format
 msgid "Could not delete message %(msg_id_hash)s: %(error)s"
-msgstr ""
+msgstr "Съобщение %(msg_id_hash)s не можеше да се изтрие: %(error)s"
 
 #: views/message.py:297
 #, python-format
 msgid "Successfully deleted %(count)s messages."
-msgstr ""
+msgstr "Бяха изтрити %(count)s съобщения."
 
 #: views/mlist.py:88
 msgid "for this month"
@@ -1173,11 +1181,11 @@ msgstr "Този месец в gzip-архивиран mbox формат"
 
 #: views/mlist.py:200 views/mlist.py:224
 msgid "No discussions this month (yet)."
-msgstr ""
+msgstr "За този месец още няма дискусии."
 
 #: views/mlist.py:212
 msgid "No vote has been cast this month (yet)."
-msgstr ""
+msgstr "Този месец още не си гласувал."
 
 #: views/mlist.py:241
 msgid "You have not flagged any discussions (yet)."
@@ -1185,7 +1193,7 @@ msgstr ""
 
 #: views/mlist.py:264
 msgid "You have not posted to this list (yet)."
-msgstr ""
+msgstr "Още не си писал до този пощенски списък."
 
 #: views/mlist.py:357
 msgid "You must be a staff member to delete a MailingList"
@@ -1193,7 +1201,7 @@ msgstr ""
 
 #: views/mlist.py:371
 msgid "Successfully deleted {}"
-msgstr ""
+msgstr "Изтрит {}"
 
 #: views/search.py:115
 #, python-format
