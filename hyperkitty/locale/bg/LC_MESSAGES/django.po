@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 11:22-0800\n"
-"PO-Revision-Date: 2022-03-20 17:16+0000\n"
-"Last-Translator: dpa-weblate@aegee.org <dpa-weblate@aegee.org>\n"
+"PO-Revision-Date: 2022-03-25 18:46+0000\n"
+"Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/bg/>\n"
 "Language: bg\n"
@@ -283,11 +283,11 @@ msgstr "Пощенският списък е скрит. Трябва да се 
 
 #: templates/hyperkitty/fragments/like_form.html:16
 msgid "You like it (cancel)"
-msgstr ""
+msgstr "Харесваш го (отказ)"
 
 #: templates/hyperkitty/fragments/like_form.html:24
 msgid "You dislike it (cancel)"
-msgstr ""
+msgstr "Не го харесваш (отказ)"
 
 #: templates/hyperkitty/fragments/like_form.html:27
 #: templates/hyperkitty/fragments/like_form.html:31
@@ -334,7 +334,7 @@ msgstr "Промени подателя"
 
 #: templates/hyperkitty/fragments/send_as.html:16
 msgid "Link another address"
-msgstr "Вържи друг адрес"
+msgstr "Свържи друг адрес"
 
 #: templates/hyperkitty/fragments/send_as.html:20
 msgid ""
@@ -370,7 +370,7 @@ msgstr "Налични списъци"
 #: templates/hyperkitty/index.html:22 templates/hyperkitty/index.html:27
 #: templates/hyperkitty/index.html:72
 msgid "Most popular"
-msgstr "Най-известни"
+msgstr "Най-популярни"
 
 #: templates/hyperkitty/index.html:26
 msgid "Sort by number of recent participants"
@@ -470,7 +470,7 @@ msgstr "Дейност през последните 30 дни"
 #: templates/hyperkitty/threads/right_col.html:97
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
-msgstr "участници"
+msgstr "участника"
 
 #: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
 #: templates/hyperkitty/thread_list.html:45
@@ -670,7 +670,7 @@ msgstr "Изтрий архив"
 
 #: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
-msgstr ""
+msgstr "Обобщение на дейността"
 
 #: templates/hyperkitty/overview.html:93
 msgid "Post volume over the past <strong>30</strong> days."
@@ -686,7 +686,7 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:100
 msgid "the past <strong>30</strong> days:"
-msgstr ""
+msgstr "последните <strong>30</strong> дни:"
 
 #: templates/hyperkitty/overview.html:109
 msgid "Most active posters"
@@ -706,11 +706,11 @@ msgstr "Скорошни"
 
 #: templates/hyperkitty/overview.html:156
 msgid "Most Active"
-msgstr ""
+msgstr "Най-дейни"
 
 #: templates/hyperkitty/overview.html:160
 msgid "Most Popular"
-msgstr ""
+msgstr "Най-популярни"
 
 #: templates/hyperkitty/overview.html:166
 #: templates/hyperkitty/user_profile/base.html:22
@@ -723,15 +723,15 @@ msgstr ""
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
-msgstr ""
+msgstr "Скорошно дейни дискусии"
 
 #: templates/hyperkitty/overview.html:186
 msgid "Most popular discussions"
-msgstr ""
+msgstr "Най-популярни дискусии"
 
 #: templates/hyperkitty/overview.html:193
 msgid "Most active discussions"
-msgstr ""
+msgstr "Най-дейни дискусии"
 
 #: templates/hyperkitty/overview.html:200
 msgid "Discussions You've Flagged"
@@ -874,7 +874,7 @@ msgstr "Възраст (преди дни)"
 
 #: templates/hyperkitty/threads/right_col.html:18
 msgid "Last active (days ago)"
-msgstr ""
+msgstr "Последно деен (преди дни)"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
@@ -884,24 +884,24 @@ msgstr "%(num_comments)s коментари"
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(participants_count)s participants"
-msgstr "%(participants_count)s участници"
+msgstr "%(participants_count)s участника"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
-msgstr ""
+msgstr "%(unread_count)s непрочетени <span class=\"hidden-sm\">съобщения</span>"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
-msgstr ""
+msgstr "Трябва да влезеш в системата за да имаш любими съобщения."
 
 #: templates/hyperkitty/threads/right_col.html:60
 msgid "Add to favorites"
-msgstr ""
+msgstr "Добави към любими"
 
 #: templates/hyperkitty/threads/right_col.html:62
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Премахни от любими"
 
 #: templates/hyperkitty/threads/right_col.html:71
 msgid "Reattach this thread"
@@ -970,7 +970,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/base.html:5
 #: templates/hyperkitty/user_profile/base.html:12
 msgid "User posting activity"
-msgstr ""
+msgstr "Пишеща дейност на потребител"
 
 #: templates/hyperkitty/user_profile/base.html:12
 #: templates/hyperkitty/user_public_profile.html:7
@@ -986,7 +986,7 @@ msgstr "Прочетени от теб нишки"
 #: templates/hyperkitty/user_profile/profile.html:18
 #: templates/hyperkitty/user_profile/subscriptions.html:45
 msgid "Votes"
-msgstr ""
+msgstr "Гласувания"
 
 #: templates/hyperkitty/user_profile/base.html:34
 msgid "Subscriptions"
@@ -996,18 +996,18 @@ msgstr "Абонаменти"
 #: templates/hyperkitty/user_profile/last_views.html:27
 #: templates/hyperkitty/user_profile/votes.html:23
 msgid "Original author:"
-msgstr ""
+msgstr "Първоначален подател:"
 
 #: templates/hyperkitty/user_profile/favorites.html:26
 #: templates/hyperkitty/user_profile/last_views.html:29
 #: templates/hyperkitty/user_profile/votes.html:25
 msgid "Started on:"
-msgstr ""
+msgstr "Започнато на:"
 
 #: templates/hyperkitty/user_profile/favorites.html:28
 #: templates/hyperkitty/user_profile/last_views.html:31
 msgid "Last activity:"
-msgstr ""
+msgstr "Последна дейност:"
 
 #: templates/hyperkitty/user_profile/favorites.html:30
 #: templates/hyperkitty/user_profile/last_views.html:33
@@ -1031,16 +1031,16 @@ msgstr ""
 #: templates/hyperkitty/user_profile/last_views.html:48
 #: templates/hyperkitty/user_profile/votes.html:49
 msgid "Start date"
-msgstr ""
+msgstr "Начална дата"
 
 #: templates/hyperkitty/user_profile/favorites.html:44
 #: templates/hyperkitty/user_profile/last_views.html:49
 msgid "Last activity"
-msgstr ""
+msgstr "Последна дейност"
 
 #: templates/hyperkitty/user_profile/favorites.html:71
 msgid "No favorites yet."
-msgstr ""
+msgstr "Още нямаш любими съобщения."
 
 #: templates/hyperkitty/user_profile/last_views.html:22
 #: templates/hyperkitty/user_profile/last_views.html:59
@@ -1087,7 +1087,7 @@ msgstr "още няма съобщения"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:42
 msgid "Time since the first activity"
-msgstr ""
+msgstr "Време от последната дейност"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:43
 msgid "First post"
