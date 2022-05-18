@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-20 11:22-0800\n"
+"POT-Creation-Date: 2022-05-18 17:37+0000\n"
 "PO-Revision-Date: 2021-12-01 07:53+0000\n"
 "Last-Translator: Leonardo Robol <leo@robol.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -348,7 +348,7 @@ msgid "List overview"
 msgstr "Vista generale della lista"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
-#: views/mlist.py:102 views/thread.py:168
+#: views/mlist.py:114 views/thread.py:191
 msgid "Download"
 msgstr "Scarica"
 
@@ -467,14 +467,14 @@ msgid "Activity in the past 30 days"
 msgstr "Attività nei giorni precendenti"
 
 #: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
-#: templates/hyperkitty/thread_list.html:40
+#: templates/hyperkitty/thread_list.html:50
 #: templates/hyperkitty/threads/right_col.html:97
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "partecipanti"
 
 #: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
-#: templates/hyperkitty/thread_list.html:45
+#: templates/hyperkitty/thread_list.html:55
 msgid "discussions"
 msgstr "conversazioni"
 
@@ -483,13 +483,19 @@ msgid "Delete MailingList"
 msgstr "Elimina la MailingList"
 
 #: templates/hyperkitty/list_delete.html:20
-msgid "Delete Mailing List"
+#, fuzzy
+#| msgid "Delete Mailing List"
+msgid "Delete Mailing List From HyperKitty"
 msgstr "Elimina la Mailing List"
 
 #: templates/hyperkitty/list_delete.html:26
+#, fuzzy
+#| msgid ""
+#| "will be deleted along with all the threads and messages. Do you want to "
+#| "continue?"
 msgid ""
-"will be deleted along with all the threads and messages. Do you want to "
-"continue?"
+"will be deleted from HyperKitty along with all the threads and messages. It "
+"will not be deleted from Mailman Core. Do you want to continue?"
 msgstr ""
 "verrà eliminato insieme a tutte le conversazioni ed i messaggi. Vuoi "
 "continuare?"
@@ -589,14 +595,22 @@ msgid "Sign in to reply online"
 msgstr "Accedi per rispondere da qui"
 
 #: templates/hyperkitty/messages/message.html:105
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                %(email.attachments.count)s attachment\n"
+#| "                "
+#| msgid_plural ""
+#| "\n"
+#| "                %(email.attachments.count)s attachments\n"
+#| "                "
 msgid ""
 "\n"
-"                %(email.attachments.count)s attachment\n"
+"                %(email.attachments_count)s attachment\n"
 "                "
 msgid_plural ""
 "\n"
-"                %(email.attachments.count)s attachments\n"
+"                %(email.attachments_count)s attachments\n"
 "                "
 msgstr[0] ""
 "\n"
@@ -655,12 +669,18 @@ msgid "Threads"
 msgstr "Conversazioni"
 
 #: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
-#: templates/hyperkitty/thread_list.html:48
+#: templates/hyperkitty/thread_list.html:58
 msgid "You must be logged-in to create a thread."
 msgstr "Devi accedere per iniziare una nuova conversazione."
 
+#: templates/hyperkitty/overview.html:50
+#, fuzzy
+#| msgid "new"
+msgid "New"
+msgstr "nuova"
+
 #: templates/hyperkitty/overview.html:63
-#: templates/hyperkitty/thread_list.html:52
+#: templates/hyperkitty/thread_list.html:62
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
@@ -868,7 +888,11 @@ msgstr "Mostra le repliche per conversazione"
 msgid "Show replies by date"
 msgstr "Mostra repliche per data"
 
-#: templates/hyperkitty/thread_list.html:60
+#: templates/hyperkitty/thread.html:113
+msgid "Visit here for a non-javascript version of this page."
+msgstr ""
+
+#: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
 msgstr "Nessuna conversazione trovata"
 
@@ -1189,38 +1213,44 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "Eliminati %(count)s messaggi."
 
 #: views/mlist.py:88
+#, fuzzy
+#| msgid "Delete MailingList"
+msgid "for this MailingList"
+msgstr "Elimina la MailingList"
+
+#: views/mlist.py:100
 msgid "for this month"
 msgstr "per questo mese"
 
-#: views/mlist.py:91
+#: views/mlist.py:103
 msgid "for this day"
 msgstr "per questo giorno"
 
-#: views/mlist.py:103
+#: views/mlist.py:115
 msgid "This month in gzipped mbox format"
 msgstr "Questo mese in formato MBOX compresso gzip"
 
-#: views/mlist.py:200 views/mlist.py:224
+#: views/mlist.py:250 views/mlist.py:274
 msgid "No discussions this month (yet)."
 msgstr "Nessuna conversazione per questo mese."
 
-#: views/mlist.py:212
+#: views/mlist.py:262
 msgid "No vote has been cast this month (yet)."
 msgstr "Nessun voto per questo mese."
 
-#: views/mlist.py:241
+#: views/mlist.py:291
 msgid "You have not flagged any discussions (yet)."
 msgstr "Non hai appuntato nessuna conversazione."
 
-#: views/mlist.py:264
+#: views/mlist.py:314
 msgid "You have not posted to this list (yet)."
 msgstr "Non hai ancora scritto un messaggio a questa lista."
 
-#: views/mlist.py:357
+#: views/mlist.py:407
 msgid "You must be a staff member to delete a MailingList"
 msgstr "Devi essere un membro dello staff per eliminare una MailingList"
 
-#: views/mlist.py:371
+#: views/mlist.py:421
 msgid "Successfully deleted {}"
 msgstr "Eliminato con successo {}"
 
@@ -1229,7 +1259,7 @@ msgstr "Eliminato con successo {}"
 msgid "Parsing error: %(error)s"
 msgstr "Errore di interpretazione: %(error)s"
 
-#: views/thread.py:169
+#: views/thread.py:192
 msgid "This thread in gzipped mbox format"
 msgstr "Questa conversazione in formato MBOX compresso gzip"
 
@@ -1239,7 +1269,6 @@ msgstr "Questa conversazione in formato MBOX compresso gzip"
 #~ msgid "days old"
 #~ msgstr "giorni di vecchiaia"
 
-#, python-format
 #~ msgid ""
 #~ "\n"
 #~ "                    by %(name)s\n"
@@ -1273,7 +1302,6 @@ msgstr "Questa conversazione in formato MBOX compresso gzip"
 #~ msgid "Update"
 #~ msgstr "Aggiorna"
 
-#, python-format
 #~ msgid ""
 #~ "\n"
 #~ "                                        by %(name)s\n"
