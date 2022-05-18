@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-20 11:22-0800\n"
+"POT-Creation-Date: 2022-05-18 17:37+0000\n"
 "PO-Revision-Date: 2019-07-14 17:02+0000\n"
 "Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -342,7 +342,7 @@ msgid "List overview"
 msgstr ""
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
-#: views/mlist.py:102 views/thread.py:168
+#: views/mlist.py:114 views/thread.py:191
 msgid "Download"
 msgstr "تنزيل"
 
@@ -461,14 +461,14 @@ msgid "Activity in the past 30 days"
 msgstr "النشاط في الأيام الثلاثين الماضية"
 
 #: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
-#: templates/hyperkitty/thread_list.html:40
+#: templates/hyperkitty/thread_list.html:50
 #: templates/hyperkitty/threads/right_col.html:97
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "المشاركون"
 
 #: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
-#: templates/hyperkitty/thread_list.html:45
+#: templates/hyperkitty/thread_list.html:55
 msgid "discussions"
 msgstr ""
 
@@ -477,13 +477,13 @@ msgid "Delete MailingList"
 msgstr ""
 
 #: templates/hyperkitty/list_delete.html:20
-msgid "Delete Mailing List"
+msgid "Delete Mailing List From HyperKitty"
 msgstr ""
 
 #: templates/hyperkitty/list_delete.html:26
 msgid ""
-"will be deleted along with all the threads and messages. Do you want to "
-"continue?"
+"will be deleted from HyperKitty along with all the threads and messages. It "
+"will not be deleted from Mailman Core. Do you want to continue?"
 msgstr ""
 
 #: templates/hyperkitty/list_delete.html:33
@@ -581,14 +581,18 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"                %(email.attachments.count)s attachment\n"
+"                %(email.attachments_count)s attachment\n"
 "                "
 msgid_plural ""
 "\n"
-"                %(email.attachments.count)s attachments\n"
+"                %(email.attachments_count)s attachments\n"
 "                "
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
 
 #: templates/hyperkitty/messages/message.html:131
 msgid "Quote"
@@ -637,12 +641,18 @@ msgid "Threads"
 msgstr "غير مقروء"
 
 #: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
-#: templates/hyperkitty/thread_list.html:48
+#: templates/hyperkitty/thread_list.html:58
 msgid "You must be logged-in to create a thread."
 msgstr "يجب تسجيل الدخول لإنشاء موضوع."
 
+#: templates/hyperkitty/overview.html:50
+#, fuzzy
+#| msgid "new"
+msgid "New"
+msgstr "جديد"
+
 #: templates/hyperkitty/overview.html:63
-#: templates/hyperkitty/thread_list.html:52
+#: templates/hyperkitty/thread_list.html:62
 #, fuzzy
 #| msgid ""
 #| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
@@ -856,7 +866,11 @@ msgstr "إظهار الردود حسب الموضوع"
 msgid "Show replies by date"
 msgstr "إظهار الردود حسب التاريخ"
 
-#: templates/hyperkitty/thread_list.html:60
+#: templates/hyperkitty/thread.html:113
+msgid "Visit here for a non-javascript version of this page."
+msgstr ""
+
+#: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
 msgstr ""
 
@@ -1172,38 +1186,44 @@ msgid "Successfully deleted %(count)s messages."
 msgstr ""
 
 #: views/mlist.py:88
+#, fuzzy
+#| msgid "Search this list"
+msgid "for this MailingList"
+msgstr "البحث في هذه القائمة"
+
+#: views/mlist.py:100
 msgid "for this month"
 msgstr ""
 
-#: views/mlist.py:91
+#: views/mlist.py:103
 msgid "for this day"
 msgstr ""
 
-#: views/mlist.py:103
+#: views/mlist.py:115
 msgid "This month in gzipped mbox format"
 msgstr ""
 
-#: views/mlist.py:200 views/mlist.py:224
+#: views/mlist.py:250 views/mlist.py:274
 msgid "No discussions this month (yet)."
 msgstr ""
 
-#: views/mlist.py:212
+#: views/mlist.py:262
 msgid "No vote has been cast this month (yet)."
 msgstr ""
 
-#: views/mlist.py:241
+#: views/mlist.py:291
 msgid "You have not flagged any discussions (yet)."
 msgstr ""
 
-#: views/mlist.py:264
+#: views/mlist.py:314
 msgid "You have not posted to this list (yet)."
 msgstr ""
 
-#: views/mlist.py:357
+#: views/mlist.py:407
 msgid "You must be a staff member to delete a MailingList"
 msgstr ""
 
-#: views/mlist.py:371
+#: views/mlist.py:421
 msgid "Successfully deleted {}"
 msgstr ""
 
@@ -1212,7 +1232,7 @@ msgstr ""
 msgid "Parsing error: %(error)s"
 msgstr ""
 
-#: views/thread.py:169
+#: views/thread.py:192
 msgid "This thread in gzipped mbox format"
 msgstr ""
 

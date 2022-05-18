@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-20 11:23-0800\n"
+"POT-Creation-Date: 2022-05-18 17:37+0000\n"
 "PO-Revision-Date: 2021-05-19 11:33+0000\n"
 "Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -346,7 +346,7 @@ msgid "List overview"
 msgstr "목록 개요"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
-#: views/mlist.py:102 views/thread.py:168
+#: views/mlist.py:114 views/thread.py:191
 msgid "Download"
 msgstr "다운로드"
 
@@ -465,14 +465,14 @@ msgid "Activity in the past 30 days"
 msgstr "지난 30일간 활동 목록"
 
 #: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
-#: templates/hyperkitty/thread_list.html:40
+#: templates/hyperkitty/thread_list.html:50
 #: templates/hyperkitty/threads/right_col.html:97
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "참여자"
 
 #: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
-#: templates/hyperkitty/thread_list.html:45
+#: templates/hyperkitty/thread_list.html:55
 msgid "discussions"
 msgstr "댓글"
 
@@ -481,13 +481,19 @@ msgid "Delete MailingList"
 msgstr "메일링 목록 삭제"
 
 #: templates/hyperkitty/list_delete.html:20
-msgid "Delete Mailing List"
+#, fuzzy
+#| msgid "Delete Mailing List"
+msgid "Delete Mailing List From HyperKitty"
 msgstr "메일링 목록 삭제"
 
 #: templates/hyperkitty/list_delete.html:26
+#, fuzzy
+#| msgid ""
+#| "will be deleted along with all the threads and messages. Do you want to "
+#| "continue?"
 msgid ""
-"will be deleted along with all the threads and messages. Do you want to "
-"continue?"
+"will be deleted from HyperKitty along with all the threads and messages. It "
+"will not be deleted from Mailman Core. Do you want to continue?"
 msgstr "모든 스레드 및 메시지와 함께 삭제됩니다. 계속하시겠습니까?"
 
 #: templates/hyperkitty/list_delete.html:33
@@ -585,14 +591,22 @@ msgid "Sign in to reply online"
 msgstr "온라인으로 답장하기위해 로그인하기"
 
 #: templates/hyperkitty/messages/message.html:105
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                %(email.attachments.count)s attachment\n"
+#| "                "
+#| msgid_plural ""
+#| "\n"
+#| "                %(email.attachments.count)s attachments\n"
+#| "                "
 msgid ""
 "\n"
-"                %(email.attachments.count)s attachment\n"
+"                %(email.attachments_count)s attachment\n"
 "                "
 msgid_plural ""
 "\n"
-"                %(email.attachments.count)s attachments\n"
+"                %(email.attachments_count)s attachments\n"
 "                "
 msgstr[0] ""
 "\n"
@@ -647,12 +661,18 @@ msgid "Threads"
 msgstr "스레드"
 
 #: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
-#: templates/hyperkitty/thread_list.html:48
+#: templates/hyperkitty/thread_list.html:58
 msgid "You must be logged-in to create a thread."
 msgstr "스레드를 만들기 위해서 로그인되어야 합니다."
 
+#: templates/hyperkitty/overview.html:50
+#, fuzzy
+#| msgid "new"
+msgid "New"
+msgstr "new"
+
 #: templates/hyperkitty/overview.html:63
-#: templates/hyperkitty/thread_list.html:52
+#: templates/hyperkitty/thread_list.html:62
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
@@ -862,7 +882,11 @@ msgstr "스레드 별로 답장보기"
 msgid "Show replies by date"
 msgstr "날짜별로 답장보기"
 
-#: templates/hyperkitty/thread_list.html:60
+#: templates/hyperkitty/thread.html:113
+msgid "Visit here for a non-javascript version of this page."
+msgstr ""
+
+#: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
 msgstr "이메일 스레드를 찾을 수 없습니다"
 
@@ -1182,38 +1206,44 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "성공적으로 삭제했습니다 ( %(count)s 개)."
 
 #: views/mlist.py:88
+#, fuzzy
+#| msgid "Delete MailingList"
+msgid "for this MailingList"
+msgstr "메일링 목록 삭제"
+
+#: views/mlist.py:100
 msgid "for this month"
 msgstr "이번 달에"
 
-#: views/mlist.py:91
+#: views/mlist.py:103
 msgid "for this day"
 msgstr "하루 동안"
 
-#: views/mlist.py:103
+#: views/mlist.py:115
 msgid "This month in gzipped mbox format"
 msgstr "이번 달을 gzip mbox 포멧으로 압축된 형태"
 
-#: views/mlist.py:200 views/mlist.py:224
+#: views/mlist.py:250 views/mlist.py:274
 msgid "No discussions this month (yet)."
 msgstr "이번 달에 개시된 논의가 없습니다."
 
-#: views/mlist.py:212
+#: views/mlist.py:262
 msgid "No vote has been cast this month (yet)."
 msgstr "이번 달에 진행된 투표가 없습니다."
 
-#: views/mlist.py:241
+#: views/mlist.py:291
 msgid "You have not flagged any discussions (yet)."
 msgstr "아직 찜한 의논이 없습니다."
 
-#: views/mlist.py:264
+#: views/mlist.py:314
 msgid "You have not posted to this list (yet)."
 msgstr "이 목록에 아직 글을 쓰지 않았습니다."
 
-#: views/mlist.py:357
+#: views/mlist.py:407
 msgid "You must be a staff member to delete a MailingList"
 msgstr "메일링 목록을 삭제하려면 스태프 멤버여야 합니다"
 
-#: views/mlist.py:371
+#: views/mlist.py:421
 msgid "Successfully deleted {}"
 msgstr "성공적으로 삭제했습니다 {}"
 
@@ -1222,7 +1252,7 @@ msgstr "성공적으로 삭제했습니다 {}"
 msgid "Parsing error: %(error)s"
 msgstr "파싱(Parsing) 에러:%(error)s"
 
-#: views/thread.py:169
+#: views/thread.py:192
 msgid "This thread in gzipped mbox format"
 msgstr "이 스레드는 gzip mbox 포멧으로 압축되었습니다"
 
@@ -1232,7 +1262,6 @@ msgstr "이 스레드는 gzip mbox 포멧으로 압축되었습니다"
 #~ msgid "days old"
 #~ msgstr "일 지남"
 
-#, python-format
 #~ msgid ""
 #~ "\n"
 #~ "                    by %(name)s\n"
@@ -1266,7 +1295,6 @@ msgstr "이 스레드는 gzip mbox 포멧으로 압축되었습니다"
 #~ msgid "Update"
 #~ msgstr "업데이트"
 
-#, python-format
 #~ msgid ""
 #~ "\n"
 #~ "                                        by %(name)s\n"

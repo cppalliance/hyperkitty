@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-20 11:22-0800\n"
+"POT-Creation-Date: 2022-05-18 17:37+0000\n"
 "PO-Revision-Date: 2022-05-18 10:15+0000\n"
 "Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -279,7 +279,8 @@ msgstr "Грешка: скрит списък"
 #: templates/hyperkitty/errors/private.html:19
 msgid ""
 "This mailing list is private. You must be subscribed to view the archives."
-msgstr "Пощенският списък е скрит. Трябва да се абонираш, за да видиш архивите."
+msgstr ""
+"Пощенският списък е скрит. Трябва да се абонираш, за да видиш архивите."
 
 #: templates/hyperkitty/fragments/like_form.html:16
 msgid "You like it (cancel)"
@@ -347,7 +348,7 @@ msgid "List overview"
 msgstr "Преглед на списъка"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
-#: views/mlist.py:102 views/thread.py:168
+#: views/mlist.py:114 views/thread.py:191
 msgid "Download"
 msgstr "Изтегли"
 
@@ -466,14 +467,14 @@ msgid "Activity in the past 30 days"
 msgstr "Дейност през последните 30 дни"
 
 #: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
-#: templates/hyperkitty/thread_list.html:40
+#: templates/hyperkitty/thread_list.html:50
 #: templates/hyperkitty/threads/right_col.html:97
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "участника"
 
 #: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
-#: templates/hyperkitty/thread_list.html:45
+#: templates/hyperkitty/thread_list.html:55
 msgid "discussions"
 msgstr "дискусии"
 
@@ -482,13 +483,19 @@ msgid "Delete MailingList"
 msgstr "Изтрий пощенски списък"
 
 #: templates/hyperkitty/list_delete.html:20
-msgid "Delete Mailing List"
+#, fuzzy
+#| msgid "Delete Mailing List"
+msgid "Delete Mailing List From HyperKitty"
 msgstr "Изтрий пощенски списък"
 
 #: templates/hyperkitty/list_delete.html:26
+#, fuzzy
+#| msgid ""
+#| "will be deleted along with all the threads and messages. Do you want to "
+#| "continue?"
 msgid ""
-"will be deleted along with all the threads and messages. Do you want to "
-"continue?"
+"will be deleted from HyperKitty along with all the threads and messages. It "
+"will not be deleted from Mailman Core. Do you want to continue?"
 msgstr ""
 "ще бъде изтрит заедно с всички нишки и съобщения. Искаш ли да продължиш?"
 
@@ -590,11 +597,11 @@ msgstr "Влез, за да отговориш онлайн"
 #, python-format
 msgid ""
 "\n"
-"                %(email.attachments.count)s attachment\n"
+"                %(email.attachments_count)s attachment\n"
 "                "
 msgid_plural ""
 "\n"
-"                %(email.attachments.count)s attachments\n"
+"                %(email.attachments_count)s attachments\n"
 "                "
 msgstr[0] ""
 msgstr[1] ""
@@ -647,26 +654,32 @@ msgid "Threads"
 msgstr "Нишки"
 
 #: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
-#: templates/hyperkitty/thread_list.html:48
+#: templates/hyperkitty/thread_list.html:58
 msgid "You must be logged-in to create a thread."
 msgstr "Трябва да се регистрираш, за да създадеш нишка."
 
+#: templates/hyperkitty/overview.html:50
+#, fuzzy
+#| msgid "new"
+msgid "New"
+msgstr "новo"
+
 #: templates/hyperkitty/overview.html:63
-#: templates/hyperkitty/thread_list.html:52
+#: templates/hyperkitty/thread_list.html:62
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
-"<span class=\"d-none d-md-inline\">Започни н</span><span class=\"d-md-none\""
-">Н</span>ова нишка"
+"<span class=\"d-none d-md-inline\">Започни н</span><span class=\"d-md-none"
+"\">Н</span>ова нишка"
 
 #: templates/hyperkitty/overview.html:75
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"d-none d-md-inline\">Управлявай а</span><span class=\"d-md-"
-"none\">А</span>бонамент"
+"<span class=\"d-none d-md-inline\">Управлявай а</span><span class=\"d-md-none"
+"\">А</span>бонамент"
 
 #: templates/hyperkitty/overview.html:81
 msgid "Delete Archive"
@@ -856,7 +869,11 @@ msgstr "Покажи отговорите по нишка"
 msgid "Show replies by date"
 msgstr "Покажи отговори подредени по дата"
 
-#: templates/hyperkitty/thread_list.html:60
+#: templates/hyperkitty/thread.html:113
+msgid "Visit here for a non-javascript version of this page."
+msgstr ""
+
+#: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
 msgstr "Съжалявам, но не намерих никакви нишки"
 
@@ -893,7 +910,8 @@ msgstr "%(participants_count)s участника"
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
-msgstr "%(unread_count)s непрочетени <span class=\"hidden-sm\">съобщения</span>"
+msgstr ""
+"%(unread_count)s непрочетени <span class=\"hidden-sm\">съобщения</span>"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
@@ -1172,38 +1190,44 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "Бяха изтрити %(count)s съобщения."
 
 #: views/mlist.py:88
+#, fuzzy
+#| msgid "Delete MailingList"
+msgid "for this MailingList"
+msgstr "Изтрий пощенски списък"
+
+#: views/mlist.py:100
 msgid "for this month"
 msgstr "за този месец"
 
-#: views/mlist.py:91
+#: views/mlist.py:103
 msgid "for this day"
 msgstr "за този ден"
 
-#: views/mlist.py:103
+#: views/mlist.py:115
 msgid "This month in gzipped mbox format"
 msgstr "Този месец в gzip-архивиран mbox формат"
 
-#: views/mlist.py:200 views/mlist.py:224
+#: views/mlist.py:250 views/mlist.py:274
 msgid "No discussions this month (yet)."
 msgstr "За този месец още няма дискусии."
 
-#: views/mlist.py:212
+#: views/mlist.py:262
 msgid "No vote has been cast this month (yet)."
 msgstr "Този месец още не си гласувал."
 
-#: views/mlist.py:241
+#: views/mlist.py:291
 msgid "You have not flagged any discussions (yet)."
 msgstr ""
 
-#: views/mlist.py:264
+#: views/mlist.py:314
 msgid "You have not posted to this list (yet)."
 msgstr "Още не си писал до този пощенски списък."
 
-#: views/mlist.py:357
+#: views/mlist.py:407
 msgid "You must be a staff member to delete a MailingList"
 msgstr ""
 
-#: views/mlist.py:371
+#: views/mlist.py:421
 msgid "Successfully deleted {}"
 msgstr "Изтрит {}"
 
@@ -1212,6 +1236,6 @@ msgstr "Изтрит {}"
 msgid "Parsing error: %(error)s"
 msgstr ""
 
-#: views/thread.py:169
+#: views/thread.py:192
 msgid "This thread in gzipped mbox format"
 msgstr ""
