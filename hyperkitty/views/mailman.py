@@ -27,13 +27,12 @@ from email import message_from_binary_file
 from email.message import EmailMessage
 from email.policy import default
 from functools import wraps
-from urllib.parse import urljoin
+from urllib.parse import unquote, urljoin
 
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured, SuspiciousOperation
 from django.http import HttpResponse
 from django.urls import reverse
-from django.utils.http import urlunquote
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 
@@ -134,7 +133,7 @@ def _get_url(mlist_fqdn, msg_id=None):
         msg_hash = get_message_id_hash(msg_id.strip().strip("<>"))
         url = reverse('hk_message_index', kwargs={
             "mlist_fqdn": mlist_fqdn, "message_id_hash": msg_hash})
-    relative_url = urlunquote(url)
+    relative_url = unquote(url)
     mail_domain = mlist_fqdn.split("@")[1]
     try:
         domain = MailDomain.objects.get(

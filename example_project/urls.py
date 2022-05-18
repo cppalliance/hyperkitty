@@ -21,21 +21,21 @@ This file is the main URL config for a Django website including HyperKitty.
 """
 
 from django.conf import settings
-from django.conf.urls import include, url
+from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path, reverse_lazy
 from django.views.generic import RedirectView
 
 
 urlpatterns = [
-    url(r'^$', RedirectView.as_view(
+    path('', RedirectView.as_view(
         url=reverse_lazy('hk_root'))),
-    url(r'^hyperkitty/', include('hyperkitty.urls')),
+    path('hyperkitty/', include('hyperkitty.urls')),
     # url(r'^postorius/', include('postorius.urls')),
-    url(r'', include('django_mailman3.urls')),
-    url(r'^accounts/', include('allauth.urls')),
+    path('', include('django_mailman3.urls')),
+    path('accounts/', include('allauth.urls')),
     # Django admin
-    url(r'^admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 ]
 
 

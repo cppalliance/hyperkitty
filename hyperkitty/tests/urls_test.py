@@ -21,11 +21,12 @@
 This file is the main URL config for a Django website including HyperKitty.
 """
 
-from django.conf.urls import include, url
+from django.conf.urls import include
+from django.urls import path
 
 
 urlpatterns = [
-    url(r'', include('hyperkitty.urls')),
-    url(r'', include('django_mailman3.urls')),
-    url(r'^accounts/', include('allauth.urls')),
+    path('', include('hyperkitty.urls')),
+    path('', include('django_mailman3.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
