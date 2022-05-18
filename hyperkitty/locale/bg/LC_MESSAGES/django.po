@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 11:22-0800\n"
-"PO-Revision-Date: 2022-05-12 09:15+0000\n"
+"PO-Revision-Date: 2022-05-18 10:15+0000\n"
 "Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/bg/>\n"
@@ -222,7 +222,7 @@ msgstr "Търси във всички списъци"
 
 #: templates/hyperkitty/base.html:149
 msgid "Manage this list"
-msgstr "Управлявай този пощенски списък"
+msgstr "Управлявай пощенския списък"
 
 #: templates/hyperkitty/base.html:154
 msgid "Manage lists"
@@ -657,12 +657,16 @@ msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
+"<span class=\"d-none d-md-inline\">Започни н</span><span class=\"d-md-none\""
+">Н</span>ова нишка"
 
 #: templates/hyperkitty/overview.html:75
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
+"<span class=\"d-none d-md-inline\">Управлявай а</span><span class=\"d-md-"
+"none\">А</span>бонамент"
 
 #: templates/hyperkitty/overview.html:81
 msgid "Delete Archive"
@@ -719,7 +723,7 @@ msgstr "Любими"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
-msgstr ""
+msgstr "Написани"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
