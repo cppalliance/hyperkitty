@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: Traducao_Hyperkitty1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: 2022-03-01 12:58+0000\n"
+"PO-Revision-Date: 2022-05-19 00:17+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/gnu-"
-"mailman/hyperkitty/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"gnu-mailman/hyperkitty/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.11.1-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -489,21 +489,16 @@ msgid "Delete MailingList"
 msgstr "Excluir lista de discussão"
 
 #: templates/hyperkitty/list_delete.html:20
-#, fuzzy
-#| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
-msgstr "Excluir lista de discussão"
+msgstr "Excluir a lista de discussão do HyperKitty"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
 msgstr ""
-"vai ser excluída junto com todos os tópicos e mensagens. Deseja continuar?"
+"vai ser excluída do HyperKitty junto com todos os tópicos e mensagens. Não "
+"será excluído do Mailman Core. Deseja continuar?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -600,15 +595,7 @@ msgid "Sign in to reply online"
 msgstr "Faça login para responder on-line"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments.count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments.count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments_count)s attachment\n"
@@ -619,11 +606,11 @@ msgid_plural ""
 "                "
 msgstr[0] ""
 "\n"
-"                %(email.attachments.count)s anexo\n"
+"                %(email.attachments_count)s anexo\n"
 "                "
 msgstr[1] ""
 "\n"
-"                %(email.attachments.count)s anexos\n"
+"                %(email.attachments_count)s anexos\n"
 "                "
 
 #: templates/hyperkitty/messages/message.html:131
@@ -679,10 +666,8 @@ msgid "You must be logged-in to create a thread."
 msgstr "Você deve estar logado para criar um tópico."
 
 #: templates/hyperkitty/overview.html:50
-#, fuzzy
-#| msgid "new"
 msgid "New"
-msgstr "novo"
+msgstr "Novo"
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:62
@@ -891,7 +876,7 @@ msgstr "Mostrar respostas por data"
 
 #: templates/hyperkitty/thread.html:113
 msgid "Visit here for a non-javascript version of this page."
-msgstr ""
+msgstr "Visite aqui para uma versão sem javascript desta página."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
@@ -1211,8 +1196,6 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "Excluído com sucesso %(count)s mensagens."
 
 #: views/mlist.py:88
-#, fuzzy
-#| msgid "Delete MailingList"
 msgid "for this MailingList"
 msgstr "Excluir lista de discussão"
 

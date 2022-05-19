@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: 2022-02-22 02:54+0000\n"
-"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"PO-Revision-Date: 2022-05-19 00:17+0000\n"
+"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/tr/>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -484,22 +484,16 @@ msgid "Delete MailingList"
 msgstr "Posta Listesi Sil"
 
 #: templates/hyperkitty/list_delete.html:20
-#, fuzzy
-#| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
-msgstr "Posta Listesini Sil"
+msgstr "Posta Listesini HyperKitty'den Sil"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
 msgstr ""
-"tüm mesaj dizileri ve mesajlarla birlikte silinecek. Devam etmek istiyor "
-"musun?"
+"tüm mesaj dizileri ve mesajlarla birlikte HyperKitty'den silinecek. Mailman "
+"Core'dan silinmeyecek. Devam etmek istiyor musunuz?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -596,15 +590,7 @@ msgid "Sign in to reply online"
 msgstr "Çevrimiçi yanıtlamak için oturum açın"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments.count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments.count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments_count)s attachment\n"
@@ -615,11 +601,11 @@ msgid_plural ""
 "                "
 msgstr[0] ""
 "\n"
-"                %(email.attachments.count)s ek\n"
+"                %(email.attachments_count)s ek\n"
 "                "
 msgstr[1] ""
 "\n"
-"                %(email.attachments.count)s ek\n"
+"                %(email.attachments_count)s ek\n"
 "                "
 
 #: templates/hyperkitty/messages/message.html:131
@@ -675,10 +661,8 @@ msgid "You must be logged-in to create a thread."
 msgstr "Bir mesaj dizisi oluşturmak için oturum açmış olmalısınız."
 
 #: templates/hyperkitty/overview.html:50
-#, fuzzy
-#| msgid "new"
 msgid "New"
-msgstr "yeni"
+msgstr "Yeni"
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:62
@@ -887,7 +871,7 @@ msgstr "Yanıtları tarihe göre göster"
 
 #: templates/hyperkitty/thread.html:113
 msgid "Visit here for a non-javascript version of this page."
-msgstr ""
+msgstr "Bu sayfanın javascript olmayan bir sürümü için burayı ziyaret edin."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
@@ -1208,10 +1192,8 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "%(count)s mesaj başarıyla silindi."
 
 #: views/mlist.py:88
-#, fuzzy
-#| msgid "Delete MailingList"
 msgid "for this MailingList"
-msgstr "Posta Listesi Sil"
+msgstr "bu posta listesi için"
 
 #: views/mlist.py:100
 msgid "for this month"
