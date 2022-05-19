@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: 2022-05-18 10:15+0000\n"
+"PO-Revision-Date: 2022-05-19 00:17+0000\n"
 "Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/bg/>\n"
@@ -483,21 +483,16 @@ msgid "Delete MailingList"
 msgstr "Изтрий пощенски списък"
 
 #: templates/hyperkitty/list_delete.html:20
-#, fuzzy
-#| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
-msgstr "Изтрий пощенски списък"
+msgstr "Изтрий пощенски списък от HyperKitty"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
 msgstr ""
-"ще бъде изтрит заедно с всички нишки и съобщения. Искаш ли да продължиш?"
+"ще бъде изтрит от HyperKitty заедно с всички нишки и съобщения. Няма да бъде "
+"изтрит от Mailman Core. Искаш ли да продължиш?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -659,10 +654,8 @@ msgid "You must be logged-in to create a thread."
 msgstr "Трябва да се регистрираш, за да създадеш нишка."
 
 #: templates/hyperkitty/overview.html:50
-#, fuzzy
-#| msgid "new"
 msgid "New"
-msgstr "новo"
+msgstr "Нова"
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:62

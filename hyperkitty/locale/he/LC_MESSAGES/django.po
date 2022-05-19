@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: 2022-02-22 02:54+0000\n"
+"PO-Revision-Date: 2022-05-19 00:17+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -479,20 +479,16 @@ msgid "Delete MailingList"
 msgstr "מחיקת רשימת דיוור"
 
 #: templates/hyperkitty/list_delete.html:20
-#, fuzzy
-#| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
-msgstr "מחיקת רשימת דיוור"
+msgstr "מחיקת רשימת דיוור מ־HyperKitty"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
-msgstr "תימחק על כל השרשורים וההודעות שלה. להמשיך?"
+msgstr ""
+"תימחק מ־HyperKitty על כל השרשורים וההודעות שלה. היא לא תימחק מהליבה של "
+"Mailman. להמשיך?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -589,15 +585,7 @@ msgid "Sign in to reply online"
 msgstr "יש להיכנס כדי להגיב דרך כאן"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments.count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments.count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments_count)s attachment\n"
@@ -612,7 +600,7 @@ msgstr[0] ""
 "                "
 msgstr[1] ""
 "\n"
-"                %(email.attachments.count)s קבצים מצורפים\n"
+"                %(email.attachments_count)s קבצים מצורפים\n"
 "                "
 
 #: templates/hyperkitty/messages/message.html:131
@@ -668,8 +656,6 @@ msgid "You must be logged-in to create a thread."
 msgstr "עליך להיכנס כדי ליצור שרשור."
 
 #: templates/hyperkitty/overview.html:50
-#, fuzzy
-#| msgid "new"
 msgid "New"
 msgstr "חדשה"
 
@@ -880,7 +866,7 @@ msgstr "הצגת תגובות לפי תאריך"
 
 #: templates/hyperkitty/thread.html:113
 msgid "Visit here for a non-javascript version of this page."
-msgstr ""
+msgstr "יש לבקר כאן לגרסה נטולת JavaScript של העמוד הזה."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
@@ -1200,10 +1186,8 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "%(count)s הודעות נמחקו בהצלחה."
 
 #: views/mlist.py:88
-#, fuzzy
-#| msgid "Delete MailingList"
 msgid "for this MailingList"
-msgstr "מחיקת רשימת דיוור"
+msgstr "לרשימת הדיוור הזאת"
 
 #: views/mlist.py:100
 msgid "for this month"
