@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: 2022-05-19 00:17+0000\n"
+"PO-Revision-Date: 2022-05-20 17:30+0000\n"
 "Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/bg/>\n"
@@ -206,7 +206,7 @@ msgstr "Изход"
 
 #: templates/hyperkitty/base.html:78 templates/hyperkitty/base.html:134
 msgid "Sign In"
-msgstr ""
+msgstr "Вход"
 
 #: templates/hyperkitty/base.html:82 templates/hyperkitty/base.html:138
 msgid "Sign Up"
@@ -599,7 +599,13 @@ msgid_plural ""
 "                %(email.attachments_count)s attachments\n"
 "                "
 msgstr[0] ""
+"\n"
+"                %(email.attachments_count)s прикачен файл\n"
+"                "
 msgstr[1] ""
+"\n"
+"                %(email.attachments_count)s прикачени файла\n"
+"                "
 
 #: templates/hyperkitty/messages/message.html:131
 msgid "Quote"
@@ -893,7 +899,7 @@ msgstr "Последно деен (преди дни)"
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr "%(num_comments)s коментари"
+msgstr "%(num_comments)s коментарa"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
