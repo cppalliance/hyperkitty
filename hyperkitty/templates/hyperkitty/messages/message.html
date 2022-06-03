@@ -56,7 +56,7 @@
       {{ email.content|render:mlist }}
     </div>
 
-    {% if unfolded and email.attachments_count %}
+    {% if unfolded and email.attachments.count %}
     <div class="attachments">
         <p class="attachments">{% trans "Attachments:" %}</p>
         <ul class="attachments-list list-unstyled">
@@ -99,13 +99,13 @@
         {% endif  %}
 
         <!-- Attachments -->
-        {% if not unfolded and email.attachments_count %}
+        {% if not unfolded and email.attachments.count %}
         <div class="attachments dropdown">
             <a class="attachments" data-toggle="dropdown" href="#">
-                {% blocktrans count attachments=email.attachments_count %}
-                {{ email.attachments_count }} attachment
+                {% blocktrans count attachments=email.attachments.count %}
+                {{ email.attachments.count }} attachment
                 {% plural %}
-                {{ email.attachments_count }} attachments
+                {{ email.attachments.count }} attachments
                 {% endblocktrans %}
                 <span class="caret"></span>
                 <!-- <i class="fa fa-caret-right"></i> -->
