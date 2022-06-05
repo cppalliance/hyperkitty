@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: 2021-12-11 14:53+0000\n"
-"Last-Translator: Ivan Kuznetsov <kia@solvo.ru>\n"
+"PO-Revision-Date: 2022-06-05 10:21+0000\n"
+"Last-Translator: МАН69К <weblate@mah69k.net>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/ru/>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.10-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -603,15 +603,7 @@ msgid "Sign in to reply online"
 msgstr "Войти, чтобы ответить онлайн"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments.count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments.count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments_count)s attachment\n"
@@ -622,19 +614,19 @@ msgid_plural ""
 "                "
 msgstr[0] ""
 "\n"
-"                %(email.attachments.count)s прикреплённый файл\n"
+"                %(email.attachments_count)s прикреплённый файл\n"
 "                "
 msgstr[1] ""
 "\n"
-"                %(email.attachments.count)s прикреплённых файла\n"
+"                %(email.attachments_count)s прикреплённых файла\n"
 "                "
 msgstr[2] ""
 "\n"
-"                %(email.attachments.count)s прикреплённых файлов\n"
+"                %(email.attachments_count)s прикреплённых файлов\n"
 "                "
 msgstr[3] ""
 "\n"
-"                %(email.attachments.count)s прикреплённых файлов\n"
+"                %(email.attachments_count)s прикреплённых файлов\n"
 "                "
 
 #: templates/hyperkitty/messages/message.html:131
@@ -937,10 +929,9 @@ msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s комментариев"
 
 #: templates/hyperkitty/threads/right_col.html:44
-#, fuzzy, python-format
-#| msgid "%(thread.participants_count)s participants"
+#, python-format
 msgid "%(participants_count)s participants"
-msgstr "%(thread.participants_count)s участников"
+msgstr "%(participants_count)s участников"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
