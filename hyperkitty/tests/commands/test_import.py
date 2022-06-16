@@ -364,6 +364,11 @@ msg1
 
     def test_unconvertable_message(self):
         # This message can't be converted to an email.message.EmailMessage.
+        # This fails with Python 3.9 >=3.9.13 and versions >= 3.10.5 because
+        # https://bugs.python.org/issue43323 is fixed.
+        if ((sys.hexversion >= 0x3090df0 and sys.hexversion < 0x30a0000) or
+                sys.hexversion >= 0x30a05f0):
+            raise SkipTest
         mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
         # We have to do it this way to see the exception.
         with open(get_test_file("unconvertable_message.txt"), "rb") as em_file:
