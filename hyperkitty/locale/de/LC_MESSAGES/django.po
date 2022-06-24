@@ -683,7 +683,7 @@ msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
-"<span class=\"d-none d-md-inline\">Einen </span><span class=\"d-md-none\">n</"
+"<span class=\"d-none d-md-inline\">Einen n</span><span class=\"d-md-none\">N</"
 "span>euen Thread beginnen"
 
 #: templates/hyperkitty/overview.html:75
@@ -691,8 +691,7 @@ msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
-"<span class=\"d-none d-md-inline\">Mitglied</span><span class=\"d-md-none"
-"\">s</span>chaft verwalten"
+"Mitgliedschaft<span class=\"d-none d-md-inline\"> verwalten</span>"
 
 #: templates/hyperkitty/overview.html:81
 msgid "Delete Archive"
