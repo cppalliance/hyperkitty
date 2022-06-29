@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: 2022-03-02 05:50+0000\n"
+"PO-Revision-Date: 2022-06-29 09:21+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.1-dev\n"
+"X-Generator: Weblate 4.13.1-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -488,20 +488,16 @@ msgid "Delete MailingList"
 msgstr "Levelezési lista törlése"
 
 #: templates/hyperkitty/list_delete.html:20
-#, fuzzy
-#| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
 msgstr "Lista archívum törlése"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
-msgstr "az összes hozzászólással és üzenettel együtt törlődik. Folytatja?"
+msgstr ""
+"az összes hozzászólással és üzenettel együtt törlődik az archívumból. A "
+"lista maga nem törlődik. Folytatja?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -598,15 +594,7 @@ msgid "Sign in to reply online"
 msgstr "Bejelentkezés az online válaszhoz"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments.count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments.count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments_count)s attachment\n"
@@ -617,11 +605,11 @@ msgid_plural ""
 "                "
 msgstr[0] ""
 "\n"
-"                %(email.attachments.count)s melléklet\n"
+"                %(email.attachments_count)s melléklet\n"
 "                "
 msgstr[1] ""
 "\n"
-"                %(email.attachments.count)s mellékletek\n"
+"                %(email.attachments_count)s mellékletek\n"
 "                "
 
 #: templates/hyperkitty/messages/message.html:131
@@ -677,10 +665,8 @@ msgid "You must be logged-in to create a thread."
 msgstr "Téma létrehozásához be kell jelentkeznie."
 
 #: templates/hyperkitty/overview.html:50
-#, fuzzy
-#| msgid "new"
 msgid "New"
-msgstr "új"
+msgstr "Új"
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:62
@@ -889,7 +875,7 @@ msgstr "Válaszok megjelenítése dátum szerint"
 
 #: templates/hyperkitty/thread.html:113
 msgid "Visit here for a non-javascript version of this page."
-msgstr ""
+msgstr "Látogasson el ide az oldal nem-javascriptes verziójához."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
@@ -1209,10 +1195,8 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "Sikeresen törölték a %(count)s üzeneteket."
 
 #: views/mlist.py:88
-#, fuzzy
-#| msgid "Delete MailingList"
 msgid "for this MailingList"
-msgstr "Levelezési lista törlése"
+msgstr "ehhez a levelezőlistához"
 
 #: views/mlist.py:100
 msgid "for this month"
