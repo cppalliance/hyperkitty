@@ -19,6 +19,7 @@
 #
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
+from textwrap import dedent
 from unittest.mock import patch
 
 from django.test import override_settings
@@ -43,13 +44,14 @@ This is the response.
 """
         expected = (
             """
-On Fri, 09.11.12 11:27, Someone wrote:
-<div class="quoted-switch"><a style="font-weight:normal" href="#">%s</a>"""
-            """</div><div class="quoted-text quoted-text-0">  This is the first quoted line
- This is the second quoted line </div>This is the response.
-""") % self.quotemsg
+            On Fri, 09.11.12 11:27, Someone wrote:
+            <div class="quoted-switch"><a style="font-weight:normal" href="#">%s</a></div><div class="quoted-text quoted-text-0">  This is the first quoted line
+             This is the second quoted line </div>This is the response.
+            """  # noqa: E501
+        ) % self.quotemsg
         result = snip_quoted(contents, self.quotemsg)
-        self.assertEqual(result, expected)
+
+        self.assertEqual(result, "\n" + dedent(expected).strip() + "\n")
 
     def test_quote_2(self):
         contents = """
