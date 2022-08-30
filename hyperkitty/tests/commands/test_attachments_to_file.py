@@ -88,33 +88,11 @@ class CommandTestCase(TestCase):
         with io.StringIO() as fp, redirect_stdout(fp):
             with suppress(SystemExit):
                 call_command('attachments_to_file', '--help')
-            self.assertRegex(fp.getvalue(), """\
-(?s)usage:  attachments_to_file \[-h\] \[-c CHUNK_SIZE\] \[--version\]
-                            \[--settings SETTINGS\] \[--pythonpath PYTHONPATH\]
-                            \[--traceback\] \[--no-color\] \[--force-color\]
-                            .*\[-v \{0,1\}\]
 
-Move attachments from database to file system after setting
-HYPERKITTY_ATTACHMENT_FOLDER\.
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -c CHUNK_SIZE, --chunk-size CHUNK_SIZE
-                        Specify the number of attachments to retrieve at one
-                        time from the database\. Default is 100\. Larger values
-                        use more memory\.
-  --version             show program's version number and exit
-  --settings SETTINGS   The Python path to a settings module, e\.g\.
-                        "myproject\.settings\.main". If this isn't provided, the
-                        DJANGO_SETTINGS_MODULE environment variable will be
-                        used\.
-  --pythonpath PYTHONPATH
-                        A directory to add to the Python path, e\.g\.
-                        "/home/djangoprojects/myproject"\.
-  --traceback           Raise on CommandError exceptions
-  --no-color            Don't colorize the command output\.
-  --force-color         Force colorization of the command output\..*
-  -v \{0,1\}, --verbosity \{0,1\}
-                        Verbosity = 1 will print a dot for each 100
-                        attachments moved\.
-""")                                               # noqa E501,W605
+            output_value = fp.getvalue()
+            assert (
+                "HYPERKITTY_ATTACHMENT_FOLDER" in output_value
+                and "-c CHUNK_SIZE" in output_value
+                and "-c CHUNK_SIZE, --chunk-size CHUNK_SIZE" in output_value
+                and "-v {0,1}, --verbosity {0,1}" in output_value
+            )

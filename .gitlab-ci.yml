@@ -6,45 +6,10 @@ stages:
   - quality-assurance
   - test
 
-py36-django22:
-  stage: test
-  script:
-    - tox -e py36-django22
-
-py36-django31:
-  stage: test
-  script:
-    - tox -e py36-django31
-
-py36-django32:
-  stage: test
-  script:
-    - tox -e py36-django32
-
-py37-django22:
-  stage: test
-  script:
-    - tox -e py37-django22
-
-py37-django31:
-  stage: test
-  script:
-    - tox -e py37-django31
-
 py37-django32:
   stage: test
   script:
     - tox -e py37-django32
-
-py38-django22:
-  stage: test
-  script:
-    - tox -e py38-django22
-
-py38-django31:
-  stage: test
-  script:
-    - tox -e py38-django31
 
 py38-django32:
   stage: test
@@ -56,21 +21,6 @@ py38-django40:
   script:
     - tox -e py38-django40
 
-py39-django22:
-  stage: test
-  script:
-    - tox -e py39-django22
-
-py39-django30:
-  stage: test
-  script:
-    - tox -e py39-django30
-
-py39-django31:
-  stage: test
-  script:
-    - tox -e py39-django31
-
 py39-django32:
   stage: test
   script:
@@ -81,16 +31,25 @@ py39-django40:
   script:
     - tox -e py39-django40
 
+py39-django41:
+  stage: test
+  script:
+    - tox -e py39-django41
+
 py310-django32:
   stage: test
-  # TODO: at the time of writing the container in use shipped a python 3.10
-  # alpha which seemed to cause issues for the discovery of the lxml package.
-  # Running tests locally with a stable python 3.10 release did not exhibit any
-  # issues, so the allow_failure should be removed once the container is
-  # updated.
-  allow_failure: true
   script:
     - tox -e py310-django32
+
+py310-django40:
+  stage: test
+  script:
+    - tox -e py310-django40
+
+py310-django41:
+  stage: test
+  script:
+    - tox -e py310-django41
 
 qa:
   stage: quality-assurance
