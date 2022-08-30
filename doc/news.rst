@@ -10,7 +10,6 @@ News / Changelog
 
 (xxxx-xx-xx)
 
-- Add support for Django 4.0
 - Fixed an issue in hyperkitty_import with an empty Message-ID.  (Closes #396)
 - Set Q_CLUSTER retry > timeout in example_project.  (Closes #402)
 - Set DEFAULT_AUTO_FIELD to silence errors with Django >= 3.2.
@@ -35,6 +34,10 @@ News / Changelog
   once, which will be slow to load but allow reading. (See #422)
 - Improve the performance of the thread view for logged-in users by optimizing
   the total database calls made. (See !409)
+- Add support for Django <= 4.1
+- Remove support for Django < 3.2
+- Remove support for Python 3.6
+- Fix tests to be compatible with Python 3.10
 
 Third Party
 -----------
