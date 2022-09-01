@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: 2022-01-28 20:41+0000\n"
-"Last-Translator: Sebastian Machat <sebi@outlook.com>\n"
+"PO-Revision-Date: 2022-08-30 09:48+0000\n"
+"Last-Translator: SONS ČR <weblate@sons.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/cs/>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -70,7 +70,6 @@ msgstr ""
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
-#, fuzzy
 msgid "started"
 msgstr "začal"
 
@@ -127,7 +126,7 @@ msgstr "Seznam dostupných formátů:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
-msgstr "Plain text"
+msgstr "Prostý text"
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
@@ -137,7 +136,7 @@ msgstr "Seznam mailing-listů"
 #: templates/hyperkitty/api.html:39 templates/hyperkitty/api.html:45
 #: templates/hyperkitty/api.html:51
 msgid "Endpoint:"
-msgstr "Endpoint:"
+msgstr "Koncový bod:"
 
 #: templates/hyperkitty/api.html:29
 msgid ""
@@ -487,20 +486,16 @@ msgid "Delete MailingList"
 msgstr "Smazat mailing-list"
 
 #: templates/hyperkitty/list_delete.html:20
-#, fuzzy
-#| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
-msgstr "Smazat mailing-list"
+msgstr "Smazat mailing-list z HyperKitty"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
-msgstr "bude smazán i se všemi vlákny a zprávami. Chcete pokračovat?"
+msgstr ""
+"bude smazán z HyperKitty i se všemi vlákny a zprávami. Nebude smazán z "
+"Mailman Core. Chcete pokračovat?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -597,15 +592,7 @@ msgid "Sign in to reply online"
 msgstr "Pro online odpověď se přihlašte"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments.count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments.count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments_count)s attachment\n"
@@ -616,15 +603,15 @@ msgid_plural ""
 "                "
 msgstr[0] ""
 "\n"
-"                %(email.attachments.count)s příloha\n"
+"                %(email.attachments_count)s příloha\n"
 "                "
 msgstr[1] ""
 "\n"
-"                %(email.attachments.count)s přílohy\n"
+"                %(email.attachments_count)s přílohy\n"
 "                "
 msgstr[2] ""
 "\n"
-"                %(email.attachments.count)s přílohy\n"
+"                %(email.attachments_count)s přílohy\n"
 "                "
 
 #: templates/hyperkitty/messages/message.html:131
@@ -680,10 +667,8 @@ msgid "You must be logged-in to create a thread."
 msgstr "Pro vytvoření vlákna se musíte přihlásit."
 
 #: templates/hyperkitty/overview.html:50
-#, fuzzy
-#| msgid "new"
 msgid "New"
-msgstr "nový"
+msgstr "Nový"
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:62
@@ -736,7 +721,7 @@ msgstr "Významní přispěvatelé"
 
 #: templates/hyperkitty/overview.html:133
 msgid "kudos"
-msgstr "kudos"
+msgstr "sláva"
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
@@ -892,7 +877,7 @@ msgstr "Zobrazit odpovědi podle data"
 
 #: templates/hyperkitty/thread.html:113
 msgid "Visit here for a non-javascript version of this page."
-msgstr ""
+msgstr "Otevře nejavascriptovou verzi této stránky."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
@@ -912,13 +897,11 @@ msgstr "žádné kategorie"
 
 #: templates/hyperkitty/threads/right_col.html:12
 msgid "Age (days ago)"
-msgstr ""
+msgstr "Stáří (před dny)"
 
 #: templates/hyperkitty/threads/right_col.html:18
-#, fuzzy
-#| msgid "Last activity"
 msgid "Last active (days ago)"
-msgstr "Poslední aktivita"
+msgstr "Poslední aktivní (před dny)"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
@@ -926,10 +909,9 @@ msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s komentářů"
 
 #: templates/hyperkitty/threads/right_col.html:44
-#, fuzzy, python-format
-#| msgid "%(thread.participants_count)s participants"
+#, python-format
 msgid "%(participants_count)s participants"
-msgstr "%(thread.participants_count)s účastníků"
+msgstr "%(participants_count)s účastníků"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
@@ -1215,10 +1197,8 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "%(count)s zpráv bylo úspěšně smazáno."
 
 #: views/mlist.py:88
-#, fuzzy
-#| msgid "Delete MailingList"
 msgid "for this MailingList"
-msgstr "Smazat mailing-list"
+msgstr "pro tento mailing-list"
 
 #: views/mlist.py:100
 msgid "for this month"
