@@ -3,422 +3,473 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-09-01 14:39+0000\n"
+"Last-Translator: Fré van Limpt <fre@freedom.nl>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/gnu-mailman/"
+"hyperkitty/nl/>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr ""
+msgstr "Voeg een tag toe..."
 
 #: forms.py:55
 msgid "Add"
-msgstr ""
+msgstr "Voeg toe"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "gebruik komma's om meerdere tags toe te voegen"
 
 #: forms.py:64
 msgid "Attach a file"
-msgstr ""
+msgstr "Voeg een bestand toe"
 
 #: forms.py:65
 msgid "Attach another file"
-msgstr ""
+msgstr "Voeg nog een bestand toe"
 
 #: forms.py:66
 msgid "Remove this file"
-msgstr ""
+msgstr "Verwijder dit bestand"
 
 #: templates/hyperkitty/404.html:28
 msgid "Error 404"
-msgstr ""
+msgstr "Fout 404"
 
 #: templates/hyperkitty/404.html:30 templates/hyperkitty/500.html:31
 msgid "Oh No!"
-msgstr ""
+msgstr "Oh nee!"
 
 #: templates/hyperkitty/404.html:32
 msgid "I can't find this page."
-msgstr ""
+msgstr "Ik kan deze pagina niet vinden."
 
 #: templates/hyperkitty/404.html:33 templates/hyperkitty/500.html:34
 msgid "Go back home"
-msgstr ""
+msgstr "Ga terug naar huis"
 
 #: templates/hyperkitty/500.html:29
 msgid "Error 500"
-msgstr ""
+msgstr "Fout 500"
 
 #: templates/hyperkitty/500.html:33
 msgid "Sorry, but the requested page is unavailable due to a server hiccup."
 msgstr ""
+"Excuus, maar de opgevraagde pagina is niet beschikbaar vanwege een "
+"serverstoring."
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
 msgid "started"
-msgstr ""
+msgstr "begonnen, gestart"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
 #: templates/hyperkitty/reattach.html:25
 msgid "last active:"
-msgstr ""
+msgstr "laatst actief:"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:8
 msgid "see this thread"
-msgstr ""
+msgstr "zie deze conversatie"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:12
 msgid "(no suggestions)"
-msgstr ""
+msgstr "(geen suggesties)"
 
 #: templates/hyperkitty/ajax/temp_message.html:12
 msgid "Sent just now, not yet distributed"
-msgstr ""
+msgstr "Zojuist verzonden, nog niet verspreid"
 
 #: templates/hyperkitty/api.html:5
 msgid "REST API"
-msgstr ""
+msgstr "REST API"
 
 #: templates/hyperkitty/api.html:7
 msgid ""
 "HyperKitty comes with a small REST API allowing you to programatically "
 "retrieve emails and information."
 msgstr ""
+"HyperKitty wordt geleverd met een bescheiden REST API waarmee u e-mails en "
+"informatie automatisch kunt ophalen."
 
 #: templates/hyperkitty/api.html:10
 msgid "Formats"
-msgstr ""
+msgstr "Formats"
 
 #: templates/hyperkitty/api.html:12
 msgid ""
 "This REST API can return the information into several formats.  The default "
 "format is html to allow human readibility."
 msgstr ""
+"Deze REST API kan de informatie omzetten in verscheidene formats. Het "
+"standaard format is html voor menselijke leesbaarheid."
 
 #: templates/hyperkitty/api.html:14
 msgid ""
 "To change the format, just add <em>?format=&lt;FORMAT&gt;</em> to the URL."
 msgstr ""
+"Om het format te wijzigen voegt u eenvoudig <em> ?format= &lt; FORMAT&gt;</"
+"em> toe aan de URL."
 
 #: templates/hyperkitty/api.html:16
 msgid "The list of available formats is:"
-msgstr ""
+msgstr "De lijst met beschikbare formats is:"
 
 #: templates/hyperkitty/api.html:20
 msgid "Plain text"
-msgstr ""
+msgstr "Platte tekst"
 
 #: templates/hyperkitty/api.html:26
 msgid "List of mailing-lists"
-msgstr ""
+msgstr "Lijst met mailinglijsten"
 
 #: templates/hyperkitty/api.html:27 templates/hyperkitty/api.html:33
 #: templates/hyperkitty/api.html:39 templates/hyperkitty/api.html:45
 #: templates/hyperkitty/api.html:51
 msgid "Endpoint:"
-msgstr ""
+msgstr "Eindpunt:"
 
 #: templates/hyperkitty/api.html:29
 msgid ""
 "Using this address you will be able to retrieve the information known about "
 "all the mailing lists."
 msgstr ""
+"Door dit adres te gebruiken kunt u de informatie ophalen die over alle "
+"mailinglijsten bekend is."
 
 #: templates/hyperkitty/api.html:32
 msgid "Threads in a mailing list"
-msgstr ""
+msgstr "Conversaties in een mailinglijst"
 
 #: templates/hyperkitty/api.html:35
 msgid ""
 "Using this address you will be able to retrieve information about all the "
 "threads on the specified mailing list."
 msgstr ""
+"Door dit adres te gebruiken kunt u informatie ophalen over alle conversaties "
+"in de gespecificeerde mailinglijst."
 
 #: templates/hyperkitty/api.html:38
 msgid "Emails in a thread"
-msgstr ""
+msgstr "E-mails in een conversatie"
 
 #: templates/hyperkitty/api.html:41
 msgid ""
 "Using this address you will be able to retrieve the list of emails in a "
 "mailing list thread."
 msgstr ""
+"Wanneer u dit adres gebruikt kunt u de lijst e-mails in een mailinglijst-"
+"conversatie ophalen."
 
 #: templates/hyperkitty/api.html:44
 msgid "An email in a mailing list"
-msgstr ""
+msgstr "Een e-mail in een mailinglijst"
 
 #: templates/hyperkitty/api.html:47
 msgid ""
 "Using this address you will be able to retrieve the information known about "
 "a specific email on the specified mailing list."
 msgstr ""
+"Wanneer u dit adres gebruikt kunt u bekende informatie over een specifieke e-"
+"mail in de gespecificeerde mailinglijst ophalen."
 
 #: templates/hyperkitty/api.html:50
 msgid "Tags"
-msgstr ""
+msgstr "Tags"
 
 #: templates/hyperkitty/api.html:53
 msgid "Using this address you will be able to retrieve the list of tags."
-msgstr ""
+msgstr "Met dit adres kunt u de taglijst ophalen."
 
 #: templates/hyperkitty/base.html:57 templates/hyperkitty/base.html:112
 msgid "Account"
-msgstr ""
+msgstr "Account"
 
 #: templates/hyperkitty/base.html:62 templates/hyperkitty/base.html:117
 msgid "Mailman settings"
-msgstr ""
+msgstr "Mailman instellingen"
 
 #: templates/hyperkitty/base.html:67 templates/hyperkitty/base.html:122
 #: templates/hyperkitty/user_profile/base.html:17
 msgid "Posting activity"
-msgstr ""
+msgstr "Een bericht plaatsen"
 
 #: templates/hyperkitty/base.html:72 templates/hyperkitty/base.html:127
 msgid "Logout"
-msgstr ""
+msgstr "Uitloggen"
 
 #: templates/hyperkitty/base.html:78 templates/hyperkitty/base.html:134
 msgid "Sign In"
-msgstr ""
+msgstr "Log in"
 
 #: templates/hyperkitty/base.html:82 templates/hyperkitty/base.html:138
 msgid "Sign Up"
-msgstr ""
+msgstr "Log in"
 
 #: templates/hyperkitty/base.html:91
 msgid "Search this list"
-msgstr ""
+msgstr "Doorzoek deze lijst"
 
 #: templates/hyperkitty/base.html:91
 msgid "Search all lists"
-msgstr ""
+msgstr "Doorzoek alle lijsten"
 
 #: templates/hyperkitty/base.html:149
 msgid "Manage this list"
-msgstr ""
+msgstr "Beheer deze lijst"
 
 #: templates/hyperkitty/base.html:154
 msgid "Manage lists"
-msgstr ""
+msgstr "Beheerlijsten"
 
 #: templates/hyperkitty/base.html:192
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Snelkoppelingen toetsenbord"
 
 #: templates/hyperkitty/base.html:195
 msgid "Thread View"
-msgstr ""
+msgstr "Conversatieweergave"
 
 #: templates/hyperkitty/base.html:197
+#, fuzzy
 msgid "Next unread message"
-msgstr ""
+msgstr "Volgende ongelezen bericht"
 
 #: templates/hyperkitty/base.html:198
 msgid "Previous unread message"
-msgstr ""
+msgstr "Vorige ongelezen bericht"
 
 #: templates/hyperkitty/base.html:199
 msgid "Jump to all threads"
-msgstr ""
+msgstr "Ga naar alle conversaties"
 
 #: templates/hyperkitty/base.html:200
 msgid "Jump to MailingList overview"
-msgstr ""
+msgstr "Ga naar overzicht mailinglijst"
 
 #: templates/hyperkitty/base.html:214
 msgid "Powered by"
-msgstr ""
+msgstr "Aangestuurd door"
 
 #: templates/hyperkitty/base.html:214
 msgid "version"
-msgstr ""
+msgstr "versie"
 
 #: templates/hyperkitty/errors/notimplemented.html:7
+#, fuzzy
 msgid "Not implemented yet"
-msgstr ""
+msgstr "Nog niet geïmplementeerd"
 
 #: templates/hyperkitty/errors/notimplemented.html:12
+#, fuzzy
 msgid "Not implemented"
-msgstr ""
+msgstr "Niet geïmplementeerd"
 
 #: templates/hyperkitty/errors/notimplemented.html:14
+#, fuzzy
 msgid "This feature has not been implemented yet, sorry."
-msgstr ""
+msgstr "Deze functie is nog niet geïmplementeerd, sorry."
 
 #: templates/hyperkitty/errors/private.html:7
+#, fuzzy
 msgid "Error: private list"
-msgstr ""
+msgstr "Fout: privélijst"
 
 #: templates/hyperkitty/errors/private.html:19
+#, fuzzy
 msgid ""
 "This mailing list is private. You must be subscribed to view the archives."
 msgstr ""
+"Deze mailinglijst is privé. U moet geabonneerd zijn om de archieven te "
+"kunnen bekijken."
 
 #: templates/hyperkitty/fragments/like_form.html:16
 msgid "You like it (cancel)"
-msgstr ""
+msgstr "Vindt u leuk (annuleren)"
 
 #: templates/hyperkitty/fragments/like_form.html:24
 msgid "You dislike it (cancel)"
-msgstr ""
+msgstr "Vindt u niet leuk (annuleren)"
 
 #: templates/hyperkitty/fragments/like_form.html:27
 #: templates/hyperkitty/fragments/like_form.html:31
+#, fuzzy
 msgid "You must be logged-in to vote."
-msgstr ""
+msgstr "U moet ingelogd zijn om te kunnen stemmen."
 
 #: templates/hyperkitty/fragments/month_list.html:6
 msgid "Threads by"
-msgstr ""
+msgstr "Conversaties door"
 
 #: templates/hyperkitty/fragments/month_list.html:6
 msgid " month"
-msgstr ""
+msgstr " maand"
 
 #: templates/hyperkitty/fragments/overview_threads.html:11
 msgid "New messages in this thread"
-msgstr ""
+msgstr "Nieuwe berichten in deze conversatie"
 
 #: templates/hyperkitty/fragments/overview_threads.html:36
 #: templates/hyperkitty/fragments/thread_left_nav.html:19
 #: templates/hyperkitty/overview.html:78
 msgid "All Threads"
-msgstr ""
+msgstr "Alle conversaties"
 
 #: templates/hyperkitty/fragments/overview_top_posters.html:15
+#, fuzzy
 msgid "See the profile"
-msgstr ""
+msgstr "Bekijk het profiel"
 
 #: templates/hyperkitty/fragments/overview_top_posters.html:21
+#, fuzzy
 msgid "posts"
-msgstr ""
+msgstr "berichten"
 
 #: templates/hyperkitty/fragments/overview_top_posters.html:26
 msgid "No posters this month (yet)."
-msgstr ""
+msgstr "(Nog) geen auteurs van berichten deze maand."
 
 #: templates/hyperkitty/fragments/send_as.html:5
+#, fuzzy
 msgid "This message will be sent as:"
-msgstr ""
+msgstr "Dit bericht zal worden verzonden als:"
 
 #: templates/hyperkitty/fragments/send_as.html:6
+#, fuzzy
 msgid "Change sender"
-msgstr ""
+msgstr "Afzender wijzigen"
 
 #: templates/hyperkitty/fragments/send_as.html:16
 msgid "Link another address"
-msgstr ""
+msgstr "Koppel een ander adres"
 
 #: templates/hyperkitty/fragments/send_as.html:20
 msgid ""
 "If you aren't a current list member, sending this message will subscribe you."
 msgstr ""
+"Bent u nog geen lid van de lijst? Schrijft u zich dan in door dit bericht in "
+"te sturen."
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:12
+#, fuzzy
 msgid "List overview"
-msgstr ""
+msgstr "Lijstoverzicht"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
 #: views/mlist.py:114 views/thread.py:191
+#, fuzzy
 msgid "Download"
-msgstr ""
+msgstr "Downloaden"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:32
+#, fuzzy
 msgid "Past 30 days"
-msgstr ""
+msgstr "Afgelopen 30 dagen"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:33
+#, fuzzy
 msgid "This month"
-msgstr ""
+msgstr "Deze maand"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:36
+#, fuzzy
 msgid "Entire archive"
-msgstr ""
+msgstr "Volledig archief"
 
 #: templates/hyperkitty/index.html:9 templates/hyperkitty/index.html:63
+#, fuzzy
 msgid "Available lists"
-msgstr ""
+msgstr "Beschikbare lijsten"
 
 #: templates/hyperkitty/index.html:22 templates/hyperkitty/index.html:27
 #: templates/hyperkitty/index.html:72
+#, fuzzy
 msgid "Most popular"
-msgstr ""
+msgstr "Meest populair"
 
 #: templates/hyperkitty/index.html:26
+#, fuzzy
 msgid "Sort by number of recent participants"
-msgstr ""
+msgstr "Sorteer op aantal recente deelnemers"
 
 #: templates/hyperkitty/index.html:32 templates/hyperkitty/index.html:37
 #: templates/hyperkitty/index.html:75
+#, fuzzy
 msgid "Most active"
-msgstr ""
+msgstr "Meest actief"
 
 #: templates/hyperkitty/index.html:36
 msgid "Sort by number of recent discussions"
-msgstr ""
+msgstr "Sorteer op aantal recente conversaties"
 
 #: templates/hyperkitty/index.html:42 templates/hyperkitty/index.html:47
 #: templates/hyperkitty/index.html:78
+#, fuzzy
 msgid "By name"
-msgstr ""
+msgstr "Op naam"
 
 #: templates/hyperkitty/index.html:46
+#, fuzzy
 msgid "Sort alphabetically"
-msgstr ""
+msgstr "Sorteer alfabetisch"
 
 #: templates/hyperkitty/index.html:52 templates/hyperkitty/index.html:57
 #: templates/hyperkitty/index.html:81
+#, fuzzy
 msgid "Newest"
-msgstr ""
+msgstr "Nieuwste"
 
 #: templates/hyperkitty/index.html:56
 msgid "Sort by list creation date"
-msgstr ""
+msgstr "Sorteer op aanmaakdatum lijst"
 
 #: templates/hyperkitty/index.html:68
+#, fuzzy
 msgid "Sort by"
-msgstr ""
+msgstr "Sorteer op"
 
 #: templates/hyperkitty/index.html:91
+#, fuzzy
 msgid "Hide inactive"
-msgstr ""
+msgstr "Verberg inactief"
 
 #: templates/hyperkitty/index.html:92
+#, fuzzy
 msgid "Hide private"
-msgstr ""
+msgstr "Verberg privé"
 
 #: templates/hyperkitty/index.html:99
+#, fuzzy
 msgid "Find list"
-msgstr ""
+msgstr "Vind lijst"
 
 #: templates/hyperkitty/index.html:123 templates/hyperkitty/index.html:191
 #: templates/hyperkitty/user_profile/last_views.html:34
 #: templates/hyperkitty/user_profile/last_views.html:73
+#, fuzzy
 msgid "new"
-msgstr ""
+msgstr "nieuw"
 
 #: templates/hyperkitty/index.html:135 templates/hyperkitty/index.html:202
+#, fuzzy
 msgid "private"
-msgstr ""
+msgstr "privé"
 
 #: templates/hyperkitty/index.html:137 templates/hyperkitty/index.html:204
+#, fuzzy
 msgid "inactive"
-msgstr ""
+msgstr "Inactief"
 
 #: templates/hyperkitty/index.html:143 templates/hyperkitty/index.html:229
 #: templates/hyperkitty/overview.html:94 templates/hyperkitty/overview.html:111
@@ -428,12 +479,13 @@ msgstr ""
 #: templates/hyperkitty/overview.html:204
 #: templates/hyperkitty/overview.html:212 templates/hyperkitty/reattach.html:39
 #: templates/hyperkitty/thread.html:111
+#, fuzzy
 msgid "Loading..."
-msgstr ""
+msgstr "Bezig met laden..."
 
 #: templates/hyperkitty/index.html:160 templates/hyperkitty/index.html:237
 msgid "No archived list yet."
-msgstr ""
+msgstr "Nog niet gearchiveerde lijst."
 
 #: templates/hyperkitty/index.html:172
 #: templates/hyperkitty/user_profile/favorites.html:40
@@ -441,54 +493,63 @@ msgstr ""
 #: templates/hyperkitty/user_profile/profile.html:15
 #: templates/hyperkitty/user_profile/subscriptions.html:41
 #: templates/hyperkitty/user_profile/votes.html:46
+#, fuzzy
 msgid "List"
-msgstr ""
+msgstr "Lijst"
 
 #: templates/hyperkitty/index.html:173
+#, fuzzy
 msgid "Description"
-msgstr ""
+msgstr "Beschrijving"
 
 #: templates/hyperkitty/index.html:174
+#, fuzzy
 msgid "Activity in the past 30 days"
-msgstr ""
+msgstr "Activiteit in de afgelopen 30 dagen"
 
 #: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
 #: templates/hyperkitty/thread_list.html:50
 #: templates/hyperkitty/threads/right_col.html:97
 #: templates/hyperkitty/threads/summary_thread_large.html:54
+#, fuzzy
 msgid "participants"
-msgstr ""
+msgstr "deelnemers"
 
 #: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
 #: templates/hyperkitty/thread_list.html:55
+#, fuzzy
 msgid "discussions"
-msgstr ""
+msgstr "discussies"
 
 #: templates/hyperkitty/list_delete.html:7
+#, fuzzy
 msgid "Delete MailingList"
-msgstr ""
+msgstr "Mailinglijst verwijderen"
 
 #: templates/hyperkitty/list_delete.html:20
 msgid "Delete Mailing List From HyperKitty"
-msgstr ""
+msgstr "Mailinglijst verwijderen uit HyperKitty"
 
 #: templates/hyperkitty/list_delete.html:26
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
 msgstr ""
+"Zal worden verwijderd uit HyperKitty samen met alle conversaties en "
+"berichten. Zal niet worden verwijderd uit Mailman Core. Wilt u doorgaan?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
+#, fuzzy
 msgid "Delete"
-msgstr ""
+msgstr "Verwijderen"
 
 #: templates/hyperkitty/list_delete.html:34
 #: templates/hyperkitty/message_delete.html:45
 #: templates/hyperkitty/message_new.html:53
 #: templates/hyperkitty/messages/message.html:146
 msgid "or"
-msgstr ""
+msgstr "of"
 
 #: templates/hyperkitty/list_delete.html:36
 #: templates/hyperkitty/message_delete.html:45
@@ -497,16 +558,16 @@ msgstr ""
 #: templates/hyperkitty/user_profile/votes.html:36
 #: templates/hyperkitty/user_profile/votes.html:74
 msgid "cancel"
-msgstr ""
+msgstr "verwijder"
 
 #: templates/hyperkitty/message.html:22
 msgid "thread"
-msgstr ""
+msgstr "conversatie"
 
 #: templates/hyperkitty/message_delete.html:7
 #: templates/hyperkitty/message_delete.html:20
 msgid "Delete message(s)"
-msgstr ""
+msgstr "Verwijder bericht(en)"
 
 #: templates/hyperkitty/message_delete.html:25
 #, python-format
@@ -515,59 +576,69 @@ msgid ""
 "        %(count)s message(s) will be deleted. Do you want to continue?\n"
 "        "
 msgstr ""
+"\n"
+"        %(count)s bericht(en) zullen worden verwijderd. Wilt u doorgaan?\n"
+"        "
 
 #: templates/hyperkitty/message_new.html:8
 #: templates/hyperkitty/message_new.html:21
 msgid "Create a new thread"
-msgstr ""
+msgstr "Nieuwe conversatie beginnen"
 
 #: templates/hyperkitty/message_new.html:22
 #: templates/hyperkitty/user_posts.html:22
 msgid "in"
-msgstr ""
+msgstr "in"
 
 #: templates/hyperkitty/message_new.html:52
 #: templates/hyperkitty/messages/message.html:145
 msgid "Send"
-msgstr ""
+msgstr "Verstuur"
 
 #: templates/hyperkitty/messages/message.html:18
 #, python-format
 msgid "See the profile for %(name)s"
-msgstr ""
+msgstr "Bekijk het profiel voor %(name)s"
 
 #: templates/hyperkitty/messages/message.html:28
+#, fuzzy
 msgid "Unread"
-msgstr ""
+msgstr "Ongelezen"
 
 #: templates/hyperkitty/messages/message.html:45
 msgid "Sender's time:"
-msgstr ""
+msgstr "Tijdstip verzending:"
 
 #: templates/hyperkitty/messages/message.html:51
+#, fuzzy
 msgid "New subject:"
-msgstr ""
+msgstr "Nieuw onderwerp:"
 
 #: templates/hyperkitty/messages/message.html:61
+#, fuzzy
 msgid "Attachments:"
-msgstr ""
+msgstr "Bijlagen:"
 
 #: templates/hyperkitty/messages/message.html:76
+#, fuzzy
 msgid "Display in fixed font"
-msgstr ""
+msgstr "Weergave in vast lettertype"
 
 #: templates/hyperkitty/messages/message.html:79
+#, fuzzy
 msgid "Permalink for this message"
-msgstr ""
+msgstr "Permalink voor dit bericht"
 
 #: templates/hyperkitty/messages/message.html:90
 #: templates/hyperkitty/messages/message.html:96
+#, fuzzy
 msgid "Reply"
-msgstr ""
+msgstr "Antwoord"
 
 #: templates/hyperkitty/messages/message.html:93
+#, fuzzy
 msgid "Sign in to reply online"
-msgstr ""
+msgstr "Log in om online te antwoorden"
 
 #: templates/hyperkitty/messages/message.html:105
 #, python-format
@@ -580,60 +651,76 @@ msgid_plural ""
 "                %(email.attachments_count)s attachments\n"
 "                "
 msgstr[0] ""
+"\n"
+"                %(email.attachments_count)s bijlage\n"
+"                "
 msgstr[1] ""
+"\n"
+"                %(email.attachments_count)s bijlages\n"
+"                "
 
 #: templates/hyperkitty/messages/message.html:131
+#, fuzzy
 msgid "Quote"
-msgstr ""
+msgstr "Citaat"
 
 #: templates/hyperkitty/messages/message.html:132
 msgid "Create new thread"
-msgstr ""
+msgstr "Nieuwe conversatie beginnen"
 
 #: templates/hyperkitty/messages/message.html:135
+#, fuzzy
 msgid "Use email software"
-msgstr ""
+msgstr "E-mailsoftware gebruiken"
 
 #: templates/hyperkitty/messages/right_col.html:11
 msgid "Back to the thread"
-msgstr ""
+msgstr "Terug naar conversatie"
 
 #: templates/hyperkitty/messages/right_col.html:18
+#, fuzzy
 msgid "Back to the list"
-msgstr ""
+msgstr "Terug naar de lijst"
 
 #: templates/hyperkitty/messages/right_col.html:27
+#, fuzzy
 msgid "Delete this message"
-msgstr ""
+msgstr "Verwijder dit bericht"
 
 #: templates/hyperkitty/messages/summary_message.html:23
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "\n"
 "                                by %(name)s\n"
 "                            "
 msgstr ""
+"\n"
+"                                door %(name)s\n"
+"                            "
 
 #: templates/hyperkitty/overview.html:38
+#, fuzzy
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: templates/hyperkitty/overview.html:41 templates/hyperkitty/thread.html:78
+#, fuzzy
 msgid "Stats"
-msgstr ""
+msgstr "Statistieken"
 
 #: templates/hyperkitty/overview.html:44
 msgid "Threads"
-msgstr ""
+msgstr "Conversaties"
 
 #: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
 #: templates/hyperkitty/thread_list.html:58
 msgid "You must be logged-in to create a thread."
-msgstr ""
+msgstr "U moet ingelogd zijn om een conversatie te beginnen."
 
 #: templates/hyperkitty/overview.html:50
+#, fuzzy
 msgid "New"
-msgstr ""
+msgstr "Nieuw"
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:62
@@ -641,565 +728,618 @@ msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
+"<span class=\"d-none d-md-inline\">Begin een n</span><span class=\"d-md-"
+"none\">N</span>ieuwe conversatie"
 
 #: templates/hyperkitty/overview.html:75
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
+"<span class=\"d-none d-md-inline\">Beheer a</span><span class=\"d-md-none\""
+">A</span>bonnement"
 
 #: templates/hyperkitty/overview.html:81
+#, fuzzy
 msgid "Delete Archive"
-msgstr ""
+msgstr "Archief verwijderen"
 
 #: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
-msgstr ""
+msgstr "Activiteitenoverzicht"
 
 #: templates/hyperkitty/overview.html:93
 msgid "Post volume over the past <strong>30</strong> days."
-msgstr ""
+msgstr "Volume berichten van de afgelopen <strong>30</strong> dagen."
 
 #: templates/hyperkitty/overview.html:98
+#, fuzzy
 msgid "The following statistics are from"
-msgstr ""
+msgstr "De volgende statistieken zijn van"
 
 #: templates/hyperkitty/overview.html:99
 msgid "In"
-msgstr ""
+msgstr "in"
 
 #: templates/hyperkitty/overview.html:100
+#, fuzzy
 msgid "the past <strong>30</strong> days:"
-msgstr ""
+msgstr "de afgelopen <strong>30</strong> dagen:"
 
 #: templates/hyperkitty/overview.html:109
 msgid "Most active posters"
-msgstr ""
+msgstr "Meest actieve auteurs"
 
 #: templates/hyperkitty/overview.html:118
 msgid "Prominent posters"
-msgstr ""
+msgstr "Prominente auteurs"
 
 #: templates/hyperkitty/overview.html:133
+#, fuzzy
 msgid "kudos"
-msgstr ""
+msgstr "kudos"
 
 #: templates/hyperkitty/overview.html:152
+#, fuzzy
 msgid "Recent"
-msgstr ""
+msgstr "Recent"
 
 #: templates/hyperkitty/overview.html:156
+#, fuzzy
 msgid "Most Active"
-msgstr ""
+msgstr "Meest actief"
 
 #: templates/hyperkitty/overview.html:160
+#, fuzzy
 msgid "Most Popular"
-msgstr ""
+msgstr "Meest populair"
 
 #: templates/hyperkitty/overview.html:166
 #: templates/hyperkitty/user_profile/base.html:22
+#, fuzzy
 msgid "Favorites"
-msgstr ""
+msgstr "Favorieten"
 
 #: templates/hyperkitty/overview.html:170
+#, fuzzy
 msgid "Posted"
-msgstr ""
+msgstr "Geplaatst"
 
 #: templates/hyperkitty/overview.html:179
+#, fuzzy
 msgid "Recently active discussions"
-msgstr ""
+msgstr "Recent actieve discussies"
 
 #: templates/hyperkitty/overview.html:186
 msgid "Most popular discussions"
-msgstr ""
+msgstr "Populairste discussies"
 
 #: templates/hyperkitty/overview.html:193
 msgid "Most active discussions"
-msgstr ""
+msgstr "Meest geanimeerde discussies"
 
 #: templates/hyperkitty/overview.html:200
 msgid "Discussions You've Flagged"
-msgstr ""
+msgstr "Door jou gemarkeerde discussies"
 
 #: templates/hyperkitty/overview.html:208
 msgid "Discussions You've Posted to"
-msgstr ""
+msgstr "Discussies waaraan jij hebt deelgenomen"
 
 #: templates/hyperkitty/reattach.html:9
 msgid "Reattach a thread"
-msgstr ""
+msgstr "Weer aansluiten bij een gesprek"
 
 #: templates/hyperkitty/reattach.html:20
 msgid "Re-attach a thread to another"
-msgstr ""
+msgstr "Weer aansluiten bij een ander gesprek"
 
 #: templates/hyperkitty/reattach.html:22
 msgid "Thread to re-attach:"
-msgstr ""
+msgstr "Gesprek om weer bij aan te sluiten:"
 
 #: templates/hyperkitty/reattach.html:29
 msgid "Re-attach it to:"
-msgstr ""
+msgstr "Koppel weer als bijlage aan:"
 
 #: templates/hyperkitty/reattach.html:31
 msgid "Search for the parent thread"
-msgstr ""
+msgstr "Zoek naar de bronconversatie"
 
 #: templates/hyperkitty/reattach.html:32
 msgid "Search"
-msgstr ""
+msgstr "Zoek"
 
 #: templates/hyperkitty/reattach.html:44
 msgid "this thread ID:"
-msgstr ""
+msgstr "ID van deze conversatie:"
 
 #: templates/hyperkitty/reattach.html:50
+#, fuzzy
 msgid "Do it"
-msgstr ""
+msgstr "Doe het"
 
 #: templates/hyperkitty/reattach.html:50
 msgid "(there's no undoing!), or"
-msgstr ""
+msgstr "(kan niet ongedaan maken!), of"
 
 #: templates/hyperkitty/reattach.html:52
 msgid "go back to the thread"
-msgstr ""
+msgstr "ga terug naar de conversatie"
 
 #: templates/hyperkitty/search_results.html:8
 msgid "Search results for"
-msgstr ""
+msgstr "Zoek resultaten voor"
 
 #: templates/hyperkitty/search_results.html:30
 msgid "search results"
-msgstr ""
+msgstr "zoek resultaten"
 
 #: templates/hyperkitty/search_results.html:32
 msgid "Search results"
-msgstr ""
+msgstr "Zoek resultaten"
 
 #: templates/hyperkitty/search_results.html:34
 msgid "for query"
-msgstr ""
+msgstr "als zoekopdracht"
 
 #: templates/hyperkitty/search_results.html:44
 #: templates/hyperkitty/user_posts.html:34
 msgid "messages"
-msgstr ""
+msgstr "berichten"
 
 #: templates/hyperkitty/search_results.html:57
 msgid "sort by score"
-msgstr ""
+msgstr "sorteer op puntenaantal"
 
 #: templates/hyperkitty/search_results.html:60
 msgid "sort by latest first"
-msgstr ""
+msgstr "sorteer op laatste eerst"
 
 #: templates/hyperkitty/search_results.html:63
 msgid "sort by earliest first"
-msgstr ""
+msgstr "sorteer op eerste eerst"
 
 #: templates/hyperkitty/search_results.html:84
 msgid "Sorry no email could be found for this query."
-msgstr ""
+msgstr "Sorry, geen e-mail gevonden voor deze zoekopdracht."
 
 #: templates/hyperkitty/search_results.html:87
 msgid "Sorry but your query looks empty."
-msgstr ""
+msgstr "Sorry, maar uw zoekopdracht lijkt leeg."
 
 #: templates/hyperkitty/search_results.html:88
 msgid "these are not the messages you are looking for"
-msgstr ""
+msgstr "dit zijn niet de berichten die u zoekt"
 
 #: templates/hyperkitty/thread.html:30
 msgid "newer"
-msgstr ""
+msgstr "nieuwer"
 
 #: templates/hyperkitty/thread.html:44
+#, fuzzy
 msgid "older"
-msgstr ""
+msgstr "ouder"
 
 #: templates/hyperkitty/thread.html:72
+#, fuzzy
 msgid "First Post"
-msgstr ""
+msgstr "Eerste bericht"
 
 #: templates/hyperkitty/thread.html:75
 #: templates/hyperkitty/user_profile/favorites.html:45
 #: templates/hyperkitty/user_profile/last_views.html:50
+#, fuzzy
 msgid "Replies"
-msgstr ""
+msgstr "Antwoorden"
 
 #: templates/hyperkitty/thread.html:97
 msgid "Show replies by thread"
-msgstr ""
+msgstr "Toon antwoorden per conversatie"
 
 #: templates/hyperkitty/thread.html:100
+#, fuzzy
 msgid "Show replies by date"
-msgstr ""
+msgstr "Toon antwoorden op datum"
 
 #: templates/hyperkitty/thread.html:113
 msgid "Visit here for a non-javascript version of this page."
-msgstr ""
+msgstr "Bezoek hier voor een niet-javascriptversie van deze pagina."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
-msgstr ""
+msgstr "Sorry, geen e-mailconversaties gevonden"
 
 #: templates/hyperkitty/threads/category.html:7
+#, fuzzy
 msgid "Click to edit"
-msgstr ""
+msgstr "Klik om te bewerken"
 
 #: templates/hyperkitty/threads/category.html:9
+#, fuzzy
 msgid "You must be logged-in to edit."
-msgstr ""
+msgstr "U moet ingelogd zijn om te bewerken."
 
 #: templates/hyperkitty/threads/category.html:15
+#, fuzzy
 msgid "no category"
-msgstr ""
+msgstr "geen categorie"
 
 #: templates/hyperkitty/threads/right_col.html:12
+#, fuzzy
 msgid "Age (days ago)"
-msgstr ""
+msgstr "Leeftijd (dagen geleden)"
 
 #: templates/hyperkitty/threads/right_col.html:18
+#, fuzzy
 msgid "Last active (days ago)"
-msgstr ""
+msgstr "Laatst actief (dagen geleden)"
 
 #: templates/hyperkitty/threads/right_col.html:40
-#, python-format
+#, fuzzy, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s opmerkingen"
 
 #: templates/hyperkitty/threads/right_col.html:44
-#, python-format
+#, fuzzy, python-format
 msgid "%(participants_count)s participants"
-msgstr ""
+msgstr "%(participants_count)s deelnemers"
 
 #: templates/hyperkitty/threads/right_col.html:49
-#, python-format
+#, fuzzy, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
-msgstr ""
+msgstr "%(unread_count)s ongelezen <span class=\"hidden-sm\">berichten</span>"
 
 #: templates/hyperkitty/threads/right_col.html:59
+#, fuzzy
 msgid "You must be logged-in to have favorites."
-msgstr ""
+msgstr "U moet ingelogd zijn om favorieten te hebben."
 
 #: templates/hyperkitty/threads/right_col.html:60
+#, fuzzy
 msgid "Add to favorites"
-msgstr ""
+msgstr "Toevoegen aan favorieten"
 
 #: templates/hyperkitty/threads/right_col.html:62
+#, fuzzy
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Uit favorieten verwijderen"
 
 #: templates/hyperkitty/threads/right_col.html:71
 msgid "Reattach this thread"
-msgstr ""
+msgstr "Weer aansluiten bij een gesprek"
 
 #: templates/hyperkitty/threads/right_col.html:75
 msgid "Delete this thread"
-msgstr ""
+msgstr "Verwijder deze conversatie"
 
 #: templates/hyperkitty/threads/right_col.html:113
 msgid "Unreads:"
-msgstr ""
+msgstr "Ongelezen:"
 
 #: templates/hyperkitty/threads/right_col.html:115
 msgid "Go to:"
-msgstr ""
+msgstr "Ga naar:"
 
 #: templates/hyperkitty/threads/right_col.html:115
 msgid "next"
-msgstr ""
+msgstr "volgende"
 
 #: templates/hyperkitty/threads/right_col.html:116
 msgid "prev"
-msgstr ""
+msgstr "vorige"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:21
 #: templates/hyperkitty/threads/summary_thread_large.html:23
 msgid "Favorite"
-msgstr ""
+msgstr "Favoriet"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:38
 msgid "Most recent thread activity"
-msgstr ""
+msgstr "Meest recente conversatie-activiteit"
 
 #: templates/hyperkitty/threads/summary_thread_large.html:59
 msgid "comments"
-msgstr ""
+msgstr "opmerkingen"
 
 #: templates/hyperkitty/threads/tags.html:3
 msgid "tags"
-msgstr ""
+msgstr "tags"
 
 #: templates/hyperkitty/threads/tags.html:9
 msgid "Search for tag"
-msgstr ""
+msgstr "Zoek naar tag"
 
 #: templates/hyperkitty/threads/tags.html:15
 msgid "Remove"
-msgstr ""
+msgstr "Verwijderen"
 
 #: templates/hyperkitty/user_posts.html:8
 #: templates/hyperkitty/user_posts.html:21
 #: templates/hyperkitty/user_posts.html:25
 msgid "Messages by"
-msgstr ""
+msgstr "Berichten van"
 
 #: templates/hyperkitty/user_posts.html:38
 #, python-format
 msgid "Back to %(fullname)s's profile"
-msgstr ""
+msgstr "Terug naar %(fullname)s's profiel"
 
 #: templates/hyperkitty/user_posts.html:48
 msgid "Sorry no email could be found by this user."
-msgstr ""
+msgstr "Sorry, er kon geen e-mail worden gevonden van deze gebruiker."
 
 #: templates/hyperkitty/user_profile/base.html:5
 #: templates/hyperkitty/user_profile/base.html:12
 msgid "User posting activity"
-msgstr ""
+msgstr "Activiteit van plaatsen van berichten door gebruiker"
 
 #: templates/hyperkitty/user_profile/base.html:12
 #: templates/hyperkitty/user_public_profile.html:7
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "for"
-msgstr ""
+msgstr "voor"
 
 #: templates/hyperkitty/user_profile/base.html:26
 msgid "Threads you have read"
-msgstr ""
+msgstr "Conversaties die u heeft gelezen"
 
 #: templates/hyperkitty/user_profile/base.html:30
 #: templates/hyperkitty/user_profile/profile.html:18
 #: templates/hyperkitty/user_profile/subscriptions.html:45
+#, fuzzy
 msgid "Votes"
-msgstr ""
+msgstr "Stemmen"
 
 #: templates/hyperkitty/user_profile/base.html:34
+#, fuzzy
 msgid "Subscriptions"
-msgstr ""
+msgstr "Abonnementen"
 
 #: templates/hyperkitty/user_profile/favorites.html:24
 #: templates/hyperkitty/user_profile/last_views.html:27
 #: templates/hyperkitty/user_profile/votes.html:23
+#, fuzzy
 msgid "Original author:"
-msgstr ""
+msgstr "Oorspronkelijke auteur:"
 
 #: templates/hyperkitty/user_profile/favorites.html:26
 #: templates/hyperkitty/user_profile/last_views.html:29
 #: templates/hyperkitty/user_profile/votes.html:25
+#, fuzzy
 msgid "Started on:"
-msgstr ""
+msgstr "Begonnen op:"
 
 #: templates/hyperkitty/user_profile/favorites.html:28
 #: templates/hyperkitty/user_profile/last_views.html:31
+#, fuzzy
 msgid "Last activity:"
-msgstr ""
+msgstr "Laatste activiteit:"
 
 #: templates/hyperkitty/user_profile/favorites.html:30
 #: templates/hyperkitty/user_profile/last_views.html:33
+#, fuzzy
 msgid "Replies:"
-msgstr ""
+msgstr "Antwoorden:"
 
 #: templates/hyperkitty/user_profile/favorites.html:41
 #: templates/hyperkitty/user_profile/last_views.html:46
 #: templates/hyperkitty/user_profile/profile.html:16
 #: templates/hyperkitty/user_profile/votes.html:47
+#, fuzzy
 msgid "Subject"
-msgstr ""
+msgstr "Onderwerp"
 
 #: templates/hyperkitty/user_profile/favorites.html:42
 #: templates/hyperkitty/user_profile/last_views.html:47
 #: templates/hyperkitty/user_profile/votes.html:48
+#, fuzzy
 msgid "Original author"
-msgstr ""
+msgstr "Oorspronkelijke auteur"
 
 #: templates/hyperkitty/user_profile/favorites.html:43
 #: templates/hyperkitty/user_profile/last_views.html:48
 #: templates/hyperkitty/user_profile/votes.html:49
+#, fuzzy
 msgid "Start date"
-msgstr ""
+msgstr "Startdatum"
 
 #: templates/hyperkitty/user_profile/favorites.html:44
 #: templates/hyperkitty/user_profile/last_views.html:49
+#, fuzzy
 msgid "Last activity"
-msgstr ""
+msgstr "Laatste activiteit"
 
 #: templates/hyperkitty/user_profile/favorites.html:71
+#, fuzzy
 msgid "No favorites yet."
-msgstr ""
+msgstr "Nog geen favorieten."
 
 #: templates/hyperkitty/user_profile/last_views.html:22
 #: templates/hyperkitty/user_profile/last_views.html:59
+#, fuzzy
 msgid "New comments"
-msgstr ""
+msgstr "Nieuwe opmerkingen"
 
 #: templates/hyperkitty/user_profile/last_views.html:82
+#, fuzzy
 msgid "Nothing read yet."
-msgstr ""
+msgstr "Nog niets gelezen."
 
 #: templates/hyperkitty/user_profile/profile.html:9
+#, fuzzy
 msgid "Last posts"
-msgstr ""
+msgstr "Laatste berichten"
 
 #: templates/hyperkitty/user_profile/profile.html:17
+#, fuzzy
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: templates/hyperkitty/user_profile/profile.html:19
 msgid "Thread"
-msgstr ""
+msgstr "Conversatie"
 
 #: templates/hyperkitty/user_profile/profile.html:20
 msgid "Last thread activity"
-msgstr ""
+msgstr "Laatste conversatie-activiteit"
 
 #: templates/hyperkitty/user_profile/profile.html:49
+#, fuzzy
 msgid "No posts yet."
-msgstr ""
+msgstr "Nog geen berichten."
 
 #: templates/hyperkitty/user_profile/subscriptions.html:24
+#, fuzzy
 msgid "since first post"
-msgstr ""
+msgstr "sinds eerste bericht"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:26
 #: templates/hyperkitty/user_profile/subscriptions.html:63
 msgid "post"
-msgstr ""
+msgstr "plaats"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:31
 #: templates/hyperkitty/user_profile/subscriptions.html:69
+#, fuzzy
 msgid "no post yet"
-msgstr ""
+msgstr "nog geen bericht"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:42
 msgid "Time since the first activity"
-msgstr ""
+msgstr "Tijd sinds eerste activiteit"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:43
+#, fuzzy
 msgid "First post"
-msgstr ""
+msgstr "Eerste bericht"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:44
+#, fuzzy
 msgid "Posts to this list"
-msgstr ""
+msgstr "Berichten aan deze lijst"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:76
+#, fuzzy
 msgid "no subscriptions"
-msgstr ""
+msgstr "geen abonnementen"
 
 #: templates/hyperkitty/user_profile/votes.html:32
 #: templates/hyperkitty/user_profile/votes.html:70
 msgid "You like it"
-msgstr ""
+msgstr "Vindt u leuk"
 
 #: templates/hyperkitty/user_profile/votes.html:34
 #: templates/hyperkitty/user_profile/votes.html:72
 msgid "You dislike it"
-msgstr ""
+msgstr "Vindt u niet leuk"
 
 #: templates/hyperkitty/user_profile/votes.html:50
+#, fuzzy
 msgid "Vote"
-msgstr ""
+msgstr "Stem"
 
 #: templates/hyperkitty/user_profile/votes.html:83
+#, fuzzy
 msgid "No vote yet."
-msgstr ""
+msgstr "Nog geen stem."
 
 #: templates/hyperkitty/user_public_profile.html:7
 msgid "User Profile"
-msgstr ""
+msgstr "Gebruikersprofiel"
 
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "User profile"
-msgstr ""
+msgstr "Gebruikersprofiel"
 
 #: templates/hyperkitty/user_public_profile.html:23
 msgid "Name:"
-msgstr ""
+msgstr "Naam:"
 
 #: templates/hyperkitty/user_public_profile.html:28
 msgid "Creation:"
-msgstr ""
+msgstr "Gemaakt:"
 
 #: templates/hyperkitty/user_public_profile.html:33
+#, fuzzy
 msgid "Votes for this user:"
-msgstr ""
+msgstr "Stemmen voor deze gebruiker:"
 
 #: templates/hyperkitty/user_public_profile.html:41
 msgid "Email addresses:"
-msgstr ""
+msgstr "E-mailadressen:"
 
 #: views/message.py:75
 msgid "This message in gzipped mbox format"
-msgstr ""
+msgstr "Dit bericht in gzipped mbox formaat"
 
 #: views/message.py:201
 msgid "Your reply has been sent and is being processed."
-msgstr ""
+msgstr "Uw antwoord is verzonden en wordt verwerkt."
 
 #: views/message.py:205
 msgid ""
 "\n"
 "  You have been subscribed to {} list."
 msgstr ""
+"\n"
+"  U bent geabonneerd op {} lijst."
 
 #: views/message.py:288
 #, python-format
 msgid "Could not delete message %(msg_id_hash)s: %(error)s"
-msgstr ""
+msgstr "Kon bericht %(msg_id_hash)s: %(error)s niet verwijderen"
 
 #: views/message.py:297
 #, python-format
 msgid "Successfully deleted %(count)s messages."
-msgstr ""
+msgstr "%(count)s berichten succesvol verwijderd."
 
 #: views/mlist.py:88
 msgid "for this MailingList"
-msgstr ""
+msgstr "voor deze mailinglijst"
 
 #: views/mlist.py:100
 msgid "for this month"
-msgstr ""
+msgstr "voor deze maand"
 
 #: views/mlist.py:103
 msgid "for this day"
-msgstr ""
+msgstr "voor deze dag"
 
 #: views/mlist.py:115
 msgid "This month in gzipped mbox format"
-msgstr ""
+msgstr "Deze maand in gzipped mbox formaat"
 
 #: views/mlist.py:250 views/mlist.py:274
 msgid "No discussions this month (yet)."
-msgstr ""
+msgstr "(Nog) geen discussies deze maand."
 
 #: views/mlist.py:262
 msgid "No vote has been cast this month (yet)."
-msgstr ""
+msgstr "(Nog) geen stem uitgebracht deze maand."
 
 #: views/mlist.py:291
 msgid "You have not flagged any discussions (yet)."
-msgstr ""
+msgstr "U hebt (nog) geen discussies gemarkeerd."
 
 #: views/mlist.py:314
 msgid "You have not posted to this list (yet)."
-msgstr ""
+msgstr "U hebt (nog) niet op deze lijst gepost."
 
 #: views/mlist.py:407
 msgid "You must be a staff member to delete a MailingList"
-msgstr ""
+msgstr "U moet leidinggevende zijn om een mailinglijst te verwijderen"
 
 #: views/mlist.py:421
 msgid "Successfully deleted {}"
-msgstr ""
+msgstr "Succesvol verwijderd {}"
 
 #: views/search.py:115
 #, python-format
 msgid "Parsing error: %(error)s"
-msgstr ""
+msgstr "Parseringsfout: %(error)s"
 
 #: views/thread.py:192
 msgid "This thread in gzipped mbox format"
-msgstr ""
+msgstr "Deze conversatie in gzipped mbox formaat"
