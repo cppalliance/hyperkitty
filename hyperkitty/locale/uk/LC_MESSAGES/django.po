@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: 2021-05-30 22:30+0000\n"
-"Last-Translator: AtaZh <ipomoea@hilarious.com>\n"
+"PO-Revision-Date: 2022-08-18 15:38+0000\n"
+"Last-Translator: Sergii Horichenko <m@sgg.im>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/uk/>\n"
 "Language: uk\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr ""
+msgstr "Додати тег..."
 
 #: forms.py:55
 msgid "Add"
-msgstr ""
+msgstr "Додати"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr ""
+msgstr "щоби додати декілька тегів користуйтеся комами"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -111,8 +111,8 @@ msgid ""
 "This REST API can return the information into several formats.  The default "
 "format is html to allow human readibility."
 msgstr ""
-"Цей REST API може видавати інформацію у кількох форматах.  Формат за "
-"замовчуванням — html, щоб він результат був читомим для людини."
+"Цей REST API може видавати інформацію у кількох форматах.  Типовий формат "
+"html для полегшення читання людиною."
 
 #: templates/hyperkitty/api.html:14
 msgid ""
@@ -488,21 +488,16 @@ msgid "Delete MailingList"
 msgstr "Вилучити список розсилки"
 
 #: templates/hyperkitty/list_delete.html:20
-#, fuzzy
-#| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
-msgstr "Вилучити список розсилки"
+msgstr "Видалити список розсилки з HyperKitty"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
 msgstr ""
-"буде вилучено включно з усіма гілками і повідомленнями. Бажаєте продовжити?"
+"буде видалено з HyperKitty разом з усіма гілками та повідомленнями. Це не "
+"буде видалення з ядра Mailman. Бажаєте продовжити?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -599,15 +594,7 @@ msgid "Sign in to reply online"
 msgstr "Увійдіть, щоб відповісти онлайн"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments.count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments.count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments_count)s attachment\n"
@@ -618,15 +605,15 @@ msgid_plural ""
 "                "
 msgstr[0] ""
 "\n"
-"                %(email.attachments.count)s прикріплення\n"
+"                %(email.attachments_count)s прикріплення\n"
 "                "
 msgstr[1] ""
 "\n"
-"                %(email.attachments.count)s прикріплення\n"
+"                %(email.attachments_count)s прикріплення\n"
 "                "
 msgstr[2] ""
 "\n"
-"                %(email.attachments.count)s прикріплень\n"
+"                %(email.attachments_count)s прикріплень\n"
 "                "
 
 #: templates/hyperkitty/messages/message.html:131
@@ -682,10 +669,8 @@ msgid "You must be logged-in to create a thread."
 msgstr "Ви маєте увійти в систему, щоб створити гілку."
 
 #: templates/hyperkitty/overview.html:50
-#, fuzzy
-#| msgid "new"
 msgid "New"
-msgstr "новий"
+msgstr "Новий"
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:62
@@ -705,14 +690,12 @@ msgstr ""
 "\">П</span>ідпискою"
 
 #: templates/hyperkitty/overview.html:81
-#, fuzzy
-#| msgid "Entire archive"
 msgid "Delete Archive"
-msgstr "Увесь архів"
+msgstr "Видалити архів"
 
 #: templates/hyperkitty/overview.html:91
 msgid "Activity Summary"
-msgstr "Огляд активності"
+msgstr "Підсумки активності"
 
 #: templates/hyperkitty/overview.html:93
 msgid "Post volume over the past <strong>30</strong> days."
@@ -744,17 +727,13 @@ msgstr "kudos"
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
-msgstr ""
+msgstr "Нещодавні"
 
 #: templates/hyperkitty/overview.html:156
-#, fuzzy
-#| msgid "Most active"
 msgid "Most Active"
 msgstr "Найактивніші"
 
 #: templates/hyperkitty/overview.html:160
-#, fuzzy
-#| msgid "Most popular"
 msgid "Most Popular"
 msgstr "Найпопулярніші"
 
@@ -765,7 +744,7 @@ msgstr "Улюблене"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
-msgstr ""
+msgstr "Розміщене"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
@@ -900,7 +879,7 @@ msgstr "Показати відповіді за датою"
 
 #: templates/hyperkitty/thread.html:113
 msgid "Visit here for a non-javascript version of this page."
-msgstr ""
+msgstr "Перейдіть сюди для перегляду цієї сторінки без javascript."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
@@ -920,28 +899,27 @@ msgstr "без категорії"
 
 #: templates/hyperkitty/threads/right_col.html:12
 msgid "Age (days ago)"
-msgstr ""
+msgstr "Вік (днів тому)"
 
 #: templates/hyperkitty/threads/right_col.html:18
-#, fuzzy
-#| msgid "Last activity"
 msgid "Last active (days ago)"
-msgstr "Остання активність"
+msgstr "Остання активність (днів тому)"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
 msgid "%(num_comments)s comments"
-msgstr ""
+msgstr "%(num_comments)s коментарів"
 
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(participants_count)s participants"
-msgstr ""
+msgstr "%(participants_count)s учасників"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
 msgstr ""
+"%(unread_count)s непрочитаних <span class=\"hidden-sm\">повідомлень</span>"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
@@ -1222,10 +1200,8 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "Успішно вилучено %(count)s повідомлення(-ь)."
 
 #: views/mlist.py:88
-#, fuzzy
-#| msgid "Delete MailingList"
 msgid "for this MailingList"
-msgstr "Вилучити список розсилки"
+msgstr "для цього списку розсилки"
 
 #: views/mlist.py:100
 msgid "for this month"
