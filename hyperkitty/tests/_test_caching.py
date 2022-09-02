@@ -4,11 +4,11 @@
 import datetime
 import unittest
 import uuid
+from unittest.mock import Mock
 from urllib.error import HTTPError
 
 from mailman.email.message import Message
 from mailman.interfaces.archiver import ArchivePolicy
-from mock import Mock
 
 
 #import kittystore.utils

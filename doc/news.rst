@@ -38,6 +38,7 @@ News / Changelog
 - Remove support for Django < 3.2
 - Remove support for Python 3.6
 - Fix tests to be compatible with Python 3.10
+- Replace use of ``mock`` with ``unittest.mock`` in all tests. (Closes #429)
 
 Third Party
 -----------

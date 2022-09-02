@@ -20,9 +20,9 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-from django.core.management import call_command
+from unittest.mock import patch
 
-from mock import patch
+from django.core.management import call_command
 
 from hyperkitty.tests.utils import TestCase
 

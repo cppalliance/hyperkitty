@@ -27,6 +27,7 @@ import uuid
 from email import message_from_file
 from email.message import EmailMessage
 from email.policy import default
+from unittest.mock import Mock, patch
 
 from django.contrib.auth.models import User
 from django.core import mail
@@ -36,7 +37,6 @@ from django.utils import timezone
 from allauth.account.models import EmailAddress
 from django_gravatar.helpers import get_gravatar_url
 from django_mailman3.tests.utils import get_flash_messages
-from mock import Mock, patch
 
 from hyperkitty.lib.incoming import add_to_list
 from hyperkitty.lib.utils import get_message_id_hash

@@ -25,12 +25,11 @@ import os
 from email import message_from_file
 from email.message import EmailMessage
 from email.policy import default
+from unittest.mock import Mock, patch
 
 from django.core.cache import cache
 from django.db import DataError, IntegrityError
 from django.utils import timezone
-
-import mock
 
 from hyperkitty.lib.incoming import DuplicateMessage, add_to_list
 from hyperkitty.lib.utils import get_message_id_hash
@@ -547,11 +546,11 @@ class TestAddToList(TestCase):
         msg["Message-ID"] = "<dummy>"
         msg["Date"] = "Fri, 02 Nov 2012 16:07:54"
         msg.set_payload("Fake Message")
-        email = mock.Mock()
+        email = Mock()
         email.save.side_effect = DataError("test error")
-        with mock.patch("hyperkitty.lib.incoming.Email") as Email:
+        with patch("hyperkitty.lib.incoming.Email") as Email:
             Email.return_value = email
-            filter_mock = mock.Mock()
+            filter_mock = Mock()
             filter_mock.exists.return_value = False
             Email.objects.filter.return_value = filter_mock
             self.assertRaises(ValueError, add_to_list, "example-list", msg)

@@ -9,13 +9,12 @@ from email.message import EmailMessage
 from io import StringIO
 from traceback import format_exc
 from unittest import SkipTest, expectedFailure
+from unittest.mock import Mock, patch
 
 from django.conf import settings
 from django.core.management import call_command
 from django.db import DEFAULT_DB_ALIAS
 from django.utils.timezone import utc
-
-from mock import Mock, patch
 
 from hyperkitty.lib.incoming import add_to_list
 from hyperkitty.management.commands.hyperkitty_import import Command

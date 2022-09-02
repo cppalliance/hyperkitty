@@ -21,12 +21,12 @@
 
 import uuid
 from email.message import EmailMessage
+from unittest.mock import Mock, patch
 
 from django.contrib.auth.models import User
 
 from django_mailman3.tests.utils import FakeMMList, FakeMMMember
 from haystack import DEFAULT_ALIAS
-from mock import Mock, patch
 
 from hyperkitty.lib.incoming import add_to_list
 from hyperkitty.models import ArchivePolicy, MailingList

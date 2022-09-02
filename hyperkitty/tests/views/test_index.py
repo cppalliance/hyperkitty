@@ -23,6 +23,7 @@
 
 import json
 from email.message import EmailMessage
+from unittest.mock import Mock
 
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -31,7 +32,6 @@ from django.test import override_settings
 
 from django_mailman3.models import MailDomain
 from django_mailman3.tests.utils import FakeMMList, FakeMMMember
-from mock import Mock
 
 from hyperkitty.lib.incoming import add_to_list
 from hyperkitty.models import ArchivePolicy, MailingList

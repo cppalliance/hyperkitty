@@ -25,6 +25,7 @@ import os
 import shutil
 import tempfile
 from unittest import SkipTest
+from unittest.mock import Mock, patch
 
 from django.apps import apps
 from django.conf import settings
@@ -37,7 +38,6 @@ from django.test import TestCase as DjangoTestCase
 from django.test import TransactionTestCase
 
 import mailmanclient
-from mock import Mock, patch
 
 
 def setup_logging(tmpdir):
