@@ -25,13 +25,13 @@ import datetime
 import uuid
 from email.message import EmailMessage
 from traceback import format_exc
+from unittest.mock import Mock
 
 from django.conf import settings
 from django.contrib.auth.models import User
 
 from allauth.account.models import EmailAddress
 from django_mailman3.tests.utils import FakeMMList, FakeMMMember
-from mock import Mock
 
 from hyperkitty.lib.incoming import add_to_list
 from hyperkitty.lib.utils import get_message_id_hash

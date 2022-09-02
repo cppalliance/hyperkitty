@@ -23,11 +23,11 @@
 import json
 from email.message import EmailMessage
 from io import BytesIO
+from unittest.mock import patch
 
 from django.conf import settings
 from django.contrib.sites.models import Site
 
-import mock
 from django_mailman3.models import MailDomain
 
 from hyperkitty.models.email import Email
@@ -97,7 +97,7 @@ class ArchiveTestCase(TestCase):
         self.assertEqual(Email.objects.filter(message_id="dummy").count(), 1)
 
     def test_data_error(self):
-        with mock.patch("hyperkitty.views.mailman.add_to_list") as atl:
+        with patch("hyperkitty.views.mailman.add_to_list") as atl:
             atl.side_effect = ValueError("test error")
             response = self.client.post(
                 self.url,

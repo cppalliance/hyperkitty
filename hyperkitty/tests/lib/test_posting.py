@@ -22,6 +22,7 @@
 
 import uuid
 from smtplib import SMTPDataError
+from unittest.mock import Mock, patch
 from urllib.error import HTTPError
 
 from django.contrib.auth.models import User
@@ -29,7 +30,6 @@ from django.core import mail
 from django.test.client import RequestFactory
 
 from django_mailman3.tests.utils import FakeMMList, FakeMMMember
-from mock import Mock, patch
 
 from hyperkitty.lib import posting
 from hyperkitty.models import MailingList

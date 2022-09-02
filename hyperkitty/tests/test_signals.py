@@ -20,8 +20,9 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
+from unittest.mock import patch
+
 from django_mailman3.signals import mailinglist_created, mailinglist_modified
-from mock import patch
 
 from hyperkitty.tests.utils import TestCase
 

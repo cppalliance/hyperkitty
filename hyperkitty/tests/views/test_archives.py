@@ -28,6 +28,7 @@ import os
 import shutil
 from email import message_from_bytes, policy
 from email.message import EmailMessage
+from unittest.mock import Mock
 
 from django.contrib.auth.models import User
 from django.core.cache import cache
@@ -35,7 +36,6 @@ from django.test import override_settings
 
 from bs4 import BeautifulSoup
 from django_mailman3.tests.utils import FakeMMList, FakeMMMember
-from mock import Mock
 
 from hyperkitty.lib.incoming import add_to_list
 from hyperkitty.models import (

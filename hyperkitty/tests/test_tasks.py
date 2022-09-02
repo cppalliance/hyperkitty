@@ -21,8 +21,7 @@
 #
 
 from email.message import EmailMessage
-
-from mock import patch
+from unittest.mock import patch
 
 from hyperkitty import tasks
 from hyperkitty.lib.incoming import add_to_list

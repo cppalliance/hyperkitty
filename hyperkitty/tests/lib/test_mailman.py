@@ -20,13 +20,13 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
+from unittest.mock import Mock, patch
 from urllib.error import HTTPError
 
 from django.contrib.auth.models import User
 from django.core.cache import cache
 
 from django_mailman3.tests.utils import FakeMMList, FakeMMPage
-from mock import Mock, patch
 
 from hyperkitty.lib import mailman
 from hyperkitty.models import MailingList, Sender
