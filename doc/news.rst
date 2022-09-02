@@ -53,6 +53,13 @@ UI
 - Remove the counter in the "Top posters" section and all the list of threads
   in the list of overview page. (Fixes #31)
 
+
+Misc
+----
+
+- Use Pytest as the test runner.
+
+
 .. _news-1.3.5:
 
 1.3.5
@@ -127,7 +134,7 @@ Security
   necessary and not unconditionally. (Closes #320)
 - The wildcard notation for any host ``'*'`` is now supported into
   ``MAILMAN_ARCHVER_FROM`` to disable Hyperkitty clients IP checking.
-- Join the searchbar and search button  like it was before bootstrap 4 
+- Join the searchbar and search button  like it was before bootstrap 4
   migration. (See !301)
 - Use the umd builds for popper.js instead of the regular ones. (See !309)
 - Exceptions thrown by smtplib in sending replies are now caught and give an
