@@ -69,7 +69,7 @@ docs:
     - tox -e docs
 
 coverage:
-  stage: quality-assurance
+  stage: test
   script:
     - tox -e py39-django32-cov
 

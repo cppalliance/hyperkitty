@@ -37,10 +37,10 @@ from hyperkitty.tests.utils import TestCase, get_test_file
 SLOP = datetime.timedelta(seconds=2)
 
 
-def test_rwl(*args, **kwargs):
+def _test_rwl(*args, **kwargs):
     """This function is called in some tests by
 
-    run_with_lock(test_rwl, *args, **kwargs)
+    run_with_lock(_test_rwl, *args, **kwargs)
 
     kwargs are:
     remove: boolean if true use a longer lifetime
@@ -326,7 +326,7 @@ Dummy Message
 
     def test_run_with_lock_defaults(self):
         utils.run_with_lock(
-            test_rwl, remove=False, lifetime=15,
+            _test_rwl, remove=False, lifetime=15,
             lockfile=os.path.join(gettempdir(),
                                   'hyperkitty-jobs-update-index.lock'))
         self.assertEqual('',
@@ -334,7 +334,7 @@ Dummy Message
 
     def test_run_with_lock_extended(self):
         utils.run_with_lock(
-            test_rwl, remove=True, lifetime=900,
+            _test_rwl, remove=True, lifetime=900,
             lockfile=os.path.join(gettempdir(),
                                   'hyperkitty-jobs-update-index.lock'))
         self.assertEqual('',
@@ -343,7 +343,7 @@ Dummy Message
     def test_run_with_lock_extended_setting(self):
         self._override_setting('HYPERKITTY_JOBS_UPDATE_INDEX_LOCK_LIFE', 300)
         utils.run_with_lock(
-            test_rwl, remove=True, lifetime=300,
+            _test_rwl, remove=True, lifetime=300,
             lockfile=os.path.join(gettempdir(),
                                   'hyperkitty-jobs-update-index.lock'))
         self.assertEqual('',
@@ -354,20 +354,20 @@ Dummy Message
             'HYPERKITTY_JOBS_UPDATE_INDEX_LOCKFILE',
             os.path.join(gettempdir(), 'alt.lock'))
         utils.run_with_lock(
-            test_rwl, remove=False, lifetime=15,
+            _test_rwl, remove=False, lifetime=15,
             lockfile=os.path.join(gettempdir(), 'alt.lock'))
         self.assertEqual('',
                          open(os.path.join(self.tmpdir, 'error.log')).read())
 
     def test_run_with_lock_bad_file(self):
-        utils.run_with_lock(test_rwl, remove=False,
+        utils.run_with_lock(_test_rwl, remove=False,
                             lifetime=15, lockfile='/bogus/file/name')
         self.assertIn('/bogus/file/name',
                       open(os.path.join(self.tmpdir, 'error.log')).read())
 
     def test_run_with_lock_wrong_time(self):
         utils.run_with_lock(
-            test_rwl, remove=False, lifetime=20,
+            _test_rwl, remove=False, lifetime=20,
             lockfile=os.path.join(gettempdir(),
                                   'hyperkitty-jobs-update-index.lock'))
         self.assertIn('ValueError',
