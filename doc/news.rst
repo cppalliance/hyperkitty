@@ -39,6 +39,8 @@ News / Changelog
 - Remove support for Python 3.6
 - Fix tests to be compatible with Python 3.10
 - Replace use of ``mock`` with ``unittest.mock`` in all tests. (Closes #429)
+- The check for writability of ``HYPERKITTY_ATTACHMENT_FOLDER`` when set has
+  been improved to avoid a potential race condition.  (Closes #389)
 
 Third Party
 -----------

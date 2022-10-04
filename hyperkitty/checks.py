@@ -20,6 +20,7 @@
 #
 
 import os
+import random
 
 from django.conf import settings
 from django.core.checks import Error, register
@@ -47,8 +48,9 @@ def config_check(app_configs, **kwargs):
                 )
             )
         else:
+            extra = random.randrange(10000)
             try:
-                filepath = os.path.join(attachment_folder, "_check")
+                filepath = os.path.join(attachment_folder, f'_check_{extra}')
                 with open(filepath, "w") as f:
                     f.write("check")
                 os.remove(filepath)
