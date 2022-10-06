@@ -148,10 +148,18 @@ class Thread(models.Model):
         from .email import Email  # circular import
         if self.starting_email is not None:
             return
+
         try:
             self.starting_email = self.emails.get(parent_id__isnull=True)
         except Email.DoesNotExist:
             self.starting_email = self.emails.order_by("date").first()
+        except ValueError:
+            # If the Thread is not created yet, the self.emails will raise a
+            # ValueError exception. This happens at creation time because this
+            # method is called by on_pre_save
+            #
+            # https://docs.djangoproject.com/en/4.1/releases/4.1/#reverse-foreign-key-changes-for-unsaved-model-instances
+            return
 
     def on_pre_save(self):
         self.find_starting_email()
