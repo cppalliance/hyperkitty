@@ -195,6 +195,9 @@ class EmailTestCase(TestCase):
                       subject="This is a folded\n subject",
                       in_reply_to="<msg1.example.com>\n <msg2.example.com>",
                       content="Dummy message")
+        sender.save()
+        mlist.save()
+        email.save()
         msg = email.as_message()
         self.assertEqual(msg["Subject"], "This is a folded subject")
 
@@ -210,6 +213,9 @@ class EmailTestCase(TestCase):
                       mailinglist=mlist,
                       subject="Message subject",
                       content="Dummy message")
+        sender.save()
+        mlist.save()
+        email.save()
         msg = email.as_message()
         self.assertEqual(msg['from'], '"Team: J.Q. Doe" <dummy@example.com>')
 
