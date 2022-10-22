@@ -8,7 +8,7 @@ News / Changelog
 1.3.6
 =====
 
-(xxxx-xx-xx)
+(2022-10-22)
 
 - Fixed an issue in hyperkitty_import with an empty Message-ID.  (Closes #396)
 - Set Q_CLUSTER retry > timeout in example_project.  (Closes #402)

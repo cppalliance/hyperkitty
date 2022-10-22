@@ -38,7 +38,7 @@ with open('hyperkitty/__init__.py') as fp:
 # Requirements
 REQUIRES = [
     "django>=3.2,<4.2",
-    "django_mailman3>=1.3.7",
+    "django_mailman3>=1.3.8",
     "django-gravatar2>=1.0.6",
     "djangorestframework>=3.0.0",
     "robot-detection>=0.3",
