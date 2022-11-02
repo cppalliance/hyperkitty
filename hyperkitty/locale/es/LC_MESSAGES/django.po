@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:37+0000\n"
-"PO-Revision-Date: 2021-12-04 12:50+0000\n"
+"PO-Revision-Date: 2022-11-02 10:30+0000\n"
 "Last-Translator: Guillermo Hernandez <guillermo@querysoft.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"X-Generator: Weblate 4.14.2-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -487,20 +487,16 @@ msgid "Delete MailingList"
 msgstr "Borrar la lista"
 
 #: templates/hyperkitty/list_delete.html:20
-#, fuzzy
-#| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
-msgstr "Borrar la lista"
+msgstr "Borrar la lista desde HyperKitty"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
-msgstr "será borrada junto con todos los hilos y mensajes. ¿Desea continuar?"
+msgstr ""
+"será borrada desde HyperKitty junto con todos los hilos y mensajes. No se "
+"realizará el borrado desde el núcleo de Mailman ¿Desea continuar?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -597,15 +593,7 @@ msgid "Sign in to reply online"
 msgstr "Acceder a su cuenta para responder en línea"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments.count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments.count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments_count)s attachment\n"
@@ -616,11 +604,11 @@ msgid_plural ""
 "                "
 msgstr[0] ""
 "\n"
-"                %(email.attachments.count)s archivo adjunto\n"
+"                %(email.attachments._count)s archivo adjunto\n"
 "                "
 msgstr[1] ""
 "\n"
-"                %(email.attachments.count)s archivos adjuntos\n"
+"                %(email.attachments._count)s archivos adjuntos\n"
 "                "
 
 #: templates/hyperkitty/messages/message.html:131
