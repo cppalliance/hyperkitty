@@ -664,10 +664,8 @@ msgid "You must be logged-in to create a thread."
 msgstr "Debe acceder a su cuenta para crear un hilo."
 
 #: templates/hyperkitty/overview.html:50
-#, fuzzy
-#| msgid "new"
 msgid "New"
-msgstr "nuevas"
+msgstr "Nueva(s)"
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:62
@@ -876,7 +874,7 @@ msgstr "Mostrar respuestas por fecha"
 
 #: templates/hyperkitty/thread.html:113
 msgid "Visit here for a non-javascript version of this page."
-msgstr ""
+msgstr "Aquí puede ver una versión sin javascript de esta página."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
@@ -896,13 +894,11 @@ msgstr "ninguna categoría"
 
 #: templates/hyperkitty/threads/right_col.html:12
 msgid "Age (days ago)"
-msgstr ""
+msgstr "Antigüedad (en días)"
 
 #: templates/hyperkitty/threads/right_col.html:18
-#, fuzzy
-#| msgid "Last activity"
 msgid "Last active (days ago)"
-msgstr "Última actividad"
+msgstr "Última actividad (en días desde entonces)"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
@@ -910,10 +906,9 @@ msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s comentarios"
 
 #: templates/hyperkitty/threads/right_col.html:44
-#, fuzzy, python-format
-#| msgid "%(thread.participants_count)s participants"
+#, python-format
 msgid "%(participants_count)s participants"
-msgstr "%(thread.participants_count)s participantes"
+msgstr "%(participants_count)s participantes"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
@@ -1199,10 +1194,8 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "Se eliminaron %(count)s mensajes correctamente."
 
 #: views/mlist.py:88
-#, fuzzy
-#| msgid "Delete MailingList"
 msgid "for this MailingList"
-msgstr "Borrar la lista"
+msgstr "para esta lista de correo"
 
 #: views/mlist.py:100
 msgid "for this month"
@@ -1248,6 +1241,25 @@ msgstr "Error de procesamiento: %(error)s"
 #: views/thread.py:192
 msgid "This thread in gzipped mbox format"
 msgstr "Este hilo en formato mbox comprimido con gzip"
+
+#: templates/hyperkitty/messages/message.html:105
+#, python-format
+msgid ""
+"\n"
+"                %(email.attachments_count)s attachment\n"
+"                "
+msgid_plural ""
+"\n"
+"                %(email.attachments_count)s attachments\n"
+"                "
+msgstr[0] ""
+"\n"
+"                %(email.attachments_count)s archivo adjunto\n"
+"                "
+msgstr[1] ""
+"\n"
+"                %(email.attachments_count)s archivos adjuntos\n"
+"                "
 
 #~ msgid "days inactive"
 #~ msgstr "días inactivo"
