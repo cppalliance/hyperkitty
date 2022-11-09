@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-04 20:47+0000\n"
-"PO-Revision-Date: 2022-08-18 15:38+0000\n"
+"PO-Revision-Date: 2022-11-09 17:30+0000\n"
 "Last-Translator: Sergii Horichenko <m@sgg.im>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/uk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -594,15 +594,7 @@ msgid "Sign in to reply online"
 msgstr "Увійдіть, щоб відповісти онлайн"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments_count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments_count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments.count)s attachment\n"
@@ -613,15 +605,15 @@ msgid_plural ""
 "                "
 msgstr[0] ""
 "\n"
-"                %(email.attachments_count)s прикріплення\n"
+"                %(email.attachments.count)s прикріплення\n"
 "                "
 msgstr[1] ""
 "\n"
-"                %(email.attachments_count)s прикріплення\n"
+"                %(email.attachments.count)s прикріплення\n"
 "                "
 msgstr[2] ""
 "\n"
-"                %(email.attachments_count)s прикріплень\n"
+"                %(email.attachments.count)s прикріплень\n"
 "                "
 
 #: templates/hyperkitty/messages/message.html:131
@@ -731,7 +723,7 @@ msgstr "Визначні дописувачі"
 
 #: templates/hyperkitty/overview.html:133
 msgid "kudos"
-msgstr "kudos"
+msgstr "компліменти"
 
 #: templates/hyperkitty/overview.html:152
 msgid "Recent"
