@@ -229,7 +229,7 @@ class DbImporter(object):
             # Now insert the message
             try:
                 with transaction.atomic():
-                    add_to_list(self.list_address, message)
+                    add_to_list(self.list_address, message, from_import=True)
             except DuplicateMessage as e:
                 if self.verbose:
                     self.stderr.write(

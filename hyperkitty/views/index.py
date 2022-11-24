@@ -111,10 +111,10 @@ def index(request):
         mlists = mlists.order_by(SortMode.NAME)
     elif sort_mode == SortMode.ACTIVE:
         mlists = list(mlists)
-        mlists.sort(key=lambda l: l.recent_threads_count, reverse=True)
+        mlists.sort(key=lambda lk: lk.recent_threads_count, reverse=True)
     elif sort_mode == SortMode.POPULAR:
         mlists = list(mlists)
-        mlists.sort(key=lambda l: l.recent_participants_count, reverse=True)
+        mlists.sort(key=lambda lk: lk.recent_participants_count, reverse=True)
     elif sort_mode == SortMode.CREATION:
         mlists = mlists.order_by("-created_at")
 
