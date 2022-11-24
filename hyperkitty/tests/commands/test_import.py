@@ -18,7 +18,7 @@ from django.utils.timezone import utc
 
 from hyperkitty.lib.incoming import add_to_list
 from hyperkitty.management.commands.hyperkitty_import import Command
-from hyperkitty.models import Email, MailingList
+from hyperkitty.models import ArchivePolicy, Email, MailingList
 from hyperkitty.tests.utils import TestCase, get_test_file
 
 
@@ -626,6 +626,30 @@ msg1
         self.assertEqual(
             email.archived_date,
             datetime(2008, 7, 21, 11, 44, 51, tzinfo=utc))
+
+    def test_import_with_archiving_disabled(self):
+        # We should be able to import to a list with archiving disabled.
+        mlist = MailingList.objects.get_or_create(
+            name=self.common_cmd_args['list_address'])[0]
+        mlist.archive_policy = ArchivePolicy.never.value
+        msg = EmailMessage()
+        msg["From"] = "dummy@example.com"
+        msg["Message-ID"] = "<msg1>"
+        msg["Date"] = "01 Feb 2015 12:00:00"
+        msg.set_payload("msg1")
+        mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
+        mbox.add(msg)
+        mbox.close()
+        # do the import
+        output = StringIO()
+        kw = self.common_cmd_args.copy()
+        kw["stdout"] = kw["stderr"] = output
+        with patch('hyperkitty.models.MailingList.objects.get_or_create') as x:
+            x.return_value = (mlist, False)
+            call_command('hyperkitty_import',
+                         os.path.join(self.tmpdir, "test.mbox"), **kw)
+        # The message should be archived.
+        self.assertEqual(Email.objects.count(), 1)
 
     def test_impacted_threads_batch(self):
         # Fix GL issue #86

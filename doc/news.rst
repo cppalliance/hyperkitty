@@ -3,6 +3,17 @@ News / Changelog
 ================
 
 
+.. _news-1.3.7:
+
+1.3.7
+=====
+
+(xxxx-xx-xx)
+
+- ``hyperkitty_import`` will now import messages to a list with archiving
+  disabled.  (Closes #451)
+
+
 .. _news-1.3.6:
 
 1.3.6

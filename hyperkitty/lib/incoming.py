@@ -49,14 +49,14 @@ class DuplicateMessage(Exception):
     """
 
 
-def add_to_list(list_name, message):
+def add_to_list(list_name, message, from_import=False):
     assert isinstance(message, EmailMessage)
     # timeit("1 start")
     mlist = MailingList.objects.get_or_create(name=list_name)[0]
     if not getattr(settings, "HYPERKITTY_BATCH_MODE", False):
         update_from_mailman(mlist.name)
     mlist.save()
-    if mlist.archive_policy == ArchivePolicy.never.value:
+    if mlist.archive_policy == ArchivePolicy.never.value and not from_import:
         logger.info("Archiving disabled by list policy for %s", list_name)
         return
     if "Message-Id" not in message:
