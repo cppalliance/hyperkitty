@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-04 20:47+0000\n"
-"PO-Revision-Date: 2022-11-13 14:47+0000\n"
+"PO-Revision-Date: 2022-12-13 17:47+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/id/>\n"
@@ -688,7 +688,7 @@ msgstr "Ringkasan Aktivitas"
 
 #: templates/hyperkitty/overview.html:93
 msgid "Post volume over the past <strong>30</strong> days."
-msgstr ""
+msgstr "Volume pos pada <strong>30</strong> hari terakhir:"
 
 #: templates/hyperkitty/overview.html:98
 msgid "The following statistics are from"
@@ -700,7 +700,7 @@ msgstr "Dalam"
 
 #: templates/hyperkitty/overview.html:100
 msgid "the past <strong>30</strong> days:"
-msgstr ""
+msgstr "<strong>30</strong> hari terakhir:"
 
 #: templates/hyperkitty/overview.html:109
 msgid "Most active posters"
@@ -708,7 +708,7 @@ msgstr "Pengepos paling aktif"
 
 #: templates/hyperkitty/overview.html:118
 msgid "Prominent posters"
-msgstr ""
+msgstr "Pengepos paling menonjol"
 
 #: templates/hyperkitty/overview.html:133
 #, fuzzy
@@ -750,11 +750,12 @@ msgstr "Diskusi paling aktif"
 
 #: templates/hyperkitty/overview.html:200
 msgid "Discussions You've Flagged"
-msgstr ""
+msgstr "Diskusi yang Anda Tandai"
 
 #: templates/hyperkitty/overview.html:208
+#, fuzzy
 msgid "Discussions You've Posted to"
-msgstr ""
+msgstr "Diskusi yang Anda Pos ke sana"
 
 #: templates/hyperkitty/reattach.html:9
 msgid "Reattach a thread"
@@ -915,7 +916,7 @@ msgstr "%(unread_count)s <span class=\"hidden-sm\">pesan</span> tidak dibaca"
 
 #: templates/hyperkitty/threads/right_col.html:59
 msgid "You must be logged-in to have favorites."
-msgstr ""
+msgstr "Anda harus masuk untuk memfavoritkan."
 
 #: templates/hyperkitty/threads/right_col.html:60
 msgid "Add to favorites"
@@ -1221,7 +1222,7 @@ msgstr ""
 
 #: views/mlist.py:291
 msgid "You have not flagged any discussions (yet)."
-msgstr ""
+msgstr "Anda belum menandai diskusi apa pun."
 
 #: views/mlist.py:314
 msgid "You have not posted to this list (yet)."
