@@ -8,7 +8,7 @@ News / Changelog
 1.3.7
 =====
 
-(xxxx-xx-xx)
+(2023-01-04)
 
 - ``hyperkitty_import`` will now import messages to a list with archiving
   disabled.  (Closes #451)
