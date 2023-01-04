@@ -46,10 +46,10 @@ py310-django40:
   script:
     - tox -e py310-django40
 
-py310-django41:
+py311-django41:
   stage: test
   script:
-    - tox -e py310-django41
+    - tox -e py311-django41
 
 qa:
   stage: quality-assurance

@@ -12,6 +12,7 @@ News / Changelog
 
 - ``hyperkitty_import`` will now import messages to a list with archiving
   disabled.  (Closes #451)
+- Add support for Python 3.11.
 
 
 .. _news-1.3.6:
