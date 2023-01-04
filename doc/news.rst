@@ -2,6 +2,14 @@
 News / Changelog
 ================
 
+.. _news-1.3.8:
+
+1.3.8
+=====
+
+(xxxx-xx-xx)
+
+ - Make it compatible with elasticsearch 8.0.0
 
 .. _news-1.3.7:
 

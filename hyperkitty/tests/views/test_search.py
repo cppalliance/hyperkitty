@@ -210,11 +210,18 @@ class SearchViewsTestCase(SearchEnabledTestCase):
         self.assertContains(response, "dummy parsing failure")
 
         # For elasticsearch backend
-        from elasticsearch import RequestError
+        from elasticsearch import VERSION, RequestError
+        mayor, _minor, _p = VERSION
+
+        search_error = "dummy parsing failure"
+        if mayor > 7:
+            class ElasticError:
+                status = search_error
+            search_error = ElasticError
 
         class CrashingIterator(list):
             def __len__(self):
-                raise RequestError(400, "dummy parsing failure", {})
+                raise RequestError(400, search_error, {})
             query = Mock()
 
         with self.settings(HAYSTACK_CONNECTIONS={
