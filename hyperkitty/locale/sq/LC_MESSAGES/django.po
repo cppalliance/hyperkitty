@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-04 20:47+0000\n"
-"PO-Revision-Date: 2021-11-02 09:36+0000\n"
+"PO-Revision-Date: 2023-01-05 14:47+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/sq/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -491,20 +491,16 @@ msgid "Delete MailingList"
 msgstr "Fshije Listën e Postimeve"
 
 #: templates/hyperkitty/list_delete.html:20
-#, fuzzy
-#| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
-msgstr "Fshije Listën e Postimeve"
+msgstr "Fshije Listën e Postimeve nga HyperKitty"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
-msgstr "do të fshihet tok me krejt rrjedhat dhe mesazhet. Doni të vazhdohet?"
+msgstr ""
+"do të fshihet nga HyperKitty me krejt rrjedhat dhe mesazhet. S’do të fshihet "
+"nga Mailman Core. Doni të vazhdohet?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
@@ -601,15 +597,7 @@ msgid "Sign in to reply online"
 msgstr "Që të përgjigjeni, bëni hyrjen"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments.count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments.count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments.count)s attachment\n"
@@ -680,10 +668,8 @@ msgid "You must be logged-in to create a thread."
 msgstr "Duhet të jeni i futur, që të krijoni një rrjedhë."
 
 #: templates/hyperkitty/overview.html:50
-#, fuzzy
-#| msgid "new"
 msgid "New"
-msgstr "e re"
+msgstr "E re"
 
 #: templates/hyperkitty/overview.html:63
 #: templates/hyperkitty/thread_list.html:62
@@ -757,7 +743,7 @@ msgstr "Të parapëlqyer"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Posted"
-msgstr ""
+msgstr "U postua"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
@@ -892,7 +878,7 @@ msgstr "Shfaq përgjigje sipas datash"
 
 #: templates/hyperkitty/thread.html:113
 msgid "Visit here for a non-javascript version of this page."
-msgstr ""
+msgstr "Vizitoni këtë për një version pa Javascript të kësaj faqeje."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
@@ -912,13 +898,11 @@ msgstr "s’ka kategori"
 
 #: templates/hyperkitty/threads/right_col.html:12
 msgid "Age (days ago)"
-msgstr ""
+msgstr "Mosha (ditë më parë)"
 
 #: templates/hyperkitty/threads/right_col.html:18
-#, fuzzy
-#| msgid "Last activity"
 msgid "Last active (days ago)"
-msgstr "Veprimtaria e fundit"
+msgstr "Aktiv së fundi (ditë më parë)"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
@@ -926,10 +910,9 @@ msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s komente"
 
 #: templates/hyperkitty/threads/right_col.html:44
-#, fuzzy, python-format
-#| msgid "%(thread.participants_count)s participants"
+#, python-format
 msgid "%(participants_count)s participants"
-msgstr "%(thread.participants_count)s pjesëmarrës"
+msgstr "%(participants_count)s pjesëmarrës"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
@@ -1215,10 +1198,8 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "U fshinë me sukses %(count)s mesazhe."
 
 #: views/mlist.py:88
-#, fuzzy
-#| msgid "Delete MailingList"
 msgid "for this MailingList"
-msgstr "Fshije Listën e Postimeve"
+msgstr "për këtë Listë Postimesh"
 
 #: views/mlist.py:100
 msgid "for this month"
