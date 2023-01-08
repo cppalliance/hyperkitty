@@ -1,4 +1,22 @@
 #! /usr/bin/env python3
+
+# Copyright (C) 2023 by the Free Software Foundation, Inc.
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+# USA.
+
 'Check for possible hyperkitty_import exceptions.'
 
 import argparse
@@ -41,13 +59,32 @@ def loop(start, end, mbox, mb_keys):
                                       e))
                 continue
             msg.get_from()
+            mid = msg.get('message-id', 'n/a')
             try:
-                message_from_bytes(msg_raw, policy=policy.default)
+                msg = message_from_bytes(msg_raw, policy=policy.default)
             except Exception as e:
                 print('Failed to convert message number {}, '
                       'message=id {} to email.message.Message\n'
                       '    {}'.format(count,
                                       unquote(msg.get("Message-Id", 'n/a')),
+                                      e))
+                continue
+            try:
+                mid = msg.get('message-id', 'n/a')
+            except Exception as e:
+                print('Failed to get mid from converted message number {}, '
+                      'message=id {}\n'
+                      '    {}'.format(count,
+                                      mid,
+                                      e))
+                continue
+            try:
+                date = msg.get('date') or msg.get('resent-date')
+            except Exception as e:
+                print('Failed to get date from converted message number {}, '
+                      'message=id {}\n'
+                      '    {}'.format(count,
+                                      mid,
                                       e))
                 continue
     except Exception as e:
