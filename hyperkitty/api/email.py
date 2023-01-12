@@ -23,6 +23,7 @@ from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404
 
 from rest_framework import generics, serializers
+from rest_framework.pagination import LimitOffsetPagination
 
 from hyperkitty.lib.view_helpers import is_mlist_authorized
 from hyperkitty.models import ArchivePolicy, Email, MailingList
@@ -76,6 +77,7 @@ class EmailList(generics.ListAPIView):
 
     serializer_class = EmailShortSerializer
     ordering_fields = ("archived_date", "thread_order", "date")
+    pagination_class = LimitOffsetPagination
 
     def get_queryset(self):
         mlist = MailingList.objects.get(name=self.kwargs["mlist_fqdn"])
@@ -96,6 +98,7 @@ class EmailListBySender(generics.ListAPIView):
     """List emails by sender"""
 
     serializer_class = EmailShortSerializer
+    pagination_class = LimitOffsetPagination
 
     def get_queryset(self):
         key = self.kwargs["mailman_id"]

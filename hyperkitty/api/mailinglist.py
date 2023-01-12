@@ -20,6 +20,7 @@
 #
 
 from rest_framework import generics, serializers
+from rest_framework.pagination import LimitOffsetPagination
 
 from hyperkitty.models import ArchivePolicy, MailingList
 from .utils import EnumField, IsMailingListPublicOrIsMember
@@ -54,6 +55,7 @@ class MailingListList(generics.ListAPIView):
     ordering_fields = ("name", "created_at")
     lookup_field = "name"
     serializer_class = MailingListSerializer
+    pagination_class = LimitOffsetPagination
 
 
 class MailingListDetail(generics.RetrieveAPIView):
@@ -64,3 +66,4 @@ class MailingListDetail(generics.RetrieveAPIView):
     lookup_url_kwarg = "mlist_fqdn"
     serializer_class = MailingListSerializer
     permission_classes = [IsMailingListPublicOrIsMember]
+    pagination_class = LimitOffsetPagination

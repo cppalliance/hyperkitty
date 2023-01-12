@@ -23,6 +23,7 @@ from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404
 
 from rest_framework import generics, serializers
+from rest_framework.pagination import LimitOffsetPagination
 
 from hyperkitty.lib.view_helpers import is_mlist_authorized
 from hyperkitty.models import MailingList, Thread
@@ -88,6 +89,7 @@ class ThreadList(generics.ListAPIView):
     """List threads"""
 
     serializer_class = ThreadShortSerializer
+    pagination_class = LimitOffsetPagination
     ordering = ("-date_active", )
 
     def get_queryset(self):
@@ -103,6 +105,7 @@ class ThreadDetail(generics.RetrieveAPIView):
     """Show a thread"""
 
     serializer_class = ThreadSerializer
+    pagination_class = LimitOffsetPagination
     permission_classes = [IsMailingListPublicOrIsMember]
 
     def get_object(self):

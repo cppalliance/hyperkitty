@@ -12,6 +12,8 @@ News / Changelog
  - Make it compatible with elasticsearch 8.0.0
  - Removed unnecessary SESSION_SERIALIZER from settings.py.  (Closes #455)
  - Updated the contrib/check_hk_import script to catch more issues.
+ - Update API Views to use LimitOffsetPagination as the default pagination
+   style. (Fix #457)
 
 .. _news-1.3.7:
 
