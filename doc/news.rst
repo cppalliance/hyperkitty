@@ -14,6 +14,8 @@ News / Changelog
  - Updated the contrib/check_hk_import script to catch more issues.
  - Update API Views to use LimitOffsetPagination as the default pagination
    style. (Fix #457)
+ - Added a new contrib/cleanarch3 script it check/fix mboxes for unescaped
+   "From " lines and bad Date: headers.
 
 .. _news-1.3.7:
 
