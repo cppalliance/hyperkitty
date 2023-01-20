@@ -1,0 +1,246 @@
+#! /usr/bin/python3
+
+# Copyright (C) 2001-2023 by the Free Software Foundation, Inc.
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+# USA.
+
+"""Clean up an .mbox archive file.
+
+The archiver looks for Unix-From lines separating messages in an mbox archive
+file.  For compatibility, it specifically looks for lines that start with
+"From " -- i.e. the letters capital-F, lowercase-r, o, m, space, ignoring
+everything else on the line.
+
+Normally, any lines that start "From " in the body of a message should be
+escaped such that a > character is actually the first on a line.  It is
+possible though that body lines are not actually escaped.  This script
+attempts to fix these by doing a stricter test of the Unix-From lines.  Any
+lines that start "From " but do not pass this stricter test are escaped with a
+> character.
+
+This in an enhanced version of the standard cleanarch script. It works just
+like the normal cleanarch but it also looks at lines that look like Date:
+headers and if they don't have a parseable date close to that of the Unix-from,
+it replaces the value with the date from the Unix-From.
+
+Usage: cleanarch3 [options] inputfile
+Options:
+    -s n
+    --status=n
+        Print a # character every n messages processed
+
+    -o file
+    --output=file
+        Write the output mailbox to file. If not specified, stdout is used.
+
+    -d n
+    --date-skew n
+        n is the number of hours difference between the time in the Date:
+        header and that in the Unix-from within which the Date: header will be
+        accepted as is and not replaced with the Unix-from time. Default is
+        24 hours.
+
+    -e encoding
+    --encoding=encoding
+        Specify the character encoding of the input and output files if other
+        than utf-8.
+
+    -q / --quiet
+        Don't print changed line information to standard error.
+
+    -n / --dry-run
+        Don't actually output anything.
+
+    -h / --help
+        Print this message and exit
+"""
+
+import getopt
+import re
+import sys
+import time
+from email.utils import formatdate, parsedate
+
+
+_fromlinepattern = 'From \\s*[^\\s]+\\s+\\w\\w\\w\\s+\\w\\w\\w\\s+\\d?\\d\\s+\\d?\\d:\\d\\d(:\\d\\d)?(\\s+[^\\s]+)?\\s+\\d\\d\\d\\d\\s*[^\\s]*\\s*$'
+cre = re.compile(_fromlinepattern)
+
+# From RFC 2822, a header field name must contain only characters from 33-126
+# inclusive, excluding colon.  I.e. from oct 41 to oct 176 less oct 072.
+fre = re.compile(r'^[\041-\071\073-\176]+:')
+
+
+
+def usage(code, msg=''):
+    if code:
+        fd = sys.stderr
+    else:
+        fd = sys.stdout
+    print(__doc__, file=fd)
+    if msg:
+        print(msg, file=fd)
+    sys.exit(code)
+
+
+
+def escape_line(line, lineno, quiet, output, ofile):
+    if output:
+        ofile.write('>' + line)
+    if not quiet:
+        print('Unix-From line changed: {}'.format(lineno), file=sys.stderr)
+        print(line[:-1], file=sys.stderr)
+
+
+
+def check_date(line, lastfrom, lineno, date_skew, quiet, output):
+    lfdate = parsedate(re.sub(r'^From \s*\S+\s+', '', lastfrom, flags=re.I))
+    ddate = parsedate(re.sub(r'^Date:\s*', '', line, flags=re.I))
+    if ddate:
+        try:
+            dsecs = time.mktime(ddate)
+        except (OverflowError, ValueError):
+            dsecs = 0
+    else:
+        dsecs = 0
+    # lfdate should be good because it looks like a valid unixfrom
+    lfsecs = time.mktime(lfdate)
+    if abs(dsecs - lfsecs) <= date_skew:
+        if output:
+            sys.stdout.write(line)
+        return
+    # Date: is off. Replace it with unix from date
+    newline = 'Date: ' + formatdate(lfsecs) + '\n'
+    if output:
+        sys.stdout.write(newline)
+    if not quiet:
+        print(f'Date: changed at line {lineno}\n{line}{newline}',
+              file=sys.stderr),       
+
+
+
+def main():
+    inheader = False
+    try:
+        opts, args = getopt.getopt(
+            sys.argv[1:], 'hqns:o:e:d:',
+            ['help', 'quiet', 'dry-run', 'status=', 'output=', 'encoding=',
+             'date-skew='])
+    except getopt.error as msg:
+        usage(1, msg)
+
+    quiet = False
+    output = True
+    status = -1
+    oname = '-'
+    encoding = 'utf-8'
+    date_skew = 24 * 60 * 60
+
+    for opt, arg in opts:
+        if opt in ('-h', '--help'):
+            usage(0)
+        elif opt in ('-q', '--quiet'):
+            quiet = True
+        elif opt in ('-n', '--dry-run'):
+            output = False
+        elif opt in ('-s', '--status'):
+            try:
+                status = int(arg)
+            except ValueError:
+                usage(1, 'Bad status number: {}'.format(arg))
+        elif opt in ('-e', '--encoding'):
+            encoding = arg
+        elif opt in ('-o', '--output'):
+            oname = arg
+        elif opt in ('-d', '--date-skew'):
+            try:
+                date_skew = int(arg) * 60 * 60
+            except ValueError:
+                usage(1, 'Bad date-skew number: {}'.format(arg))
+
+    if len(args) == 0:
+        usage(1, 'Input file required')
+    if len(args) > 1:
+        usage(1, 'Only one input file allowed')
+    input = open(args[0], encoding=encoding)
+    if oname == '-':
+        ofile = sys.stdout
+    else:
+        ofile = open(oname, 'w', encoding=encoding)
+
+    lineno = 0
+    statuscnt = 0
+    messages = 0
+    prevline = None
+    while True:
+        lineno += 1
+        line = input.readline()
+        if not line:
+            break
+        if line.startswith('From '):
+            if cre.match(line):
+                # This is a real Unix-From line.  But it could be a message
+                # /about/ Unix-From lines, so as a second order test, make
+                # sure there's at least one RFC 2822 header following
+                nextline = input.readline()
+                lineno += 1
+                if not nextline:
+                    # It was the last line of the mbox, so it couldn't have
+                    # been a Unix-From
+                    escape_line(line, lineno, quiet, output, ofile)
+                    break
+                fieldname = nextline.split(':', 1)
+                if len(fieldname) < 2 or not fre.match(nextline):
+                    # The following line was not a header, so this wasn't a
+                    # valid Unix-From
+                    escape_line(line, lineno, quiet, output, ofile)
+                    if output:
+                        ofile.write(nextline)
+                else:
+                    # It's a valid Unix-From line
+                    messages += 1
+                    lastfrom = line
+                    inheader = True
+                    if output:
+                        # Before we spit out the From_ line, make sure the
+                        # previous line was blank.
+                        if prevline is not None and prevline != '\n':
+                            ofile.write('\n')
+                        ofile.write(line)
+                        ofile.write(nextline)
+                    if status > 0 and (messages % status) == 0:
+                        sys.stderr.write('#')
+                        statuscnt += 1
+                        if statuscnt > 50:
+                            print(file=sys.stderr)
+                            statuscnt = 0
+            else:
+                # This is a bogus Unix-From line
+                escape_line(line, lineno, quiet, output, ofile)
+        else:
+            # Any old line
+            if inheader and line.lower().startswith('date:'):
+                check_date(line, lastfrom, lineno, date_skew, quiet, output)
+            elif output:
+                ofile.write(line)
+            if not line.strip():
+                inheader = False
+        prevline = line
+    print('{} messages found'.format(messages), file=sys.stderr)
+
+
+
+if __name__ == '__main__':
+    main()
