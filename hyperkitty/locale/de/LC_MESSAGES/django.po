@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Hyperkitty\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-04 20:47+0000\n"
-"PO-Revision-Date: 2023-02-07 08:35+0000\n"
+"PO-Revision-Date: 2023-02-08 06:24+0000\n"
 "Last-Translator: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/de/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: forms.py:53
 msgid "Add a tag..."
-msgstr "Ein Tag hinzufügen"
+msgstr "Ein Tag hinzufügen..."
 
 #: forms.py:55
 msgid "Add"
@@ -496,10 +496,6 @@ msgid "Delete Mailing List From HyperKitty"
 msgstr "Mailingliste in HyperKitty löschen"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
@@ -602,15 +598,7 @@ msgid "Sign in to reply online"
 msgstr "Anmelden, um online zu antworten"
 
 #: templates/hyperkitty/messages/message.html:105
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments_count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments_count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments.count)s attachment\n"
@@ -621,11 +609,11 @@ msgid_plural ""
 "                "
 msgstr[0] ""
 "\n"
-"                %(email.attachments_count)s Anhang\n"
+"                %(email.attachments.count)s Anhang\n"
 "                "
 msgstr[1] ""
 "\n"
-"                %(email.attachments_count)s Anhänge\n"
+"                %(email.attachments.count)s Anhänge\n"
 "                "
 
 #: templates/hyperkitty/messages/message.html:131
@@ -753,9 +741,8 @@ msgid "Favorites"
 msgstr "Favoriten"
 
 #: templates/hyperkitty/overview.html:170
-#, fuzzy
 msgid "Posted"
-msgstr "verschickt"
+msgstr "Versendet"
 
 #: templates/hyperkitty/overview.html:179
 msgid "Recently active discussions"
@@ -890,9 +877,8 @@ msgid "Show replies by date"
 msgstr "Zeige Antworten nach Datum"
 
 #: templates/hyperkitty/thread.html:113
-#, fuzzy
 msgid "Visit here for a non-javascript version of this page."
-msgstr "Besuchen Sie hier eine Version dieser Seite ohne javascript."
+msgstr "Besuchen Sie hier eine Version dieser Seite ohne Javascript."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
