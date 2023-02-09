@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-04 20:47+0000\n"
-"PO-Revision-Date: 2023-02-08 18:37+0000\n"
+"PO-Revision-Date: 2023-02-09 19:36+0000\n"
 "Last-Translator: Ecron <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/ca/>\n"
@@ -874,9 +874,8 @@ msgid "Show replies by date"
 msgstr "Mostra respostes per data"
 
 #: templates/hyperkitty/thread.html:113
-#, fuzzy
 msgid "Visit here for a non-javascript version of this page."
-msgstr "Visiteu aquí una versió no javascript d'aquesta pàgina."
+msgstr "Entreu aquí per a una versió d'aquesta pàgina sense Javascript."
 
 #: templates/hyperkitty/thread_list.html:70
 msgid "Sorry no email threads could be found"
@@ -899,10 +898,8 @@ msgid "Age (days ago)"
 msgstr "Edat (dies enrere)"
 
 #: templates/hyperkitty/threads/right_col.html:18
-#, fuzzy
-#| msgid "Last activity"
 msgid "Last active (days ago)"
-msgstr "Última activitat"
+msgstr "Última activitat (quants dies fa)"
 
 #: templates/hyperkitty/threads/right_col.html:40
 #, python-format
@@ -910,10 +907,9 @@ msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s comentaris"
 
 #: templates/hyperkitty/threads/right_col.html:44
-#, fuzzy, python-format
-#| msgid "%(thread.participants_count)s participants"
+#, python-format
 msgid "%(participants_count)s participants"
-msgstr "%(thread.participants_count)s participants"
+msgstr "%(participants_count)s participants"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
@@ -1199,10 +1195,8 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "S'han suprimit %(count)s missatges correctament."
 
 #: views/mlist.py:88
-#, fuzzy
-#| msgid "Delete MailingList"
 msgid "for this MailingList"
-msgstr "Suprimeix la llista de correu"
+msgstr "per a aquesta llista de correu"
 
 #: views/mlist.py:100
 msgid "for this month"
