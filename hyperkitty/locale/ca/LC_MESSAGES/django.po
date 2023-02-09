@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-04 20:47+0000\n"
-"PO-Revision-Date: 2023-01-31 18:47+0000\n"
-"Last-Translator: Quim Rebull <quim@eccit.com>\n"
+"PO-Revision-Date: 2023-02-08 18:37+0000\n"
+"Last-Translator: Ecron <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/ca/>\n"
 "Language: ca\n"
@@ -492,16 +492,12 @@ msgid "Delete Mailing List From HyperKitty"
 msgstr "Suprimeix la llista de correu de HyperKitty"
 
 #: templates/hyperkitty/list_delete.html:26
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
 msgstr ""
-"s'eliminarà d'HyperKitty juntament amb tots els fils i missatges. No se "
-"suprimirà de Mailman Core. Vols continuar?"
+"se suprimirà d'HyperKitty juntament amb tots els fils i missatges. No se "
+"suprimirà de Mailman Core. Voleu continuar?"
 
 #: templates/hyperkitty/list_delete.html:33
 #: templates/hyperkitty/message_delete.html:44
