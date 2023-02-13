@@ -20,18 +20,3 @@ table.user-data {
         border-top: 0;
     }
 }
-
-
-/*
-// for tiny viewports (<=380px), adjust table column widths
-@media (max-width: $screen-tn-max) {
-    .user-profile table.user-data {
-        .ellipsis-overflow {
-            max-width: 150px;
-        }
-        select {
-            width: 150px;
-        }
-    }
-}
-*/

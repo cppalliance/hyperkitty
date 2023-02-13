@@ -14,15 +14,18 @@
 <div class="all-lists">
 
 <div class="row header">
-    {# This version of the sort-by options shows up on larger screens; hidden-xs and hidden-tn are Bootstrap options to hide it at tiny or small sizes. #}
-    <nav class="sort-mode right d-none d-md-flex mr-5 align-items-end">
+    <h1 class="col col-sm-8">
+        {% trans 'Available lists' %}
+    </h1>
+    {# This version of the sort-by options shows up on larger screens. #}
+    <nav class="col d-none d-md-flex flex-row-reverse sort-mode">
         <ul class="list-unstyled list-inline">
             <li class="list-inline-item">
                {% if sort_mode == "popular" %}
                <span class="active">{% trans 'Most popular' %}</span>
                {% else %}
                 <a href="{% url 'hk_root' %}?{% add_to_query_string "sort" "popular" %}"
-                   data-toggle="tooltip" data-placement="bottom"
+                   data-bs-toggle="tooltip" data-placement="bottom"
                    title="{% trans 'Sort by number of recent participants' %}"
                    >{% trans 'Most popular' %}</a>
                {% endif %}
@@ -32,7 +35,7 @@
                <span class="active">{% trans 'Most active' %}</span>
                {% else %}
                <a href="{% url 'hk_root' %}?{% add_to_query_string "sort" "active" %}"
-                  data-toggle="tooltip" data-placement="bottom"
+                  data-bs-toggle="tooltip" data-placement="bottom"
                   title="{% trans 'Sort by number of recent discussions' %}"
                   >{% trans 'Most active' %}</a>
                {% endif %}
@@ -42,7 +45,7 @@
                <span class="active">{% trans 'By name' %}</span>
                {% else %}
                <a href="{% url 'hk_root' %}?{% add_to_query_string "sort" "name" %}"
-                  data-toggle="tooltip" data-placement="bottom"
+                  data-bs-toggle="tooltip" data-placement="bottom"
                   title="{% trans 'Sort alphabetically' %}"
                   >{% trans 'By name' %}</a>
                {% endif %}
@@ -52,19 +55,16 @@
                <span class="active">{% trans 'Newest' %}</span>
                {% else %}
                 <a href="{% url 'hk_root' %}?{% add_to_query_string "sort" "creation" %}"
-                   data-toggle="tooltip" data-placement="bottom"
+                   data-bs-toggle="tooltip" data-placement="bottom"
                    title="{% trans 'Sort by list creation date' %}"
                    >{% trans 'Newest' %}</a>
                {% endif %}
             </li>
         </ul>
     </nav>
-    <h1 class="col-12 col-sm-8">
-        {% trans 'Available lists' %}
-    </h1>
     {# This version of the sort-by options shows up on tablets/mobile phones. #}
     <div class="btn-group float-right col-5 col-sm-3 d-md-none">
-        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle pull-right" data-toggle="dropdown">
+        <button type="button" role="button" class="dropdown-toggle btn btn-sm btn-secondary pull-right" data-bs-toggle="dropdown" aria-haspopup="true">
             {% trans 'Sort by' %} <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
@@ -120,7 +120,7 @@
                     <td>
                         {% ifchanged mlist.name|first %}<a name="{{ mlist.name|first }}" />{% endifchanged %}
                         {% if mlist.is_new %}
-                        <span class="new badge badge-secondary">{% trans 'new' %}</span>
+                        <span class="new badge bg-secondary">{% trans 'new' %}</span>
                         {% endif %}
                          <a href="{% url 'hk_list_overview' mlist_fqdn=mlist.name %}"
                             class="list-name">
@@ -142,11 +142,11 @@
                         <div class="chart d-xs-none">
                             <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
                         </div>
-                            <span class="badge badge-secondary">
+                            <span class="badge bg-secondary">
                                 <i class="fa fa-user"></i>
                                 {{ mlist.recent_participants_count|default_if_none:"..." }}
                             </span>
-                            <span class="badge badge-secondary">
+                            <span class="badge bg-secondary">
                                 <i class="fa fa-comments"></i>
                                 {{ mlist.recent_threads_count|default_if_none:"..." }}
                             </span>
@@ -188,7 +188,7 @@
                     <td>
                         {% ifchanged mlist.name|first %}<a name="{{ mlist.name|first }}" />{% endifchanged %}
                         {% if mlist.is_new %}
-                        <span class="new badge badge-secondary">{% trans 'new' %}</span>
+                        <span class="new badge bg-secondary">{% trans 'new' %}</span>
                         {% endif %}
                          <a href="{% url 'hk_list_overview' mlist_fqdn=mlist.name %}"
                             class="list-name">
@@ -242,8 +242,6 @@
 </div> <!-- /row, for lists -->
 
 {% paginator all_lists %}
-
-<img class="logo" alt="HyperKitty" src="{% static 'hyperkitty/img/logo.png' %}" />
 
 </div> <!-- /all-lists, outer-wrapper -->
 

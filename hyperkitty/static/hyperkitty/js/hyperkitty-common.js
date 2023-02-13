@@ -64,7 +64,7 @@ function vote(elem) {
 
 
 function setup_vote() {
-    $("div.container").on("click", "a.vote", function(e) {
+    $("div.container-xxl").on("click", "a.vote", function(e) {
         e.preventDefault();
         vote(this);
     });
@@ -244,7 +244,7 @@ function ajax_chart(url, elements, props) {
 
 function setup_tooltips() {
     // Setup tooltips
-    $("body").tooltip({selector: '[data-toggle="tooltip"]'});
+    $("body").tooltip({selector: '[data-bs-toggle="tooltip"]'});
     // Setup disabled tooltips
     $("body")
         .tooltip({selector: "a.disabled"})
@@ -275,7 +275,7 @@ function setup_back_to_top_link(offset, duration) {
 }
 
 function setup_send_as() {
-    $("div.container").on("click", ".send-as-default", function(e) {
+    $("div.container-xxl").on("click", ".send-as-default", function(e) {
         e.preventDefault();
         var select = $(this).next();
         $(this).hide();

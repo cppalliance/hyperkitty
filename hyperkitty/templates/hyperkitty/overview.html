@@ -1,9 +1,8 @@
 {% extends "hyperkitty/base.html" %}
-
 {% load i18n %}
 {% load hk_generic %}
 {% load static %}
-
+{% load cache %}
 
 {% block head_title %}
 {{ mlist.display_name|default:mlist.name }} - {{ block.super }}
@@ -19,9 +18,8 @@
 
 <div class="overview col-tn-12 col-sm-12">
     <div class="row">
-    <div class="col-md-3">
-    <div class="col-12">
-        <section id="title">
+        <div class="row">
+        <section id="title" class="col-auto">
             <h2>
                 {% if mlist.display_name %}
                     {{ mlist.display_name }}
@@ -29,9 +27,82 @@
                     {{ mlist.name|until:"@" }}
                 {% endif %}
             </h2>
-            <p id="description">{{ mlist.description|default_if_none:"" }}</p>
+            {{ mlist.name }}
         </section> <!-- /title & description -->
+        <div class="discussions col-auto">
+            <ul class="nav nav-pills" role="tablist">
+              <li class="nav-item">
+                <a href="#most-recent" aria-controls="most-recent" role="tab" data-bs-toggle="pill" class="nav-link active" aria-selected="true">{% trans 'Recent' %}</a>
+              </li>
 
+              <li class="nav-item">
+                <a class="nav-link" href="#most-active" aria-controls="most-active" role="tab" data-bs-toggle="pill" aria-selected="false">{% trans 'Most Active' %}</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#most-popular" aria-controls="most-popular" role="tab" data-bs-toggle="pill" aria-selected="false">{% trans 'Most Popular' %}</a>
+              </li>
+
+              {% if user.is_authenticated %}
+
+              <li class="nav-item">
+                <a class="nav-link" href="#flagged" aria-controls="flagged" role="tab" data-bs-toggle="pill" aria-selected="false">{% trans 'Favorites' %}</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#posted-to" aria-controls="posted-to" role="tab" data-bs-toggle="pill" aria-selected="false">{% trans 'Posted' %}</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+
+            <div class="tab-content discussions pull-right col-12">
+                <div id="most-recent" role="tabpanel" class="tab-pane active">
+                    <h3>{% trans "Recently active discussions" %}</h3>
+                    <div data-load-from="{% url 'hk_list_overview_recent_threads' mlist.name %}">
+                        <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
+                    </div>
+                </div>
+
+                <div id="most-popular" role="tabpanel" class="tab-pane">
+                    <h3>{% trans "Most popular discussions" %}</h3>
+                    <div data-load-from="{% url 'hk_list_overview_pop_threads' mlist.name %}">
+                        <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
+                    </div>
+                </div>
+
+                <div id="most-active" role="tabpanel" class="tab-pane">
+                    <h3>{% trans "Most active discussions" %}</h3>
+                    <div data-load-from="{% url 'hk_list_overview_top_threads' mlist.name %}">
+                        <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
+                    </div>
+                </div>
+                {% if user.is_authenticated %}
+                <div id="flagged" role="tabpanel" class="tab-pane">
+                    <h3>{% trans "Discussions You've Flagged" %} ({{ flagged_threads|length }})
+                        {% if flagged_threads %}<i class="fa fa-caret-right"></i>{% endif %}
+                    </h3>
+                    <div data-load-from="{% url 'hk_list_overview_favorites' mlist.name %}">
+                        <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
+                    </div>
+                </div>
+                <div id="posted-to" role="tabpanel" class="tab-pane">
+                    <h3>{% trans "Discussions You've Posted to" %} ({{ threads_posted_to|length }})
+                        {% if threads_posted_to %}<i class="fa fa-caret-right"></i>{% endif %}
+                    </h3>
+                    <div data-load-from="{% url 'hk_list_overview_posted_to' mlist.name %}">
+                        <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
+                    </div>
+                </div>
+                {% endif %}
+            </div> <!-- /container, for thread lists -->
+
+            </div> <!-- /row, container for home, overview, & thread lists -->
+    <div class="col-md-3">
+        <p id="description">{{ mlist.description|default_if_none:"" }}</p>
+    <div class="col-12">
         <!-- Overview Page for small screens. -->
         <ul class="nav nav-tabs d-md-none">
             <li class="nav-item">
@@ -51,37 +122,41 @@
             </li>
             {% endif %}
         </ul>
-
+        <a href="{% url 'hk_archives_latest' mlist_fqdn=mlist.name %}" class="btn btn-primary mb-2">{% trans "All Threads" %}</a>
+        {% if posting_enabled %}
+        <br/>
+        <a href="{% url "hk_message_new" mlist_fqdn=mlist.name %}"
+            class="btn btn-success order-4 mb-2 {% if not user.is_authenticated %} disabled" title="{% trans 'You must be logged-in to create a thread.' %}{% endif %}">
+            <i class="fa fa-plus"></i>
+            {% trans '<span class="d-none d-md-inline">Start a n</span><span class="d-md-none">N</span>ew thread' %}
+        </a>
+        {% endif %}
+        <br/>
+        {% if export_allowed %}
+            <button type="button" class="btn btn-outline-primary dropdown-toggle mb-2" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-download"></i>
+                {% trans "Download" %} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><a class="nav-link" href="{{ export.recent }}">{% trans "Past 30 days" %} <small>(mbox)</small></a></li>
+                <li class="dropdown-item"><a class="nav-link" href="{{ export.month }}">{% trans "This month" %} <small>(mbox)</small></a></li>
+                <li role="separator" class="dropdown-item divider"></li>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'hk_list_export_mbox' mlist_fqdn=mlist.name filename=mlist.name %}">
+                    {% trans "Entire archive" %} <small>(mbox)</small></a></li>
+            </ul>
+        {% endif %}
+        {% cache 86400 month_list_select LANGUAGE_CODE months_list mlist.name %}
+            {% include 'hyperkitty/fragments/month_list.html' with show_select='True' %}
+        {% endcache %}
+        {% if user.is_staff or user.is_superuser %}
         <!-- Overview page for large screens. -->
-        <div class="d-none d-md-block">
-            <a id="home"></a>
+        <div class="d-none d-md-block mt-2">
             <div class="list-actions">
-              {% if posting_enabled %}
-                <a href="{% url "hk_message_new" mlist_fqdn=mlist.name %}"
-                    class="btn btn-outline-primary {% if not user.is_authenticated %} disabled" title="{% trans 'You must be logged-in to create a thread.' %}{% endif %}">
-                    <i class="fa fa-plus"></i>
-                    {% trans '<span class="d-none d-md-inline">Start a n</span><span class="d-md-none">N</span>ew thread' %}
-                </a>
-              {% endif %}
-                </br>
-
-                {% include 'hyperkitty/fragments/month_list.html' with show_dropdown='True' pagename='overview' %}
-                </br>
-
-                {% if 'postorius' in INSTALLED_APPS %}
-                <!-- Subscription -->
-                <a class="btn btn-outline-primary" href="{% url 'list_summary' mlist.list_id %}">
-                    <i class="fa fa-inbox"></i>
-                    {% trans '<span class="d-none d-md-inline">Manage s</span><span class="d-md-none">S</span>ubscription' %}</a>
-                   </br>
-                {% endif %}
-                <a href="{% url 'hk_archives_latest' mlist_fqdn=mlist.name %}" class="btn btn-outline-primary">{% trans "All Threads" %}</a>
-                </br>
-                {% if user.is_staff or user.is_superuser %}
-                    <a href="{% url 'hk_list_delete' mlist_fqdn=mlist.name %}" class="btn btn-danger">{% trans "Delete Archive" %}</a>
-                {% endif %}
+                <a href="{% url 'hk_list_delete' mlist_fqdn=mlist.name %}" class="btn btn-danger">{% trans "Delete Archive" %}</a>
             </div>
         </div> <!-- /container, navbar & search (tiny/xs screens), new thread button -->
+        {% endif %}
     </div> <!-- /container, title/description + the elements above -->
 
     <div class="stats col-12">
@@ -142,80 +217,7 @@
     </div> <!-- /container, for list stats -->
     </div> <!-- col-3 -->
 
-    <div class="col-md-9">
 
-    <div class="discussions col-12">
-
-      <ul class="nav nav-pills" role="tablist">
-
-        <li class="nav-item">
-          <a href="#most-recent" aria-controls="most-recent" role="tab" data-toggle="pill" class="nav-link active" aria-selected="true">{% trans 'Recent' %}</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#most-active" aria-controls="most-active" role="tab" data-toggle="pill" aria-selected="false">{% trans 'Most Active' %}</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#most-popular" aria-controls="most-popular" role="tab" data-toggle="pill" aria-selected="false">{% trans 'Most Popular' %}</a>
-        </li>
-
-        {% if user.is_authenticated %}
-
-        <li class="nav-item">
-          <a class="nav-link" href="#flagged" aria-controls="flagged" role="tab" data-toggle="pill" aria-selected="false">{% trans 'Favorites' %}</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#posted-to" aria-controls="posted-to" role="tab" data-toggle="pill" aria-selected="false">{% trans 'Posted' %}</a>
-        </li>
-        {% endif %}
-      </ul>
-
-    </div>
-
-    <div class="tab-content discussions pull-right col-12">
-        <div id="most-recent" role="tabpanel" class="tab-pane active">
-            <h3>{% trans "Recently active discussions" %}</h3>
-            <div data-load-from="{% url 'hk_list_overview_recent_threads' mlist.name %}">
-                <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
-            </div>
-        </div>
-
-        <div id="most-popular" role="tabpanel" class="tab-pane">
-            <h3>{% trans "Most popular discussions" %}</h3>
-            <div data-load-from="{% url 'hk_list_overview_pop_threads' mlist.name %}">
-                <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
-            </div>
-        </div>
-
-        <div id="most-active" role="tabpanel" class="tab-pane">
-            <h3>{% trans "Most active discussions" %}</h3>
-            <div data-load-from="{% url 'hk_list_overview_top_threads' mlist.name %}">
-                <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
-            </div>
-        </div>
-        {% if user.is_authenticated %}
-        <div id="flagged" role="tabpanel" class="tab-pane">
-            <h3>{% trans "Discussions You've Flagged" %} ({{ flagged_threads|length }})
-                {% if flagged_threads %}<i class="fa fa-caret-right"></i>{% endif %}
-            </h3>
-            <div data-load-from="{% url 'hk_list_overview_favorites' mlist.name %}">
-                <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
-            </div>
-        </div>
-        <div id="posted-to" role="tabpanel" class="tab-pane">
-            <h3>{% trans "Discussions You've Posted to" %} ({{ threads_posted_to|length }})
-                {% if threads_posted_to %}<i class="fa fa-caret-right"></i>{% endif %}
-            </h3>
-            <div data-load-from="{% url 'hk_list_overview_posted_to' mlist.name %}">
-                <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
-            </div>
-        </div>
-        {% endif %}
-    </div> <!-- /container, for thread lists -->
-
-    </div> <!-- /row, container for home, overview, & thread lists -->
 </div>
     <a href="#" class="back-to-top d-none"><span class="glyphicon glyphicon-arrow-up"></span></a>
 

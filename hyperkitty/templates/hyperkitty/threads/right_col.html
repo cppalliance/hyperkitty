@@ -1,6 +1,7 @@
 {% load i18n %}
 {% load hk_generic %}
 {% load cache %}
+{% export_allowed as export_allowed %}
 
 <!-- right column -->
 <section id="thread-overview-info">
@@ -32,6 +33,12 @@
         <i class="fa fa-fw fa-inbox"></i>
         Manage subscription</a>
     </p>
+    {% endif %}
+
+    {% if export and export_allowed %}
+    <a href="{{ export.url }}" title="{{ export.title }}"
+          class="btn btn-outline-primary">
+        <i class="fa fa-download"></i> {{ export.message }}</a>
     {% endif %}
 
     <p class="thread-overview-details">

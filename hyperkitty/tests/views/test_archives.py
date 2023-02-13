@@ -395,21 +395,6 @@ class MonthsListTestCase(TestCase):
             "show" in panel["class"],
             "Panel %s has no 'show' class" % panel["id"])
 
-    def _assertActivePanel(self, html, panel_num):
-        """ Checks that the <panel_num> year is active.
-        The panel_num arg is the id in the years list. Example: panel_num=0
-        means the current year is active, panel_num=-1 means the year of the
-        first archived email is active.
-        """
-        soup = BeautifulSoup(html, "html.parser")
-        months_list = soup.find(id="months-list")
-        panels = months_list.find_all(class_="panel-collapse")
-        for panel in panels:
-            if panel == panels[panel_num]:
-                self._assertNotCollapsed(panel)
-            else:
-                self._assertCollapsed(panel)
-
     def _assertMonthsDropdown(self, html):
         """
         Checks that there is a months dropdown.
@@ -423,13 +408,3 @@ class MonthsListTestCase(TestCase):
             'hk_list_overview', args=["list@example.com"]))
         self.assertEqual(response.status_code, 200)
         self._assertMonthsDropdown(response.content)
-
-    def test_month_list(self):
-        response = self.client.get(reverse(
-                'hk_archives_with_month', kwargs={
-                    'mlist_fqdn': 'list@example.com',
-                    'year': '2011',
-                    'month': '1',
-                }))
-        self.assertEqual(response.status_code, 200)
-        self._assertActivePanel(response.content, -2)
