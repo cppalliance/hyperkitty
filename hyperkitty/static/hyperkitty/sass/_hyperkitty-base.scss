@@ -2,6 +2,7 @@
 $navbarHeight: 75px;
 $navbarHoverColor: #e7e7e7;
 
+
 html {
     // for compatibility with Bootstrap 3, we set the default size to be 14 (b4 makes it 16).
     font-size: 14px;
@@ -13,23 +14,30 @@ body {
     background-color: white;
 }
 
-// Sometimes jQuery UI overwrites the Bootstrap values
-a {
-    color: $linkColor;
+nav#navbar-main {
+    background-color: $navbarColor;
+
+    a.nav-link, div.navbar-header > a {
+        color: white;
+    }
+
 }
 
-.navbar nav {
-    background-color: $navbarColor;
-}
+
+
 
 footer {
-    background-color: $navbarColor;
+    background-color: #f8f8f8;
     border-top: 1px solid $navbarHoverColor;
     margin-top: 2em;
     padding: 1em;
     text-align: center;
     p {
         margin: 0;
+    }
+
+    img {
+        height: 25px;
     }
 }
 
@@ -53,11 +61,22 @@ nav {
         background: inherit;
     }
 
+    .search {
+        background-color: rgb(146, 194, 245);
+        text-align: center;
+        border: none;
+    }
+
     // postorius link
     .postorius {
         padding: 10px 20px;
         margin: 0;
         float: right;
+    }
+
+    .user-button {
+        background-color: inherit;
+        border: none;
     }
 }
 

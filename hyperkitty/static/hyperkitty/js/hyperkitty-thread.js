@@ -157,12 +157,12 @@ function setup_favorites() {
 
 function setup_emails_list() {
     // Attachements
-    $("div.container").tooltip({
+    $("div.container-xxl").tooltip({
             selector: ".email-info .attachments-list a",
             placement: "right"
     });
     // Quotes
-    $("div.container").on("click", 'div.email-body .quoted-switch a', function(e) {
+    $("div.container-xxl").on("click", 'div.email-body .quoted-switch a', function(e) {
             e.preventDefault();
             $(this).parent().next(".quoted-text").slideToggle('fast');
         });

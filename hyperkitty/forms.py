@@ -95,7 +95,7 @@ class ReplyForm(forms.Form):
         widget=forms.Textarea(attrs={'class': 'form-control'}))
     sender = forms.ChoiceField(
         label="", required=False,
-        widget=forms.Select(attrs={'class': 'form-control input-sm'}))
+        widget=forms.Select(attrs={'class': 'form-select input-sm'}))
     #  attachment = forms.FileField(required=False, widget=AttachmentFileInput)
 
 
@@ -105,7 +105,7 @@ class PostForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea)
     sender = forms.ChoiceField(
         label="", required=False,
-        widget=forms.Select(attrs={'class': 'form-control input-sm'}))
+        widget=forms.Select(attrs={'class': 'form-select input-sm'}))
     # attachment = forms.FileField(required=False, label="",
     #                              widget=AttachmentFileInput)
 

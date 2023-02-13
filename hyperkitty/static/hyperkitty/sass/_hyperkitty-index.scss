@@ -44,11 +44,6 @@ $headerNavPadding: 7px;
         }
     }
     nav.sort-mode {
-        padding-top: 0;
-        background-color: white;
-        position: absolute;
-        bottom: 0;
-        right: 0;
         ul {
             margin-bottom: 0;
             padding-bottom: $headerNavPadding;
@@ -246,6 +241,6 @@ $headerNavPadding: 7px;
 		//=== Logo
 
 		.all-lists .logo {
-				display: block;
-				margin: 50px auto 0 auto;
+			display: block;
+			margin: 10px auto 0 auto;
 		}

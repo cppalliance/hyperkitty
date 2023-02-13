@@ -317,7 +317,7 @@ def settings_value_equals(name, value):
     return getattr(settings, name, '') == value
 
 
-@register.simple_tag
+@register.simple_tag()
 def export_allowed():
     """Returns the HYPERKITTY_MBOX_EXPORT settings value. Defaults to True."""
     return getattr(settings, 'HYPERKITTY_MBOX_EXPORT', True)

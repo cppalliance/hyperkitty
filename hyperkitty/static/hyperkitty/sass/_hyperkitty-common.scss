@@ -113,10 +113,6 @@ h1 {
 //=== Gravatar ==/
 .gravatar {
     vertical-align: top;
-    img {
-				// TODO: Convert this to a circle instead.
-				// @include square(60px);
-    }
 }
 .gravatar-details {
     padding-left: 5px;
@@ -134,6 +130,9 @@ h1 {
 	width: 120px;
 	height: 120px;
 	background-color: $super-light-grey;
+}
+span.username {
+    vertical-align: middle;
 }
 
 //== font icons (fa-user, fa-comment, unread) ===/

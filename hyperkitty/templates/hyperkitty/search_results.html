@@ -12,8 +12,6 @@
 
 <div class="row">
 
-{% include 'hyperkitty/fragments/month_list.html' %}
-
     <div id="thread-list" class="search-results col-12 col-md-10">
 
         <div class="thread-list-header row">
@@ -51,7 +49,7 @@
                 {% if mlist %}<input type="hidden" name="mlist" value="{{ mlist.name }}" />{% endif %}
                 <!--<p>-->
                 <!--<span class="col-tn-3">Sort by:</span>-->
-                <select name="sort" id="sort-search" class="form-control">
+                <select name="sort" id="sort-search" class="form-select">
                     <option value="score"
                         {% if sort_mode == "score" %}selected{% endif %}
                         >{% trans "sort by score" %}</option>

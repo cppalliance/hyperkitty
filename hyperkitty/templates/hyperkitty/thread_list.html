@@ -6,7 +6,7 @@
 
 
 {% block head_title %}
-{{ list_title }} - {{ mlist.display_name|default:mlist.name }} - {{ block.super }}
+{{ list_title }} - {{ mlist.display_name|default:mlist.name }} - {{ block.super }
 {% endblock %}
 
 {% block head_feed %}
@@ -17,17 +17,9 @@
 
 <div class="row">
 
-
-{% get_current_language as LANGUAGE_CODE %}
-
-{# Cache the month list for 24hrs. #}
-{% cache 86400 month_list LANGUAGE_CODE months_list mlist.name %}
-    {% include 'hyperkitty/fragments/month_list.html' %}
-{% endcache %}
-
-    <div id="thread-list" class="col-sm-12 col-md-10">
+    <div id="thread-list">
         <div class="thread-list-header row">
-            <h1 class="col-12">
+            <h1 class="col-6">
                 <a href="{% url 'hk_list_overview' mlist_fqdn=mlist.name %}" class="list-name">
                     {% if mlist.display_name %}
                         {{ mlist.display_name }}
@@ -36,12 +28,26 @@
                     {% endif %}
                 </a>
                 <small class="d-none d-md-block">{{ list_title }}</small>
-                <div class="d-md-none">
-                  {% cache 86400 month_list_select LANGUAGE_CODE months_list mlist.name %}
-                     {% include 'hyperkitty/fragments/month_list.html' with show_select='True' %}
-                  {% endcache %}
-                </div>
             </h1>
+            <div class="col-6 d-flex flex-align-center flex-row-reverse">
+                <div class="order-3 me-2">
+                    <a href="{% url "hk_message_new" mlist_fqdn=mlist.name %}"
+                        class="btn btn-success  {% if not user.is_authenticated %} disabled" title="{% trans 'You must be logged-in to create a thread.' %}{% endif %}">
+                        <i class="fa fa-plus"></i>
+                    {% trans '<span class="d-none d-md-inline">Start a n</span><span class="d-md-none">N</span>ew thread' %}
+                    </a>
+                </div>
+                {% if export and export_allowed %}
+                <div>
+                <a href="{{ export.url }}" title="{{ export.title }}"
+                  class="btn btn-outline-primary ms-2"><i class="fa fa-download"></i>{{ export.message }}</a>
+                {% endif %}
+                </div>
+                {% cache 86400 month_list_select LANGUAGE_CODE months_list mlist.name %}
+                   {% include 'hyperkitty/fragments/month_list.html' with show_select='True' %}
+                {% endcache %}
+            </div>
+
             <span class="list-address col-12">{{ mlist.name }}</span>
             <ul class="list-unstyled list-stats thread-list-info col-6 col-sm-8">
                 {% if participants_count %}
@@ -55,13 +61,7 @@
                     {{ threads.paginator.count }} {% trans "discussions" %}
                 </li>
             </ul>
-            <div class="thread-new right col-6 col-sm-4" {% if not user.is_authenticated %}title="{% trans 'You must be logged-in to create a thread.' %}"{% endif %}>
-                <a href="{% url "hk_message_new" mlist_fqdn=mlist.name %}"
-                   class="btn btn-outline-primary{% if not user.is_authenticated %} disabled{% endif %}">
-                    <i class="fa fa-plus"></i>
-                    {% trans '<span class="d-none d-md-inline">Start a n</span><span class="d-md-none">N</span>ew thread' %}
-                </a>
-            </div>
+
         </div>
 
         {% for thread in threads %}
