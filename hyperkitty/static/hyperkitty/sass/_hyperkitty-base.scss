@@ -9,9 +9,12 @@ html {
 }
 
 body {
-    position: relative;
-    // padding-top: $navbarHeight;
     background-color: white;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
 }
 
 nav#navbar-main {
