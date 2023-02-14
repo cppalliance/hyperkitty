@@ -21,9 +21,9 @@
         </div>
     </div> <!-- /Stats re: dates -->
 
-    <p class="list-name">
-        <a href="{% url 'hk_list_overview' mlist_fqdn=mlist.name %}">
-            {{ mlist.name }}
+    <p>
+        <a href="{% url 'hk_list_overview' mlist_fqdn=mlist.name %}" class="btn btn-outline-primary btn-sm">
+            {% trans 'List overview' %}
         </a>
     </p>
 
