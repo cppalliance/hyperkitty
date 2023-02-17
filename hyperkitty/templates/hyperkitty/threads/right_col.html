@@ -101,7 +101,7 @@
     {% endif %}
     {% cache 86400 thread_participants thread.id %}
     <div id="participants">
-        <span id="participants_title">{% trans "participants" %}</span> ({{ thread.participants_count }})
+        <h3 id="participants_title">{% trans "participants" %} ({{ thread.participants_count }})</h3>
         <ul class="list-unstyled">
             {% for participant in thread.participants|sort_by_name %}
             <li class="row">
