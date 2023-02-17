@@ -63,11 +63,15 @@ nav {
     .input-group-addon {
         background: inherit;
     }
-
+    $searchColor: rgb(146, 194, 245);
     .search {
-        background-color: rgb(146, 194, 245);
+        background-color: $searchColor;
         text-align: center;
         border: none;
+    }
+
+    .search-button {
+        background-color: $searchColor;
     }
 
     // postorius link
