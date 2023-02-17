@@ -1,7 +1,7 @@
 // Overview page (List overview)
 
 .overview {
-    h3 {
+    h2 {
         @extend .small-caps;
         line-height: 28px;
         margin-bottom: 0.5em;
@@ -32,7 +32,7 @@
 }
 
 .overview section#title {
-    h2 {
+    h1 {
         margin-top: 5px;
         margin-bottom: 0px;
     }
@@ -43,7 +43,7 @@
 }
 
 .overview .list-group {
-    h5 {
+    h3 {
         font-size: 1em;
     }
     .list-group-item-heading {
