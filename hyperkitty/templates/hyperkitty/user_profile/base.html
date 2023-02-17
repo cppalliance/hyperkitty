@@ -11,25 +11,25 @@
 
     <h1>{% trans "User posting activity" %} <small>{% trans "for" %} {{ user }}</small></h1>
 
-    <ul class="nav nav-tabs">
-        <li role="presentation" class="nav-item">
+    <ul class="nav nav-tabs" role="navigation">
+        <li lass="nav-item">
           <a href="{% url "hk_user_profile" %}" class="nav-link {% if subpage == "profile" %}active{% endif %}">
             {% trans "Posting activity" %}
           </a>
-      	</li>
-        <li role="presentation"  class="nav-item">
+        </li>
+        <li class="nav-item">
           <a href="{% url "hk_user_favorites" %}" class="nav-link {% if subpage == "favorites" %}active{% endif %}">
             {% trans "Favorites" %}</a>
         </li>
-        <li role="presentation"  class="nav-item">
+        <li class="nav-item">
          <a href="{% url "hk_user_last_views" %}" class="nav-link {% if subpage == "last_views" %}active {% endif %}">
            {% trans "Threads you have read" %}</a>
         </li>
-        <li role="presentation"  class="nav-item">
+        <li class="nav-item">
           <a href="{% url "hk_user_votes" %}" class="nav-link {% if subpage == "votes" %}active{% endif %}">
             {% trans "Votes" %}</a>
         </li>
-        <li role="presentation"  class="nav-item">
+        <li class="nav-item">
           <a href="{% url "hk_user_subscriptions" %}"  class="nav-link {% if subpage == "subscriptions" %}active{% endif %}">
             {% trans "Subscriptions" %}</a>
         </li>
