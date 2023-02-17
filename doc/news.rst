@@ -17,8 +17,15 @@ News / Changelog
  - Added a new contrib/cleanarch3 script it check/fix mboxes for unescaped
    "From " lines and bad Date: headers.
  - Upgrade to Bootstrap 5 and the UI redesign. (See !498)
+
+A11y
+----
+
  - Use nav pills in the user profile page to be consistent with rest of
    the pages and update the aria-role of the navigation. (See #464)
+ - Re-add the search button so it is more accessible and users don't have
+   to guess that you need to press enter to search. Also, add the aria
+   label for the search button. (Fixes #362)
 
 .. _news-1.3.7:
 
