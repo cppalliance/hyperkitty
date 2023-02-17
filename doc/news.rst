@@ -26,6 +26,8 @@ A11y
  - Re-add the search button so it is more accessible and users don't have
    to guess that you need to press enter to search. Also, add the aria
    label for the search button. (Fixes #362)
+ - Use better heading hierarchy and update styling to make sure the look
+   does not change. (Fixes #373)
 
 .. _news-1.3.7:
 

@@ -20,13 +20,13 @@
     <div class="row">
         <div class="row">
         <section id="title" class="col-auto">
-            <h2>
+            <h1>
                 {% if mlist.display_name %}
                     {{ mlist.display_name }}
                 {% else %}
                     {{ mlist.name|until:"@" }}
                 {% endif %}
-            </h2>
+            </h1>
             {{ mlist.name }}
         </section> <!-- /title & description -->
         <div class="discussions col-auto">
@@ -60,38 +60,38 @@
 
             <div class="tab-content discussions pull-right col-12">
                 <div id="most-recent" role="tabpanel" class="tab-pane active">
-                    <h3>{% trans "Recently active discussions" %}</h3>
+                    <h2>{% trans "Recently active discussions" %}</h2>
                     <div data-load-from="{% url 'hk_list_overview_recent_threads' mlist.name %}">
                         <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
                     </div>
                 </div>
 
                 <div id="most-popular" role="tabpanel" class="tab-pane">
-                    <h3>{% trans "Most popular discussions" %}</h3>
+                    <h2>{% trans "Most popular discussions" %}</h2>
                     <div data-load-from="{% url 'hk_list_overview_pop_threads' mlist.name %}">
                         <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
                     </div>
                 </div>
 
                 <div id="most-active" role="tabpanel" class="tab-pane">
-                    <h3>{% trans "Most active discussions" %}</h3>
+                    <h2>{% trans "Most active discussions" %}</h2>
                     <div data-load-from="{% url 'hk_list_overview_top_threads' mlist.name %}">
                         <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
                     </div>
                 </div>
                 {% if user.is_authenticated %}
                 <div id="flagged" role="tabpanel" class="tab-pane">
-                    <h3>{% trans "Discussions You've Flagged" %} ({{ flagged_threads|length }})
+                    <h2>{% trans "Discussions You've Flagged" %} ({{ flagged_threads|length }})
                         {% if flagged_threads %}<i class="fa fa-caret-right"></i>{% endif %}
-                    </h3>
+                    </h2>
                     <div data-load-from="{% url 'hk_list_overview_favorites' mlist.name %}">
                         <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
                     </div>
                 </div>
                 <div id="posted-to" role="tabpanel" class="tab-pane">
-                    <h3>{% trans "Discussions You've Posted to" %} ({{ threads_posted_to|length }})
+                    <h2>{% trans "Discussions You've Posted to" %} ({{ threads_posted_to|length }})
                         {% if threads_posted_to %}<i class="fa fa-caret-right"></i>{% endif %}
-                    </h3>
+                    </h2>
                     <div data-load-from="{% url 'hk_list_overview_posted_to' mlist.name %}">
                         <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
                     </div>
@@ -163,7 +163,7 @@
         <div class="anchor-link">
             <a id="stats"></a>
         </div>
-        <h3>{% trans "Activity Summary" %}</h3>
+        <h2>{% trans "Activity Summary" %}</h2>
         <div class="chart">
             <p class="caption">{% trans "Post volume over the past <strong>30</strong> days." %}</p>
             <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
@@ -181,7 +181,7 @@
 
         <div class="row">
         <section id="most-active-poster" class="col-12">
-            <h3>{% trans "Most active posters" %}</h3>
+            <h2>{% trans "Most active posters" %}</h2>
             <div data-load-from="{% url 'hk_list_overview_top_posters' mlist.name %}">
                 <img alt="{% trans 'Loading...' %}" class="ajaxloader" src="{% static 'hyperkitty/img/ajax-loader.gif' %}" />
             </div>
@@ -190,7 +190,7 @@
 
         {% if top_author %}
         <section id="discussion-maker" class="col-12 col-sm-6 col-md-12">
-            <h3>{% trans "Prominent posters" %}</h3>
+            <h2>{% trans "Prominent posters" %}</h2>
             {% for author in top_author %}
             <div class="maker row">
                 <div class="inline-block maker-id col-tn-1">
