@@ -28,6 +28,8 @@ A11y
    label for the search button. (Fixes #362)
  - Use better heading hierarchy and update styling to make sure the look
    does not change. (Fixes #373)
+ - Add more headings to the thread page for easier navigation using assistive
+   technologies. (Fixes #370)
 
 .. _news-1.3.7:
 
