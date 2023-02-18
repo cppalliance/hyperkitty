@@ -18,9 +18,9 @@
                            href="{% url 'hk_thread' threadid=thread.thread_id mlist_fqdn=mlist.name %}"
                            class="thread-title">
                             {% if thread.favorite %}
-                                <i class="fa fa-star saved" title="{% trans 'Favorite' %}"></i>
+                                <i class="fa fa-star saved" title="{% trans 'Favorite' %}" aria-label="Favorite thread"></i>
                             {% else %}
-                                <i class="fa fa-star-o notsaved" title="{% trans 'Favorite' %}"></i>
+                                <i class="fa fa-star-o notsaved" title="{% trans 'Favorite' %}" aria-label="Favorite thread"></i>
                             {% endif %}
                             {{ starting_email.subject|strip_subject:mlist }}
                         </a>
@@ -49,12 +49,12 @@
                   <div class="col-2">
                         <div class="list-stats pull-right">
                           <span class="badge bg-secondary">
-                            <i class="fa fa-user"></i>
+                            <i class="fa fa-user" aria-label="participants"></i>
                             {{ thread.participants_count }}
                             <!-- {% trans "participants" %} -->
                           </span>
                           <span class="badge bg-secondary">
-                            <i class="fa fa-comment"></i>
+                            <i class="fa fa-comment" aria-label="replies"></i>
                             {{ thread|num_comments }}
                             <!-- {% trans "comments" %} -->
                           </span>
