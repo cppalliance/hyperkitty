@@ -16,16 +16,16 @@
                 {{ thread.date_active|date:"D M j, g:i a" }}
                 <ul class="list-unstyled pull-right list-stats">
                     <li>
-                        <i class="fa fa-user"></i>
+                        <i class="fa fa-user" aria-label="participants"></i>
                         {{ thread.participants_count }}
                     </li>
                     <li>
-                        <i class="fa fa-comment"></i>
+                        <i class="fa fa-comment" aria-label="replies"></i>
                         {{ thread|num_comments }}
                     </li>
                     <li class="hidden-tn">
                         {% with votes=thread.get_votes %}
-                        <i class="icomoon likestatus {{ votes.status }}"></i>
+                        <i class="icomoon likestatus {{ votes.status }}" aria-label="likes and dislikes"></i>
                         <span class="likestatus">+{{ votes.likes }}/-{{ votes.dislikes }}</span>
                         {% endwith %}
                     </li>
