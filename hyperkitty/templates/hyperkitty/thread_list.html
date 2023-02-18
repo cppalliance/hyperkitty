@@ -32,7 +32,8 @@
             <div class="col-6 d-flex flex-align-center flex-row-reverse">
                 <div class="order-3 me-2">
                     <a href="{% url "hk_message_new" mlist_fqdn=mlist.name %}"
-                        class="btn btn-success  {% if not user.is_authenticated %} disabled" title="{% trans 'You must be logged-in to create a thread.' %}{% endif %}">
+                        class="btn btn-success  {% if not user.is_authenticated %} disabled" title="{% trans 'You must be logged-in to create a thread.' %}{% endif %}"
+                        aria-label="Start new thread">
                         <i class="fa fa-plus"></i>
                     {% trans '<span class="d-none d-md-inline">Start a n</span><span class="d-md-none">N</span>ew thread' %}
                     </a>
@@ -40,7 +41,7 @@
                 {% if export and export_allowed %}
                 <div>
                 <a href="{{ export.url }}" title="{{ export.title }}"
-                  class="btn btn-outline-primary ms-2"><i class="fa fa-download"></i>{{ export.message }}</a>
+                  class="btn btn-outline-primary ms-2"><i class="fa fa-download" aria-label="Download Messages"></i>{{ export.message }}</a>
                 {% endif %}
                 </div>
                 {% cache 86400 month_list_select LANGUAGE_CODE months_list mlist.name %}
@@ -52,12 +53,12 @@
             <ul class="list-unstyled list-stats thread-list-info col-6 col-sm-8">
                 {% if participants_count %}
                 <li>
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-user" aria-label="participants"></i>
                     {{ participants_count }} {% trans "participants" %}
                 </li>
                 {% endif %}
                 <li>
-                    <i class="fa fa-comment"></i>
+                    <i class="fa fa-comment" aria-label="replies"></i>
                     {{ threads.paginator.count }} {% trans "discussions" %}
                 </li>
             </ul>
