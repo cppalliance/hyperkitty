@@ -104,7 +104,13 @@
                     {% if mlist %}<input type="hidden" name="mlist" value="{{ mlist.name }}" />{% endif %}
                     <div class="input-group">
                     <input name="q" type="text" class="form-control rounded-4 search"
-                            placeholder="{% if mlist %}{% trans 'Search this list' %}{% else %}{% trans 'Search all lists' %}{% endif %}"
+                            {% if mlist %}
+                                placeholder="{% trans 'Search this list' %}"
+                                aria-label="Search this list"
+                            {% else %}
+                                placeholder="{% trans 'Search all lists' %}"
+                                aria-label="Search all lists"
+                            {% endif %}
                             {% if query %}value="{{ query }}"{% endif %}
                             />
                     <button class="btn search-button" aria-label="Search"><span class="fa fa-search"></span></button>

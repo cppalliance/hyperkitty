@@ -35,6 +35,7 @@ A11y
    currently selected one as active page. (Fixes #365)
  - Add ARIA labels to the like and dislike buttons. (Fixes #363)
  - Add ARIA labels to icons on overview page in thread summary. (Fixes #364)
+ - Add ARIA label to the search input in the top navigation bar. (Fixes #361)
 
 .. _news-1.3.7:
 
