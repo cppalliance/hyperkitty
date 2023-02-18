@@ -14,51 +14,67 @@
 <div class="all-lists">
 
 <div class="row header">
-    <h1 class="col col-sm-8">
+    <h1 class="col-md col-sm-8">
         {% trans 'Available lists' %}
     </h1>
     {# This version of the sort-by options shows up on larger screens. #}
     <nav class="col d-none d-md-flex flex-row-reverse sort-mode">
         <ul class="list-unstyled list-inline">
             <li class="list-inline-item">
-               {% if sort_mode == "popular" %}
-               <span class="active">{% trans 'Most popular' %}</span>
-               {% else %}
                 <a href="{% url 'hk_root' %}?{% add_to_query_string "sort" "popular" %}"
                    data-bs-toggle="tooltip" data-placement="bottom"
                    title="{% trans 'Sort by number of recent participants' %}"
-                   >{% trans 'Most popular' %}</a>
-               {% endif %}
+                   {% if sort_mode == "popular" %}
+                   aria-current="page"
+                   >
+                   <span class="active" >{% trans 'Most popular' %}</span>
+                   {% else %}
+                   >
+                   {% trans 'Most popular' %}
+                   {% endif %}
+                </a>
             </li>
             <li class="list-inline-item">
-               {% if sort_mode == "active" %}
-               <span class="active">{% trans 'Most active' %}</span>
-               {% else %}
                <a href="{% url 'hk_root' %}?{% add_to_query_string "sort" "active" %}"
                   data-bs-toggle="tooltip" data-placement="bottom"
                   title="{% trans 'Sort by number of recent discussions' %}"
-                  >{% trans 'Most active' %}</a>
+                 {% if sort_mode == "active" %}
+                   aria-current="page"
+                >
+                  <span class="active" aria-selected="true">{% trans 'Most active' %}</span>
+                {% else %}
+                >
+                  {% trans 'Most active' %}
                {% endif %}
+                </a>
             </li>
             <li class="list-inline-item">
-               {% if sort_mode == "name" %}
-               <span class="active">{% trans 'By name' %}</span>
-               {% else %}
                <a href="{% url 'hk_root' %}?{% add_to_query_string "sort" "name" %}"
                   data-bs-toggle="tooltip" data-placement="bottom"
                   title="{% trans 'Sort alphabetically' %}"
-                  >{% trans 'By name' %}</a>
+                  {% if sort_mode == "name" %}
+                  aria-current="page"
+                  >
+                    <span class="active" aria-selected="true">{% trans 'By name' %}</span>
+                  {% else %}
+                  >
+                    {% trans 'By name' %}
                {% endif %}
+                </a>
             </li>
             <li class="list-inline-item">
-               {% if sort_mode == "creation" %}
-               <span class="active">{% trans 'Newest' %}</span>
-               {% else %}
                 <a href="{% url 'hk_root' %}?{% add_to_query_string "sort" "creation" %}"
                    data-bs-toggle="tooltip" data-placement="bottom"
                    title="{% trans 'Sort by list creation date' %}"
-                   >{% trans 'Newest' %}</a>
-               {% endif %}
+                   {% if sort_mode == "creation" %}
+                   aria-current="page"
+                   >
+                      <span class="active" aria-selected="true">{% trans 'Newest' %}</span>
+                   {% else %}
+                   >
+                   {% trans 'Newest' %}
+                   {% endif %}
+                </a>
             </li>
         </ul>
     </nav>

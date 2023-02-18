@@ -30,6 +30,9 @@ A11y
    does not change. (Fixes #373)
  - Add more headings to the thread page for easier navigation using assistive
    technologies. (Fixes #370)
+ - Make the active sort-mode also clickable so that keyboard focus can land
+   on it and it can be announced. Also, add aria labels to announce the
+   currently selected one as active page. (Fixes #365)
 
 .. _news-1.3.7:
 
