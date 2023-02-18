@@ -18,7 +18,7 @@
         {% trans 'Available lists' %}
     </h1>
     {# This version of the sort-by options shows up on larger screens. #}
-    <nav class="col d-none d-md-flex flex-row-reverse sort-mode">
+    <nav class="col d-none d-md-flex flex-row-reverse sort-mode" aria-label="mailinglist sort mode">
         <ul class="list-unstyled list-inline">
             <li class="list-inline-item">
                 <a href="{% url 'hk_root' %}?{% add_to_query_string "sort" "popular" %}"
@@ -113,13 +113,15 @@
         <form method="get" action="">
             <input name="name" type="text" class="form-control" id="focusedInput"
                    placeholder="{% trans 'Find list' %}"
+                   aria-label="Find list"
+                   aria-autocomplete="list"
                    />
         </form>
     </div>
 </div> <!--/row, for switches & filter -->
 
 <!-- condensed table for tiny & xsmall screens -->
-<div class="row lists d-md-none">
+<section class="row lists d-md-none" aria-label="List of mailinglists">
     <div class="col-12">
         {% if all_lists %}
         <table class="lists table">
@@ -176,9 +178,9 @@
         <p>{% trans "No archived list yet." %}</p>
         {% endif %}
     </div>
-</div> <!-- /row, for lists -->
+</section> <!-- /row, for lists -->
 
-<div class="row lists d-none d-md-block">
+<section class="row lists d-none d-md-block" aria-label="List of mailinglists">
     <div class="col-sm-12">
         {% if all_lists %}
         <table class="lists table">
@@ -255,7 +257,7 @@
 
     </div> <!-- /container for table -->
 
-</div> <!-- /row, for lists -->
+</section> <!-- /row, for lists -->
 
 {% paginator all_lists %}
 
