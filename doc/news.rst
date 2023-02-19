@@ -36,6 +36,8 @@ A11y
  - Add ARIA labels to the like and dislike buttons. (Fixes #363)
  - Add ARIA labels to icons on overview page in thread summary. (Fixes #364)
  - Add ARIA label to the search input in the top navigation bar. (Fixes #361)
+ - Add sections and aria labels to input and navigation and aria-autocomplete
+   to search list form on index page. (Fixes #366)
 
 .. _news-1.3.7:
 
