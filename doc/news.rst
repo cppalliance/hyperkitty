@@ -40,6 +40,7 @@ A11y
    to search list form on index page. (Fixes #366)
  - Fix the tab ordering of the next/older threads in the thread page. (
    Fixes #369)
+ - Fix the toggle fixed-font button so it can receive keyboard focus.
 
 .. _news-1.3.7:
 

@@ -225,6 +225,9 @@ $oddEmailColor: rgb(238, 238, 238);
         top: 0;
         right: 0;
     }
+    .likeform-wrapper a {
+        text-decoration: none;
+    }
     .likestatus + span {
         padding-right: 1em;
     }
