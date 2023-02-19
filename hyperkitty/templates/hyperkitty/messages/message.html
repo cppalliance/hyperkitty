@@ -72,9 +72,11 @@
     <div class="email-info">
       <div class="likeform-wrapper right">
         <div class="messagelink pull-right">
-          <span class="fa fa-font cursor-pointer toggle-font"
+          <button class="toggle-font btn btn-sm"
                 title="{% trans "Display in fixed font" %}"
-                data-bs-toggle="tooltip" data-placement="bottom"></span>
+                data-bs-toggle="tooltip" data-placement="bottom">
+                <i class="fa fa-font"></i>
+          </button>
           <a href="{% url 'hk_message_index' mlist_fqdn=mlist.name message_id_hash=email.message_id_hash %}"
              title="{% trans "Permalink for this message" %}"
              data-bs-toggle="tooltip" data-placement="bottom"><i class="fa fa-link"></i></a>
