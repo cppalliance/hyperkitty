@@ -38,6 +38,8 @@ A11y
  - Add ARIA label to the search input in the top navigation bar. (Fixes #361)
  - Add sections and aria labels to input and navigation and aria-autocomplete
    to search list form on index page. (Fixes #366)
+ - Fix the tab ordering of the next/older threads in the thread page. (
+   Fixes #369)
 
 .. _news-1.3.7:
 
