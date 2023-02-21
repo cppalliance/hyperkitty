@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-04 20:47+0000\n"
-"PO-Revision-Date: 2022-12-13 17:47+0000\n"
+"PO-Revision-Date: 2023-02-21 16:36+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/id/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -138,8 +138,9 @@ msgstr "Daftar"
 #: templates/hyperkitty/api.html:27 templates/hyperkitty/api.html:33
 #: templates/hyperkitty/api.html:39 templates/hyperkitty/api.html:45
 #: templates/hyperkitty/api.html:51
+#, fuzzy
 msgid "Endpoint:"
-msgstr ""
+msgstr "Titik API URL:"
 
 #: templates/hyperkitty/api.html:29
 msgid ""
@@ -671,12 +672,16 @@ msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
 msgstr ""
+"<span class=\"d-none d-md-inline\">Buat u</span><span class=\"d-md-none\">U</"
+"span>tas baru"
 
 #: templates/hyperkitty/overview.html:75
 msgid ""
 "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
 "\">S</span>ubscription"
 msgstr ""
+"<span class=\"d-none d-md-inline\">Atur l</span><span class=\"d-md-none\""
+">L</span>angganan"
 
 #: templates/hyperkitty/overview.html:81
 msgid "Delete Archive"
@@ -688,7 +693,7 @@ msgstr "Ringkasan Aktivitas"
 
 #: templates/hyperkitty/overview.html:93
 msgid "Post volume over the past <strong>30</strong> days."
-msgstr "Volume pos pada <strong>30</strong> hari terakhir:"
+msgstr "Volume pos pada <strong>30</strong> hari terakhir."
 
 #: templates/hyperkitty/overview.html:98
 msgid "The following statistics are from"
@@ -907,7 +912,7 @@ msgstr "%(num_comments)s komentar"
 #: templates/hyperkitty/threads/right_col.html:44
 #, python-format
 msgid "%(participants_count)s participants"
-msgstr ""
+msgstr "%(participants_count)s partisipan"
 
 #: templates/hyperkitty/threads/right_col.html:49
 #, python-format
@@ -1239,7 +1244,7 @@ msgstr "Berhasil menghapus {}"
 #: views/search.py:115
 #, python-format
 msgid "Parsing error: %(error)s"
-msgstr ""
+msgstr "Galat penguraian: %(error)s"
 
 #: views/thread.py:192
 #, fuzzy
