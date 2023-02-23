@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-04 20:47+0000\n"
+"POT-Creation-Date: 2023-02-21 23:47+0000\n"
 "PO-Revision-Date: 2023-02-21 16:36+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -70,13 +70,13 @@ msgstr ""
 "peladen."
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
-#: templates/hyperkitty/reattach.html:25
+#: templates/hyperkitty/reattach.html:23
 #, fuzzy
 msgid "started"
 msgstr "dimulai"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
-#: templates/hyperkitty/reattach.html:25
+#: templates/hyperkitty/reattach.html:23
 msgid "last active:"
 msgstr "terakhir aktif:"
 
@@ -193,76 +193,76 @@ msgstr "Tanda"
 msgid "Using this address you will be able to retrieve the list of tags."
 msgstr "Menggunakan alamat ini, Anda dapat mendapatkan daftar tanda."
 
-#: templates/hyperkitty/base.html:57 templates/hyperkitty/base.html:112
+#: templates/hyperkitty/base.html:56 templates/hyperkitty/base.html:135
 msgid "Account"
 msgstr "Akun"
 
-#: templates/hyperkitty/base.html:62 templates/hyperkitty/base.html:117
+#: templates/hyperkitty/base.html:61 templates/hyperkitty/base.html:140
 msgid "Mailman settings"
 msgstr "Pengaturan Mailman"
 
-#: templates/hyperkitty/base.html:67 templates/hyperkitty/base.html:122
+#: templates/hyperkitty/base.html:66 templates/hyperkitty/base.html:145
 #: templates/hyperkitty/user_profile/base.html:17
 msgid "Posting activity"
 msgstr "Aktivitas pos"
 
-#: templates/hyperkitty/base.html:72 templates/hyperkitty/base.html:127
+#: templates/hyperkitty/base.html:71 templates/hyperkitty/base.html:150
 msgid "Logout"
 msgstr "Keluar"
 
-#: templates/hyperkitty/base.html:78 templates/hyperkitty/base.html:134
-msgid "Sign In"
-msgstr "Masuk"
-
-#: templates/hyperkitty/base.html:82 templates/hyperkitty/base.html:138
-msgid "Sign Up"
-msgstr "Daftar"
-
-#: templates/hyperkitty/base.html:91
-msgid "Search this list"
-msgstr "Cari milis ini"
-
-#: templates/hyperkitty/base.html:91
-msgid "Search all lists"
-msgstr "Cari semua milis"
-
-#: templates/hyperkitty/base.html:149
+#: templates/hyperkitty/base.html:84
 msgid "Manage this list"
 msgstr "Kelola milis ini"
 
-#: templates/hyperkitty/base.html:154
+#: templates/hyperkitty/base.html:89
 msgid "Manage lists"
 msgstr "Kelola milis"
 
-#: templates/hyperkitty/base.html:192
+#: templates/hyperkitty/base.html:96
+msgid "Sign In"
+msgstr "Masuk"
+
+#: templates/hyperkitty/base.html:100
+msgid "Sign Up"
+msgstr "Daftar"
+
+#: templates/hyperkitty/base.html:108
+msgid "Search this list"
+msgstr "Cari milis ini"
+
+#: templates/hyperkitty/base.html:111
+msgid "Search all lists"
+msgstr "Cari semua milis"
+
+#: templates/hyperkitty/base.html:196
 msgid "Keyboard Shortcuts"
 msgstr "Pintasan Papan Tik"
 
-#: templates/hyperkitty/base.html:195
+#: templates/hyperkitty/base.html:199
 msgid "Thread View"
 msgstr "Tampilan Utas"
 
-#: templates/hyperkitty/base.html:197
+#: templates/hyperkitty/base.html:201
 msgid "Next unread message"
 msgstr "Pesan berikutnya yang belum dibaca"
 
-#: templates/hyperkitty/base.html:198
+#: templates/hyperkitty/base.html:202
 msgid "Previous unread message"
 msgstr "Pesan sebelumnya yang belum dibaca"
 
-#: templates/hyperkitty/base.html:199
+#: templates/hyperkitty/base.html:203
 msgid "Jump to all threads"
 msgstr "Langsung ke semua utas"
 
-#: templates/hyperkitty/base.html:200
+#: templates/hyperkitty/base.html:204
 msgid "Jump to MailingList overview"
 msgstr "Langsung ke ikhtisar Milis"
 
-#: templates/hyperkitty/base.html:214
+#: templates/hyperkitty/base.html:219
 msgid "Powered by"
 msgstr "Ditenagai oleh"
 
-#: templates/hyperkitty/base.html:214
+#: templates/hyperkitty/base.html:219
 msgid "version"
 msgstr "versi"
 
@@ -300,11 +300,11 @@ msgstr "Anda tidak menyukainya (batal)"
 msgid "You must be logged-in to vote."
 msgstr ""
 
-#: templates/hyperkitty/fragments/month_list.html:6
+#: templates/hyperkitty/fragments/month_list.html:7
 msgid "Threads by"
 msgstr "Utas oleh"
 
-#: templates/hyperkitty/fragments/month_list.html:6
+#: templates/hyperkitty/fragments/month_list.html:7
 msgid " month"
 msgstr " bulan"
 
@@ -314,7 +314,7 @@ msgstr "Pesan baru di utas ini"
 
 #: templates/hyperkitty/fragments/overview_threads.html:36
 #: templates/hyperkitty/fragments/thread_left_nav.html:19
-#: templates/hyperkitty/overview.html:78
+#: templates/hyperkitty/overview.html:125
 msgid "All Threads"
 msgstr "Semua Utas"
 
@@ -350,113 +350,116 @@ msgstr ""
 "berlangganan ke milis ini."
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:12
+#: templates/hyperkitty/threads/right_col.html:26
 msgid "List overview"
 msgstr "Tinjauan milis"
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
+#: templates/hyperkitty/fragments/thread_left_nav.html:29
+#: templates/hyperkitty/overview.html:139 views/message.py:74
 #: views/mlist.py:114 views/thread.py:191
 msgid "Download"
 msgstr "Unduh"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:32
+#: templates/hyperkitty/overview.html:142
 msgid "Past 30 days"
 msgstr "30 hari terakhir"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:33
+#: templates/hyperkitty/overview.html:143
 msgid "This month"
 msgstr "Bulan ini"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:36
+#: templates/hyperkitty/overview.html:146
 msgid "Entire archive"
 msgstr "Seluruh arsip"
 
-#: templates/hyperkitty/index.html:9 templates/hyperkitty/index.html:63
+#: templates/hyperkitty/index.html:9 templates/hyperkitty/index.html:18
 msgid "Available lists"
 msgstr "Milis yang tersedia"
-
-#: templates/hyperkitty/index.html:22 templates/hyperkitty/index.html:27
-#: templates/hyperkitty/index.html:72
-msgid "Most popular"
-msgstr "Paling populer"
 
 #: templates/hyperkitty/index.html:26
 msgid "Sort by number of recent participants"
 msgstr "Urut berdasarkan jumlah partisipan baru-baru ini"
 
-#: templates/hyperkitty/index.html:32 templates/hyperkitty/index.html:37
-#: templates/hyperkitty/index.html:75
-msgid "Most active"
-msgstr "Paling aktif"
+#: templates/hyperkitty/index.html:30 templates/hyperkitty/index.html:33
+#: templates/hyperkitty/index.html:88
+msgid "Most popular"
+msgstr "Paling populer"
 
-#: templates/hyperkitty/index.html:36
+#: templates/hyperkitty/index.html:40
 msgid "Sort by number of recent discussions"
 msgstr "Urut berdasarkan jumlah diskusi baru-baru ini"
 
-#: templates/hyperkitty/index.html:42 templates/hyperkitty/index.html:47
-#: templates/hyperkitty/index.html:78
-msgid "By name"
-msgstr "Berdasarkan nama"
+#: templates/hyperkitty/index.html:44 templates/hyperkitty/index.html:47
+#: templates/hyperkitty/index.html:91
+msgid "Most active"
+msgstr "Paling aktif"
 
-#: templates/hyperkitty/index.html:46
+#: templates/hyperkitty/index.html:54
 msgid "Sort alphabetically"
 msgstr "Urut secara alfabet"
 
-#: templates/hyperkitty/index.html:52 templates/hyperkitty/index.html:57
-#: templates/hyperkitty/index.html:81
-msgid "Newest"
-msgstr "Terbaru"
+#: templates/hyperkitty/index.html:58 templates/hyperkitty/index.html:61
+#: templates/hyperkitty/index.html:94
+msgid "By name"
+msgstr "Berdasarkan nama"
 
-#: templates/hyperkitty/index.html:56
+#: templates/hyperkitty/index.html:68
 msgid "Sort by list creation date"
 msgstr "Urut berdasarkan tanggal pembuatan milis"
 
-#: templates/hyperkitty/index.html:68
+#: templates/hyperkitty/index.html:72 templates/hyperkitty/index.html:75
+#: templates/hyperkitty/index.html:97
+msgid "Newest"
+msgstr "Terbaru"
+
+#: templates/hyperkitty/index.html:84
 msgid "Sort by"
 msgstr "Urut berdasarkan"
 
-#: templates/hyperkitty/index.html:91
+#: templates/hyperkitty/index.html:107
 msgid "Hide inactive"
 msgstr "Sembunyikan yang tidak aktif"
 
-#: templates/hyperkitty/index.html:92
+#: templates/hyperkitty/index.html:108
 msgid "Hide private"
 msgstr "Sembunyikan yang privat"
 
-#: templates/hyperkitty/index.html:99
+#: templates/hyperkitty/index.html:115
 msgid "Find list"
 msgstr "Cari milis"
 
-#: templates/hyperkitty/index.html:123 templates/hyperkitty/index.html:191
+#: templates/hyperkitty/index.html:141 templates/hyperkitty/index.html:209
 #: templates/hyperkitty/user_profile/last_views.html:34
 #: templates/hyperkitty/user_profile/last_views.html:73
 msgid "new"
 msgstr "baru"
 
-#: templates/hyperkitty/index.html:135 templates/hyperkitty/index.html:202
+#: templates/hyperkitty/index.html:153 templates/hyperkitty/index.html:220
 msgid "private"
 msgstr "privat"
 
-#: templates/hyperkitty/index.html:137 templates/hyperkitty/index.html:204
+#: templates/hyperkitty/index.html:155 templates/hyperkitty/index.html:222
 msgid "inactive"
 msgstr "tidak aktif"
 
-#: templates/hyperkitty/index.html:143 templates/hyperkitty/index.html:229
-#: templates/hyperkitty/overview.html:94 templates/hyperkitty/overview.html:111
-#: templates/hyperkitty/overview.html:181
-#: templates/hyperkitty/overview.html:188
-#: templates/hyperkitty/overview.html:195
-#: templates/hyperkitty/overview.html:204
-#: templates/hyperkitty/overview.html:212 templates/hyperkitty/reattach.html:39
-#: templates/hyperkitty/thread.html:111
+#: templates/hyperkitty/index.html:161 templates/hyperkitty/index.html:247
+#: templates/hyperkitty/overview.html:65 templates/hyperkitty/overview.html:72
+#: templates/hyperkitty/overview.html:79 templates/hyperkitty/overview.html:88
+#: templates/hyperkitty/overview.html:96 templates/hyperkitty/overview.html:169
+#: templates/hyperkitty/overview.html:186 templates/hyperkitty/reattach.html:37
+#: templates/hyperkitty/thread.html:85
 msgid "Loading..."
 msgstr "Memuat..."
 
-#: templates/hyperkitty/index.html:160 templates/hyperkitty/index.html:237
+#: templates/hyperkitty/index.html:178 templates/hyperkitty/index.html:255
 #, fuzzy
 msgid "No archived list yet."
 msgstr "Belum ada milis yang diarsipkan."
 
-#: templates/hyperkitty/index.html:172
+#: templates/hyperkitty/index.html:190
 #: templates/hyperkitty/user_profile/favorites.html:40
 #: templates/hyperkitty/user_profile/last_views.html:45
 #: templates/hyperkitty/user_profile/profile.html:15
@@ -465,23 +468,23 @@ msgstr "Belum ada milis yang diarsipkan."
 msgid "List"
 msgstr "Milis"
 
-#: templates/hyperkitty/index.html:173
+#: templates/hyperkitty/index.html:191
 msgid "Description"
 msgstr "Deskripsi"
 
-#: templates/hyperkitty/index.html:174
+#: templates/hyperkitty/index.html:192
 msgid "Activity in the past 30 days"
 msgstr "Aktivitas 30 hari terakhir"
 
-#: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
-#: templates/hyperkitty/thread_list.html:50
-#: templates/hyperkitty/threads/right_col.html:97
+#: templates/hyperkitty/index.html:236 templates/hyperkitty/overview.html:178
+#: templates/hyperkitty/thread_list.html:57
+#: templates/hyperkitty/threads/right_col.html:104
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "partisipan"
 
-#: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
-#: templates/hyperkitty/thread_list.html:55
+#: templates/hyperkitty/index.html:241 templates/hyperkitty/overview.html:179
+#: templates/hyperkitty/thread_list.html:62
 msgid "discussions"
 msgstr "diskusi"
 
@@ -489,11 +492,11 @@ msgstr "diskusi"
 msgid "Delete MailingList"
 msgstr "Hapus Milis"
 
-#: templates/hyperkitty/list_delete.html:20
+#: templates/hyperkitty/list_delete.html:18
 msgid "Delete Mailing List From HyperKitty"
 msgstr "Hapus Milis dari HyperKitty"
 
-#: templates/hyperkitty/list_delete.html:26
+#: templates/hyperkitty/list_delete.html:24
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
@@ -501,37 +504,37 @@ msgstr ""
 "akan dihapus dari HyperKitty bersamaan semua utas dan pesan. Tidak akan "
 "dihapus dari Mailman Inti. Apakah ingin melanjutkan?"
 
-#: templates/hyperkitty/list_delete.html:33
-#: templates/hyperkitty/message_delete.html:44
+#: templates/hyperkitty/list_delete.html:31
+#: templates/hyperkitty/message_delete.html:42
 msgid "Delete"
 msgstr "Hapus"
 
-#: templates/hyperkitty/list_delete.html:34
-#: templates/hyperkitty/message_delete.html:45
-#: templates/hyperkitty/message_new.html:53
-#: templates/hyperkitty/messages/message.html:146
+#: templates/hyperkitty/list_delete.html:32
+#: templates/hyperkitty/message_delete.html:43
+#: templates/hyperkitty/message_new.html:51
+#: templates/hyperkitty/messages/message.html:148
 msgid "or"
 msgstr "atau"
 
-#: templates/hyperkitty/list_delete.html:36
-#: templates/hyperkitty/message_delete.html:45
-#: templates/hyperkitty/message_new.html:53
-#: templates/hyperkitty/messages/message.html:146
+#: templates/hyperkitty/list_delete.html:34
+#: templates/hyperkitty/message_delete.html:43
+#: templates/hyperkitty/message_new.html:51
+#: templates/hyperkitty/messages/message.html:148
 #: templates/hyperkitty/user_profile/votes.html:36
 #: templates/hyperkitty/user_profile/votes.html:74
 msgid "cancel"
 msgstr "batal"
 
-#: templates/hyperkitty/message.html:22
+#: templates/hyperkitty/message.html:20
 msgid "thread"
 msgstr "utas"
 
 #: templates/hyperkitty/message_delete.html:7
-#: templates/hyperkitty/message_delete.html:20
+#: templates/hyperkitty/message_delete.html:18
 msgid "Delete message(s)"
 msgstr "Hapus pesan"
 
-#: templates/hyperkitty/message_delete.html:25
+#: templates/hyperkitty/message_delete.html:23
 #, python-format
 msgid ""
 "\n"
@@ -543,17 +546,17 @@ msgstr ""
 "        "
 
 #: templates/hyperkitty/message_new.html:8
-#: templates/hyperkitty/message_new.html:21
+#: templates/hyperkitty/message_new.html:19
 msgid "Create a new thread"
 msgstr "Buat utas baru"
 
-#: templates/hyperkitty/message_new.html:22
+#: templates/hyperkitty/message_new.html:20
 #: templates/hyperkitty/user_posts.html:22
 msgid "in"
 msgstr "di"
 
-#: templates/hyperkitty/message_new.html:52
-#: templates/hyperkitty/messages/message.html:145
+#: templates/hyperkitty/message_new.html:50
+#: templates/hyperkitty/messages/message.html:147
 msgid "Send"
 msgstr "Kirim"
 
@@ -582,20 +585,20 @@ msgstr "Lampiran:"
 msgid "Display in fixed font"
 msgstr "Tampilkan dalam fonta tetap"
 
-#: templates/hyperkitty/messages/message.html:79
+#: templates/hyperkitty/messages/message.html:81
 msgid "Permalink for this message"
 msgstr "Tautan untuk pesan ini"
 
-#: templates/hyperkitty/messages/message.html:90
-#: templates/hyperkitty/messages/message.html:96
+#: templates/hyperkitty/messages/message.html:92
+#: templates/hyperkitty/messages/message.html:98
 msgid "Reply"
 msgstr "Balas"
 
-#: templates/hyperkitty/messages/message.html:93
+#: templates/hyperkitty/messages/message.html:95
 msgid "Sign in to reply online"
 msgstr "Masuk untuk membalas secara daring"
 
-#: templates/hyperkitty/messages/message.html:105
+#: templates/hyperkitty/messages/message.html:107
 #, python-format
 msgid ""
 "\n"
@@ -610,15 +613,15 @@ msgstr[0] ""
 "                %(email.attachments.count)s lampiran\n"
 "                "
 
-#: templates/hyperkitty/messages/message.html:131
+#: templates/hyperkitty/messages/message.html:133
 msgid "Quote"
 msgstr "Kutip"
 
-#: templates/hyperkitty/messages/message.html:132
+#: templates/hyperkitty/messages/message.html:134
 msgid "Create new thread"
 msgstr "Buat utas baru"
 
-#: templates/hyperkitty/messages/message.html:135
+#: templates/hyperkitty/messages/message.html:137
 msgid "Use email software"
 msgstr "Gunakan perangkat lunak surel"
 
@@ -645,29 +648,72 @@ msgstr ""
 "                                oleh %(name)s\n"
 "                            "
 
-#: templates/hyperkitty/overview.html:38
+#: templates/hyperkitty/overview.html:35
+msgid "Recent"
+msgstr "Baru-Baru Ini"
+
+#: templates/hyperkitty/overview.html:39
+msgid "Most Active"
+msgstr "Paling Aktif"
+
+#: templates/hyperkitty/overview.html:43
+msgid "Most Popular"
+msgstr "Paling Populer"
+
+#: templates/hyperkitty/overview.html:49
+#: templates/hyperkitty/user_profile/base.html:22
+msgid "Favorites"
+msgstr "Favorit"
+
+#: templates/hyperkitty/overview.html:53
+msgid "Posted"
+msgstr "Dipos"
+
+#: templates/hyperkitty/overview.html:63
+msgid "Recently active discussions"
+msgstr "Diskusi aktif baru-baru ini"
+
+#: templates/hyperkitty/overview.html:70
+msgid "Most popular discussions"
+msgstr "Diskusi paling populer"
+
+#: templates/hyperkitty/overview.html:77
+msgid "Most active discussions"
+msgstr "Diskusi paling aktif"
+
+#: templates/hyperkitty/overview.html:84
+msgid "Discussions You've Flagged"
+msgstr "Diskusi yang Anda Tandai"
+
+#: templates/hyperkitty/overview.html:92
+#, fuzzy
+msgid "Discussions You've Posted to"
+msgstr "Diskusi yang Anda Pos ke sana"
+
+#: templates/hyperkitty/overview.html:109
 msgid "Home"
 msgstr "Beranda"
 
-#: templates/hyperkitty/overview.html:41 templates/hyperkitty/thread.html:78
+#: templates/hyperkitty/overview.html:112
 msgid "Stats"
 msgstr "Statistik"
 
-#: templates/hyperkitty/overview.html:44
+#: templates/hyperkitty/overview.html:115
 msgid "Threads"
 msgstr "Utas"
 
-#: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
-#: templates/hyperkitty/thread_list.html:58
+#: templates/hyperkitty/overview.html:121
+#: templates/hyperkitty/overview.html:129
+#: templates/hyperkitty/thread_list.html:35
 msgid "You must be logged-in to create a thread."
 msgstr "Anda harus masuk untuk membuat utas."
 
-#: templates/hyperkitty/overview.html:50
+#: templates/hyperkitty/overview.html:121
 msgid "New"
 msgstr "Baru"
 
-#: templates/hyperkitty/overview.html:63
-#: templates/hyperkitty/thread_list.html:62
+#: templates/hyperkitty/overview.html:131
+#: templates/hyperkitty/thread_list.html:38
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
@@ -675,131 +721,81 @@ msgstr ""
 "<span class=\"d-none d-md-inline\">Buat u</span><span class=\"d-md-none\">U</"
 "span>tas baru"
 
-#: templates/hyperkitty/overview.html:75
-msgid ""
-"<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
-"\">S</span>ubscription"
-msgstr ""
-"<span class=\"d-none d-md-inline\">Atur l</span><span class=\"d-md-none\""
-">L</span>angganan"
-
-#: templates/hyperkitty/overview.html:81
+#: templates/hyperkitty/overview.html:156
 msgid "Delete Archive"
 msgstr "Hapus Arsip"
 
-#: templates/hyperkitty/overview.html:91
+#: templates/hyperkitty/overview.html:166
 msgid "Activity Summary"
 msgstr "Ringkasan Aktivitas"
 
-#: templates/hyperkitty/overview.html:93
+#: templates/hyperkitty/overview.html:168
 msgid "Post volume over the past <strong>30</strong> days."
 msgstr "Volume pos pada <strong>30</strong> hari terakhir."
 
-#: templates/hyperkitty/overview.html:98
+#: templates/hyperkitty/overview.html:173
 msgid "The following statistics are from"
 msgstr "Statistik berikut dari"
 
-#: templates/hyperkitty/overview.html:99
+#: templates/hyperkitty/overview.html:174
 msgid "In"
 msgstr "Dalam"
 
-#: templates/hyperkitty/overview.html:100
+#: templates/hyperkitty/overview.html:175
 msgid "the past <strong>30</strong> days:"
 msgstr "<strong>30</strong> hari terakhir:"
 
-#: templates/hyperkitty/overview.html:109
+#: templates/hyperkitty/overview.html:184
 msgid "Most active posters"
 msgstr "Pengepos paling aktif"
 
-#: templates/hyperkitty/overview.html:118
+#: templates/hyperkitty/overview.html:193
 msgid "Prominent posters"
 msgstr "Pengepos paling menonjol"
 
-#: templates/hyperkitty/overview.html:133
+#: templates/hyperkitty/overview.html:208
 #, fuzzy
 msgid "kudos"
 msgstr "bagus"
-
-#: templates/hyperkitty/overview.html:152
-msgid "Recent"
-msgstr "Baru-Baru Ini"
-
-#: templates/hyperkitty/overview.html:156
-msgid "Most Active"
-msgstr "Paling Aktif"
-
-#: templates/hyperkitty/overview.html:160
-msgid "Most Popular"
-msgstr "Paling Populer"
-
-#: templates/hyperkitty/overview.html:166
-#: templates/hyperkitty/user_profile/base.html:22
-msgid "Favorites"
-msgstr "Favorit"
-
-#: templates/hyperkitty/overview.html:170
-msgid "Posted"
-msgstr "Dipos"
-
-#: templates/hyperkitty/overview.html:179
-msgid "Recently active discussions"
-msgstr "Diskusi aktif baru-baru ini"
-
-#: templates/hyperkitty/overview.html:186
-msgid "Most popular discussions"
-msgstr "Diskusi paling populer"
-
-#: templates/hyperkitty/overview.html:193
-msgid "Most active discussions"
-msgstr "Diskusi paling aktif"
-
-#: templates/hyperkitty/overview.html:200
-msgid "Discussions You've Flagged"
-msgstr "Diskusi yang Anda Tandai"
-
-#: templates/hyperkitty/overview.html:208
-#, fuzzy
-msgid "Discussions You've Posted to"
-msgstr "Diskusi yang Anda Pos ke sana"
 
 #: templates/hyperkitty/reattach.html:9
 msgid "Reattach a thread"
 msgstr "Semat kembali sebuah utas"
 
-#: templates/hyperkitty/reattach.html:20
+#: templates/hyperkitty/reattach.html:18
 msgid "Re-attach a thread to another"
 msgstr "Semat kembali sebuah utas ke yang lainnya"
 
-#: templates/hyperkitty/reattach.html:22
+#: templates/hyperkitty/reattach.html:20
 msgid "Thread to re-attach:"
 msgstr "Utas untuk disematkan kembali:"
 
-#: templates/hyperkitty/reattach.html:29
+#: templates/hyperkitty/reattach.html:27
 msgid "Re-attach it to:"
 msgstr "Semat kembali ke:"
 
-#: templates/hyperkitty/reattach.html:31
+#: templates/hyperkitty/reattach.html:29
 msgid "Search for the parent thread"
 msgstr "Cari utas induk"
 
-#: templates/hyperkitty/reattach.html:32
+#: templates/hyperkitty/reattach.html:30
 msgid "Search"
 msgstr "Cari"
 
-#: templates/hyperkitty/reattach.html:44
+#: templates/hyperkitty/reattach.html:42
 msgid "this thread ID:"
 msgstr "ID utas ini:"
 
-#: templates/hyperkitty/reattach.html:50
+#: templates/hyperkitty/reattach.html:48
 #, fuzzy
 msgid "Do it"
 msgstr "Lakukan"
 
-#: templates/hyperkitty/reattach.html:50
+#: templates/hyperkitty/reattach.html:48
 msgid "(there's no undoing!), or"
 msgstr "(tidak ada pembatalan!), atau"
 
-#: templates/hyperkitty/reattach.html:52
+#: templates/hyperkitty/reattach.html:50
 msgid "go back to the thread"
 msgstr "kembali ke utas"
 
@@ -807,80 +803,70 @@ msgstr "kembali ke utas"
 msgid "Search results for"
 msgstr "Hasil pencarian untuk"
 
-#: templates/hyperkitty/search_results.html:30
+#: templates/hyperkitty/search_results.html:28
 msgid "search results"
 msgstr "hasil pencarian"
 
-#: templates/hyperkitty/search_results.html:32
+#: templates/hyperkitty/search_results.html:30
 msgid "Search results"
 msgstr "Hasil pencarian"
 
-#: templates/hyperkitty/search_results.html:34
+#: templates/hyperkitty/search_results.html:32
 msgid "for query"
 msgstr "untuk kueri"
 
-#: templates/hyperkitty/search_results.html:44
+#: templates/hyperkitty/search_results.html:42
 #: templates/hyperkitty/user_posts.html:34
 msgid "messages"
 msgstr "pesan"
 
-#: templates/hyperkitty/search_results.html:57
+#: templates/hyperkitty/search_results.html:55
 #, fuzzy
 msgid "sort by score"
 msgstr "urut berdasarkan skor"
 
-#: templates/hyperkitty/search_results.html:60
+#: templates/hyperkitty/search_results.html:58
 msgid "sort by latest first"
 msgstr "urut berdasarkan terlama dulu"
 
-#: templates/hyperkitty/search_results.html:63
+#: templates/hyperkitty/search_results.html:61
 msgid "sort by earliest first"
 msgstr "urut berdasarkan terbaru dulu"
 
-#: templates/hyperkitty/search_results.html:84
+#: templates/hyperkitty/search_results.html:82
 msgid "Sorry no email could be found for this query."
 msgstr "Maaf, tidak ada surel yang ditemukan untuk kueri ini."
 
-#: templates/hyperkitty/search_results.html:87
+#: templates/hyperkitty/search_results.html:85
 msgid "Sorry but your query looks empty."
 msgstr "Maaf, tetapi sepertinya kueri Anda tampak kosong."
 
-#: templates/hyperkitty/search_results.html:88
+#: templates/hyperkitty/search_results.html:86
 #, fuzzy
 msgid "these are not the messages you are looking for"
 msgstr "itu bukan pesan yang Anda cari"
 
-#: templates/hyperkitty/thread.html:30
+#: templates/hyperkitty/thread.html:26
 msgid "newer"
 msgstr "terbaru"
 
-#: templates/hyperkitty/thread.html:44
+#: templates/hyperkitty/thread.html:45
 msgid "older"
 msgstr "terlama"
 
-#: templates/hyperkitty/thread.html:72
-msgid "First Post"
-msgstr "Pos Pertama"
-
-#: templates/hyperkitty/thread.html:75
-#: templates/hyperkitty/user_profile/favorites.html:45
-#: templates/hyperkitty/user_profile/last_views.html:50
-msgid "Replies"
-msgstr "Balasan"
-
-#: templates/hyperkitty/thread.html:97
+#: templates/hyperkitty/thread.html:71
 msgid "Show replies by thread"
 msgstr "Tampilkan balasan berdasarkan utas"
 
-#: templates/hyperkitty/thread.html:100
+#: templates/hyperkitty/thread.html:74
 msgid "Show replies by date"
 msgstr "Tampilkan balasan berdasarkan tanggal"
 
-#: templates/hyperkitty/thread.html:113
+#: templates/hyperkitty/thread.html:87
 msgid "Visit here for a non-javascript version of this page."
 msgstr "Kunjungi di sini untuk versi non-javascript dari halaman ini."
 
-#: templates/hyperkitty/thread_list.html:70
+#: templates/hyperkitty/thread_list.html:71
 msgid "Sorry no email threads could be found"
 msgstr "Maaf, tidak ada utas surel yang ditemukan"
 
@@ -896,62 +882,62 @@ msgstr "Anda harus masuk untuk menyunting."
 msgid "no category"
 msgstr "tidak ada kategori"
 
-#: templates/hyperkitty/threads/right_col.html:12
+#: templates/hyperkitty/threads/right_col.html:13
 msgid "Age (days ago)"
 msgstr "Umur (hari yang lalu)"
 
-#: templates/hyperkitty/threads/right_col.html:18
+#: templates/hyperkitty/threads/right_col.html:19
 msgid "Last active (days ago)"
 msgstr "Terakhir aktif (hari yang lalu)"
 
-#: templates/hyperkitty/threads/right_col.html:40
+#: templates/hyperkitty/threads/right_col.html:47
 #, python-format
 msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s komentar"
 
-#: templates/hyperkitty/threads/right_col.html:44
+#: templates/hyperkitty/threads/right_col.html:51
 #, python-format
 msgid "%(participants_count)s participants"
 msgstr "%(participants_count)s partisipan"
 
-#: templates/hyperkitty/threads/right_col.html:49
+#: templates/hyperkitty/threads/right_col.html:56
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
 msgstr "%(unread_count)s <span class=\"hidden-sm\">pesan</span> tidak dibaca"
 
-#: templates/hyperkitty/threads/right_col.html:59
+#: templates/hyperkitty/threads/right_col.html:66
 msgid "You must be logged-in to have favorites."
 msgstr "Anda harus masuk untuk memfavoritkan."
 
-#: templates/hyperkitty/threads/right_col.html:60
+#: templates/hyperkitty/threads/right_col.html:67
 msgid "Add to favorites"
 msgstr "Tambahkan ke favorit"
 
-#: templates/hyperkitty/threads/right_col.html:62
+#: templates/hyperkitty/threads/right_col.html:69
 msgid "Remove from favorites"
 msgstr "Hapus dari favorit"
 
-#: templates/hyperkitty/threads/right_col.html:71
+#: templates/hyperkitty/threads/right_col.html:78
 msgid "Reattach this thread"
 msgstr "Semat kembali utas ini"
 
-#: templates/hyperkitty/threads/right_col.html:75
+#: templates/hyperkitty/threads/right_col.html:82
 msgid "Delete this thread"
 msgstr "Hapus utas ini"
 
-#: templates/hyperkitty/threads/right_col.html:113
+#: templates/hyperkitty/threads/right_col.html:120
 msgid "Unreads:"
 msgstr "Belum dibaca:"
 
-#: templates/hyperkitty/threads/right_col.html:115
+#: templates/hyperkitty/threads/right_col.html:122
 msgid "Go to:"
 msgstr "Ke:"
 
-#: templates/hyperkitty/threads/right_col.html:115
+#: templates/hyperkitty/threads/right_col.html:122
 msgid "next"
 msgstr "selanjutnya"
 
-#: templates/hyperkitty/threads/right_col.html:116
+#: templates/hyperkitty/threads/right_col.html:123
 msgid "prev"
 msgstr "sebelumnya"
 
@@ -1066,6 +1052,11 @@ msgstr "Tanggal mulai"
 #: templates/hyperkitty/user_profile/last_views.html:49
 msgid "Last activity"
 msgstr "Aktivitas terakhir"
+
+#: templates/hyperkitty/user_profile/favorites.html:45
+#: templates/hyperkitty/user_profile/last_views.html:50
+msgid "Replies"
+msgstr "Balasan"
 
 #: templates/hyperkitty/user_profile/favorites.html:71
 msgid "No favorites yet."
@@ -1250,3 +1241,13 @@ msgstr "Galat penguraian: %(error)s"
 #, fuzzy
 msgid "This thread in gzipped mbox format"
 msgstr "Utas ini dalam format gzip mbox"
+
+#~ msgid ""
+#~ "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
+#~ "\">S</span>ubscription"
+#~ msgstr ""
+#~ "<span class=\"d-none d-md-inline\">Atur l</span><span class=\"d-md-none"
+#~ "\">L</span>angganan"
+
+#~ msgid "First Post"
+#~ msgstr "Pos Pertama"

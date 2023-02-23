@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-04 20:47+0000\n"
+"POT-Creation-Date: 2023-02-21 23:47+0000\n"
 "PO-Revision-Date: 2021-05-19 11:33+0000\n"
 "Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -68,12 +68,12 @@ msgid "Sorry, but the requested page is unavailable due to a server hiccup."
 msgstr "죄송합니다, 서버 오류로 인해 요청한 페이지를 불러올 수 없습니다."
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
-#: templates/hyperkitty/reattach.html:25
+#: templates/hyperkitty/reattach.html:23
 msgid "started"
 msgstr "시작함"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:7
-#: templates/hyperkitty/reattach.html:25
+#: templates/hyperkitty/reattach.html:23
 msgid "last active:"
 msgstr "최근 활동:"
 
@@ -185,77 +185,77 @@ msgstr "태그"
 msgid "Using this address you will be able to retrieve the list of tags."
 msgstr "이 주소를 이용하시면 태그 목록을 불러올수 있습니다."
 
-#: templates/hyperkitty/base.html:57 templates/hyperkitty/base.html:112
+#: templates/hyperkitty/base.html:56 templates/hyperkitty/base.html:135
 msgid "Account"
 msgstr "계정"
 
-#: templates/hyperkitty/base.html:62 templates/hyperkitty/base.html:117
+#: templates/hyperkitty/base.html:61 templates/hyperkitty/base.html:140
 msgid "Mailman settings"
 msgstr "Mailman 설정"
 
-#: templates/hyperkitty/base.html:67 templates/hyperkitty/base.html:122
+#: templates/hyperkitty/base.html:66 templates/hyperkitty/base.html:145
 #: templates/hyperkitty/user_profile/base.html:17
 msgid "Posting activity"
 msgstr "포스팅 기록"
 
-#: templates/hyperkitty/base.html:72 templates/hyperkitty/base.html:127
+#: templates/hyperkitty/base.html:71 templates/hyperkitty/base.html:150
 msgid "Logout"
 msgstr "로그아웃"
 
-#: templates/hyperkitty/base.html:78 templates/hyperkitty/base.html:134
-msgid "Sign In"
-msgstr "로그인"
-
-#: templates/hyperkitty/base.html:82 templates/hyperkitty/base.html:138
-msgid "Sign Up"
-msgstr "회원가입"
-
-#: templates/hyperkitty/base.html:91
-msgid "Search this list"
-msgstr "이 목록에서 검색하기"
-
-#: templates/hyperkitty/base.html:91
-msgid "Search all lists"
-msgstr "모든 목록에서 검색하기"
-
-#: templates/hyperkitty/base.html:149
+#: templates/hyperkitty/base.html:84
 msgid "Manage this list"
 msgstr "이 목록 관리하기"
 
-#: templates/hyperkitty/base.html:154
+#: templates/hyperkitty/base.html:89
 msgid "Manage lists"
 msgstr "목록 관리하기"
 
-#: templates/hyperkitty/base.html:192
+#: templates/hyperkitty/base.html:96
+msgid "Sign In"
+msgstr "로그인"
+
+#: templates/hyperkitty/base.html:100
+msgid "Sign Up"
+msgstr "회원가입"
+
+#: templates/hyperkitty/base.html:108
+msgid "Search this list"
+msgstr "이 목록에서 검색하기"
+
+#: templates/hyperkitty/base.html:111
+msgid "Search all lists"
+msgstr "모든 목록에서 검색하기"
+
+#: templates/hyperkitty/base.html:196
 msgid "Keyboard Shortcuts"
 msgstr "키보드 단축키"
 
-#: templates/hyperkitty/base.html:195
+#: templates/hyperkitty/base.html:199
 msgid "Thread View"
 msgstr "스레드 보기"
 
-#: templates/hyperkitty/base.html:197
+#: templates/hyperkitty/base.html:201
 msgid "Next unread message"
 msgstr "다음 안 읽은 메시지"
 
-#: templates/hyperkitty/base.html:198
+#: templates/hyperkitty/base.html:202
 msgid "Previous unread message"
 msgstr "이전 안 읽은 메시지"
 
-#: templates/hyperkitty/base.html:199
+#: templates/hyperkitty/base.html:203
 msgid "Jump to all threads"
 msgstr "모든 스레드로 이동"
 
-#: templates/hyperkitty/base.html:200
+#: templates/hyperkitty/base.html:204
 msgid "Jump to MailingList overview"
 msgstr "목록 개요로 이동"
 
-#: templates/hyperkitty/base.html:214
+#: templates/hyperkitty/base.html:219
 #, fuzzy
 msgid "Powered by"
 msgstr "구동"
 
-#: templates/hyperkitty/base.html:214
+#: templates/hyperkitty/base.html:219
 msgid "version"
 msgstr "버전"
 
@@ -294,11 +294,11 @@ msgstr "싫어요 (취소)"
 msgid "You must be logged-in to vote."
 msgstr "투표하기 위해서 로그인을 해야합니다."
 
-#: templates/hyperkitty/fragments/month_list.html:6
+#: templates/hyperkitty/fragments/month_list.html:7
 msgid "Threads by"
 msgstr "스레드 구분:"
 
-#: templates/hyperkitty/fragments/month_list.html:6
+#: templates/hyperkitty/fragments/month_list.html:7
 msgid " month"
 msgstr " 작성 월"
 
@@ -308,7 +308,7 @@ msgstr "스레드에 새 메세지가 있습니다"
 
 #: templates/hyperkitty/fragments/overview_threads.html:36
 #: templates/hyperkitty/fragments/thread_left_nav.html:19
-#: templates/hyperkitty/overview.html:78
+#: templates/hyperkitty/overview.html:125
 msgid "All Threads"
 msgstr "모든 스레드"
 
@@ -342,112 +342,115 @@ msgid ""
 msgstr "현재 목록 멤버가 아닌 경우 이 메시지를 보내면 구독됩니다."
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:12
+#: templates/hyperkitty/threads/right_col.html:26
 msgid "List overview"
 msgstr "목록 개요"
 
-#: templates/hyperkitty/fragments/thread_left_nav.html:29 views/message.py:74
+#: templates/hyperkitty/fragments/thread_left_nav.html:29
+#: templates/hyperkitty/overview.html:139 views/message.py:74
 #: views/mlist.py:114 views/thread.py:191
 msgid "Download"
 msgstr "다운로드"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:32
+#: templates/hyperkitty/overview.html:142
 msgid "Past 30 days"
 msgstr "30일 전"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:33
+#: templates/hyperkitty/overview.html:143
 msgid "This month"
 msgstr "이번 달"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:36
+#: templates/hyperkitty/overview.html:146
 msgid "Entire archive"
 msgstr "모든 저장소"
 
-#: templates/hyperkitty/index.html:9 templates/hyperkitty/index.html:63
+#: templates/hyperkitty/index.html:9 templates/hyperkitty/index.html:18
 msgid "Available lists"
 msgstr "이용가능한 목록"
-
-#: templates/hyperkitty/index.html:22 templates/hyperkitty/index.html:27
-#: templates/hyperkitty/index.html:72
-msgid "Most popular"
-msgstr "인기순"
 
 #: templates/hyperkitty/index.html:26
 msgid "Sort by number of recent participants"
 msgstr "최근 참가자들의 수로 정렬하기"
 
-#: templates/hyperkitty/index.html:32 templates/hyperkitty/index.html:37
-#: templates/hyperkitty/index.html:75
-msgid "Most active"
-msgstr "활발한순"
+#: templates/hyperkitty/index.html:30 templates/hyperkitty/index.html:33
+#: templates/hyperkitty/index.html:88
+msgid "Most popular"
+msgstr "인기순"
 
-#: templates/hyperkitty/index.html:36
+#: templates/hyperkitty/index.html:40
 msgid "Sort by number of recent discussions"
 msgstr "댓글순"
 
-#: templates/hyperkitty/index.html:42 templates/hyperkitty/index.html:47
-#: templates/hyperkitty/index.html:78
-msgid "By name"
-msgstr "이름순"
+#: templates/hyperkitty/index.html:44 templates/hyperkitty/index.html:47
+#: templates/hyperkitty/index.html:91
+msgid "Most active"
+msgstr "활발한순"
 
-#: templates/hyperkitty/index.html:46
+#: templates/hyperkitty/index.html:54
 msgid "Sort alphabetically"
 msgstr "가나다순"
 
-#: templates/hyperkitty/index.html:52 templates/hyperkitty/index.html:57
-#: templates/hyperkitty/index.html:81
-msgid "Newest"
-msgstr "최근 생성순"
+#: templates/hyperkitty/index.html:58 templates/hyperkitty/index.html:61
+#: templates/hyperkitty/index.html:94
+msgid "By name"
+msgstr "이름순"
 
-#: templates/hyperkitty/index.html:56
+#: templates/hyperkitty/index.html:68
 msgid "Sort by list creation date"
 msgstr "생성 날짜순"
 
-#: templates/hyperkitty/index.html:68
+#: templates/hyperkitty/index.html:72 templates/hyperkitty/index.html:75
+#: templates/hyperkitty/index.html:97
+msgid "Newest"
+msgstr "최근 생성순"
+
+#: templates/hyperkitty/index.html:84
 msgid "Sort by"
 msgstr "로 정렬하기"
 
-#: templates/hyperkitty/index.html:91
+#: templates/hyperkitty/index.html:107
 msgid "Hide inactive"
 msgstr "비활성화 숨기기"
 
-#: templates/hyperkitty/index.html:92
+#: templates/hyperkitty/index.html:108
 msgid "Hide private"
 msgstr "특정 전용 숨기기"
 
-#: templates/hyperkitty/index.html:99
+#: templates/hyperkitty/index.html:115
 msgid "Find list"
 msgstr "목록 찾기"
 
-#: templates/hyperkitty/index.html:123 templates/hyperkitty/index.html:191
+#: templates/hyperkitty/index.html:141 templates/hyperkitty/index.html:209
 #: templates/hyperkitty/user_profile/last_views.html:34
 #: templates/hyperkitty/user_profile/last_views.html:73
 msgid "new"
 msgstr "new"
 
-#: templates/hyperkitty/index.html:135 templates/hyperkitty/index.html:202
+#: templates/hyperkitty/index.html:153 templates/hyperkitty/index.html:220
 msgid "private"
 msgstr "특정 전용"
 
-#: templates/hyperkitty/index.html:137 templates/hyperkitty/index.html:204
+#: templates/hyperkitty/index.html:155 templates/hyperkitty/index.html:222
 msgid "inactive"
 msgstr "비활성"
 
-#: templates/hyperkitty/index.html:143 templates/hyperkitty/index.html:229
-#: templates/hyperkitty/overview.html:94 templates/hyperkitty/overview.html:111
-#: templates/hyperkitty/overview.html:181
-#: templates/hyperkitty/overview.html:188
-#: templates/hyperkitty/overview.html:195
-#: templates/hyperkitty/overview.html:204
-#: templates/hyperkitty/overview.html:212 templates/hyperkitty/reattach.html:39
-#: templates/hyperkitty/thread.html:111
+#: templates/hyperkitty/index.html:161 templates/hyperkitty/index.html:247
+#: templates/hyperkitty/overview.html:65 templates/hyperkitty/overview.html:72
+#: templates/hyperkitty/overview.html:79 templates/hyperkitty/overview.html:88
+#: templates/hyperkitty/overview.html:96 templates/hyperkitty/overview.html:169
+#: templates/hyperkitty/overview.html:186 templates/hyperkitty/reattach.html:37
+#: templates/hyperkitty/thread.html:85
 msgid "Loading..."
 msgstr "로딩중..."
 
-#: templates/hyperkitty/index.html:160 templates/hyperkitty/index.html:237
+#: templates/hyperkitty/index.html:178 templates/hyperkitty/index.html:255
 msgid "No archived list yet."
 msgstr "보관된 목록이 아직 없습니다."
 
-#: templates/hyperkitty/index.html:172
+#: templates/hyperkitty/index.html:190
 #: templates/hyperkitty/user_profile/favorites.html:40
 #: templates/hyperkitty/user_profile/last_views.html:45
 #: templates/hyperkitty/user_profile/profile.html:15
@@ -456,23 +459,23 @@ msgstr "보관된 목록이 아직 없습니다."
 msgid "List"
 msgstr "목록"
 
-#: templates/hyperkitty/index.html:173
+#: templates/hyperkitty/index.html:191
 msgid "Description"
 msgstr "설명"
 
-#: templates/hyperkitty/index.html:174
+#: templates/hyperkitty/index.html:192
 msgid "Activity in the past 30 days"
 msgstr "지난 30일간 활동 목록"
 
-#: templates/hyperkitty/index.html:218 templates/hyperkitty/overview.html:103
-#: templates/hyperkitty/thread_list.html:50
-#: templates/hyperkitty/threads/right_col.html:97
+#: templates/hyperkitty/index.html:236 templates/hyperkitty/overview.html:178
+#: templates/hyperkitty/thread_list.html:57
+#: templates/hyperkitty/threads/right_col.html:104
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "참여자"
 
-#: templates/hyperkitty/index.html:223 templates/hyperkitty/overview.html:104
-#: templates/hyperkitty/thread_list.html:55
+#: templates/hyperkitty/index.html:241 templates/hyperkitty/overview.html:179
+#: templates/hyperkitty/thread_list.html:62
 msgid "discussions"
 msgstr "댓글"
 
@@ -480,13 +483,13 @@ msgstr "댓글"
 msgid "Delete MailingList"
 msgstr "메일링 목록 삭제"
 
-#: templates/hyperkitty/list_delete.html:20
+#: templates/hyperkitty/list_delete.html:18
 #, fuzzy
 #| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
 msgstr "메일링 목록 삭제"
 
-#: templates/hyperkitty/list_delete.html:26
+#: templates/hyperkitty/list_delete.html:24
 #, fuzzy
 #| msgid ""
 #| "will be deleted along with all the threads and messages. Do you want to "
@@ -496,37 +499,37 @@ msgid ""
 "will not be deleted from Mailman Core. Do you want to continue?"
 msgstr "모든 스레드 및 메시지와 함께 삭제됩니다. 계속하시겠습니까?"
 
-#: templates/hyperkitty/list_delete.html:33
-#: templates/hyperkitty/message_delete.html:44
+#: templates/hyperkitty/list_delete.html:31
+#: templates/hyperkitty/message_delete.html:42
 msgid "Delete"
 msgstr "삭제"
 
-#: templates/hyperkitty/list_delete.html:34
-#: templates/hyperkitty/message_delete.html:45
-#: templates/hyperkitty/message_new.html:53
-#: templates/hyperkitty/messages/message.html:146
+#: templates/hyperkitty/list_delete.html:32
+#: templates/hyperkitty/message_delete.html:43
+#: templates/hyperkitty/message_new.html:51
+#: templates/hyperkitty/messages/message.html:148
 msgid "or"
 msgstr "또는"
 
-#: templates/hyperkitty/list_delete.html:36
-#: templates/hyperkitty/message_delete.html:45
-#: templates/hyperkitty/message_new.html:53
-#: templates/hyperkitty/messages/message.html:146
+#: templates/hyperkitty/list_delete.html:34
+#: templates/hyperkitty/message_delete.html:43
+#: templates/hyperkitty/message_new.html:51
+#: templates/hyperkitty/messages/message.html:148
 #: templates/hyperkitty/user_profile/votes.html:36
 #: templates/hyperkitty/user_profile/votes.html:74
 msgid "cancel"
 msgstr "취소"
 
-#: templates/hyperkitty/message.html:22
+#: templates/hyperkitty/message.html:20
 msgid "thread"
 msgstr "스레드"
 
 #: templates/hyperkitty/message_delete.html:7
-#: templates/hyperkitty/message_delete.html:20
+#: templates/hyperkitty/message_delete.html:18
 msgid "Delete message(s)"
 msgstr "삭제된 메세지"
 
-#: templates/hyperkitty/message_delete.html:25
+#: templates/hyperkitty/message_delete.html:23
 #, python-format
 msgid ""
 "\n"
@@ -538,17 +541,17 @@ msgstr ""
 "        "
 
 #: templates/hyperkitty/message_new.html:8
-#: templates/hyperkitty/message_new.html:21
+#: templates/hyperkitty/message_new.html:19
 msgid "Create a new thread"
 msgstr "새로운 스레드 생성하기"
 
-#: templates/hyperkitty/message_new.html:22
+#: templates/hyperkitty/message_new.html:20
 #: templates/hyperkitty/user_posts.html:22
 msgid "in"
 msgstr "에"
 
-#: templates/hyperkitty/message_new.html:52
-#: templates/hyperkitty/messages/message.html:145
+#: templates/hyperkitty/message_new.html:50
+#: templates/hyperkitty/messages/message.html:147
 msgid "Send"
 msgstr "보내기"
 
@@ -577,20 +580,20 @@ msgstr "첨부파일:"
 msgid "Display in fixed font"
 msgstr "고정된 폰트로 보기"
 
-#: templates/hyperkitty/messages/message.html:79
+#: templates/hyperkitty/messages/message.html:81
 msgid "Permalink for this message"
 msgstr "메세지에 고정된 하이퍼링크 달기"
 
-#: templates/hyperkitty/messages/message.html:90
-#: templates/hyperkitty/messages/message.html:96
+#: templates/hyperkitty/messages/message.html:92
+#: templates/hyperkitty/messages/message.html:98
 msgid "Reply"
 msgstr "답장"
 
-#: templates/hyperkitty/messages/message.html:93
+#: templates/hyperkitty/messages/message.html:95
 msgid "Sign in to reply online"
 msgstr "온라인으로 답장하기위해 로그인하기"
 
-#: templates/hyperkitty/messages/message.html:105
+#: templates/hyperkitty/messages/message.html:107
 #, fuzzy, python-format
 #| msgid ""
 #| "\n"
@@ -613,15 +616,15 @@ msgstr[0] ""
 "                %(email.attachments.count)s 첨부 파일\n"
 "                "
 
-#: templates/hyperkitty/messages/message.html:131
+#: templates/hyperkitty/messages/message.html:133
 msgid "Quote"
 msgstr "인용"
 
-#: templates/hyperkitty/messages/message.html:132
+#: templates/hyperkitty/messages/message.html:134
 msgid "Create new thread"
 msgstr "새로운 스레드 만들기"
 
-#: templates/hyperkitty/messages/message.html:135
+#: templates/hyperkitty/messages/message.html:137
 msgid "Use email software"
 msgstr "이메일 소프트웨어 사용하기"
 
@@ -648,31 +651,77 @@ msgstr ""
 "                                작성자 %(name)s\n"
 "                            "
 
-#: templates/hyperkitty/overview.html:38
+#: templates/hyperkitty/overview.html:35
+msgid "Recent"
+msgstr ""
+
+#: templates/hyperkitty/overview.html:39
+#, fuzzy
+#| msgid "Most active"
+msgid "Most Active"
+msgstr "활발한순"
+
+#: templates/hyperkitty/overview.html:43
+#, fuzzy
+#| msgid "Most popular"
+msgid "Most Popular"
+msgstr "인기순"
+
+#: templates/hyperkitty/overview.html:49
+#: templates/hyperkitty/user_profile/base.html:22
+msgid "Favorites"
+msgstr "즐겨찾기"
+
+#: templates/hyperkitty/overview.html:53
+msgid "Posted"
+msgstr ""
+
+#: templates/hyperkitty/overview.html:63
+msgid "Recently active discussions"
+msgstr "최근에 활동한 의논들"
+
+#: templates/hyperkitty/overview.html:70
+msgid "Most popular discussions"
+msgstr "가장 유명한 의논들"
+
+#: templates/hyperkitty/overview.html:77
+msgid "Most active discussions"
+msgstr "가장 활발한 의논들"
+
+#: templates/hyperkitty/overview.html:84
+msgid "Discussions You've Flagged"
+msgstr "찜한 의논들"
+
+#: templates/hyperkitty/overview.html:92
+msgid "Discussions You've Posted to"
+msgstr "게시한 의논들"
+
+#: templates/hyperkitty/overview.html:109
 msgid "Home"
 msgstr "홈"
 
-#: templates/hyperkitty/overview.html:41 templates/hyperkitty/thread.html:78
+#: templates/hyperkitty/overview.html:112
 msgid "Stats"
 msgstr "통계"
 
-#: templates/hyperkitty/overview.html:44
+#: templates/hyperkitty/overview.html:115
 msgid "Threads"
 msgstr "스레드"
 
-#: templates/hyperkitty/overview.html:50 templates/hyperkitty/overview.html:61
-#: templates/hyperkitty/thread_list.html:58
+#: templates/hyperkitty/overview.html:121
+#: templates/hyperkitty/overview.html:129
+#: templates/hyperkitty/thread_list.html:35
 msgid "You must be logged-in to create a thread."
 msgstr "스레드를 만들기 위해서 로그인되어야 합니다."
 
-#: templates/hyperkitty/overview.html:50
+#: templates/hyperkitty/overview.html:121
 #, fuzzy
 #| msgid "new"
 msgid "New"
 msgstr "new"
 
-#: templates/hyperkitty/overview.html:63
-#: templates/hyperkitty/thread_list.html:62
+#: templates/hyperkitty/overview.html:131
+#: templates/hyperkitty/thread_list.html:38
 msgid ""
 "<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
 "\">N</span>ew thread"
@@ -680,134 +729,81 @@ msgstr ""
 "<span class=\"d-none d-md-inline\">새 스레드를 시작</span><span class=\"d-md-"
 "none\">(N)</span>"
 
-#: templates/hyperkitty/overview.html:75
-msgid ""
-"<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
-"\">S</span>ubscription"
-msgstr ""
-"<span class=\"d-none d-md-inline\">구독 관리</span><span class=\"d-md-none"
-"\">(S)</span>"
-
-#: templates/hyperkitty/overview.html:81
+#: templates/hyperkitty/overview.html:156
 #, fuzzy
 #| msgid "Entire archive"
 msgid "Delete Archive"
 msgstr "모든 저장소"
 
-#: templates/hyperkitty/overview.html:91
+#: templates/hyperkitty/overview.html:166
 msgid "Activity Summary"
 msgstr "활동내역"
 
-#: templates/hyperkitty/overview.html:93
+#: templates/hyperkitty/overview.html:168
 msgid "Post volume over the past <strong>30</strong> days."
 msgstr "지난 <strong>30</strong>일 간 쓴 글."
 
-#: templates/hyperkitty/overview.html:98
+#: templates/hyperkitty/overview.html:173
 msgid "The following statistics are from"
 msgstr "이 통계의 출처는"
 
-#: templates/hyperkitty/overview.html:99
+#: templates/hyperkitty/overview.html:174
 msgid "In"
 msgstr "에"
 
-#: templates/hyperkitty/overview.html:100
+#: templates/hyperkitty/overview.html:175
 msgid "the past <strong>30</strong> days:"
 msgstr "지난 <strong>30</strong>일 :"
 
-#: templates/hyperkitty/overview.html:109
+#: templates/hyperkitty/overview.html:184
 msgid "Most active posters"
 msgstr "가장 활발한 글쓴이"
 
-#: templates/hyperkitty/overview.html:118
+#: templates/hyperkitty/overview.html:193
 msgid "Prominent posters"
 msgstr "유명한 글쓴이"
 
-#: templates/hyperkitty/overview.html:133
+#: templates/hyperkitty/overview.html:208
 msgid "kudos"
 msgstr "명성"
-
-#: templates/hyperkitty/overview.html:152
-msgid "Recent"
-msgstr ""
-
-#: templates/hyperkitty/overview.html:156
-#, fuzzy
-#| msgid "Most active"
-msgid "Most Active"
-msgstr "활발한순"
-
-#: templates/hyperkitty/overview.html:160
-#, fuzzy
-#| msgid "Most popular"
-msgid "Most Popular"
-msgstr "인기순"
-
-#: templates/hyperkitty/overview.html:166
-#: templates/hyperkitty/user_profile/base.html:22
-msgid "Favorites"
-msgstr "즐겨찾기"
-
-#: templates/hyperkitty/overview.html:170
-msgid "Posted"
-msgstr ""
-
-#: templates/hyperkitty/overview.html:179
-msgid "Recently active discussions"
-msgstr "최근에 활동한 의논들"
-
-#: templates/hyperkitty/overview.html:186
-msgid "Most popular discussions"
-msgstr "가장 유명한 의논들"
-
-#: templates/hyperkitty/overview.html:193
-msgid "Most active discussions"
-msgstr "가장 활발한 의논들"
-
-#: templates/hyperkitty/overview.html:200
-msgid "Discussions You've Flagged"
-msgstr "찜한 의논들"
-
-#: templates/hyperkitty/overview.html:208
-msgid "Discussions You've Posted to"
-msgstr "게시한 의논들"
 
 #: templates/hyperkitty/reattach.html:9
 msgid "Reattach a thread"
 msgstr "스레드 다시 올리기"
 
-#: templates/hyperkitty/reattach.html:20
+#: templates/hyperkitty/reattach.html:18
 msgid "Re-attach a thread to another"
 msgstr "다른 스레드에 다시 올리기"
 
-#: templates/hyperkitty/reattach.html:22
+#: templates/hyperkitty/reattach.html:20
 msgid "Thread to re-attach:"
 msgstr "다시 올릴 스레드:"
 
-#: templates/hyperkitty/reattach.html:29
+#: templates/hyperkitty/reattach.html:27
 msgid "Re-attach it to:"
 msgstr "다시 올릴 곳:"
 
-#: templates/hyperkitty/reattach.html:31
+#: templates/hyperkitty/reattach.html:29
 msgid "Search for the parent thread"
 msgstr "부모 스레드 찾기"
 
-#: templates/hyperkitty/reattach.html:32
+#: templates/hyperkitty/reattach.html:30
 msgid "Search"
 msgstr "찾기"
 
-#: templates/hyperkitty/reattach.html:44
+#: templates/hyperkitty/reattach.html:42
 msgid "this thread ID:"
 msgstr "이 스레드의 ID:"
 
-#: templates/hyperkitty/reattach.html:50
+#: templates/hyperkitty/reattach.html:48
 msgid "Do it"
 msgstr "실행"
 
-#: templates/hyperkitty/reattach.html:50
+#: templates/hyperkitty/reattach.html:48
 msgid "(there's no undoing!), or"
 msgstr "(되돌리기 할 것이 없습니다!), 또는"
 
-#: templates/hyperkitty/reattach.html:52
+#: templates/hyperkitty/reattach.html:50
 msgid "go back to the thread"
 msgstr "스레드로 돌아가기"
 
@@ -815,78 +811,68 @@ msgstr "스레드로 돌아가기"
 msgid "Search results for"
 msgstr "다음의 검색 결과입니다"
 
-#: templates/hyperkitty/search_results.html:30
+#: templates/hyperkitty/search_results.html:28
 msgid "search results"
 msgstr "검색 결과"
 
-#: templates/hyperkitty/search_results.html:32
+#: templates/hyperkitty/search_results.html:30
 msgid "Search results"
 msgstr "검색 결과"
 
-#: templates/hyperkitty/search_results.html:34
+#: templates/hyperkitty/search_results.html:32
 msgid "for query"
 msgstr "질문 당"
 
-#: templates/hyperkitty/search_results.html:44
+#: templates/hyperkitty/search_results.html:42
 #: templates/hyperkitty/user_posts.html:34
 msgid "messages"
 msgstr "메세지"
 
-#: templates/hyperkitty/search_results.html:57
+#: templates/hyperkitty/search_results.html:55
 msgid "sort by score"
 msgstr "점수에 따라 정렬하기"
 
-#: templates/hyperkitty/search_results.html:60
+#: templates/hyperkitty/search_results.html:58
 msgid "sort by latest first"
 msgstr "최근순으로 정렬하기"
 
-#: templates/hyperkitty/search_results.html:63
+#: templates/hyperkitty/search_results.html:61
 msgid "sort by earliest first"
 msgstr "오래된 순으로 정렬하기"
 
-#: templates/hyperkitty/search_results.html:84
+#: templates/hyperkitty/search_results.html:82
 msgid "Sorry no email could be found for this query."
 msgstr "이 요청에 따른 이메일을 찾을 수 없습니다."
 
-#: templates/hyperkitty/search_results.html:87
+#: templates/hyperkitty/search_results.html:85
 msgid "Sorry but your query looks empty."
 msgstr "요청이 비어있습니다."
 
-#: templates/hyperkitty/search_results.html:88
+#: templates/hyperkitty/search_results.html:86
 msgid "these are not the messages you are looking for"
 msgstr "당신이 찾고자한 메세지가 아닙니다"
 
-#: templates/hyperkitty/thread.html:30
+#: templates/hyperkitty/thread.html:26
 msgid "newer"
 msgstr "이전"
 
-#: templates/hyperkitty/thread.html:44
+#: templates/hyperkitty/thread.html:45
 msgid "older"
 msgstr "다음"
 
-#: templates/hyperkitty/thread.html:72
-msgid "First Post"
-msgstr "첫 게시물"
-
-#: templates/hyperkitty/thread.html:75
-#: templates/hyperkitty/user_profile/favorites.html:45
-#: templates/hyperkitty/user_profile/last_views.html:50
-msgid "Replies"
-msgstr "답장"
-
-#: templates/hyperkitty/thread.html:97
+#: templates/hyperkitty/thread.html:71
 msgid "Show replies by thread"
 msgstr "스레드 별로 답장보기"
 
-#: templates/hyperkitty/thread.html:100
+#: templates/hyperkitty/thread.html:74
 msgid "Show replies by date"
 msgstr "날짜별로 답장보기"
 
-#: templates/hyperkitty/thread.html:113
+#: templates/hyperkitty/thread.html:87
 msgid "Visit here for a non-javascript version of this page."
 msgstr ""
 
-#: templates/hyperkitty/thread_list.html:70
+#: templates/hyperkitty/thread_list.html:71
 msgid "Sorry no email threads could be found"
 msgstr "이메일 스레드를 찾을 수 없습니다"
 
@@ -902,64 +888,64 @@ msgstr "수정하기 전에 로그인되어야 합니다."
 msgid "no category"
 msgstr "카테고리 없음"
 
-#: templates/hyperkitty/threads/right_col.html:12
+#: templates/hyperkitty/threads/right_col.html:13
 msgid "Age (days ago)"
 msgstr ""
 
-#: templates/hyperkitty/threads/right_col.html:18
+#: templates/hyperkitty/threads/right_col.html:19
 #, fuzzy
 #| msgid "Last activity"
 msgid "Last active (days ago)"
 msgstr "최근 활동"
 
-#: templates/hyperkitty/threads/right_col.html:40
+#: templates/hyperkitty/threads/right_col.html:47
 #, python-format
 msgid "%(num_comments)s comments"
 msgstr ""
 
-#: templates/hyperkitty/threads/right_col.html:44
+#: templates/hyperkitty/threads/right_col.html:51
 #, python-format
 msgid "%(participants_count)s participants"
 msgstr ""
 
-#: templates/hyperkitty/threads/right_col.html:49
+#: templates/hyperkitty/threads/right_col.html:56
 #, python-format
 msgid "%(unread_count)s unread <span class=\"hidden-sm\">messages</span>"
 msgstr ""
 
-#: templates/hyperkitty/threads/right_col.html:59
+#: templates/hyperkitty/threads/right_col.html:66
 msgid "You must be logged-in to have favorites."
 msgstr "즐겨찾기에 등록하기 위해서 로그인되어야 합니다."
 
-#: templates/hyperkitty/threads/right_col.html:60
+#: templates/hyperkitty/threads/right_col.html:67
 msgid "Add to favorites"
 msgstr "즐겨찾기에 추가하기"
 
-#: templates/hyperkitty/threads/right_col.html:62
+#: templates/hyperkitty/threads/right_col.html:69
 msgid "Remove from favorites"
 msgstr "즐겨찾기에서 제거하기"
 
-#: templates/hyperkitty/threads/right_col.html:71
+#: templates/hyperkitty/threads/right_col.html:78
 msgid "Reattach this thread"
 msgstr "스레드 다시 올리기"
 
-#: templates/hyperkitty/threads/right_col.html:75
+#: templates/hyperkitty/threads/right_col.html:82
 msgid "Delete this thread"
 msgstr "스레드 삭제하기"
 
-#: templates/hyperkitty/threads/right_col.html:113
+#: templates/hyperkitty/threads/right_col.html:120
 msgid "Unreads:"
 msgstr "안읽음:"
 
-#: templates/hyperkitty/threads/right_col.html:115
+#: templates/hyperkitty/threads/right_col.html:122
 msgid "Go to:"
 msgstr "이동:"
 
-#: templates/hyperkitty/threads/right_col.html:115
+#: templates/hyperkitty/threads/right_col.html:122
 msgid "next"
 msgstr "다음"
 
-#: templates/hyperkitty/threads/right_col.html:116
+#: templates/hyperkitty/threads/right_col.html:123
 msgid "prev"
 msgstr "이전"
 
@@ -1073,6 +1059,11 @@ msgstr "시작한 날짜"
 #: templates/hyperkitty/user_profile/last_views.html:49
 msgid "Last activity"
 msgstr "최근 활동"
+
+#: templates/hyperkitty/user_profile/favorites.html:45
+#: templates/hyperkitty/user_profile/last_views.html:50
+msgid "Replies"
+msgstr "답장"
 
 #: templates/hyperkitty/user_profile/favorites.html:71
 msgid "No favorites yet."
@@ -1255,6 +1246,16 @@ msgstr "파싱(Parsing) 에러:%(error)s"
 #: views/thread.py:192
 msgid "This thread in gzipped mbox format"
 msgstr "이 스레드는 gzip mbox 포멧으로 압축되었습니다"
+
+#~ msgid ""
+#~ "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
+#~ "\">S</span>ubscription"
+#~ msgstr ""
+#~ "<span class=\"d-none d-md-inline\">구독 관리</span><span class=\"d-md-none"
+#~ "\">(S)</span>"
+
+#~ msgid "First Post"
+#~ msgstr "첫 게시물"
 
 #~ msgid "days inactive"
 #~ msgstr "일 비활성화"
