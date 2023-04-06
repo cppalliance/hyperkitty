@@ -17,6 +17,7 @@ News / Changelog
  - Added a new contrib/cleanarch3 script it check/fix mboxes for unescaped
    "From " lines and bad Date: headers.
  - Upgrade to Bootstrap 5 and the UI redesign. (See !498)
+ - Add support for Django 4.2
 
 A11y
 ----
