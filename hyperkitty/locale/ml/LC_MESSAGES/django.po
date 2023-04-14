@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-21 23:47+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2023-04-14 12:49+0000\n"
+"Last-Translator: Ram <airavatam@tutanota.com>\n"
+"Language-Team: Malayalam <https://hosted.weblate.org/projects/gnu-mailman/"
+"hyperkitty/ml/>\n"
+"Language: ml\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -321,8 +322,9 @@ msgid "Change sender"
 msgstr ""
 
 #: templates/hyperkitty/fragments/send_as.html:16
+#, fuzzy
 msgid "Link another address"
-msgstr ""
+msgstr "മറ്റൊരു വിലാസം ലിങ്ക് ചെയ്യുക"
 
 #: templates/hyperkitty/fragments/send_as.html:20
 msgid ""
@@ -449,7 +451,7 @@ msgstr ""
 
 #: templates/hyperkitty/index.html:191
 msgid "Description"
-msgstr ""
+msgstr "വിവരണം"
 
 #: templates/hyperkitty/index.html:192
 msgid "Activity in the past 30 days"
@@ -491,7 +493,7 @@ msgstr ""
 #: templates/hyperkitty/message_new.html:51
 #: templates/hyperkitty/messages/message.html:148
 msgid "or"
-msgstr ""
+msgstr "അഥവാ"
 
 #: templates/hyperkitty/list_delete.html:34
 #: templates/hyperkitty/message_delete.html:43
@@ -500,7 +502,7 @@ msgstr ""
 #: templates/hyperkitty/user_profile/votes.html:36
 #: templates/hyperkitty/user_profile/votes.html:74
 msgid "cancel"
-msgstr ""
+msgstr "റദ്ദാക്കുക"
 
 #: templates/hyperkitty/message.html:20
 msgid "thread"
@@ -926,7 +928,7 @@ msgstr ""
 
 #: templates/hyperkitty/threads/tags.html:15
 msgid "Remove"
-msgstr ""
+msgstr "നീക്കം ചെയ്യുക"
 
 #: templates/hyperkitty/user_posts.html:8
 #: templates/hyperkitty/user_posts.html:21
@@ -952,7 +954,7 @@ msgstr ""
 #: templates/hyperkitty/user_public_profile.html:7
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "for"
-msgstr ""
+msgstr "വേണ്ടി"
 
 #: templates/hyperkitty/user_profile/base.html:26
 msgid "Threads you have read"
