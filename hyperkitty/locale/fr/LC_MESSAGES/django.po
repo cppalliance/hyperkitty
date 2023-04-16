@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-21 23:47+0000\n"
-"PO-Revision-Date: 2021-10-31 22:39+0000\n"
+"PO-Revision-Date: 2023-04-16 13:47+0000\n"
 "Last-Translator: Frédéric Daniel Luc Lehobey <weblate@lehobey.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -219,7 +219,7 @@ msgstr "Gérer les listes"
 
 #: templates/hyperkitty/base.html:96
 msgid "Sign In"
-msgstr "Se connecter"
+msgstr "S'identifier"
 
 #: templates/hyperkitty/base.html:100
 msgid "Sign Up"
@@ -493,20 +493,16 @@ msgid "Delete MailingList"
 msgstr "Supprimer la liste de diffusion"
 
 #: templates/hyperkitty/list_delete.html:18
-#, fuzzy
-#| msgid "Delete Mailing List"
 msgid "Delete Mailing List From HyperKitty"
-msgstr "Supprimer la liste de diffusion"
+msgstr "Supprimer la liste de diffusion depuis HyperKitty"
 
 #: templates/hyperkitty/list_delete.html:24
-#, fuzzy
-#| msgid ""
-#| "will be deleted along with all the threads and messages. Do you want to "
-#| "continue?"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
-msgstr "sera supprimé avec tous les fils et messages. Voulez-vous continuer ?"
+msgstr ""
+"sera supprimé depuis HyperKitty avec tous les fils et messages. Il ne sera "
+"pas supprimé du cœur de Mailman. Voulez-vous continuer ?"
 
 #: templates/hyperkitty/list_delete.html:31
 #: templates/hyperkitty/message_delete.html:42
@@ -603,15 +599,7 @@ msgid "Sign in to reply online"
 msgstr "Connectez-vous pour répondre en ligne"
 
 #: templates/hyperkitty/messages/message.html:107
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                %(email.attachments.count)s attachment\n"
-#| "                "
-#| msgid_plural ""
-#| "\n"
-#| "                %(email.attachments.count)s attachments\n"
-#| "                "
+#, python-format
 msgid ""
 "\n"
 "                %(email.attachments.count)s attachment\n"
@@ -724,10 +712,8 @@ msgid "You must be logged-in to create a thread."
 msgstr "Vous devez être connecté·e pour créer une discussion."
 
 #: templates/hyperkitty/overview.html:121
-#, fuzzy
-#| msgid "new"
 msgid "New"
-msgstr "nouveau"
+msgstr "Nouveau"
 
 #: templates/hyperkitty/overview.html:131
 #: templates/hyperkitty/thread_list.html:38
@@ -877,7 +863,7 @@ msgstr "Afficher les réponses par date"
 
 #: templates/hyperkitty/thread.html:87
 msgid "Visit here for a non-javascript version of this page."
-msgstr ""
+msgstr "Cliquer ici pour une version sans Javascript de cette page."
 
 #: templates/hyperkitty/thread_list.html:71
 msgid "Sorry no email threads could be found"
@@ -897,13 +883,11 @@ msgstr "pas de catégorie"
 
 #: templates/hyperkitty/threads/right_col.html:13
 msgid "Age (days ago)"
-msgstr ""
+msgstr "Âge (en jours)"
 
 #: templates/hyperkitty/threads/right_col.html:19
-#, fuzzy
-#| msgid "Last activity"
 msgid "Last active (days ago)"
-msgstr "Dernière activité"
+msgstr "Dernière activité (en jours)"
 
 #: templates/hyperkitty/threads/right_col.html:47
 #, python-format
@@ -911,10 +895,9 @@ msgid "%(num_comments)s comments"
 msgstr "%(num_comments)s commentaires"
 
 #: templates/hyperkitty/threads/right_col.html:51
-#, fuzzy, python-format
-#| msgid "%(thread.participants_count)s participants"
+#, python-format
 msgid "%(participants_count)s participants"
-msgstr "%(thread.participants_count)s participants"
+msgstr "%(participants_count)s participants"
 
 #: templates/hyperkitty/threads/right_col.html:56
 #, python-format
@@ -980,7 +963,7 @@ msgstr "Rechercher une étiquette"
 
 #: templates/hyperkitty/threads/tags.html:15
 msgid "Remove"
-msgstr "Retirer"
+msgstr "Supprimer"
 
 #: templates/hyperkitty/user_posts.html:8
 #: templates/hyperkitty/user_posts.html:21
@@ -1156,11 +1139,11 @@ msgstr "Pas encore de vote."
 
 #: templates/hyperkitty/user_public_profile.html:7
 msgid "User Profile"
-msgstr "Profil d'utilisateur"
+msgstr "Profil utilisateur"
 
 #: templates/hyperkitty/user_public_profile.html:14
 msgid "User profile"
-msgstr "Profil d'utilisateur"
+msgstr "Profil utilisateur"
 
 #: templates/hyperkitty/user_public_profile.html:23
 msgid "Name:"
@@ -1205,10 +1188,8 @@ msgid "Successfully deleted %(count)s messages."
 msgstr "%(count)s messages supprimés."
 
 #: views/mlist.py:88
-#, fuzzy
-#| msgid "Delete MailingList"
 msgid "for this MailingList"
-msgstr "Supprimer la liste de diffusion"
+msgstr "pour cette liste de diffusion"
 
 #: views/mlist.py:100
 msgid "for this month"
