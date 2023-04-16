@@ -32,8 +32,10 @@
             <tr>
                 <th>{% trans 'Votes for this user:' %}</th>
                 <td>
-                    <i class="icomoon likestatus {{ likestatus }}"></i>
-                    <span class="likestatus">+{{ likes }}/-{{ dislikes }}</span>
+                    <span class="likestatus">
+                        <i class="fa fa-thumbs-o-up"></i> {{ likes }} 
+                        <i class="fa fa-thumbs-o-down"></i> {{ dislikes }} 
+                    </span>
                 </td>
             </tr>
             {% if user.is_superuser %}
