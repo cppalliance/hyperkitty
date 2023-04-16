@@ -32,8 +32,10 @@
                             >{{ message.subject }}</a></td>
                     <td>{{ message.date }}</td>
                     <td>
-                        <i class="icomoon likestatus {{ votes.status }}"></i>
-                        <span>+{{ votes.likes }}/-{{ votes.dislikes }}</span>
+                        <span>
+                            <i class="fa fa-thumbs-o-up"></i> {{ votes.likes }} 
+                            <i class="fa fa-thumbs-o-down"></i> {{ votes.dislikes }} 
+                        </span>
                     </td>
                     <td><a href="{% url 'hk_thread' mlist_fqdn=mlist.name threadid=thread.thread_id %}"
                             >{{ thread.starting_email.subject }}</a></td>

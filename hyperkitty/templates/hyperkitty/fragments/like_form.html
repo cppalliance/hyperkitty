@@ -4,11 +4,6 @@
           action="{% url 'hk_message_vote' mlist_fqdn=mlist.name message_id_hash=message_id_hash %}">
     {% csrf_token %}
     {% with votes=object.get_votes %}
-
-		<!-- Hide the status icon
-		<i class="icomoon likestatus {{ votes.status }}"></i> -->
-
-		<!-- <span>+{{ votes.likes }}/-{{ votes.dislikes }}</span> -->
 		{% if object.myvote == 1 %}
 			<!-- if you like it, highlight thumbs up, disable thumbs down -->
 			<a href="#cancelvote" class="vote" data-vote="0" aria-label="Cancel vote">
