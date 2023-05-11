@@ -176,6 +176,16 @@ class DbImporter(object):
         for msg in mbox:
             # FIXME: this converts mailbox.mboxMessage to
             # email.message.EmailMessage
+            # We need to fix up Message-IDs here because recent Python email
+            # throws an IndexError exception on getting a Message-ID of <>.
+            if msg['message-id'] is None:
+                msg['Message-ID'] = make_msgid('generated')
+            if (msg['message-id'].strip() == '' or
+                    msg['message-id'].strip() == '<>'):
+                msg.replace_header('Message-ID', make_msgid('generated'))
+            if msg['message-id'] != self._fix_mid(msg['message-id']):
+                msg.replace_header(
+                    'Message-ID', self._fix_mid(msg['message-id']))
             try:
                 msg_raw = msg.as_bytes(unixfrom=False)
             except UnicodeError as e:
@@ -219,13 +229,6 @@ class DbImporter(object):
                         "subject", TEXTWRAP_RE.sub(" ", message["subject"]))
             if unixfrom:
                 message.set_unixfrom(unixfrom)
-            if message['message-id'] is None:
-                message['Message-ID'] = make_msgid('generated')
-            if message['message-id'].strip() == '':
-                message.replace_header('Message-ID', make_msgid('generated'))
-            if message['message-id'] != self._fix_mid(message['message-id']):
-                message.replace_header(
-                    'Message-ID', self._fix_mid(message['message-id']))
             # Now insert the message
             try:
                 with transaction.atomic():

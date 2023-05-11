@@ -18,6 +18,8 @@ News / Changelog
    "From " lines and bad Date: headers.
  - Upgrade to Bootstrap 5 and the UI redesign. (See !498)
  - Add support for Django 4.2
+ - hyperkitty_import no longer fails with recent Python and Message-ID: <>
+   (Closes #396)
 
 A11y
 ----
