@@ -180,6 +180,54 @@ msg1
         archived_mid = Email.objects.get().as_message()['message-id']
         self.assertEqual(archived_mid, '<58482FD7034976FE@example.com>')
 
+    def test_empty_message_id(self):
+        # Message-IDs like this have been seen.
+        msg = message_from_string("""\
+From: dummy@example.com
+Date: 01 Feb 2015 12:00:00
+Message-ID:
+
+msg1
+""", EmailMessage)
+        mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
+        mbox.add(msg)
+        mbox.close()
+        # do the import
+        output = StringIO()
+        kw = self.common_cmd_args.copy()
+        kw["stdout"] = kw["stderr"] = output
+        call_command('hyperkitty_import',
+                     os.path.join(self.tmpdir, "test.mbox"), **kw)
+        # The message should be archived.
+        self.assertEqual(Email.objects.count(), 1)
+        # Its Message-ID should be generated.
+        archived_mid = Email.objects.get().as_message()['message-id']
+        self.assertRegex(archived_mid, r'^<.*\.generated@.*>$')
+
+    def test_another_empty_message_id(self):
+        # Message-IDs like this have been seen.
+        msg = message_from_string("""\
+From: dummy@example.com
+Date: 01 Feb 2015 12:00:00
+Message-ID: <>
+
+msg1
+""", EmailMessage)
+        mbox = mailbox.mbox(os.path.join(self.tmpdir, "test.mbox"))
+        mbox.add(msg)
+        mbox.close()
+        # do the import
+        output = StringIO()
+        kw = self.common_cmd_args.copy()
+        kw["stdout"] = kw["stderr"] = output
+        call_command('hyperkitty_import',
+                     os.path.join(self.tmpdir, "test.mbox"), **kw)
+        # The message should be archived.
+        self.assertEqual(Email.objects.count(), 1)
+        # Its Message-ID should be generated.
+        archived_mid = Email.objects.get().as_message()['message-id']
+        self.assertRegex(archived_mid, r'^<.*\.generated@.*>$')
+
     def test_wrong_encoding(self):
         """badly encoded message, only fails on PostgreSQL"""
         db_engine = settings.DATABASES[DEFAULT_DB_ALIAS]["ENGINE"]
@@ -419,7 +467,7 @@ msg1
         call_command('hyperkitty_import',
                      os.path.join(self.tmpdir, "test.mbox"), **kw)
         # Message 1 must have been rejected, but no crash
-        self.assertIn("Failed to convert n/a to email", output.getvalue())
+        self.assertIn("Failed to convert msg1 to email", output.getvalue())
         # Message 2 must have been accepted
         self.assertEqual(MailingList.objects.count(), 1)
         self.assertEqual(Email.objects.count(), 1)
@@ -446,7 +494,7 @@ msg1
         call_command('hyperkitty_import',
                      os.path.join(self.tmpdir, "test.mbox"), **kw)
         # Message 1 must have been rejected, but no crash
-        self.assertIn("Failed to convert n/a to bytes", output.getvalue())
+        self.assertIn("Failed to convert msg1 to bytes", output.getvalue())
         # Message 2 must have been accepted
         self.assertEqual(MailingList.objects.count(), 1)
         self.assertEqual(Email.objects.count(), 1)
