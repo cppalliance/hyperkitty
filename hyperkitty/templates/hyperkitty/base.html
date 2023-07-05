@@ -41,13 +41,11 @@
             <div class="d-flex">
                 <div class="auth dropdown d-md-none">
                         {% if user.is_authenticated %}
-                        <a href="#" role="button" class="btn btn-primary dropdown-toggle user-button" id="loginDropdownMenu"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a href="#" role="button" class="btn btn-primary dropdown-toggle user-button" id="loginDropdownMenu"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               {% gravatar user.email 40 %}
                             </a>
-                          {% endif %}
 
-                          {% if user.is_authenticated %}
                             <div class="dropdown-menu dropdown-menu-end">
                               <span class="dropdown-item username me-2 ms-2">{{ user.username|truncatechars:"35" }}</span>
                               <div class="dropdown-divider"></div>
@@ -71,8 +69,16 @@
                                   {% trans "Logout" %}
                               </a>
                             </div> <!-- dropdown menu -->
-                          {% endif %}
-                  </div>
+                        {% endif %}
+                </div>
+                <a  href="{% url LOGIN_URL %}?next={{next|default:request.path|urlencode}}" class="nav-link d-md-none">
+                    <span class="fa fa-sign-in"></span>
+                    {% trans "Sign In" %}
+                </a>
+                <a  href="{% url 'account_signup' %}?next={{next|default:request.path|urlencode}}" class="nav-link d-md-none">
+                    <span class="fa fa-user-plus"></span>
+                    {% trans "Sign Up" %}
+                </a>
             </div>
             <div class="navbar-collapse collapse justify-content-end"> <!--part of navbar that's collapsed on small screens-->
                 <!-- show dropdown for smaller viewports b/c login name/email may be too long -->
@@ -91,11 +97,11 @@
                 {% endif %}
             {% endif %}
             {% if not user.is_authenticated %}
-            <a  href="{% url LOGIN_URL %}?next={{next|default:request.path|urlencode}}" class="nav-link">
+            <a  href="{% url LOGIN_URL %}?next={{next|default:request.path|urlencode}}" class="nav-link d-none d-md-block">
                 <span class="fa fa-sign-in"></span>
                 {% trans "Sign In" %}
             </a>
-            <a  href="{% url 'account_signup' %}?next={{next|default:request.path|urlencode}}" class="nav-link">
+            <a  href="{% url 'account_signup' %}?next={{next|default:request.path|urlencode}}" class="nav-link d-none d-md-block">
                 <span class="fa fa-user-plus"></span>
                 {% trans "Sign Up" %}
             </a>
@@ -151,15 +157,6 @@
                                 </a>
                             </div>
                         </li>
-                    {% comment %} {% else %}
-                        <li class="nav-item"><a href="{% url LOGIN_URL %}?next={{next|default:request.path|urlencode}}" class="nav-link">
-                            <span class="fa fa-sign-in"></span>
-                            {% trans "Sign In" %}
-                        </a></li>
-                        <li class="nav-item"><a href="{% url 'account_signup' %}?next={{next|default:request.path|urlencode}}" class="nav-link">
-                            <span class="fa fa-user-plus"></span>
-                            {% trans "Sign Up" %}
-                        </a></li> {% endcomment %}
                     {% endif %}
                 </ul>
             </div> <!--/navbar-collapse -->
