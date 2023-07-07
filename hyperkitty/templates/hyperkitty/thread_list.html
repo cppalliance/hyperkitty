@@ -19,7 +19,7 @@
 
     <div id="thread-list">
         <div class="thread-list-header row">
-            <h1 class="col-6">
+            <h1 class="col">
                 <a href="{% url 'hk_list_overview' mlist_fqdn=mlist.name %}" class="list-name">
                     {% if mlist.display_name %}
                         {{ mlist.display_name }}
@@ -27,30 +27,33 @@
                         {{ mlist.name|until:"@" }}
                     {% endif %}
                 </a>
-                <small class="d-none d-md-block">{{ list_title }}</small>
             </h1>
-            <div class="col-6 d-flex flex-align-center flex-row-reverse">
+            <div class="col d-flex flex-align-center flex-row-reverse">
                 <div class="order-3 me-2">
                     <a href="{% url "hk_message_new" mlist_fqdn=mlist.name %}"
                         class="btn btn-success  {% if not user.is_authenticated %} disabled" title="{% trans 'You must be logged-in to create a thread.' %}{% endif %}"
                         aria-label="Start new thread">
                         <i class="fa fa-plus"></i>
-                    {% trans '<span class="d-none d-md-inline">Start a n</span><span class="d-md-none">N</span>ew thread' %}
+                        <span class="d-inline d-md-none">{% trans 'Thread'%}</span>
+                        <span class="d-none d-md-inline">{% trans 'Start a new thread'%}</span>
                     </a>
                 </div>
                 {% if export and export_allowed %}
-                <div>
-                <a href="{{ export.url }}" title="{{ export.title }}"
-                  class="btn btn-outline-primary ms-2"><i class="fa fa-download" aria-label="Download Messages"></i>{{ export.message }}</a>
+                <div class="d-none d-md-block">
+                    <a href="{{ export.url }}" title="{{ export.title }}"
+                    class="btn btn-outline-primary ms-2"><i class="fa fa-download" aria-label="Download Messages"></i>{{ export.message }}
+                    </a>
                 {% endif %}
                 </div>
                 {% cache 86400 month_list_select LANGUAGE_CODE months_list mlist.name %}
                    {% include 'hyperkitty/fragments/month_list.html' with show_select='True' %}
                 {% endcache %}
             </div>
-
-            <span class="list-address col-12">{{ mlist.name }}</span>
-            <ul class="list-unstyled list-stats thread-list-info col-6 col-sm-8">
+            <span class="list-address">
+                {{ mlist.name }}
+                <h2>{{ list_title }}</h2>
+            </span>
+            <ul class="list-unstyled list-stats thread-list-info">
                 {% if participants_count %}
                 <li>
                     <i class="fa fa-user" aria-label="participants"></i>

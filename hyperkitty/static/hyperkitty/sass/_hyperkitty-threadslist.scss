@@ -3,16 +3,16 @@
  */
 
 #thread-list .thread-list-header {
-    margin-bottom: 2em;
-    padding-bottom: 1em;
+    // margin-bottom: 2em;
+    // padding-bottom: 1em;
     h1 {
         margin-bottom: 0;
     }
+    a {
+        text-decoration: none;
+    }
     .list-name {
         color: black;
-        &:hover {
-            text-decoration: none;
-        }
     }
     .list-address {
         font-size: 120%;
@@ -34,7 +34,7 @@
 
     @extend .bordered-vertical;
 
-    padding: 5px;
+    // padding: 5px;
 
     .thread-summary {
         width: 100%;

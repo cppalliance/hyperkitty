@@ -2,12 +2,12 @@
 {% load hk_generic %}
 
 {% for poster in mlist.top_posters %}
-<div class="maker row">
-    <div class="gravatar col-sm-auto">
+<div class="maker d-flex flex-column flex-md-row">
+    <div class="gravatar">
         {% gravatar poster.address 120 %}
-        <br />
+        {% comment %} <br /> {% endcomment %}
     </div>
-    <div class="gravatar-details col">
+    <div class="gravatar-details">
         <ul class="list-unstyled">
             <li><span class="maker-name">
                 {% if poster.mailman_id %}

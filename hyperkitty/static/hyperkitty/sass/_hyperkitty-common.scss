@@ -122,9 +122,9 @@ h1 {
     @extend .small-bolded-text;
     color: $subheadingColor;
 }
-.maker-name  {
-    @extend .small-bolded-text;
-}
+// .maker-name  {
+//     @extend .small-bolded-text;
+// }
 
 .gravatar-placeholder {
 	width: 120px;
@@ -282,7 +282,7 @@ div#months-list {
     }
     a.label:hover {
         color: white;
-        text-decoration: none;
+        // text-decoration: none;
     }
     form {
         margin: 0;

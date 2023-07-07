@@ -105,7 +105,7 @@
         <ul class="list-unstyled">
             {% for participant in thread.participants|sort_by_name %}
             <li class="row">
-                <div class="participant-gravatar col-sm-auto circle-small">{% gravatar participant.address 48 %}</div>
+                <div class="participant-gravatar col-sm-auto circle">{% gravatar participant.address 48 %}</div>
                 <div class="participant-name col">{{ participant.name|default:participant.address|escapeemail }}</div>
             </li>
             {% endfor %}
