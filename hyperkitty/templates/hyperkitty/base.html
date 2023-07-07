@@ -71,6 +71,7 @@
                             </div> <!-- dropdown menu -->
                         {% endif %}
                 </div>
+                {% if not user.is_authenticated %}
                 <a  href="{% url LOGIN_URL %}?next={{next|default:request.path|urlencode}}" class="nav-link d-md-none">
                     <span class="fa fa-sign-in"></span>
                     {% trans "Sign In" %}
@@ -79,6 +80,7 @@
                     <span class="fa fa-user-plus"></span>
                     {% trans "Sign Up" %}
                 </a>
+                {% endif %}
             </div>
             <div class="navbar-collapse collapse justify-content-end"> <!--part of navbar that's collapsed on small screens-->
                 <!-- show dropdown for smaller viewports b/c login name/email may be too long -->

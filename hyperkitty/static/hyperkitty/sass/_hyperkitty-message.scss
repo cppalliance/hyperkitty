@@ -214,7 +214,7 @@ $oddEmailColor: rgb(238, 238, 238);
         background: #FFAAAA
     }
     .reply {
-        padding: 10px;
+        // padding: 10px;
         border-radius: 4px;
     }
     .reply:hover {
@@ -279,18 +279,18 @@ $oddEmailColor: rgb(238, 238, 238);
 }
 
 
-.email-first .email-info {
-    padding: 0 0 20px 0;
-    // border-bottom: 1px solid $rowBorderColor;
-}
+// .email-first .email-info {
+//     padding: 0 0 20px 0;
+//     // border-bottom: 1px solid $rowBorderColor;
+// }
 
-.email-first {
-    padding-left: 10px;
-}
+// .email-first {
+//     padding-left: 10px;
+// }
 
-.email-first .email-body {
-    padding-left: 25px;
-}
+// .email-first .email-body {
+//     padding-left: 25px;
+// }
 
 .sort-mode {
     text-align: right;
@@ -626,7 +626,7 @@ $oddEmailColor: rgb(238, 238, 238);
         // @media (max-width: $screen-xs-max) {
                 #participants {
                         .participant-name {
-                                margin-left: -20px;
+                                margin-left: 0px;
                         }
                 }
         }

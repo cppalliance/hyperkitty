@@ -94,7 +94,7 @@ $headerNavPadding: 7px;
 
     td {
         vertical-align: middle;
-        padding: 8px 12px;
+        // padding: 8px 12px;
         border-top: 1px solid $rowBorderColor;
         border-bottom: 1px solid $rowBorderColor;
     }
@@ -192,11 +192,11 @@ $headerNavPadding: 7px;
 // at screens <= 610px, convert to a different layout
 // rows are too long, so only display some info (list name, list stats)
 // @media (max-width: $screen-xs-max) {
-@include media-breakpoint-down(xs) {
-		.all-lists .row {
-				margin-right: 0;
-		}
-}
+// @include media-breakpoint-down(xs) {
+// 		.all-lists .row {
+// 				margin-right: 0;
+// 		}
+// }
 // force header onto 1 row by removing extra padding/gutter
 @include media-breakpoint-between(xs, sm) {
 		// @media (max-width: $screen-xs-max) and (min-width: $screen-xs) {

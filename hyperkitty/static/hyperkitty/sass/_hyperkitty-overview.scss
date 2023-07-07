@@ -37,7 +37,7 @@
         margin-bottom: 0px;
     }
     #description {
-        font-size: smaller;
+        // font-size: smaller;
         font-weight: normal;
     }
 }
@@ -50,11 +50,11 @@
         font-weight: bold;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
+        // white-space: nowrap;
 
-				.fa-envelope {
-						color: #08c;
-				}
+        .fa-envelope {
+                color: #08c;
+        }
     }
 
     .thread-id {
@@ -128,14 +128,13 @@
     .chart-data {
         @extend .bordered;
     }
-    ul.list-stats {
+    .list-stats {
         padding-bottom: 10px;
         display: block;
         i {
             padding-right: 5px;
         }
-        li {
-            display: block;
+        span {
             font-size: small;
             padding-left: 0;
         }
@@ -155,8 +154,9 @@
 }
 
 .overview .maker {
-		padding-right: 10px;
-		padding-bottom: 20px;
+		// padding-right: 10px;
+        flex: 1;
+		// padding-bottom: 20px;
 		.maker-name {
 				word-wrap: break-word !important;
 		}
@@ -192,6 +192,14 @@
 						@extend .row-link-hover;
 				}
 		}
+}
+
+.gravatar {
+    img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
 }
 
 /*
@@ -260,12 +268,5 @@
 				.thread .thread-title {
 						max-height: 1.8em;
 				}
-        }
-        .gravatar {
-            img {
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-            }
         }
 }

@@ -14,9 +14,9 @@
 <div class="all-lists">
 
 <div class="row header">
-    <h1 class="col-md col-sm-8">
-        {% trans 'Available lists' %}
-    </h1>
+    <div class="col">
+        <h1>{% trans 'Available lists' %}</h1>
+    </div>
     {# This version of the sort-by options shows up on larger screens. #}
     <nav class="col d-none d-md-flex flex-row-reverse sort-mode" aria-label="mailinglist sort mode">
         <ul class="list-unstyled list-inline">
@@ -79,7 +79,7 @@
         </ul>
     </nav>
     {# This version of the sort-by options shows up on tablets/mobile phones. #}
-    <div class="btn-group float-right col-5 col-sm-3 d-md-none">
+    <div class="col btn-group float-right d-md-none">
         <button type="button" role="button" class="dropdown-toggle btn btn-sm btn-secondary pull-right" data-bs-toggle="dropdown" aria-haspopup="true">
             {% trans 'Sort by' %} <span class="caret"></span>
         </button>
