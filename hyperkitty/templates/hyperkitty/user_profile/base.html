@@ -11,7 +11,7 @@
 
     <h1>{% trans "User posting activity" %} <small>{% trans "for" %} {{ user }}</small></h1>
 
-    <ul class="nav nav-tabs" role="navigation">
+    <ul class="nav nav-pills" role="navigation">
         <li lass="nav-item">
           <a href="{% url "hk_user_profile" %}" class="nav-link {% if subpage == "profile" %}active{% endif %}">
             {% trans "Posting activity" %}
