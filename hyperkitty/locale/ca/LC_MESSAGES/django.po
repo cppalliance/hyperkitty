@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-09 10:43+0530\n"
-"PO-Revision-Date: 2023-02-09 19:36+0000\n"
+"PO-Revision-Date: 2023-07-09 17:17+0000\n"
 "Last-Translator: Ecron <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -655,16 +655,12 @@ msgid "Recent"
 msgstr "Recent"
 
 #: templates/hyperkitty/overview.html:40
-#, fuzzy
-#| msgid "inactive"
 msgid "Active"
-msgstr "inactives"
+msgstr "Actives"
 
 #: templates/hyperkitty/overview.html:44
-#, fuzzy
-#| msgid "Most Popular"
 msgid "Popular"
-msgstr "Més populars"
+msgstr "Popular"
 
 #: templates/hyperkitty/overview.html:49
 #: templates/hyperkitty/user_profile/base.html:22
@@ -855,10 +851,8 @@ msgid "Thread"
 msgstr "Fil"
 
 #: templates/hyperkitty/thread_list.html:38
-#, fuzzy
-#| msgid "Create a new thread"
 msgid "Start a new thread"
-msgstr "Crear un fil"
+msgstr "Inicia un fil"
 
 #: templates/hyperkitty/thread_list.html:74
 msgid "Sorry no email threads could be found"

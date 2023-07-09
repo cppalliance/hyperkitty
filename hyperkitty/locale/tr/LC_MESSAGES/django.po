@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-09 10:43+0530\n"
-"PO-Revision-Date: 2022-11-06 07:07+0000\n"
+"PO-Revision-Date: 2023-07-09 17:17+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -651,16 +651,12 @@ msgid "Recent"
 msgstr "Yeni"
 
 #: templates/hyperkitty/overview.html:40
-#, fuzzy
-#| msgid "inactive"
 msgid "Active"
-msgstr "etkin değil"
+msgstr "Etkin"
 
 #: templates/hyperkitty/overview.html:44
-#, fuzzy
-#| msgid "Most Popular"
 msgid "Popular"
-msgstr "En Popüler"
+msgstr "Popüler"
 
 #: templates/hyperkitty/overview.html:49
 #: templates/hyperkitty/user_profile/base.html:22
@@ -851,10 +847,8 @@ msgid "Thread"
 msgstr "Mesaj dizisi"
 
 #: templates/hyperkitty/thread_list.html:38
-#, fuzzy
-#| msgid "Create a new thread"
 msgid "Start a new thread"
-msgstr "Yeni bir mesaj dizisi oluştur"
+msgstr "Yeni bir mesaj dizisi başlat"
 
 #: templates/hyperkitty/thread_list.html:74
 msgid "Sorry no email threads could be found"
