@@ -48,7 +48,12 @@ $parent_path/update-po.sh
 # Add the files and comment.
 git add hyperkitty/locale/*
 git commit -m 'Update po files'
-git push -o merge_request.create -o merge_request.remove_source_branch origin update-po
+git push \
+    -o merge_request.create \
+    -o merge_request.remove_source_branch \
+    -o merge_request.title "Update po files" \
+    -o merge_request.description "This merge request was created using [`scripts/update-po-create-pr.sh`](scripts/update-po-create-pr.sh) script." \
+    origin update-po
 
 # Go back to the original directory and git branch.
 git checkout -
