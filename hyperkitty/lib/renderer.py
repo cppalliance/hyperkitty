@@ -116,6 +116,28 @@ class BlockParser(mistune.block_parser.BlockParser):
         mistune.block_parser.BlockParser.RULE_NAMES)
 
 
+OUTLOOK_REPLY_PATTERN = re.compile(
+    r'^-------- Original message --------\n'
+    r'([\s\S]+)',                             # everything after newline.
+    re.M
+)
+
+
+def parse_outlook_reply(block, m, state):
+    """Parser for outlook style replies."""
+    text = m.group(0)
+    return {
+        'type': 'block_quote',
+        'children': [{'type': 'paragraph', 'text': text}]
+        }
+
+
+def plugin_outlook_reply(md):
+    md.block.register_rule(
+        'outlook_reply', OUTLOOK_REPLY_PATTERN, parse_outlook_reply)
+    md.block.rules.insert(-1,  'outlook_reply')
+
+
 # Signature Plugin looks for signature pattern in email content and converts it
 # into a muted text.
 SIGNATURE_PATTERN = re.compile(
@@ -200,7 +222,12 @@ markdown_renderer = mistune.Markdown(
     renderer=renderer,
     inline=InlineParser(renderer, hard_wrap=False),
     block=BlockParser(),
-    plugins=[plugin_pgp_signature, plugin_signature, plugin_url])
+    plugins=[
+        plugin_pgp_signature,
+        plugin_signature,
+        plugin_outlook_reply,
+        plugin_url
+        ])
 
 
 # The only difference between the markdown and this renderer is
