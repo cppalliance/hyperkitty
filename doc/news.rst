@@ -20,6 +20,8 @@ News / Changelog
  - Add support for Django 4.2
  - hyperkitty_import no longer fails with recent Python and Message-ID: <>
    (Closes #396)
+ - Add support to parse outlook style replies so they can be hidden inside
+   a quote section like regular quoted replies. (Fixes #478)
 
 A11y
 ----
@@ -41,7 +43,7 @@ A11y
  - Add ARIA label to the search input in the top navigation bar. (Fixes #361)
  - Add sections and aria labels to input and navigation and aria-autocomplete
    to search list form on index page. (Fixes #366)
- - Fix the tab ordering of the next/older threads in the thread page. 
+ - Fix the tab ordering of the next/older threads in the thread page.
    (Fixes #369)
  - Fix the toggle fixed-font button so it can receive keyboard focus.
  - Simplified like/dislike UI, smiley face replaced by thumbs up/down.

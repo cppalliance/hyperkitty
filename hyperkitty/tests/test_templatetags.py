@@ -223,6 +223,35 @@ https://some.url/example
             result.strip(),
             '<p># This is another sample text.</p>')
 
+    def test_outlook_style_reply_blockquote(self):
+        contents = """\
+This is the replied text.
+
+Sent from my Galaxy
+
+-------- Original message --------
+From: A person <person(a)example.com>
+Date: 6/26/23 16:23 (GMT-05:00)
+To: mytestlist@example.com
+Subject: Testing if the quoted reply works with Outlook style.
+
+This is the original text *with* some __markup__.
+"""
+        result = markdown_renderer(contents)
+        self.assertEqual(
+            result.strip(),
+            """<p>This is the replied text.</p>
+<p>Sent from my Galaxy</p>
+<div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><p>-------- Original message --------
+From: A person &lt;person(a)example.com&gt;
+Date: 6/26/23 16:23 (GMT-05:00)
+To: mytestlist@example.com
+Subject: Testing if the quoted reply works with Outlook style.
+
+This is the original text <em>*with*</em> some <strong>__markup__</strong>.
+</p>
+</blockquote>""")  # noqa: E501
+
 
 class SettingsValuesTest(TestCase):
 
