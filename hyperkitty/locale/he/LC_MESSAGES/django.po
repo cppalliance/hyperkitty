@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 23:47+0000\n"
+"POT-Creation-Date: 2023-07-09 10:43+0530\n"
 "PO-Revision-Date: 2022-11-20 17:15+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -185,76 +185,76 @@ msgstr "תגיות"
 msgid "Using this address you will be able to retrieve the list of tags."
 msgstr "עם הכתובת הזאת תהיה לך אפשרות לקבל את רשימת התגיות."
 
-#: templates/hyperkitty/base.html:56 templates/hyperkitty/base.html:135
+#: templates/hyperkitty/base.html:54 templates/hyperkitty/base.html:143
 msgid "Account"
 msgstr "חשבון"
 
-#: templates/hyperkitty/base.html:61 templates/hyperkitty/base.html:140
+#: templates/hyperkitty/base.html:59 templates/hyperkitty/base.html:148
 msgid "Mailman settings"
 msgstr "הגדרות Mailman"
 
-#: templates/hyperkitty/base.html:66 templates/hyperkitty/base.html:145
+#: templates/hyperkitty/base.html:64 templates/hyperkitty/base.html:153
 #: templates/hyperkitty/user_profile/base.html:17
 msgid "Posting activity"
 msgstr "פעילות פרסום"
 
-#: templates/hyperkitty/base.html:71 templates/hyperkitty/base.html:150
+#: templates/hyperkitty/base.html:69 templates/hyperkitty/base.html:158
 msgid "Logout"
 msgstr "יציאה"
 
-#: templates/hyperkitty/base.html:84
-msgid "Manage this list"
-msgstr "ניהול הרשימה הזו"
-
-#: templates/hyperkitty/base.html:89
-msgid "Manage lists"
-msgstr "ניהול רשימות"
-
-#: templates/hyperkitty/base.html:96
+#: templates/hyperkitty/base.html:77 templates/hyperkitty/base.html:104
 msgid "Sign In"
 msgstr "כניסה"
 
-#: templates/hyperkitty/base.html:100
+#: templates/hyperkitty/base.html:81 templates/hyperkitty/base.html:108
 msgid "Sign Up"
 msgstr "הרשמה"
 
-#: templates/hyperkitty/base.html:108
+#: templates/hyperkitty/base.html:92
+msgid "Manage this list"
+msgstr "ניהול הרשימה הזו"
+
+#: templates/hyperkitty/base.html:97
+msgid "Manage lists"
+msgstr "ניהול רשימות"
+
+#: templates/hyperkitty/base.html:116
 msgid "Search this list"
 msgstr "חיפוש ברשימה הזו"
 
-#: templates/hyperkitty/base.html:111
+#: templates/hyperkitty/base.html:119
 msgid "Search all lists"
 msgstr "חיפוש בכל הרשימות"
 
-#: templates/hyperkitty/base.html:196
+#: templates/hyperkitty/base.html:194
 msgid "Keyboard Shortcuts"
 msgstr "קיצורי מקלדת"
 
-#: templates/hyperkitty/base.html:199
+#: templates/hyperkitty/base.html:197
 msgid "Thread View"
 msgstr "תצוגת שרשור"
 
-#: templates/hyperkitty/base.html:201
+#: templates/hyperkitty/base.html:199
 msgid "Next unread message"
 msgstr "ההודעה הבאה שלא נקראה"
 
-#: templates/hyperkitty/base.html:202
+#: templates/hyperkitty/base.html:200
 msgid "Previous unread message"
 msgstr "ההודעה הקודמת שלא נקראה"
 
-#: templates/hyperkitty/base.html:203
+#: templates/hyperkitty/base.html:201
 msgid "Jump to all threads"
 msgstr "קפיצה לכל השרשורים"
 
-#: templates/hyperkitty/base.html:204
+#: templates/hyperkitty/base.html:202
 msgid "Jump to MailingList overview"
 msgstr "קפיצה לסקירת רשימת דיוור"
 
-#: templates/hyperkitty/base.html:219
+#: templates/hyperkitty/base.html:217
 msgid "Powered by"
 msgstr "מופעל על גבי"
 
-#: templates/hyperkitty/base.html:219
+#: templates/hyperkitty/base.html:217
 msgid "version"
 msgstr "גרסה"
 
@@ -279,16 +279,16 @@ msgid ""
 "This mailing list is private. You must be subscribed to view the archives."
 msgstr "רשימת דיוור זו היא פרטית. עליך להיות מנוי כדי לצפות בארכיונים."
 
-#: templates/hyperkitty/fragments/like_form.html:16
+#: templates/hyperkitty/fragments/like_form.html:11
 msgid "You like it (cancel)"
 msgstr "אהבת את זה (ביטול)"
 
-#: templates/hyperkitty/fragments/like_form.html:24
+#: templates/hyperkitty/fragments/like_form.html:19
 msgid "You dislike it (cancel)"
 msgstr "לא אהבת את זה (ביטול)"
 
-#: templates/hyperkitty/fragments/like_form.html:27
-#: templates/hyperkitty/fragments/like_form.html:31
+#: templates/hyperkitty/fragments/like_form.html:22
+#: templates/hyperkitty/fragments/like_form.html:26
 msgid "You must be logged-in to vote."
 msgstr "עליך להיכנס למערכת כדי להצביע."
 
@@ -304,21 +304,21 @@ msgstr " חודש"
 msgid "New messages in this thread"
 msgstr "הודעות חדשות בשרשור הזה"
 
-#: templates/hyperkitty/fragments/overview_threads.html:36
+#: templates/hyperkitty/fragments/overview_threads.html:38
 #: templates/hyperkitty/fragments/thread_left_nav.html:19
-#: templates/hyperkitty/overview.html:125
+#: templates/hyperkitty/overview.html:105
 msgid "All Threads"
 msgstr "כל השרשורים"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:15
+#: templates/hyperkitty/fragments/overview_top_posters.html:16
 msgid "See the profile"
 msgstr "הצגת הפרופיל"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:21
+#: templates/hyperkitty/fragments/overview_top_posters.html:22
 msgid "posts"
 msgstr "רשומות"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:26
+#: templates/hyperkitty/fragments/overview_top_posters.html:27
 msgid "No posters this month (yet)."
 msgstr "אין מפרסמים החודש (עדיין)."
 
@@ -345,23 +345,23 @@ msgid "List overview"
 msgstr "סקירת רשימות"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:29
-#: templates/hyperkitty/overview.html:139 views/message.py:74
+#: templates/hyperkitty/overview.html:121 views/message.py:74
 #: views/mlist.py:114 views/thread.py:191
 msgid "Download"
 msgstr "הורדה"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:32
-#: templates/hyperkitty/overview.html:142
+#: templates/hyperkitty/overview.html:124
 msgid "Past 30 days"
 msgstr "30 הימים האחרונים"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:33
-#: templates/hyperkitty/overview.html:143
+#: templates/hyperkitty/overview.html:125
 msgid "This month"
 msgstr "החודש הזה"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:36
-#: templates/hyperkitty/overview.html:146
+#: templates/hyperkitty/overview.html:128
 msgid "Entire archive"
 msgstr "כל הארכיון"
 
@@ -438,8 +438,8 @@ msgstr "בלתי פעילה"
 #: templates/hyperkitty/index.html:161 templates/hyperkitty/index.html:247
 #: templates/hyperkitty/overview.html:65 templates/hyperkitty/overview.html:72
 #: templates/hyperkitty/overview.html:79 templates/hyperkitty/overview.html:88
-#: templates/hyperkitty/overview.html:96 templates/hyperkitty/overview.html:169
-#: templates/hyperkitty/overview.html:186 templates/hyperkitty/reattach.html:37
+#: templates/hyperkitty/overview.html:96 templates/hyperkitty/overview.html:151
+#: templates/hyperkitty/overview.html:168 templates/hyperkitty/reattach.html:37
 #: templates/hyperkitty/thread.html:85
 msgid "Loading..."
 msgstr "בטעינה…"
@@ -452,7 +452,7 @@ msgstr "אין עדיין רשימות בארכיון."
 #: templates/hyperkitty/user_profile/favorites.html:40
 #: templates/hyperkitty/user_profile/last_views.html:45
 #: templates/hyperkitty/user_profile/profile.html:15
-#: templates/hyperkitty/user_profile/subscriptions.html:41
+#: templates/hyperkitty/user_profile/subscriptions.html:43
 #: templates/hyperkitty/user_profile/votes.html:46
 msgid "List"
 msgstr "רשימה"
@@ -465,15 +465,15 @@ msgstr "תיאור"
 msgid "Activity in the past 30 days"
 msgstr "פעילות ב־30 הימים האחרונים"
 
-#: templates/hyperkitty/index.html:236 templates/hyperkitty/overview.html:178
-#: templates/hyperkitty/thread_list.html:57
+#: templates/hyperkitty/index.html:236 templates/hyperkitty/overview.html:160
+#: templates/hyperkitty/thread_list.html:60
 #: templates/hyperkitty/threads/right_col.html:104
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "משתתפים"
 
-#: templates/hyperkitty/index.html:241 templates/hyperkitty/overview.html:179
-#: templates/hyperkitty/thread_list.html:62
+#: templates/hyperkitty/index.html:241 templates/hyperkitty/overview.html:161
+#: templates/hyperkitty/thread_list.html:65
 msgid "discussions"
 msgstr "דיונים"
 
@@ -641,16 +641,20 @@ msgstr ""
 "                                מאת %(name)s\n"
 "                            "
 
-#: templates/hyperkitty/overview.html:35
+#: templates/hyperkitty/overview.html:36
 msgid "Recent"
 msgstr "אחרונים"
 
-#: templates/hyperkitty/overview.html:39
-msgid "Most Active"
-msgstr "הפעילים ביותר"
+#: templates/hyperkitty/overview.html:40
+#, fuzzy
+#| msgid "inactive"
+msgid "Active"
+msgstr "בלתי פעילה"
 
-#: templates/hyperkitty/overview.html:43
-msgid "Most Popular"
+#: templates/hyperkitty/overview.html:44
+#, fuzzy
+#| msgid "Most Popular"
+msgid "Popular"
 msgstr "הנפוצים ביותר"
 
 #: templates/hyperkitty/overview.html:49
@@ -682,70 +686,52 @@ msgstr "דיונים שסימנת בדגל"
 msgid "Discussions You've Posted to"
 msgstr "דיונים שפרסמת אליהם"
 
-#: templates/hyperkitty/overview.html:109
-msgid "Home"
-msgstr "דף הבית"
-
-#: templates/hyperkitty/overview.html:112
-msgid "Stats"
-msgstr "סטטיסטיקה"
-
-#: templates/hyperkitty/overview.html:115
-msgid "Threads"
-msgstr "שרשורים"
-
-#: templates/hyperkitty/overview.html:121
-#: templates/hyperkitty/overview.html:129
-#: templates/hyperkitty/thread_list.html:35
+#: templates/hyperkitty/overview.html:110
+#: templates/hyperkitty/thread_list.html:34
 msgid "You must be logged-in to create a thread."
 msgstr "עליך להיכנס כדי ליצור שרשור."
 
-#: templates/hyperkitty/overview.html:121
-msgid "New"
-msgstr "חדשה"
-
-#: templates/hyperkitty/overview.html:131
-#: templates/hyperkitty/thread_list.html:38
+#: templates/hyperkitty/overview.html:112
 msgid ""
-"<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
-"\">N</span>ew thread"
+"<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-"
+"none\">N</span>ew thread"
 msgstr ""
-"<span class=\"d-none d-md-inline\">התחלת שרשור </span><span class=\"d-md-none"
-"\">ח</span>דש"
+"<span class=\"d-none d-md-inline\">התחלת שרשור </span><span class=\"d-md-"
+"none\">ח</span>דש"
 
-#: templates/hyperkitty/overview.html:156
+#: templates/hyperkitty/overview.html:138
 msgid "Delete Archive"
 msgstr "מחיקת הארכיון"
 
-#: templates/hyperkitty/overview.html:166
+#: templates/hyperkitty/overview.html:148
 msgid "Activity Summary"
 msgstr "סיכום פעילות"
 
-#: templates/hyperkitty/overview.html:168
+#: templates/hyperkitty/overview.html:150
 msgid "Post volume over the past <strong>30</strong> days."
 msgstr "נפח פרסומים ב־<strong>30</strong> הימים האחרונים."
 
-#: templates/hyperkitty/overview.html:173
+#: templates/hyperkitty/overview.html:155
 msgid "The following statistics are from"
 msgstr "הסטטיסטיקות הבאות הן מתחילת"
 
-#: templates/hyperkitty/overview.html:174
+#: templates/hyperkitty/overview.html:156
 msgid "In"
 msgstr "בתוך"
 
-#: templates/hyperkitty/overview.html:175
+#: templates/hyperkitty/overview.html:157
 msgid "the past <strong>30</strong> days:"
 msgstr "<strong>30</strong> הימים האחרונים:"
 
-#: templates/hyperkitty/overview.html:184
+#: templates/hyperkitty/overview.html:166
 msgid "Most active posters"
 msgstr "המפרסמים הפעילים ביותר"
 
-#: templates/hyperkitty/overview.html:193
+#: templates/hyperkitty/overview.html:175
 msgid "Prominent posters"
 msgstr "מפרסמים עקביים"
 
-#: templates/hyperkitty/overview.html:208
+#: templates/hyperkitty/overview.html:190
 msgid "kudos"
 msgstr "תודות"
 
@@ -854,7 +840,18 @@ msgstr "הצגת תגובות לפי תאריך"
 msgid "Visit here for a non-javascript version of this page."
 msgstr "יש לבקר כאן לגרסה נטולת JavaScript של העמוד הזה."
 
-#: templates/hyperkitty/thread_list.html:71
+#: templates/hyperkitty/thread_list.html:37
+#: templates/hyperkitty/user_profile/profile.html:19
+msgid "Thread"
+msgstr "שרשור"
+
+#: templates/hyperkitty/thread_list.html:38
+#, fuzzy
+#| msgid "Create a new thread"
+msgid "Start a new thread"
+msgstr "יצירת שרשור חדש"
+
+#: templates/hyperkitty/thread_list.html:74
 msgid "Sorry no email threads could be found"
 msgstr "לא ניתן למצוא שרשורי הודעות, עמך הסליחה"
 
@@ -986,7 +983,7 @@ msgstr "שרשורים שקראת"
 
 #: templates/hyperkitty/user_profile/base.html:30
 #: templates/hyperkitty/user_profile/profile.html:18
-#: templates/hyperkitty/user_profile/subscriptions.html:45
+#: templates/hyperkitty/user_profile/subscriptions.html:47
 msgid "Votes"
 msgstr "הצבעות"
 
@@ -1066,15 +1063,11 @@ msgstr "רשומות אחרונות"
 msgid "Date"
 msgstr "תאריך"
 
-#: templates/hyperkitty/user_profile/profile.html:19
-msgid "Thread"
-msgstr "שרשור"
-
 #: templates/hyperkitty/user_profile/profile.html:20
 msgid "Last thread activity"
 msgstr "פעילות אחרונה בשרשור"
 
-#: templates/hyperkitty/user_profile/profile.html:49
+#: templates/hyperkitty/user_profile/profile.html:51
 msgid "No posts yet."
 msgstr "אין רשומות עדיין."
 
@@ -1083,28 +1076,28 @@ msgid "since first post"
 msgstr "מאז הרשומה הראשונה"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:26
-#: templates/hyperkitty/user_profile/subscriptions.html:63
+#: templates/hyperkitty/user_profile/subscriptions.html:65
 msgid "post"
 msgstr "רשומה"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:31
-#: templates/hyperkitty/user_profile/subscriptions.html:69
+#: templates/hyperkitty/user_profile/subscriptions.html:33
+#: templates/hyperkitty/user_profile/subscriptions.html:73
 msgid "no post yet"
 msgstr "אין רשומות עדיין"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:42
+#: templates/hyperkitty/user_profile/subscriptions.html:44
 msgid "Time since the first activity"
 msgstr "הזמן מאז הפעילות הראשונה"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:43
+#: templates/hyperkitty/user_profile/subscriptions.html:45
 msgid "First post"
 msgstr "רשומה ראשונה"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:44
+#: templates/hyperkitty/user_profile/subscriptions.html:46
 msgid "Posts to this list"
 msgstr "פרסומים לרשימה הזו"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:76
+#: templates/hyperkitty/user_profile/subscriptions.html:80
 msgid "no subscriptions"
 msgstr "אין מינויים"
 
@@ -1146,7 +1139,7 @@ msgstr "יצירה:"
 msgid "Votes for this user:"
 msgstr "הצבעות למשתמש זה:"
 
-#: templates/hyperkitty/user_public_profile.html:41
+#: templates/hyperkitty/user_public_profile.html:43
 msgid "Email addresses:"
 msgstr "כתובות דוא״ל:"
 
@@ -1225,12 +1218,27 @@ msgstr "שגיאת פענוח: %(error)s"
 msgid "This thread in gzipped mbox format"
 msgstr "שרשור זה ב־gzip בתצורת mbox"
 
+#~ msgid "Most Active"
+#~ msgstr "הפעילים ביותר"
+
+#~ msgid "Home"
+#~ msgstr "דף הבית"
+
+#~ msgid "Stats"
+#~ msgstr "סטטיסטיקה"
+
+#~ msgid "Threads"
+#~ msgstr "שרשורים"
+
+#~ msgid "New"
+#~ msgstr "חדשה"
+
 #~ msgid ""
-#~ "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
-#~ "\">S</span>ubscription"
+#~ "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-"
+#~ "none\">S</span>ubscription"
 #~ msgstr ""
-#~ "<span class=\"d-none d-md-inline\">ניהול </span><span class=\"d-md-none"
-#~ "\">מ</span>ינוי"
+#~ "<span class=\"d-none d-md-inline\">ניהול </span><span class=\"d-md-"
+#~ "none\">מ</span>ינוי"
 
 #~ msgid "First Post"
 #~ msgstr "פרסום ראשון"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 23:47+0000\n"
+"POT-Creation-Date: 2023-07-09 10:43+0530\n"
 "PO-Revision-Date: 2022-02-23 16:56+0000\n"
 "Last-Translator: Tomasz Chiliński <tomasz.chilinski@chilan.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -16,9 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
-"%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
-"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
+"(n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 "X-Generator: Weblate 4.11-dev\n"
 
 #: forms.py:53
@@ -192,80 +192,80 @@ msgstr "Znaczniki"
 msgid "Using this address you will be able to retrieve the list of tags."
 msgstr "Za pomocą tego adresu będziesz mógł pobrać listę znaczników."
 
-#: templates/hyperkitty/base.html:56 templates/hyperkitty/base.html:135
+#: templates/hyperkitty/base.html:54 templates/hyperkitty/base.html:143
 msgid "Account"
 msgstr "Konto"
 
-#: templates/hyperkitty/base.html:61 templates/hyperkitty/base.html:140
+#: templates/hyperkitty/base.html:59 templates/hyperkitty/base.html:148
 msgid "Mailman settings"
 msgstr "Ustawienia Mailmana"
 
-#: templates/hyperkitty/base.html:66 templates/hyperkitty/base.html:145
+#: templates/hyperkitty/base.html:64 templates/hyperkitty/base.html:153
 #: templates/hyperkitty/user_profile/base.html:17
 msgid "Posting activity"
 msgstr "Aktywność postowania"
 
-#: templates/hyperkitty/base.html:71 templates/hyperkitty/base.html:150
+#: templates/hyperkitty/base.html:69 templates/hyperkitty/base.html:158
 msgid "Logout"
 msgstr "Wylogowanie"
 
-#: templates/hyperkitty/base.html:84
-msgid "Manage this list"
-msgstr "Zarządzaj tą listą"
-
-#: templates/hyperkitty/base.html:89
-msgid "Manage lists"
-msgstr "Zarządzaj listami"
-
-#: templates/hyperkitty/base.html:96
+#: templates/hyperkitty/base.html:77 templates/hyperkitty/base.html:104
 msgid "Sign In"
 msgstr "Zaloguj się"
 
-#: templates/hyperkitty/base.html:100
+#: templates/hyperkitty/base.html:81 templates/hyperkitty/base.html:108
 msgid "Sign Up"
 msgstr "Zarejestruj się"
 
-#: templates/hyperkitty/base.html:108
+#: templates/hyperkitty/base.html:92
+msgid "Manage this list"
+msgstr "Zarządzaj tą listą"
+
+#: templates/hyperkitty/base.html:97
+msgid "Manage lists"
+msgstr "Zarządzaj listami"
+
+#: templates/hyperkitty/base.html:116
 msgid "Search this list"
 msgstr "Szukaj na tej liście"
 
-#: templates/hyperkitty/base.html:111
+#: templates/hyperkitty/base.html:119
 #, fuzzy
 msgid "Search all lists"
 msgstr "Szukaj na tej liście"
 
-#: templates/hyperkitty/base.html:196
+#: templates/hyperkitty/base.html:194
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: templates/hyperkitty/base.html:199
+#: templates/hyperkitty/base.html:197
 #, fuzzy
 msgid "Thread View"
 msgstr "Wątek"
 
-#: templates/hyperkitty/base.html:201
+#: templates/hyperkitty/base.html:199
 msgid "Next unread message"
 msgstr "Następna nieprzeczytana wiadomość"
 
-#: templates/hyperkitty/base.html:202
+#: templates/hyperkitty/base.html:200
 msgid "Previous unread message"
 msgstr "Poprzednia nieprzeczytana wiadomość"
 
-#: templates/hyperkitty/base.html:203
+#: templates/hyperkitty/base.html:201
 #, fuzzy
 msgid "Jump to all threads"
 msgstr "Wszystkie wątki"
 
-#: templates/hyperkitty/base.html:204
+#: templates/hyperkitty/base.html:202
 #, fuzzy
 msgid "Jump to MailingList overview"
 msgstr "Przegląd listy"
 
-#: templates/hyperkitty/base.html:219
+#: templates/hyperkitty/base.html:217
 msgid "Powered by"
 msgstr "Obsługiwane przez"
 
-#: templates/hyperkitty/base.html:219
+#: templates/hyperkitty/base.html:217
 msgid "version"
 msgstr "wersja"
 
@@ -292,16 +292,16 @@ msgstr ""
 "Ta lista mailingowa jest prywatna. Musisz być na nią zapisany, aby "
 "przeglądać jej archiwa."
 
-#: templates/hyperkitty/fragments/like_form.html:16
+#: templates/hyperkitty/fragments/like_form.html:11
 msgid "You like it (cancel)"
 msgstr "Lubisz to (anuluj)"
 
-#: templates/hyperkitty/fragments/like_form.html:24
+#: templates/hyperkitty/fragments/like_form.html:19
 msgid "You dislike it (cancel)"
 msgstr "Nie lubisz tego (anuluj)"
 
-#: templates/hyperkitty/fragments/like_form.html:27
-#: templates/hyperkitty/fragments/like_form.html:31
+#: templates/hyperkitty/fragments/like_form.html:22
+#: templates/hyperkitty/fragments/like_form.html:26
 msgid "You must be logged-in to vote."
 msgstr "Musisz być zalogowany, aby głosować."
 
@@ -318,21 +318,21 @@ msgstr " miesiąc"
 msgid "New messages in this thread"
 msgstr "Nowe wiadomości w tym wątku"
 
-#: templates/hyperkitty/fragments/overview_threads.html:36
+#: templates/hyperkitty/fragments/overview_threads.html:38
 #: templates/hyperkitty/fragments/thread_left_nav.html:19
-#: templates/hyperkitty/overview.html:125
+#: templates/hyperkitty/overview.html:105
 msgid "All Threads"
 msgstr "Wszystkie wątki"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:15
+#: templates/hyperkitty/fragments/overview_top_posters.html:16
 msgid "See the profile"
 msgstr "Zobacz profil"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:21
+#: templates/hyperkitty/fragments/overview_top_posters.html:22
 msgid "posts"
 msgstr "posty"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:26
+#: templates/hyperkitty/fragments/overview_top_posters.html:27
 msgid "No posters this month (yet)."
 msgstr "Żadnych postujących w tym miesiącu (jeszcze)."
 
@@ -359,23 +359,23 @@ msgid "List overview"
 msgstr "Przegląd listy"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:29
-#: templates/hyperkitty/overview.html:139 views/message.py:74
+#: templates/hyperkitty/overview.html:121 views/message.py:74
 #: views/mlist.py:114 views/thread.py:191
 msgid "Download"
 msgstr "Pobierz"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:32
-#: templates/hyperkitty/overview.html:142
+#: templates/hyperkitty/overview.html:124
 msgid "Past 30 days"
 msgstr "Ostatnie 30 dni"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:33
-#: templates/hyperkitty/overview.html:143
+#: templates/hyperkitty/overview.html:125
 msgid "This month"
 msgstr "Ten miesiąc"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:36
-#: templates/hyperkitty/overview.html:146
+#: templates/hyperkitty/overview.html:128
 msgid "Entire archive"
 msgstr "Całe archiwum"
 
@@ -452,8 +452,8 @@ msgstr "nieaktywna"
 #: templates/hyperkitty/index.html:161 templates/hyperkitty/index.html:247
 #: templates/hyperkitty/overview.html:65 templates/hyperkitty/overview.html:72
 #: templates/hyperkitty/overview.html:79 templates/hyperkitty/overview.html:88
-#: templates/hyperkitty/overview.html:96 templates/hyperkitty/overview.html:169
-#: templates/hyperkitty/overview.html:186 templates/hyperkitty/reattach.html:37
+#: templates/hyperkitty/overview.html:96 templates/hyperkitty/overview.html:151
+#: templates/hyperkitty/overview.html:168 templates/hyperkitty/reattach.html:37
 #: templates/hyperkitty/thread.html:85
 msgid "Loading..."
 msgstr "Ładowanie..."
@@ -466,7 +466,7 @@ msgstr "Nie ma jeszcze zarchiwizowanej listy."
 #: templates/hyperkitty/user_profile/favorites.html:40
 #: templates/hyperkitty/user_profile/last_views.html:45
 #: templates/hyperkitty/user_profile/profile.html:15
-#: templates/hyperkitty/user_profile/subscriptions.html:41
+#: templates/hyperkitty/user_profile/subscriptions.html:43
 #: templates/hyperkitty/user_profile/votes.html:46
 msgid "List"
 msgstr "Lista"
@@ -479,15 +479,15 @@ msgstr "Opis"
 msgid "Activity in the past 30 days"
 msgstr "Aktywność z ostatnich 30 dni"
 
-#: templates/hyperkitty/index.html:236 templates/hyperkitty/overview.html:178
-#: templates/hyperkitty/thread_list.html:57
+#: templates/hyperkitty/index.html:236 templates/hyperkitty/overview.html:160
+#: templates/hyperkitty/thread_list.html:60
 #: templates/hyperkitty/threads/right_col.html:104
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "uczestnicy"
 
-#: templates/hyperkitty/index.html:241 templates/hyperkitty/overview.html:179
-#: templates/hyperkitty/thread_list.html:62
+#: templates/hyperkitty/index.html:241 templates/hyperkitty/overview.html:161
+#: templates/hyperkitty/thread_list.html:65
 msgid "discussions"
 msgstr "dyskusje"
 
@@ -669,16 +669,20 @@ msgstr ""
 "                                %(name)s\n"
 "                            "
 
-#: templates/hyperkitty/overview.html:35
+#: templates/hyperkitty/overview.html:36
 msgid "Recent"
 msgstr "Ostatnie"
 
-#: templates/hyperkitty/overview.html:39
-msgid "Most Active"
-msgstr "Najaktywniejsze"
+#: templates/hyperkitty/overview.html:40
+#, fuzzy
+#| msgid "inactive"
+msgid "Active"
+msgstr "nieaktywna"
 
-#: templates/hyperkitty/overview.html:43
-msgid "Most Popular"
+#: templates/hyperkitty/overview.html:44
+#, fuzzy
+#| msgid "Most Popular"
+msgid "Popular"
 msgstr "Najpopularniejsze"
 
 #: templates/hyperkitty/overview.html:49
@@ -710,73 +714,52 @@ msgstr "Dyskusje, które oznaczyłeś"
 msgid "Discussions You've Posted to"
 msgstr "Dyskusje, w których postowałeś"
 
-#: templates/hyperkitty/overview.html:109
-msgid "Home"
-msgstr "Ekran główny"
-
-#: templates/hyperkitty/overview.html:112
-msgid "Stats"
-msgstr "Statystyki"
-
-#: templates/hyperkitty/overview.html:115
-#, fuzzy
-msgid "Threads"
-msgstr "Wątek"
-
-#: templates/hyperkitty/overview.html:121
-#: templates/hyperkitty/overview.html:129
-#: templates/hyperkitty/thread_list.html:35
+#: templates/hyperkitty/overview.html:110
+#: templates/hyperkitty/thread_list.html:34
 msgid "You must be logged-in to create a thread."
 msgstr "Musisz być zalogowany, aby stworzyć wątek."
 
-#: templates/hyperkitty/overview.html:121
-#, fuzzy
-#| msgid "new"
-msgid "New"
-msgstr "nowa"
-
-#: templates/hyperkitty/overview.html:131
-#: templates/hyperkitty/thread_list.html:38
+#: templates/hyperkitty/overview.html:112
 msgid ""
-"<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
-"\">N</span>ew thread"
+"<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-"
+"none\">N</span>ew thread"
 msgstr ""
-"<span class=\"d-none d-md-inline\">Rozpocznij n</span><span class=\"d-md-none"
-"\">N</span>owy wątek"
+"<span class=\"d-none d-md-inline\">Rozpocznij n</span><span class=\"d-md-"
+"none\">N</span>owy wątek"
 
-#: templates/hyperkitty/overview.html:156
+#: templates/hyperkitty/overview.html:138
 msgid "Delete Archive"
 msgstr "Usuń Archiwum"
 
-#: templates/hyperkitty/overview.html:166
+#: templates/hyperkitty/overview.html:148
 msgid "Activity Summary"
 msgstr "Podsumowanie aktywności"
 
-#: templates/hyperkitty/overview.html:168
+#: templates/hyperkitty/overview.html:150
 msgid "Post volume over the past <strong>30</strong> days."
 msgstr "Liczba wpisów w ciągu ostatnich <strong>30</strong> dni."
 
-#: templates/hyperkitty/overview.html:173
+#: templates/hyperkitty/overview.html:155
 msgid "The following statistics are from"
 msgstr "Poniższe statystyki są z"
 
-#: templates/hyperkitty/overview.html:174
+#: templates/hyperkitty/overview.html:156
 msgid "In"
 msgstr "W"
 
-#: templates/hyperkitty/overview.html:175
+#: templates/hyperkitty/overview.html:157
 msgid "the past <strong>30</strong> days:"
 msgstr "ostatnich <strong>30</strong> dniach:"
 
-#: templates/hyperkitty/overview.html:184
+#: templates/hyperkitty/overview.html:166
 msgid "Most active posters"
 msgstr "Najaktywniejszy posterzy"
 
-#: templates/hyperkitty/overview.html:193
+#: templates/hyperkitty/overview.html:175
 msgid "Prominent posters"
 msgstr "Wybitni posterzy"
 
-#: templates/hyperkitty/overview.html:208
+#: templates/hyperkitty/overview.html:190
 msgid "kudos"
 msgstr "sława"
 
@@ -885,7 +868,18 @@ msgstr "Pokaż odpowiedzi według dat"
 msgid "Visit here for a non-javascript version of this page."
 msgstr ""
 
-#: templates/hyperkitty/thread_list.html:71
+#: templates/hyperkitty/thread_list.html:37
+#: templates/hyperkitty/user_profile/profile.html:19
+msgid "Thread"
+msgstr "Wątek"
+
+#: templates/hyperkitty/thread_list.html:38
+#, fuzzy
+#| msgid "Create a new thread"
+msgid "Start a new thread"
+msgstr "Stwórz nowy wątek"
+
+#: templates/hyperkitty/thread_list.html:74
 msgid "Sorry no email threads could be found"
 msgstr "Niestety nie znaleziono wątków email"
 
@@ -1020,7 +1014,7 @@ msgstr "Wątki, które czytasz"
 
 #: templates/hyperkitty/user_profile/base.html:30
 #: templates/hyperkitty/user_profile/profile.html:18
-#: templates/hyperkitty/user_profile/subscriptions.html:45
+#: templates/hyperkitty/user_profile/subscriptions.html:47
 msgid "Votes"
 msgstr "Głosy"
 
@@ -1100,15 +1094,11 @@ msgstr "Ostatnie posty"
 msgid "Date"
 msgstr "Data"
 
-#: templates/hyperkitty/user_profile/profile.html:19
-msgid "Thread"
-msgstr "Wątek"
-
 #: templates/hyperkitty/user_profile/profile.html:20
 msgid "Last thread activity"
 msgstr "Ostatnia aktywność wątku"
 
-#: templates/hyperkitty/user_profile/profile.html:49
+#: templates/hyperkitty/user_profile/profile.html:51
 msgid "No posts yet."
 msgstr "Brak postów."
 
@@ -1117,28 +1107,28 @@ msgid "since first post"
 msgstr "od pierwszego posta"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:26
-#: templates/hyperkitty/user_profile/subscriptions.html:63
+#: templates/hyperkitty/user_profile/subscriptions.html:65
 msgid "post"
 msgstr "post"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:31
-#: templates/hyperkitty/user_profile/subscriptions.html:69
+#: templates/hyperkitty/user_profile/subscriptions.html:33
+#: templates/hyperkitty/user_profile/subscriptions.html:73
 msgid "no post yet"
 msgstr "brak postów"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:42
+#: templates/hyperkitty/user_profile/subscriptions.html:44
 msgid "Time since the first activity"
 msgstr "Czas od pierwszej aktywności"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:43
+#: templates/hyperkitty/user_profile/subscriptions.html:45
 msgid "First post"
 msgstr "Pierwszy post"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:44
+#: templates/hyperkitty/user_profile/subscriptions.html:46
 msgid "Posts to this list"
 msgstr "Posty na tej liście"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:76
+#: templates/hyperkitty/user_profile/subscriptions.html:80
 msgid "no subscriptions"
 msgstr "brak subskrypcji"
 
@@ -1180,7 +1170,7 @@ msgstr "Utworzenie:"
 msgid "Votes for this user:"
 msgstr "Głosy dla tego użytkownika:"
 
-#: templates/hyperkitty/user_public_profile.html:41
+#: templates/hyperkitty/user_public_profile.html:43
 msgid "Email addresses:"
 msgstr "Adresy email:"
 
@@ -1262,9 +1252,27 @@ msgstr "Błąd analizy: %(error)s"
 msgid "This thread in gzipped mbox format"
 msgstr "Ten wątek w formacie gzipped mbox"
 
+#~ msgid "Most Active"
+#~ msgstr "Najaktywniejsze"
+
+#~ msgid "Home"
+#~ msgstr "Ekran główny"
+
+#~ msgid "Stats"
+#~ msgstr "Statystyki"
+
+#, fuzzy
+#~ msgid "Threads"
+#~ msgstr "Wątek"
+
+#, fuzzy
+#~| msgid "new"
+#~ msgid "New"
+#~ msgstr "nowa"
+
 #~ msgid ""
-#~ "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
-#~ "\">S</span>ubscription"
+#~ "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-"
+#~ "none\">S</span>ubscription"
 #~ msgstr ""
 #~ "<span class=\"d-none d-md-inline\">Zarządzaj s</span><span class=\"d-md-"
 #~ "none\">S</span>ubskrypcją"
