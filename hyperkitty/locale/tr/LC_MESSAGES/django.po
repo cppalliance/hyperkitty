@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 23:47+0000\n"
+"POT-Creation-Date: 2023-07-09 10:43+0530\n"
 "PO-Revision-Date: 2022-11-06 07:07+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -189,76 +189,76 @@ msgstr "Etiketler"
 msgid "Using this address you will be able to retrieve the list of tags."
 msgstr "Bu adresi kullanarak etiketlerin listesini alabileceksiniz."
 
-#: templates/hyperkitty/base.html:56 templates/hyperkitty/base.html:135
+#: templates/hyperkitty/base.html:54 templates/hyperkitty/base.html:143
 msgid "Account"
 msgstr "Hesap"
 
-#: templates/hyperkitty/base.html:61 templates/hyperkitty/base.html:140
+#: templates/hyperkitty/base.html:59 templates/hyperkitty/base.html:148
 msgid "Mailman settings"
 msgstr "Mailman ayarları"
 
-#: templates/hyperkitty/base.html:66 templates/hyperkitty/base.html:145
+#: templates/hyperkitty/base.html:64 templates/hyperkitty/base.html:153
 #: templates/hyperkitty/user_profile/base.html:17
 msgid "Posting activity"
 msgstr "Gönderme etkinliği"
 
-#: templates/hyperkitty/base.html:71 templates/hyperkitty/base.html:150
+#: templates/hyperkitty/base.html:69 templates/hyperkitty/base.html:158
 msgid "Logout"
 msgstr "Oturumu kapat"
 
-#: templates/hyperkitty/base.html:84
-msgid "Manage this list"
-msgstr "Bu listeyi yönet"
-
-#: templates/hyperkitty/base.html:89
-msgid "Manage lists"
-msgstr "Listeleri yönet"
-
-#: templates/hyperkitty/base.html:96
+#: templates/hyperkitty/base.html:77 templates/hyperkitty/base.html:104
 msgid "Sign In"
 msgstr "Oturum Aç"
 
-#: templates/hyperkitty/base.html:100
+#: templates/hyperkitty/base.html:81 templates/hyperkitty/base.html:108
 msgid "Sign Up"
 msgstr "Kaydol"
 
-#: templates/hyperkitty/base.html:108
+#: templates/hyperkitty/base.html:92
+msgid "Manage this list"
+msgstr "Bu listeyi yönet"
+
+#: templates/hyperkitty/base.html:97
+msgid "Manage lists"
+msgstr "Listeleri yönet"
+
+#: templates/hyperkitty/base.html:116
 msgid "Search this list"
 msgstr "Bu listede ara"
 
-#: templates/hyperkitty/base.html:111
+#: templates/hyperkitty/base.html:119
 msgid "Search all lists"
 msgstr "Tüm listeleri ara"
 
-#: templates/hyperkitty/base.html:196
+#: templates/hyperkitty/base.html:194
 msgid "Keyboard Shortcuts"
 msgstr "Klavye Kısayolları"
 
-#: templates/hyperkitty/base.html:199
+#: templates/hyperkitty/base.html:197
 msgid "Thread View"
 msgstr "Mesaj Dizisi Görünümü"
 
-#: templates/hyperkitty/base.html:201
+#: templates/hyperkitty/base.html:199
 msgid "Next unread message"
 msgstr "Sonraki okunmamış mesaj"
 
-#: templates/hyperkitty/base.html:202
+#: templates/hyperkitty/base.html:200
 msgid "Previous unread message"
 msgstr "Önceki okunmamış mesaj"
 
-#: templates/hyperkitty/base.html:203
+#: templates/hyperkitty/base.html:201
 msgid "Jump to all threads"
 msgstr "Tüm mesaj dizilerine atla"
 
-#: templates/hyperkitty/base.html:204
+#: templates/hyperkitty/base.html:202
 msgid "Jump to MailingList overview"
 msgstr "Posta listesine genel bakışa atla"
 
-#: templates/hyperkitty/base.html:219
+#: templates/hyperkitty/base.html:217
 msgid "Powered by"
 msgstr "Tarafından desteklenmektedir"
 
-#: templates/hyperkitty/base.html:219
+#: templates/hyperkitty/base.html:217
 msgid "version"
 msgstr "sürüm"
 
@@ -284,16 +284,16 @@ msgid ""
 msgstr ""
 "Bu posta listesi özeldir. Arşivleri görüntülemek için abone olmalısınız."
 
-#: templates/hyperkitty/fragments/like_form.html:16
+#: templates/hyperkitty/fragments/like_form.html:11
 msgid "You like it (cancel)"
 msgstr "Beğendiniz (iptal et)"
 
-#: templates/hyperkitty/fragments/like_form.html:24
+#: templates/hyperkitty/fragments/like_form.html:19
 msgid "You dislike it (cancel)"
 msgstr "Beğenmediniz (iptal et)"
 
-#: templates/hyperkitty/fragments/like_form.html:27
-#: templates/hyperkitty/fragments/like_form.html:31
+#: templates/hyperkitty/fragments/like_form.html:22
+#: templates/hyperkitty/fragments/like_form.html:26
 msgid "You must be logged-in to vote."
 msgstr "Oy kullanmak için giriş yapmalısınız."
 
@@ -309,21 +309,21 @@ msgstr " ay"
 msgid "New messages in this thread"
 msgstr "Bu mesaj dizisindeki yeni mesajlar"
 
-#: templates/hyperkitty/fragments/overview_threads.html:36
+#: templates/hyperkitty/fragments/overview_threads.html:38
 #: templates/hyperkitty/fragments/thread_left_nav.html:19
-#: templates/hyperkitty/overview.html:125
+#: templates/hyperkitty/overview.html:105
 msgid "All Threads"
 msgstr "Tüm Mesaj Dizileri"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:15
+#: templates/hyperkitty/fragments/overview_top_posters.html:16
 msgid "See the profile"
 msgstr "Profile bak"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:21
+#: templates/hyperkitty/fragments/overview_top_posters.html:22
 msgid "posts"
 msgstr "gönderiler"
 
-#: templates/hyperkitty/fragments/overview_top_posters.html:26
+#: templates/hyperkitty/fragments/overview_top_posters.html:27
 msgid "No posters this month (yet)."
 msgstr "Bu ay (henüz) gönderi atan yok."
 
@@ -350,23 +350,23 @@ msgid "List overview"
 msgstr "Listeye genel bakış"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:29
-#: templates/hyperkitty/overview.html:139 views/message.py:74
+#: templates/hyperkitty/overview.html:121 views/message.py:74
 #: views/mlist.py:114 views/thread.py:191
 msgid "Download"
 msgstr "İndir"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:32
-#: templates/hyperkitty/overview.html:142
+#: templates/hyperkitty/overview.html:124
 msgid "Past 30 days"
 msgstr "Son 30 gün"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:33
-#: templates/hyperkitty/overview.html:143
+#: templates/hyperkitty/overview.html:125
 msgid "This month"
 msgstr "Bu ay"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:36
-#: templates/hyperkitty/overview.html:146
+#: templates/hyperkitty/overview.html:128
 msgid "Entire archive"
 msgstr "Tüm arşiv"
 
@@ -443,8 +443,8 @@ msgstr "etkin değil"
 #: templates/hyperkitty/index.html:161 templates/hyperkitty/index.html:247
 #: templates/hyperkitty/overview.html:65 templates/hyperkitty/overview.html:72
 #: templates/hyperkitty/overview.html:79 templates/hyperkitty/overview.html:88
-#: templates/hyperkitty/overview.html:96 templates/hyperkitty/overview.html:169
-#: templates/hyperkitty/overview.html:186 templates/hyperkitty/reattach.html:37
+#: templates/hyperkitty/overview.html:96 templates/hyperkitty/overview.html:151
+#: templates/hyperkitty/overview.html:168 templates/hyperkitty/reattach.html:37
 #: templates/hyperkitty/thread.html:85
 msgid "Loading..."
 msgstr "Yükleniyor..."
@@ -457,7 +457,7 @@ msgstr "Henüz arşivlenmiş bir liste yok."
 #: templates/hyperkitty/user_profile/favorites.html:40
 #: templates/hyperkitty/user_profile/last_views.html:45
 #: templates/hyperkitty/user_profile/profile.html:15
-#: templates/hyperkitty/user_profile/subscriptions.html:41
+#: templates/hyperkitty/user_profile/subscriptions.html:43
 #: templates/hyperkitty/user_profile/votes.html:46
 msgid "List"
 msgstr "Liste"
@@ -470,15 +470,15 @@ msgstr "Açıklama"
 msgid "Activity in the past 30 days"
 msgstr "Son 30 gün içindeki etkinlik"
 
-#: templates/hyperkitty/index.html:236 templates/hyperkitty/overview.html:178
-#: templates/hyperkitty/thread_list.html:57
+#: templates/hyperkitty/index.html:236 templates/hyperkitty/overview.html:160
+#: templates/hyperkitty/thread_list.html:60
 #: templates/hyperkitty/threads/right_col.html:104
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "katılımcılar"
 
-#: templates/hyperkitty/index.html:241 templates/hyperkitty/overview.html:179
-#: templates/hyperkitty/thread_list.html:62
+#: templates/hyperkitty/index.html:241 templates/hyperkitty/overview.html:161
+#: templates/hyperkitty/thread_list.html:65
 msgid "discussions"
 msgstr "tartışmalar"
 
@@ -646,16 +646,20 @@ msgstr ""
 "                                %(name)s tarafından\n"
 "                            "
 
-#: templates/hyperkitty/overview.html:35
+#: templates/hyperkitty/overview.html:36
 msgid "Recent"
 msgstr "Yeni"
 
-#: templates/hyperkitty/overview.html:39
-msgid "Most Active"
-msgstr "En Etkin"
+#: templates/hyperkitty/overview.html:40
+#, fuzzy
+#| msgid "inactive"
+msgid "Active"
+msgstr "etkin değil"
 
-#: templates/hyperkitty/overview.html:43
-msgid "Most Popular"
+#: templates/hyperkitty/overview.html:44
+#, fuzzy
+#| msgid "Most Popular"
+msgid "Popular"
 msgstr "En Popüler"
 
 #: templates/hyperkitty/overview.html:49
@@ -687,70 +691,52 @@ msgstr "İşaretlediğiniz Tartışmalar"
 msgid "Discussions You've Posted to"
 msgstr "Gönderinizin Bulunduğu Tartışmalar"
 
-#: templates/hyperkitty/overview.html:109
-msgid "Home"
-msgstr "Ana sayfa"
-
-#: templates/hyperkitty/overview.html:112
-msgid "Stats"
-msgstr "İstatistikler"
-
-#: templates/hyperkitty/overview.html:115
-msgid "Threads"
-msgstr "Mesaj dizileri"
-
-#: templates/hyperkitty/overview.html:121
-#: templates/hyperkitty/overview.html:129
-#: templates/hyperkitty/thread_list.html:35
+#: templates/hyperkitty/overview.html:110
+#: templates/hyperkitty/thread_list.html:34
 msgid "You must be logged-in to create a thread."
 msgstr "Bir mesaj dizisi oluşturmak için oturum açmış olmalısınız."
 
-#: templates/hyperkitty/overview.html:121
-msgid "New"
-msgstr "Yeni"
-
-#: templates/hyperkitty/overview.html:131
-#: templates/hyperkitty/thread_list.html:38
+#: templates/hyperkitty/overview.html:112
 msgid ""
-"<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
-"\">N</span>ew thread"
+"<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-"
+"none\">N</span>ew thread"
 msgstr ""
 "<span class=\"d-md-none\">Y</span>eni bir mesaj dizisi <span class=\"d-none "
 "d-md-inline\">başlat</span>"
 
-#: templates/hyperkitty/overview.html:156
+#: templates/hyperkitty/overview.html:138
 msgid "Delete Archive"
 msgstr "Arşivi Sil"
 
-#: templates/hyperkitty/overview.html:166
+#: templates/hyperkitty/overview.html:148
 msgid "Activity Summary"
 msgstr "Etkinlik Özeti"
 
-#: templates/hyperkitty/overview.html:168
+#: templates/hyperkitty/overview.html:150
 msgid "Post volume over the past <strong>30</strong> days."
 msgstr "Son <strong>30</strong> gün içindeki gönderi hacmi."
 
-#: templates/hyperkitty/overview.html:173
+#: templates/hyperkitty/overview.html:155
 msgid "The following statistics are from"
 msgstr "Aşağıdaki istatistikler şuradandır"
 
-#: templates/hyperkitty/overview.html:174
+#: templates/hyperkitty/overview.html:156
 msgid "In"
 msgstr "İçinde"
 
-#: templates/hyperkitty/overview.html:175
+#: templates/hyperkitty/overview.html:157
 msgid "the past <strong>30</strong> days:"
 msgstr "son <strong>30</strong> gün:"
 
-#: templates/hyperkitty/overview.html:184
+#: templates/hyperkitty/overview.html:166
 msgid "Most active posters"
 msgstr "En etkin gönderi atanlar"
 
-#: templates/hyperkitty/overview.html:193
+#: templates/hyperkitty/overview.html:175
 msgid "Prominent posters"
 msgstr "Öne çıkan gönderi atanlar"
 
-#: templates/hyperkitty/overview.html:208
+#: templates/hyperkitty/overview.html:190
 msgid "kudos"
 msgstr "bravo"
 
@@ -859,7 +845,18 @@ msgstr "Yanıtları tarihe göre göster"
 msgid "Visit here for a non-javascript version of this page."
 msgstr "Bu sayfanın javascript olmayan bir sürümü için burayı ziyaret edin."
 
-#: templates/hyperkitty/thread_list.html:71
+#: templates/hyperkitty/thread_list.html:37
+#: templates/hyperkitty/user_profile/profile.html:19
+msgid "Thread"
+msgstr "Mesaj dizisi"
+
+#: templates/hyperkitty/thread_list.html:38
+#, fuzzy
+#| msgid "Create a new thread"
+msgid "Start a new thread"
+msgstr "Yeni bir mesaj dizisi oluştur"
+
+#: templates/hyperkitty/thread_list.html:74
 msgid "Sorry no email threads could be found"
 msgstr "Maalesef hiçbir e-posta mesaj dizisi bulunamadı"
 
@@ -992,7 +989,7 @@ msgstr "Okuduğunuz mesaj dizileri"
 
 #: templates/hyperkitty/user_profile/base.html:30
 #: templates/hyperkitty/user_profile/profile.html:18
-#: templates/hyperkitty/user_profile/subscriptions.html:45
+#: templates/hyperkitty/user_profile/subscriptions.html:47
 msgid "Votes"
 msgstr "Oylar"
 
@@ -1072,15 +1069,11 @@ msgstr "Son gönderiler"
 msgid "Date"
 msgstr "Tarih"
 
-#: templates/hyperkitty/user_profile/profile.html:19
-msgid "Thread"
-msgstr "Mesaj dizisi"
-
 #: templates/hyperkitty/user_profile/profile.html:20
 msgid "Last thread activity"
 msgstr "Son mesaj dizisi etkinliği"
 
-#: templates/hyperkitty/user_profile/profile.html:49
+#: templates/hyperkitty/user_profile/profile.html:51
 msgid "No posts yet."
 msgstr "Henüz gönderi yok."
 
@@ -1089,28 +1082,28 @@ msgid "since first post"
 msgstr "ilk gönderiden bu yana"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:26
-#: templates/hyperkitty/user_profile/subscriptions.html:63
+#: templates/hyperkitty/user_profile/subscriptions.html:65
 msgid "post"
 msgstr "gönderi"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:31
-#: templates/hyperkitty/user_profile/subscriptions.html:69
+#: templates/hyperkitty/user_profile/subscriptions.html:33
+#: templates/hyperkitty/user_profile/subscriptions.html:73
 msgid "no post yet"
 msgstr "henüz gönderi yok"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:42
+#: templates/hyperkitty/user_profile/subscriptions.html:44
 msgid "Time since the first activity"
 msgstr "İlk etkinlikten bu yana geçen süre"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:43
+#: templates/hyperkitty/user_profile/subscriptions.html:45
 msgid "First post"
 msgstr "İlk gönderi"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:44
+#: templates/hyperkitty/user_profile/subscriptions.html:46
 msgid "Posts to this list"
 msgstr "Bu listeye gönderilen gönderiler"
 
-#: templates/hyperkitty/user_profile/subscriptions.html:76
+#: templates/hyperkitty/user_profile/subscriptions.html:80
 msgid "no subscriptions"
 msgstr "abonelik yok"
 
@@ -1152,7 +1145,7 @@ msgstr "Oluşturma:"
 msgid "Votes for this user:"
 msgstr "Bu kullanıcı için oylar:"
 
-#: templates/hyperkitty/user_public_profile.html:41
+#: templates/hyperkitty/user_public_profile.html:43
 msgid "Email addresses:"
 msgstr "E-posta adresleri:"
 
@@ -1231,9 +1224,24 @@ msgstr "Ayrıştırma hatası: %(error)s"
 msgid "This thread in gzipped mbox format"
 msgstr "Bu mesaj dizisi gzip'lenmiş mbox biçiminde"
 
+#~ msgid "Most Active"
+#~ msgstr "En Etkin"
+
+#~ msgid "Home"
+#~ msgstr "Ana sayfa"
+
+#~ msgid "Stats"
+#~ msgstr "İstatistikler"
+
+#~ msgid "Threads"
+#~ msgstr "Mesaj dizileri"
+
+#~ msgid "New"
+#~ msgstr "Yeni"
+
 #~ msgid ""
-#~ "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
-#~ "\">S</span>ubscription"
+#~ "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-"
+#~ "none\">S</span>ubscription"
 #~ msgstr ""
 #~ "<span class=\"d-md-none\">A</span>boneliği <span class=\"d-none d-md-"
 #~ "inline\">yönet</span>"
