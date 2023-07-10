@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: Traducao_Hyperkitty1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-09 10:43+0530\n"
-"PO-Revision-Date: 2023-02-25 13:36+0000\n"
+"PO-Revision-Date: 2023-07-10 16:43+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/gnu-"
-"mailman/hyperkitty/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"gnu-mailman/hyperkitty/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -656,16 +656,12 @@ msgid "Recent"
 msgstr "Recentes"
 
 #: templates/hyperkitty/overview.html:40
-#, fuzzy
-#| msgid "inactive"
 msgid "Active"
-msgstr "inativo"
+msgstr "Ativo"
 
 #: templates/hyperkitty/overview.html:44
-#, fuzzy
-#| msgid "Most Popular"
 msgid "Popular"
-msgstr "Mais populares"
+msgstr "Popular"
 
 #: templates/hyperkitty/overview.html:49
 #: templates/hyperkitty/user_profile/base.html:22
@@ -856,10 +852,8 @@ msgid "Thread"
 msgstr "Tópico"
 
 #: templates/hyperkitty/thread_list.html:38
-#, fuzzy
-#| msgid "Create a new thread"
 msgid "Start a new thread"
-msgstr "Criar novo tópico"
+msgstr "Iniciar um novo tópico"
 
 #: templates/hyperkitty/thread_list.html:74
 msgid "Sorry no email threads could be found"
