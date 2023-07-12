@@ -143,11 +143,11 @@ $oddEmailColor: rgb(238, 238, 238);
 
   blockquote blockquote blockquote {
       background: #ffc4b3;
-      border-left: #ffc4b3;
+      border-left: 2px solid #3771c8;
   }
   blockquote blockquote blockquote blockquote {
-      background: #5e473e;
-      border-left: #ffd3c0;
+      background: #e8ecf2;
+      border-left: 2px solid #3771c8;
   }
 
   p {
@@ -277,20 +277,6 @@ $oddEmailColor: rgb(238, 238, 238);
 
 
 }
-
-
-// .email-first .email-info {
-//     padding: 0 0 20px 0;
-//     // border-bottom: 1px solid $rowBorderColor;
-// }
-
-// .email-first {
-//     padding-left: 10px;
-// }
-
-// .email-first .email-body {
-//     padding-left: 25px;
-// }
 
 .sort-mode {
     text-align: right;
@@ -489,26 +475,6 @@ $oddEmailColor: rgb(238, 238, 238);
         border-radius: 10px;
 }
 
-.quoted-text-1 {
-        border-left: 2px solid  #1d3e0f;
-        padding: 0.5em;
-        background: #e4f1df;
-        border-radius: 10px;
-}
-
-.quoted-text-2 {
-        border-left: 2px solid  #5c0a0a;
-        padding: 0.5em;
-        background: #f7d4d4;
-        border-radius: 10px;
-}
-
-.quoted-text-3 {
-        border-left: 2px solid  rgb(55, 113, 200);
-        padding: 0.5em;
-        background: #e8ecf2;
-        border-radius: 10px;
-}
 
 //=== Navigation for unread messages ==/
         #unreadnavbar {

@@ -22,6 +22,7 @@ News / Changelog
    (Closes #396)
  - Add support to parse outlook style replies so they can be hidden inside
    a quote section like regular quoted replies. (Fixes #478)
+ - Change color for 4th level quoted text. (Fixes #354)
 
 A11y
 ----
