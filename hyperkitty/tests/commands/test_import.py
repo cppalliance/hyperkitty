@@ -180,6 +180,30 @@ msg1
         archived_mid = Email.objects.get().as_message()['message-id']
         self.assertEqual(archived_mid, '<58482FD7034976FE@example.com>')
 
+    def test_another_wierd_message_id(self):
+        # Bogus Message-IDs with non-ascii have been seen.  We need to write
+        # the mbox directly for this one.
+        with open(os.path.join(self.tmpdir, "test.mbox"), 'w') as fp:
+            fp.write("""\
+From dummy@example.com  Sun Jan  8 00:07:16 2023
+From: dummy@example.com
+Date: 01 Feb 2015 12:00:00
+Message-ID: <vines.sxdD+Ynyï+A@SZKOM.BFS.DE>
+
+msg1
+""")
+        # do the import
+        output = StringIO()
+        kw = self.common_cmd_args.copy()
+        kw["stdout"] = kw["stderr"] = output
+        call_command('hyperkitty_import',
+                     os.path.join(self.tmpdir, "test.mbox"), **kw)
+        # The message should be archived.
+        self.assertEqual(Email.objects.count(), 1)
+        # Its Message-ID should be clean
+        archived_mid = Email.objects.get().as_message()['message-id']
+        self.assertEqual(archived_mid, '<vines.sxdD+Yny+A@SZKOM.BFS.DE>')
+
     def test_empty_message_id(self):
         # Message-IDs like this have been seen.
         msg = message_from_string("""\

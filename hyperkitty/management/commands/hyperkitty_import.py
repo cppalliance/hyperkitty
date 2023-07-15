@@ -161,6 +161,8 @@ class DbImporter(object):
             mid = '<' + mid
         if not mid.endswith('>'):
             mid += '>'
+        # We've also seen bogus Message-IDs with non-ascii so remove any.
+        mid = mid.encode('ascii', 'ignore').decode('ascii')
         return mid
 
     def from_mbox(self, mbfile, report_name):
@@ -180,12 +182,11 @@ class DbImporter(object):
             # throws an IndexError exception on getting a Message-ID of <>.
             if msg['message-id'] is None:
                 msg['Message-ID'] = make_msgid('generated')
-            if (msg['message-id'].strip() == '' or
-                    msg['message-id'].strip() == '<>'):
+            mid = str(msg['message-id'])
+            if mid.strip() in ('', '<>'):
                 msg.replace_header('Message-ID', make_msgid('generated'))
-            if msg['message-id'] != self._fix_mid(msg['message-id']):
-                msg.replace_header(
-                    'Message-ID', self._fix_mid(msg['message-id']))
+            elif mid != self._fix_mid(mid):
+                msg.replace_header('Message-ID', self._fix_mid(mid))
             try:
                 msg_raw = msg.as_bytes(unixfrom=False)
             except UnicodeError as e:
