@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-09 10:43+0530\n"
-"PO-Revision-Date: 2023-06-06 08:50+0000\n"
-"Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
+"PO-Revision-Date: 2023-08-28 17:27+0000\n"
+"Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/hu/>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -655,16 +655,12 @@ msgid "Recent"
 msgstr "Legutóbbi"
 
 #: templates/hyperkitty/overview.html:40
-#, fuzzy
-#| msgid "inactive"
 msgid "Active"
-msgstr "inaktív"
+msgstr "Aktív"
 
 #: templates/hyperkitty/overview.html:44
-#, fuzzy
-#| msgid "Most Popular"
 msgid "Popular"
-msgstr "Legnépszerűbb"
+msgstr "Népszerű"
 
 #: templates/hyperkitty/overview.html:49
 #: templates/hyperkitty/user_profile/base.html:22
@@ -855,10 +851,8 @@ msgid "Thread"
 msgstr "Téma"
 
 #: templates/hyperkitty/thread_list.html:38
-#, fuzzy
-#| msgid "Create a new thread"
 msgid "Start a new thread"
-msgstr "Új téma létrehozása"
+msgstr "Új téma indítás"
 
 #: templates/hyperkitty/thread_list.html:74
 msgid "Sorry no email threads could be found"
