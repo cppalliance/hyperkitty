@@ -81,6 +81,7 @@ INSTALLED_APPS = (
 
 
 MIDDLEWARE = (
+    'allauth.account.middleware.AccountMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
