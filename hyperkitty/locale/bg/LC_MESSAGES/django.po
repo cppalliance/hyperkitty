@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-09 10:43+0530\n"
-"PO-Revision-Date: 2022-05-20 17:30+0000\n"
+"PO-Revision-Date: 2023-10-08 21:22+0000\n"
 "Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/bg/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -206,7 +206,7 @@ msgstr "Изход"
 
 #: templates/hyperkitty/base.html:77 templates/hyperkitty/base.html:104
 msgid "Sign In"
-msgstr "Вход"
+msgstr "Нова регистрация"
 
 #: templates/hyperkitty/base.html:81 templates/hyperkitty/base.html:108
 msgid "Sign Up"
