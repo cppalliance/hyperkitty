@@ -7,7 +7,7 @@ News / Changelog
 1.3.8
 =====
 
-(xxxx-xx-xx)
+(2023-10-21)
 
  - Make it compatible with elasticsearch 8.0.0
  - Removed unnecessary SESSION_SERIALIZER from settings.py.  (Closes #455)
