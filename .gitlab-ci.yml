@@ -6,11 +6,6 @@ stages:
   - quality-assurance
   - test
 
-py37-django32:
-  stage: test
-  script:
-    - tox -e py37-django32
-
 py38-django32:
   stage: test
   script:
