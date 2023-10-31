@@ -61,6 +61,11 @@ py311-django42:
   script:
     - tox -e py311-django42
 
+py312-django42:
+  stage: test
+  script:
+    - tox -e py312-django42
+
 qa:
   stage: quality-assurance
   script:
