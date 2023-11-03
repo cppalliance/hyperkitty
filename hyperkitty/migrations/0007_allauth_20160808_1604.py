@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # flake8: noqa
 
+from django.conf import settings
 from django.db import IntegrityError, connection, migrations, models, utils
 
 
@@ -13,7 +14,7 @@ PROVIDERS_MAP = {
 def populate_emailaddress(apps, schema_editor):
     # All current users have verified their email. Populate the EmailAddress
     # and mark is as such.
-    User = apps.get_model("auth", "User")
+    User = apps.get_model(settings.AUTH_USER_MODEL)
     EmailAddress = apps.get_model("account", "EmailAddress")
     for user in User.objects.all():
         if not EmailAddress.objects.filter(email=user.email).exists():

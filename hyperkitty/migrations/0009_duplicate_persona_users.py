@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # flake8: noqa
 
+from django.conf import settings
 from django.db import migrations, models
 
 
@@ -9,7 +10,7 @@ def remove_duplicate_persona_accounts(apps, schema_editor):
     # resulting in duplicate User accounts (with the same email address). In
     # that case, remove the Persona user and move its data over to the other
     # user instance.
-    User = apps.get_model("auth", "User")
+    User = apps.get_model(settings.AUTH_USER_MODEL)
     SocialAccount = apps.get_model("socialaccount", "SocialAccount")
     Tagging = apps.get_model("hyperkitty", "Tagging")
     Favorite = apps.get_model("hyperkitty", "Favorite")
