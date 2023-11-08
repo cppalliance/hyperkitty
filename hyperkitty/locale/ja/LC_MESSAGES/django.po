@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-09 10:43+0530\n"
-"PO-Revision-Date: 2023-10-05 08:10+0000\n"
+"PO-Revision-Date: 2023-11-08 12:18+0000\n"
 "Last-Translator: Matsubara <matsubara.cc@mie-u.ac.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.2-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -862,7 +862,7 @@ msgstr "カテゴリなし"
 
 #: templates/hyperkitty/threads/right_col.html:13
 msgid "Age (days ago)"
-msgstr "年（日前）"
+msgstr "（日前）"
 
 #: templates/hyperkitty/threads/right_col.html:19
 msgid "Last active (days ago)"
