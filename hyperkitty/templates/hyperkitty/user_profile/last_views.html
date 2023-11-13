@@ -18,9 +18,6 @@
                 <tr>
                     <td>
                         {% with num_unread=lv.num_unread starting_email=lv.thread.starting_email %}
-                        {% if num_unread %}
-                        <i class="unread icon-eye-close" title="{% trans 'New comments' %}"></i>
-                        {% endif %}
                         <a href="{% url 'hk_thread' mlist_fqdn=lv.thread.mailinglist.name threadid=lv.thread.thread_id %}"
                             >{{ starting_email.subject }}</a>
                         <br>
