@@ -10,6 +10,8 @@ News / Changelog
 
 (XXXX-XX-XX)
 
+- Handle the case when a user posting from Hyperkitty is banned in the
+  list. (Fixes #325)
 
 .. _news-1.3.8:
 

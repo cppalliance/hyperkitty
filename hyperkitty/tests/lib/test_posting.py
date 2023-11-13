@@ -23,7 +23,6 @@
 import uuid
 from smtplib import SMTPDataError
 from unittest.mock import Mock, patch
-from urllib.error import HTTPError
 
 from django.contrib.auth.models import User
 from django.core import mail
@@ -31,7 +30,7 @@ from django.test.client import RequestFactory
 
 from django_mailman3.tests.utils import FakeMMList, FakeMMMember
 
-from hyperkitty.lib import posting
+from hyperkitty.lib import mailman, posting
 from hyperkitty.models import MailingList
 from hyperkitty.tests.utils import TestCase
 
@@ -167,9 +166,9 @@ class PostingTestCase(TestCase):
     def test_posting_when_address_banned(self):
         # Test that we handle exception when the user is banned.
         with patch("hyperkitty.lib.posting.mailman.subscribe") as sub_fn:
-            sub_fn.side_effect = HTTPError(
-                400, 'Address is banned.', None, None, None)
-            with self.assertRaises(posting.PostingFailed) as cm:
+            sub_fn.side_effect = mailman.AddressBannedFromList(
+                'Address is banned.')
+            with self.assertRaises(mailman.AddressBannedFromList) as cm:
                 posting.post_to_list(
                     self.request, self.mlist, "Dummy subject", "body")
                 self.assertEqual(str(cm.exception),
