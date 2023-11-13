@@ -108,7 +108,7 @@
                 {% trans "Sign Up" %}
             </a>
             {% endif %}
-                <form name="search" method="get" action="{% url 'hk_search' %}" class="navbar-form navbar-right my-2 my-lg-2 ms-2 me-2" role="search">
+                <form name="search" method="get" action="{% url 'hk_search' %}" class="navbar-form navbar-right my-2 my-lg-2 ms-2" role="search">
                     {% if mlist %}<input type="hidden" name="mlist" value="{{ mlist.name }}" />{% endif %}
                     <div class="input-group">
                     <input name="q" type="text" class="form-control rounded-4 search"
