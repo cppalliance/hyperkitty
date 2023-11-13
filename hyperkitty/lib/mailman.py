@@ -36,7 +36,24 @@ class ModeratedListException(Exception):
     pass
 
 
+class AddressBannedFromList(Exception):
+    pass
+
+
 def subscribe(list_id, user, email=None, display_name=None):
+    """Subscribe a user to a given MailingList.
+
+    :param list_id: List to subscribe the user to.
+    :param user: Django user to subscribe.
+    :param email: Email address of the Django user. If not provided
+        the default email of the Django user is used.
+    :param display_name: The Display name of the user being subscribed,
+        if not provided, a join of First and Last name of the Django
+        user is used.
+
+    :returns: Boolean indicating if the user was successfully subscribed
+        to the list or not.
+    """
     if email is None:
         email = user.email
     if display_name is None:
@@ -67,6 +84,16 @@ def subscribe(list_id, user, email=None, display_name=None):
                 logger.info("Subscription for %s to %s is already pending",
                             email, list_id)
                 return subscribed_now
+            elif e.code == 400 and e.reason == 'Membership is banned':
+                # Using the message string to actually do something here is
+                # not the best idea, but we don't have any better way to
+                # handle errors right now.
+                # Ideally, API will assign different error codes to different
+                # types of errors and we can use an internal no. to signal
+                # various different errors.
+                logger.info("%s is banned from %s", email, list_id)
+                raise AddressBannedFromList(
+                    "Address {} is banned from {}".format(email, list_id))
             else:
                 raise
         # The result can be a Member object or a dict if the subscription can't
@@ -87,6 +114,15 @@ def subscribe(list_id, user, email=None, display_name=None):
 
 
 def get_new_lists_from_mailman():
+    """Poll Mailman's API and get all the new MailingLists.
+
+    This is needed so that Hyperkitty can synchronize the internal
+    state with Mailman Core. Ideally, HK is getting right signals from
+    Postorius or email archiving is causing the new lists to be imported
+    from the API on demand.
+
+    This is typically invoked from one of the scheduled cron jobs.
+    """
     from hyperkitty.models import MailingList
     mmclient = get_mailman_client()
     page_num = 0
@@ -112,6 +148,10 @@ def get_new_lists_from_mailman():
 
 
 def import_list_from_mailman(list_id):
+    """Given a single MailingList, import details from Core.
+
+    :param list_id: List id for MailingList to import.
+    """
     from hyperkitty.models import MailingList
     mmclient = get_mailman_client()
     try:
@@ -127,11 +167,17 @@ def import_list_from_mailman(list_id):
 
 
 def sync_with_mailman(overwrite=False):
+    """Sync all the details from Mailman.
+
+    This is invoked from Cron job/hyperkitty_import or hyperkitty_sync command.
+
+    :param overwrite: Overwrite the existing Senders.
+    """
     from hyperkitty.models import MailingList, Sender
     for mlist in MailingList.objects.all():
         mlist.update_from_mailman()
     # Now sync Sender.mailman_id with Mailman's User.user_id
-    # There can be thousands of senders, break into smaller chuncks to avoid
+    # There can be thousands of senders, break into smaller chunks to avoid
     # hogging up the memory
     buffer_size = 1000
     query = Sender.objects.all()

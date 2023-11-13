@@ -152,6 +152,21 @@ class MailmanSubscribeTestCase(TestCase):
             'otheremail@example.com', "Other Display Name",
             pre_verified=True, pre_confirmed=True)
 
+    def test_subscribe_address_banned(self):
+        """Test that address trying to subscribe is banned."""
+        self.ml.settings["subscription_policy"] = "open"
+        self.ml.get_member.side_effect = ValueError
+        self.ml.subscribe.side_effect = HTTPError(
+            url=None, code=400, msg="Membership is banned",
+            hdrs=None, fp=None)
+        # Subscribing a banned address should raise AddressBannedFromList
+        # exception.
+        self.assertRaises(
+            mailman.AddressBannedFromList,
+            mailman.subscribe,
+            "list@example.com", self.user, "otheremail@example.com",
+            "Other Display Name")
+
 
 class MailmanSyncTestCase(TestCase):
 

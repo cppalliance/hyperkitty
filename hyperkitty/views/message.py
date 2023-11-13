@@ -35,10 +35,12 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.template import loader
 from django.urls import reverse
 from django.utils.translation import gettext as _
+from django.views import defaults as default_views
 from django.views.decorators.http import require_POST
 
 from hyperkitty.forms import MessageDeleteForm, PostForm, ReplyForm
-from hyperkitty.lib.mailman import ModeratedListException
+from hyperkitty.lib.mailman import (
+    AddressBannedFromList, ModeratedListException)
 from hyperkitty.lib.posting import PostingFailed, post_to_list, reply_subject
 from hyperkitty.lib.view_helpers import (
     check_mlist_private, get_months, get_posting_form)
@@ -175,6 +177,8 @@ def reply(request, mlist_fqdn, message_id_hash):
         return HttpResponse(str(e), content_type="text/plain", status=500)
     except ModeratedListException as e:
         return HttpResponse(str(e), content_type="text/plain", status=403)
+    except AddressBannedFromList as e:
+        return default_views.permission_denied(request, e)
 
     # TODO: if newthread, don't insert the temp mail in the thread, redirect to
     # the new thread. Should we insert the mail in the DB and flag it as
@@ -210,7 +214,7 @@ def reply(request, mlist_fqdn, message_id_hash):
 @login_required
 @check_mlist_private
 def new_message(request, mlist_fqdn):
-    """ Sends a new thread-starting message to the list. """
+    """Sends a new thread-starting message to the list. """
     if not getattr(settings, 'HYPERKITTY_ALLOW_WEB_POSTING', True):
         return HttpResponse('Posting via Hyperkitty is disabled',
                             content_type="text/plain", status=403)
@@ -227,9 +231,14 @@ def new_message(request, mlist_fqdn):
                              form.cleaned_data["message"], headers)
             except PostingFailed as e:
                 messages.error(request, str(e))
+                logger.info(
+                    "Failed to send message from %s to list %s due to %s",
+                    form.cleaned_data["sender"], mlist, str(e))
             except ModeratedListException as e:
                 return HttpResponse(
                     str(e), content_type="text/plain", status=403)
+            except AddressBannedFromList as e:
+                return default_views.permission_denied(request, e)
             else:
                 messages.success(
                     request, "The message has been sent successfully.")
