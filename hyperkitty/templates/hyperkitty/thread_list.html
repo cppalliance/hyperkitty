@@ -31,7 +31,7 @@
             <div class="col d-flex flex-align-center flex-row-reverse">
                 <div class="order-3 me-2">
                     <a href="{% url "hk_message_new" mlist_fqdn=mlist.name %}"
-                        class="btn btn-success  {% if not user.is_authenticated %} disabled" title="{% trans 'You must be logged-in to create a thread.' %}{% endif %}"
+                        class="btn btn-success"
                         aria-label="Start new thread">
                         <i class="fa fa-plus"></i>
                         <span class="d-inline d-md-none">{% trans 'Thread'%}</span>
