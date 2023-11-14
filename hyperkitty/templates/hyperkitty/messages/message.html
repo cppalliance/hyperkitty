@@ -92,8 +92,7 @@
             {% trans "Reply" %}
         </a>
         {% else %}
-        <a class="reply reply-mailto" title="{% trans "Sign in to reply online" %}"
-           href="mailto:{{ mlist.name }}?Subject={{ email.subject|reply_subject|urlencode }}&amp;In-Reply-To=&lt;{{ email.message_id|urlencode }}&gt;">
+        <a class="reply reply-mailto" title="{% trans "Reply" %}" href="#">
             <i class="fa fa-reply"></i>
             {% trans "Reply" %}
         </a>
@@ -124,6 +123,17 @@
         </div>
         {% endif %}
         <!-- Reply form -->
+        {% if not user.is_authenticated and posting_enabled %}
+        <div class="reply-form-unauthenticated">
+            <a class="btn btn-sm btn-primary" href="{% url LOGIN_URL %}?next={{next|default:request.path|urlencode}}#">
+                {% trans "Sign in to reply online" %}
+            </a>
+            <a class="btn btn-sm btn-secondary reply-mailto"
+                       href="mailto:{{ mlist.name }}?Subject={{ email.subject|reply_subject|urlencode }}&amp;In-Reply-To=&lt;{{ email.message_id|urlencode }}&gt;"
+                       >{% trans 'Use email software' %}</a></li>
+        </div>
+        {% endif %}
+
         {% if user.is_authenticated and posting_enabled %}
         <div class="reply-form dropdown">
             <form method="post" enctype="multipart/form-data"

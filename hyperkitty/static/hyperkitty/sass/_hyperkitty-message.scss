@@ -239,6 +239,10 @@ $oddEmailColor: rgb(238, 238, 238);
         }
     }
 
+    .reply-form-unauthenticated {
+        display: none;
+        margin-top: 1em;
+    }
     .reply-form {
         display: none;
         .reply-tools {
