@@ -14,6 +14,8 @@ News / Changelog
   list. (Fixes #325)
 - Instead of defaulting to replying via Email software, provide option
   to login and reply for un-authenticated users too. (Fixes #277)
+- Tags count really doesn't add anything to the page since it isn't
+  expected to be too many like authors/messages. (Fixes #43)
 
 .. _news-1.3.8:
 

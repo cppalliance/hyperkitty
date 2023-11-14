@@ -1,6 +1,6 @@
 {% load i18n %}
 
-        <h3 id="tag-title">{% trans "tags" %} ({{thread.tags.distinct.count}}) </h3>
+        <h3 id="tag-title">{% trans "tags" %} </h3>
         {% if thread.tags.count %}
         <ul class="list-inline">
             {% for tag in thread.tags.distinct %}
