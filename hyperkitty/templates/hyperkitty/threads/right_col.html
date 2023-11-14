@@ -104,9 +104,11 @@
         <h3 id="participants_title">{% trans "participants" %} ({{ thread.participants_count }})</h3>
         <ul class="list-unstyled">
             {% for participant in thread.participants|sort_by_name %}
-            <li class="row">
-                <div class="participant-gravatar col-sm-auto circle">{% gravatar participant.address 48 %}</div>
-                <div class="participant-name col">{{ participant.name|default:participant.address|escapeemail }}</div>
+            <li class="d-flex">
+                <div class="participant-gravatar circle">{% gravatar participant.address 48 %}</div>
+                <div class="participant-name d-flex align-items-center">
+                    <span>{{ participant.name|default:participant.address|escapeemail }}</span>
+                </div>
             </li>
             {% endfor %}
         </ul>

@@ -7,11 +7,11 @@
 <div class="email{% if unfolded %} email-first{% endif %}{% if is_new %} unread{% endif %}">
 
     <div id="{{email.message_id_hash}}" class="email-header">
-        <div class="gravatar-wrapper">
+        <div class="gravatar-wrapper d-flex">
             <div class="gravatar circle">
                 {% gravatar email.sender.address 120 %}
             </div>
-            <div class="email-author">
+            <div class="email-author d-flex">
                 <h2 class="name">
                     {% if email.sender.mailman_id %}
                     <a href="{% url 'hk_public_user_profile' user_id=email.sender.mailman_id %}"

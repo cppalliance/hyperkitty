@@ -86,7 +86,7 @@ $oddEmailColor: rgb(238, 238, 238);
 
 .email-author {
     margin-left: 0.5em;;
-    display: inline-block;
+    align-items: center;
 
     .name {
         font-size: 1.25em;
@@ -596,7 +596,7 @@ $oddEmailColor: rgb(238, 238, 238);
         // @media (max-width: $screen-xs-max) {
                 #participants {
                         .participant-name {
-                                margin-left: 0px;
+                                margin-left: 10px;
                         }
                 }
         }
