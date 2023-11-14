@@ -16,6 +16,8 @@ News / Changelog
   to login and reply for un-authenticated users too. (Fixes #277)
 - Tags count really doesn't add anything to the page since it isn't
   expected to be too many like authors/messages. (Fixes #43)
+- 'Start a new thread' will redirect to login if the user is not
+  logged in, instead of disabling it. (Fixes #50)
 
 .. _news-1.3.8:
 
