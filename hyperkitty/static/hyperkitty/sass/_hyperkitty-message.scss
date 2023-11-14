@@ -323,7 +323,7 @@ $oddEmailColor: rgb(238, 238, 238);
 }
 .replies .email {
         border-top: 1px solid $rowBorderColor;
-        padding: 0.5em;
+        // padding: 0.5em;
         margin: 20px 0 20px 0;
         .unread {
                 border-top: 1px solid rgb(100, 100, 100);
@@ -337,10 +337,11 @@ $oddEmailColor: rgb(238, 238, 238);
                 text-align: center;
                 // clear: both;
                 font-style: italic;
+                display: inline-flex;
+                padding-top: 5;
         }
         .email-body {
                 // padding: 5px;
-                padding-left: 25px;
                 background-color: rgb(255, 255, 255);
         }
 }
