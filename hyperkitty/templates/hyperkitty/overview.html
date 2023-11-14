@@ -104,14 +104,11 @@
                     <div class="">
                         <a href="{% url 'hk_archives_latest' mlist_fqdn=mlist.name %}" class="btn btn-primary mb-2">{% trans "All Threads" %}</a>
                         {% if posting_enabled %}
-                            {% comment %} <br/> {% endcomment %}
-                            <a href="{% url "hk_message_new" mlist_fqdn=mlist.name %}"
-                                class="btn btn-success order-4 mb-2 {% if not user.is_authenticated %} disabled" title="{% trans 'You must be logged-in to create a thread.' %}{% endif %}">
+                            <a href="{% url "hk_message_new" mlist_fqdn=mlist.name %}" class="btn btn-success order-4 mb-2">
                                 <i class="fa fa-plus"></i>
                                 {% trans '<span class="d-none d-md-inline">Start a n</span><span class="d-md-none">N</span>ew thread' %}
                             </a>
                         {% endif %}
-                        {% comment %} <br/> {% endcomment %}
                         {% if export_allowed %}
                             <button type="button" class="btn btn-outline-primary dropdown-toggle mb-2 d-none d-md-block" data-bs-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
