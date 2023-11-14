@@ -183,7 +183,14 @@ function setup_replies() {
     $("body")
         .tooltip({selector: "a.reply"})
         .on("click", "a.reply", function(e) {
-            if ($(this).hasClass("reply-mailto")) { return; }
+            if ($(this).hasClass("reply-mailto")) {
+                $(this).parent(".email-info").find(".reply-form-unauthenticated").slideToggle("fast", function() {
+                    if ($(this).css("display") === "block") {
+                        $(this).find("textarea").focus();
+                    }
+                });
+                return;
+            }
             e.preventDefault();
             $(this).parent(".email-info").find(".reply-form").slideToggle("fast", function() {
                 if ($(this).css("display") === "block") {

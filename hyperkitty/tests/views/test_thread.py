@@ -318,11 +318,11 @@ class ThreadTestCase(TestCase):
         self.client.logout()
         response = self.client.get(url)
         soup = BeautifulSoup(response.content, "html.parser")
-        self.assertEqual(len(soup.find_all("a", class_="reply-mailto")), 1)
-        link = soup.find("a", class_="reply")
-        self.assertTrue(link is not None)
-        self.assertTrue("reply-mailto" in link["class"])
-        check_mailto(link)
+        self.assertEqual(len(soup.find_all("a", class_="reply-mailto")), 2)
+        links = soup.find_all("a", class_="reply-mailto,btn")
+        self.assertTrue(links is not None)
+        for link in links:
+            check_mailto(link)
 
     @override_settings(HYPERKITTY_ALLOW_WEB_POSTING=False)
     def test_reply_button_when_disabled_posting(self):

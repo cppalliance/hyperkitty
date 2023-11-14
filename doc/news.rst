@@ -12,6 +12,8 @@ News / Changelog
 
 - Handle the case when a user posting from Hyperkitty is banned in the
   list. (Fixes #325)
+- Instead of defaulting to replying via Email software, provide option
+  to login and reply for un-authenticated users too. (Fixes #277)
 
 .. _news-1.3.8:
 
