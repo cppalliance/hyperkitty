@@ -1,0 +1,61 @@
+
+[project]
+name = "HyperKitty"
+dynamic = ["version"]
+description = "A web interface to access GNU Mailman v3 archives"
+keywords = ["email"]
+readme = "README.rst"
+authors = [
+    {name = "Mailman Developers", email = "mailman-developers@python.org"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Django",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: JavaScript",
+    "Programming Language :: Python :: 3",
+    "Topic :: Communications :: Email :: Mailing List Servers",
+]
+dependencies = [
+    "django-compressor>=1.3",
+    "django-extensions>=1.3.7",
+    "django-gravatar2>=1.0.6",
+    "django-haystack>=2.8.0",
+    "django-q>=1.0.0",
+    "django>=4.0,<4.3",
+    "django_mailman3>=1.3.10",
+    "djangorestframework>=3.0.0",
+    "flufl.lock>=4.0",
+    "mailmanclient>=3.3.3",
+    "mistune>=2.0.0,<3.0",
+    "networkx>=2.0",
+    "python-dateutil >= 2.0",
+    "pytz>=2012",
+    "robot-detection>=0.3",
+]
+license = {text = "GPLv3"}
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://gitlab.com/mailman/hyperkitty"
+
+[project.optional-dependencies]
+dev = [
+    "isort",
+    "Whoosh>=2.5.7",
+    "django-debug-toolbar",
+]
+test = [
+    "Whoosh>=2.5.7",
+    "beautifulsoup4>=4.3.2",
+    "lxml",
+    "django-debug-toolbar",
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm.version]
+source = "file"
+path = "hyperkitty/__init__.py"
