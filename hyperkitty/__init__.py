@@ -19,5 +19,5 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-VERSION = "1.3.9b1"
-default_app_config = 'hyperkitty.apps.HyperKittyConfig'
+__version__ = "1.3.9b1"
+VERSION = __version__
