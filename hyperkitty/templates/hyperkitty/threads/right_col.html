@@ -70,7 +70,7 @@
         </p>
     </form>
 
-    {% if user.is_staff or user.is_superuser %}
+    {% if user.is_staff or user.is_superuser or user_is_owner %}
     <div class="card border-danger">
         <div class="card-body">
             <div><i class="fa fa-fw fa-plug"></i>

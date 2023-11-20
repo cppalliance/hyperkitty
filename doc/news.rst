@@ -18,6 +18,8 @@ News / Changelog
   expected to be too many like authors/messages. (Fixes #43)
 - 'Start a new thread' will redirect to login if the user is not
   logged in, instead of disabling it. (Fixes #50)
+- List owners can now delete messages and threads and reattach threads.
+  (Fixes #261)
 
 .. _news-1.3.8:
 

@@ -87,6 +87,7 @@ def index(request, mlist_fqdn, message_id_hash):
         'export': export,
         'posting_enabled': getattr(
             settings, 'HYPERKITTY_ALLOW_WEB_POSTING', True),
+        'user_is_owner': mlist.is_owner(request.user),
     }
     return render(request, "hyperkitty/message.html", context)
 
@@ -260,10 +261,14 @@ def new_message(request, mlist_fqdn):
 @check_mlist_private
 def delete(request, mlist_fqdn, threadid=None, message_id_hash=None):
     """Delete messages. """
-    if not request.user.is_staff and not request.user.is_superuser:
-        return HttpResponse('You must be a staff member to delete a message',
-                            content_type="text/plain", status=403)
     mlist = request.mlist
+    if not (request.user.is_staff or
+            request.user.is_superuser or
+            mlist.is_owner(request.user)):
+        return HttpResponse(
+            'You must be a staff member or list owner to delete a message',
+            content_type="text/plain", status=403)
+
     if threadid is not None:
         thread = get_object_or_404(
             Thread, mailinglist=mlist, thread_id=threadid)
