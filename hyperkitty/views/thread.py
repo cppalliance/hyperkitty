@@ -212,6 +212,7 @@ def thread_index(request, mlist_fqdn, threadid, month=None, year=None):
         'num_comments': thread.emails_count - 1,
         'last_view': last_view,
         'unread_count': unread_count,
+        'user_is_owner': mlist.is_owner(request.user),
         # XX(abraj): Commenting it out, since we don't need this. We aren't
         # really using. At some point we can remove this but I am commenting.
         #
@@ -387,10 +388,13 @@ def set_category(request, mlist_fqdn, threadid):
 
 @check_mlist_private
 def reattach(request, mlist_fqdn, threadid):
-    if not request.user.is_staff and not request.user.is_superuser:
-        return HttpResponse('You must be a staff member to reattach a thread',
-                            content_type="text/plain", status=403)
     mlist = request.mlist
+    if not (request.user.is_staff or
+            request.user.is_superuser or
+            mlist.is_owner(request.user)):
+        return HttpResponse(
+            'You must be a staff member or list owner to reattach a thread',
+            content_type="text/plain", status=403)
     thread = get_object_or_404(Thread, mailinglist=mlist, thread_id=threadid)
     context = {
         'mlist': mlist,

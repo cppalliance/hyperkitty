@@ -240,6 +240,21 @@ class MailingList(models.Model):
                              user, self.list_id)
                 self.moderators.add(user)
 
+    def is_owner(self, user):
+        try:
+            client = get_mailman_client()
+            mm_list = client.get_list(self.name)
+        except MailmanConnectionError:
+            return False
+        except HTTPError:
+            return False
+        if not mm_list:
+            return False
+        if user.is_authenticated and user.email in [
+                owner.address.email for owner in mm_list.owners]:
+            return True
+        return False
+
     # Events (signal callbacks)
 
     def on_pre_save(self):
