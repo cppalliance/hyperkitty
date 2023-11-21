@@ -24,6 +24,7 @@
 import json
 import re
 import urllib
+from contextlib import ExitStack
 from email.message import EmailMessage
 from unittest.mock import patch
 
@@ -118,6 +119,42 @@ class ReattachTestCase(SearchEnabledTestCase):
         self.assertEqual(len(messages), 1)
         self.assertEqual(messages[0].tags, "warning")
         self.assertIn("Invalid thread id, it should look", str(messages[0]))
+
+    def test_reattach_no_permission(self):
+        self.user.is_staff = False
+        self.user.save()
+        threadid1 = self.messages[0]["Message-ID-Hash"]
+        threadid2 = self.messages[1]["Message-ID-Hash"]
+        self.client.post(
+            reverse('hk_thread_reattach',
+                    args=["list@example.com", threadid2]),
+            data={"parent": threadid1})
+        self.assertEqual(Thread.objects.count(), 2)
+        for thread in Thread.objects.all():
+            self.assertEqual(thread.emails.count(), 1)
+
+    def test_reattach_by_owner(self):
+        self.user.is_staff = False
+        self.user.save()
+        threadid1 = self.messages[0]["Message-ID-Hash"]
+        threadid2 = self.messages[1]["Message-ID-Hash"]
+        with ExitStack() as stack:
+            mock_authorized = stack.enter_context(
+                patch('hyperkitty.models.mailinglist.MailingList.is_owner'))
+            mock_authorized.return_value = True
+            response = self.client.post(
+                reverse('hk_thread_reattach',
+                        args=["list@example.com", threadid2]),
+                data={"parent": threadid1})
+        threads = Thread.objects.order_by("id")
+        self.assertEqual(len(threads), 1)
+        self.assertEqual(threads[0].thread_id, threadid1)
+        expected_url = reverse(
+            'hk_thread', args=["list@example.com", threadid1])
+        self.assertRedirects(response, expected_url)
+        messages = get_flash_messages(response)
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(messages[0].tags, "success")
 
     def test_reattach_on_itself(self):
         threadid = self.messages[0]["Message-ID-Hash"]

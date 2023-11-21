@@ -24,6 +24,7 @@
 import json
 import os
 import uuid
+from contextlib import ExitStack
 from email import message_from_file
 from email.message import EmailMessage
 from email.policy import default
@@ -410,6 +411,27 @@ class MessageViewsTestCase(TestCase):
         url = reverse('hk_message_delete',
                       args=("list@example.com", msg.message_id_hash))
         response = self.client.post(url, {"email": msg.pk})
+        self.assertRedirects(
+            response, reverse('hk_list_overview', kwargs={
+                "mlist_fqdn": "list@example.com"}))
+        # Flash message
+        messages = get_flash_messages(response)
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(messages[0].tags, "success")
+        # The message and the thread must be deleted.
+        self.assertFalse(Email.objects.filter(message_id="msg").exists())
+        self.assertFalse(Thread.objects.filter(pk=thread_id).exists())
+
+    def test_delete_single_message_by_owner(self):
+        msg = Email.objects.get(message_id="msg")
+        thread_id = msg.thread.pk
+        url = reverse('hk_message_delete',
+                      args=("list@example.com", msg.message_id_hash))
+        with ExitStack() as stack:
+            mock_authorized = stack.enter_context(
+                patch('hyperkitty.models.mailinglist.MailingList.is_owner'))
+            mock_authorized.return_value = True
+            response = self.client.post(url, {"email": msg.pk})
         self.assertRedirects(
             response, reverse('hk_list_overview', kwargs={
                 "mlist_fqdn": "list@example.com"}))
