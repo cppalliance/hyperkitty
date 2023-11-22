@@ -4,7 +4,7 @@ from django.conf import settings
 
 import mistune
 from mistune.plugins.extra import plugin_url
-from mistune.util import escape_html, escape_url
+from mistune.util import escape_html
 
 
 class MyRenderer(mistune.HTMLRenderer):
@@ -77,7 +77,11 @@ class InlineParser(mistune.inline_parser.InlineParser):
     removing `**` or `__`. Since both the markers have same styling effect,
     the renderer currently doesn’t get which marker was used, it just gets
     ‘emphasis’ or ‘strong’ node.
+    We also null the ESCAPE string to prevent removing backslash escapes
+    without unwanted side effects from removing the 'escapre' rule.
     """
+
+    ESCAPE = ''
 
     def tokenize_emphasis(self, m, state):
         marker = m.group(1)
@@ -85,21 +89,6 @@ class InlineParser(mistune.inline_parser.InlineParser):
         if len(marker) == 1:
             return 'emphasis', marker, self.render(text, state)
         return 'strong', marker, self.render(text, state)
-
-    # This is an override for a fix that should be in mistune.
-    # https://github.com/lepture/mistune/pull/276
-    def parse_auto_link(self, m, state):
-        if state.get('_in_link'):
-            return 'text', m.group(0)
-
-        text = m.group(1)
-        if ('@' in text and
-            not text.lower().startswith('mailto:') and
-                not text.lower().startswith('http')):
-            link = 'mailto:' + text
-        else:
-            link = text
-        return 'link', escape_url(link), text
 
 
 def remove_header_rules(rules):
@@ -179,7 +168,7 @@ def plugin_disable_markdown(md):
     markdown rendering.
     """
     md.block.rules = ['block_quote']
-    md.inline.rules = ['escape', 'inline_html', 'auto_link']
+    md.inline.rules = ['inline_html', 'auto_link']
 
 
 # PGP Signature plugin parses inline pgp signatures from Emails and converts

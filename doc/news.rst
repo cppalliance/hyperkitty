@@ -20,6 +20,8 @@ News / Changelog
   logged in, instead of disabling it. (Fixes #50)
 - List owners can now delete messages and threads and reattach threads.
   (Fixes #261)
+- Archive rendering no longer removes backslash escapes.  (Closes #490)
+
 
 .. _news-1.3.8:
 
