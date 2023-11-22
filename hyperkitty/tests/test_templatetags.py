@@ -24,7 +24,7 @@ from unittest.mock import patch
 
 from django.test import override_settings
 
-from hyperkitty.lib.renderer import markdown_renderer
+from hyperkitty.lib.renderer import markdown_renderer, text_renderer
 from hyperkitty.templatetags.hk_generic import (
     export_allowed, gravatar, settings_value_equals, snip_quoted)
 from hyperkitty.templatetags.hk_haystack import nolongterms
@@ -251,6 +251,40 @@ Subject: Testing if the quoted reply works with Outlook style.
 This is the original text <em>*with*</em> some <strong>__markup__</strong>.
 </p>
 </blockquote>""")  # noqa: E501
+
+    def test_backslash(self):
+        contents = r'^.*@gmail\.com$'
+        result = markdown_renderer(contents)
+        self.assertEqual(
+            result.strip(),
+            r'<p>^.*@gmail\.com$</p>')
+
+    def test_backslas_code(self):
+        contents = r'`^.*@gmail\.com$`'
+        result = markdown_renderer(contents)
+        self.assertEqual(
+            result.strip(),
+            r'<p><code>^.*@gmail\.com$</code></p>')
+
+
+class TestDecoratePlain(TestCase):
+
+    def setUp(self):
+        pass
+
+    def test_backslash(self):
+        contents = r'^.*@gmail\.com$'
+        result = text_renderer(contents)
+        self.assertEqual(
+            result.strip(),
+            r'<p>^.*@gmail\.com$</p>')
+
+    def test_backslas_code(self):
+        contents = r'`^.*@gmail\.com$`'
+        result = text_renderer(contents)
+        self.assertEqual(
+            result.strip(),
+            r'<p>`^.*@gmail\.com$`</p>')
 
 
 class SettingsValuesTest(TestCase):
