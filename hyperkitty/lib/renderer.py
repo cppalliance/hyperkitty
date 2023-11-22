@@ -77,7 +77,8 @@ class InlineParser(mistune.inline_parser.InlineParser):
     removing `**` or `__`. Since both the markers have same styling effect,
     the renderer currently doesn’t get which marker was used, it just gets
     ‘emphasis’ or ‘strong’ node.
-    escape rule is removed to preserve backslashes in messages.
+    We also null the ESCAPE string to prevent removing backslash escapes
+    without unwanted side effects from removing the 'escapre' rule.
     """
 
     ESCAPE = ''
