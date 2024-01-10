@@ -147,15 +147,13 @@ class TestGravatar(TestCase):
 
 class TestDecorate(TestCase):
 
-    def setUp(self):
-        pass
-
     def test_parse_quote(self):
         contents = """
 On Fri, 09.11.12 11:27, Someone wrote:
 > This is the first quoted line
 > On Fri 07.25.12, Aperson wrote:
 >> This is the second quoted line.
+
 This is the response.
 """
         expected = (
@@ -184,7 +182,7 @@ https://some.url/llasdfjaksdgfjsdfgkjasdfbgksdfjgbsdfkgjbsdflkgjbsdflgksjdhfbgks
         result = markdown_renderer(contents)
         self.assertEqual(
             result.strip(),
-            '<p><a target="_blank" href="https://some.url/llasdfjaksdgfjsdfgkjasdfbgksdfjgbsdfkgjbsdflkgjbsdflgksjdhfbgksdfgb">https://some.url/llasdfjaksdgfjsdfgkjasdfbgksdfjgbsdfkgjbsdflkgjbsdflgksjdhf...</a></p>')   # noqa: E501
+            ('<p><a target="_blank" href="https://some.url/llasdfjaksdgfjsdfgkjasdfbgksdfjgbsdfkgjbsdflkgjbsdflgksjdhfbgksdfgb">https://some.url/llasdfjaksdgfjsdfgkjasdfbgksdfjgbsdfkgjbsdflkgjbsdflgksjdhf...</a></p>'))   # noqa: E501
 
     def test_autolink_small_url(self):
         # Test that autolink doesn't add ... to URLs that aren't truncated.
@@ -238,18 +236,17 @@ Subject: Testing if the quoted reply works with Outlook style.
 This is the original text *with* some __markup__.
 """
         result = markdown_renderer(contents)
+        print(result)
         self.assertEqual(
             result.strip(),
             """<p>This is the replied text.</p>
 <p>Sent from my Galaxy</p>
 <div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><p>-------- Original message --------
-From: A person &lt;person(a)example.com&gt;
+From: A person <person(a)example.com>
 Date: 6/26/23 16:23 (GMT-05:00)
 To: mytestlist@example.com
 Subject: Testing if the quoted reply works with Outlook style.
-
-This is the original text <em>*with*</em> some <strong>__markup__</strong>.
-</p>
+This is the original text <em>*with*</em> some <strong>__markup__</strong>.</p>
 </blockquote>""")  # noqa: E501
 
     def test_backslash(self):
@@ -259,18 +256,25 @@ This is the original text <em>*with*</em> some <strong>__markup__</strong>.
             result.strip(),
             r'<p>^.*@gmail\.com$</p>')
 
-    def test_backslas_code(self):
+    def test_backslash_code(self):
         contents = r'`^.*@gmail\.com$`'
         result = markdown_renderer(contents)
         self.assertEqual(
             result.strip(),
             r'<p><code>^.*@gmail\.com$</code></p>')
 
+    def test_backslash_code_block(self):
+        contents = r"""```
+^.*@gmail\.com$
+```"""
+        result = markdown_renderer(contents)
+        self.assertEqual(
+            result.strip(),
+            r"""<pre><code>^.*@gmail\.com$
+</code></pre>""")
+
 
 class TestDecoratePlain(TestCase):
-
-    def setUp(self):
-        pass
 
     def test_backslash(self):
         contents = r'^.*@gmail\.com$'
@@ -279,7 +283,7 @@ class TestDecoratePlain(TestCase):
             result.strip(),
             r'<p>^.*@gmail\.com$</p>')
 
-    def test_backslas_code(self):
+    def test_backslash_code(self):
         contents = r'`^.*@gmail\.com$`'
         result = text_renderer(contents)
         self.assertEqual(

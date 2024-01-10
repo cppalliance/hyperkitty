@@ -3,8 +3,8 @@ import re
 from django.conf import settings
 
 import mistune
-from mistune.plugins.extra import plugin_url
-from mistune.util import escape_html
+from mistune.plugins.url import url
+from mistune.util import safe_entity
 
 
 class MyRenderer(mistune.HTMLRenderer):
@@ -16,7 +16,6 @@ class MyRenderer(mistune.HTMLRenderer):
     - Optionally render Image tags depending on RENDER_INLINE_IMAGE setting,
       which is off by default to prevent remote images being rendered inline
       as they are used for tracking and can be privacy violating.
-
     """
 
     def block_quote(self, text):
@@ -28,13 +27,19 @@ class MyRenderer(mistune.HTMLRenderer):
             f'<div class="quoted-switch"><a href="#">...</a></div>'
             f'<blockquote class="blockquote quoted-text">{text}</blockquote>')
 
-    def emphasis(self, marker, text):
+    def emphasis(self, text, marker):
         """Emphasis with marker included."""
         return super().emphasis(marker + text + marker)
 
-    def strong(self, marker, text):
+    def strong(self, text, marker):
         """Strong with marker included."""
         return super().strong(marker + text + marker)
+
+    def text(self, text, marker=None):
+        # We had to override this because for some reason, text inside emphasis
+        # and strong will receive the attrs of parents too, like "marker" in
+        # our case. We don't really need to do anything with it.
+        return text
 
     def _md_style_img(self, src, title, alt):
         """Markdown syntax for images. """
@@ -42,7 +47,7 @@ class MyRenderer(mistune.HTMLRenderer):
         return '![{alt}]({src} {title})'.format(
             src=src, title=title, alt=alt)
 
-    def image(self, src, alt_text, title):
+    def image(self, alt, url, title=None):
         """Render image if configured to do so.
 
         HYPERKITTY_RENDER_INLINE_IMAGE configuration allows for
@@ -50,25 +55,28 @@ class MyRenderer(mistune.HTMLRenderer):
         default since embeded images can cause problems.
         """
         if getattr(settings, 'HYPERKITTY_RENDER_INLINE_IMAGE', False):
-            return super().image(src, alt_text, title, )
-        return self._md_style_img(src, title, alt_text)
+            return super().image(alt, url, title)
+        return self._md_style_img(url, title, alt)
 
-    def link(self, link, text=None, title=None):
+    def link(self, text, url, title=None):
         """URL link renderer that truncates the length of the URL.
 
         This only does it for the URLs that are not hyperlinks by just literal
         URLs (text=None) so text is same as URL.
         It also adds target=“_blank” so that the URLs open in a new tab.
         """
-        if text is None:
-            text = link
+        # text can be none of same as url in case of autolink parsing. This
+        # will truncate the length of the URL in both cases but preserve
+        # the actual URL destination in the hyperlink.
+        if text is None or text == url:
+            text = url
             if len(text) > 76:
-                text = link[:76] + '...'
+                text = url[:76] + '...'
 
-        s = '<a target="_blank" href="' + self._safe_url(link) + '"'
+        s = '<a target="_blank" href="' + self.safe_url(url) + '"'
         if title:
-            s += ' title="' + escape_html(title) + '"'
-        return s + '>' + (text or link) + '</a>'
+            s += ' title="' + safe_entity(title) + '"'
+        return s + '>' + (text or url) + '</a>'
 
 
 class InlineParser(mistune.inline_parser.InlineParser):
@@ -81,14 +89,23 @@ class InlineParser(mistune.inline_parser.InlineParser):
     without unwanted side effects from removing the 'escapre' rule.
     """
 
-    ESCAPE = ''
+    def parse_emphasis(self, m, state):
+        end_pos = super().parse_emphasis(m, state)
+        last_token = state.tokens[-1].copy()
+        marker = m.group(0)
+        last_token['attrs'] = {'marker': marker}
+        state.tokens[-1] = last_token
+        return end_pos
 
-    def tokenize_emphasis(self, m, state):
-        marker = m.group(1)
-        text = m.group(2)
-        if len(marker) == 1:
-            return 'emphasis', marker, self.render(text, state)
-        return 'strong', marker, self.render(text, state)
+    def parse_escape(self, m, state):
+        # Upstream version will use `unescape_char` on the text, which
+        # removes the `\` in _some_ cases. This will remove the use of
+        # unescape char since we don't want to do escaping at all.
+        state.append_token({
+            'type': 'text',
+            'raw': m.group(0),
+        })
+        return m.end()
 
 
 def remove_header_rules(rules):
@@ -101,30 +118,30 @@ def remove_header_rules(rules):
 
 class BlockParser(mistune.block_parser.BlockParser):
     """A copy of Mistune's block parser with header parsing rules removed."""
-    RULE_NAMES = remove_header_rules(
-        mistune.block_parser.BlockParser.RULE_NAMES)
+    DEFAULT_RULES = remove_header_rules(
+        mistune.block_parser.BlockParser.DEFAULT_RULES)
 
 
-OUTLOOK_REPLY_PATTERN = re.compile(
+OUTLOOK_REPLY_PATTERN = (
     r'^-------- Original message --------\n'
-    r'([\s\S]+)',                             # everything after newline.
-    re.M
+    r'(?P<reply_text>[\s\S]+)'                    # everything after newline
 )
 
 
 def parse_outlook_reply(block, m, state):
     """Parser for outlook style replies."""
-    text = m.group(0)
-    return {
+    text = m.group('reply_text')
+    reply_token = '-------- Original message --------\n'
+    state.append_token({
         'type': 'block_quote',
-        'children': [{'type': 'paragraph', 'text': text}]
-        }
+        'children': [{'type': 'paragraph', 'text': reply_token + text}],
+        })
+    return m.end() + 1
 
 
 def plugin_outlook_reply(md):
-    md.block.register_rule(
+    md.block.register(
         'outlook_reply', OUTLOOK_REPLY_PATTERN, parse_outlook_reply)
-    md.block.rules.insert(-1,  'outlook_reply')
 
 
 # Signature Plugin looks for signature pattern in email content and converts it
@@ -152,10 +169,10 @@ def plugin_signature(md):
 
     It only provides an HTML renderer because that is the only one needed.
     """
-    md.block.register_rule('signature', SIGNATURE_PATTERN, parse_signature)
+    md.block.register('signature', SIGNATURE_PATTERN, parse_signature)
 
-    md.block.rules.insert(0,  'signature')
-    if md.renderer.NAME == 'html':
+    # md.block.rules.insert(0,  'signature')
+    if md.renderer and md.renderer.NAME == 'html':
         md.renderer.register('signature', render_html_signature)
 
 
@@ -200,22 +217,22 @@ def plugin_pgp_signature(md):
     It parses BEGIN PGP SIGNATURE and END PGP SIGNATURE and collapses content
     in between them.
     """
-    md.block.register_rule('pgp', PGP_SIGNATURE_MATCH, parse_pgp_signature)
-    md.block.rules.append('pgp')
-    if md.renderer.NAME == 'html':
+    md.block.register('pgp', PGP_SIGNATURE_MATCH, parse_pgp_signature)
+    # md.block.rules.append('pgp')
+    if md.renderer and md.renderer.NAME == 'html':
         md.renderer.register('pgp', render_pgp_signature)
 
 
-renderer = MyRenderer(escape=True)
+renderer = MyRenderer()
 markdown_renderer = mistune.Markdown(
     renderer=renderer,
-    inline=InlineParser(renderer, hard_wrap=False),
+    inline=InlineParser(hard_wrap=False),
     block=BlockParser(),
     plugins=[
+        plugin_outlook_reply,
         plugin_pgp_signature,
         plugin_signature,
-        plugin_outlook_reply,
-        plugin_url
+        url,
         ])
 
 
@@ -224,10 +241,10 @@ markdown_renderer = mistune.Markdown(
 # rules that results in a regularly formatted email.
 text_renderer = mistune.Markdown(
     renderer=renderer,
-    inline=InlineParser(renderer, hard_wrap=False),
+    inline=InlineParser(hard_wrap=False),
     block=BlockParser(),
     plugins=[plugin_disable_markdown,
              plugin_pgp_signature,
              plugin_signature,
-             plugin_url,
+             url,
              ])
