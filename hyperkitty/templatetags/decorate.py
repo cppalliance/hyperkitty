@@ -9,16 +9,28 @@ register = template.Library()
 
 
 @register.filter()
-def render(value, mlist):
+def render(email, mlist):
     """Render the email content based on MailingList settings.
 
     This enables MailingList owners to choose between the two available
     renderer using MailingList settings in Postorius.
 
+    In case the display is rendered in fixed_width font because there is
+    a patch in it, do not use markdown mode since that mucks with the
+    code.
+
     :param value: The text value to render.
     :param mlist: The MailingList object this email belongs to.
     :returns: The rendered HTML form the input value text.
     """
-    if mlist.archive_rendering_mode == ArchiveRenderingMode.markdown.name:
-        return mark_safe(markdown_renderer(value))
-    return mark_safe(text_renderer(value))
+    try:
+        content = email.content
+    except AttributeError:
+        content = email.get('content', '')
+
+    if (
+        mlist.archive_rendering_mode == ArchiveRenderingMode.markdown.name and
+        not email.display_fixed
+    ):
+        return mark_safe(markdown_renderer(content))
+    return mark_safe(text_renderer(content))

@@ -23,6 +23,7 @@
 
 import json
 import os
+import textwrap
 import uuid
 from contextlib import ExitStack
 from email import message_from_file
@@ -585,3 +586,31 @@ class MessageViewsTestCase(TestCase):
             "attachment; filename*=UTF-8''testattach.txt"
         )
         self.assertEqual(response.content, contents.encode("ascii"))
+
+    def test_patch_in_message(self):
+        msg = EmailMessage()
+        msg["From"] = "someone-else@example.com"
+        msg["Subject"] = "Dummy Subject"
+        msg["Date"] = "Mon, 02 Feb 2015 13:00:00 +0300"
+        msg["Message-ID"] = "<msg2>"
+        msg.set_payload(textwrap.dedent("""
+            Dummy content
+
+            > @@ this is a patch @@
+            > + This is a code block
+            > - This was removed."""))
+        add_to_list("list@example.com", msg)
+        mlist = MailingList.objects.get(name="list@example.com")
+        mlist.archive_rendering_mode = ArchiveRenderingMode.markdown
+        url = reverse('hk_message_index', args=("list@example.com",
+                      get_message_id_hash("msg2")))
+        response = self.client.get(url)
+        self.assertContains(response, "email-body fixed", status_code=200)
+        self.assertContains(
+            response,
+            textwrap.dedent("""\
+                <p>@@ this is a patch @@
+                + This is a code block
+                - This was removed.</p>"""),
+            status_code=200
+        )
