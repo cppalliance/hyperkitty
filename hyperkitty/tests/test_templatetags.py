@@ -290,6 +290,12 @@ class TestDecoratePlain(TestCase):
             result.strip(),
             r'<p>`^.*@gmail\.com$`</p>')
 
+    def test_plaintext_patch(self):
+        self.maxDiff = None
+        contents = TEST_EMAIL_PATCH_QUOTED
+        result = text_renderer(contents)
+        self.assertEqual(result.strip(), EXPECTED_TEST_EMAIL_PATCH_QUOTED)
+
 
 class SettingsValuesTest(TestCase):
 
@@ -314,3 +320,70 @@ class SettingsValuesTest(TestCase):
         # Test when set to False.
         with override_settings(HYPERKITTY_MBOX_EXPORT=False):
             self.assertFalse(export_allowed())
+
+
+# Sample emails for testing rendering.
+TEST_EMAIL_PATCH_QUOTED = r"""
+Regarding 3be269542f4d18eaee0ad8fbeffa55708557879f,
+
+> [... 62 lines elided]
+> diff --git a/storage/spider/spd_param.cc b/storage/spider/spd_param.cc
+> index 2da262cd2bc..308857d153a 100644
+> --- a/storage/spider/spd_param.cc
+> +++ b/storage/spider/spd_param.cc
+> @@ -116,16 +116,20 @@ extern volatile ulonglong spider_mon_table_cache_vers=
+ion_req;
+>        MYSQL_SYSVAR_NAME(param_name).def_val;                            \
+>    }
+> +extern handlerton *spider_hton_ptr;
+>  static int spider_trx_status_var(THD *thd, SHOW_VAR *var, char *buff,
+>                                   ulonglong SPIDER_TRX::*counter)
+>  {
+> -  int error_num =3D 0;
+> -  SPIDER_TRX *trx;
+>    DBUG_ENTER("spider_direct_update");
+>    var->type =3D SHOW_LONGLONG;
+> -  if ((trx =3D spider_get_trx(thd, TRUE, &error_num)))
+> -    var->value =3D (char *) &(trx->*counter);
+> -  DBUG_RETURN(error_num);
+> +  var->value=3D buff;
+> +  if (thd !=3D current_thd)
+> +    mysql_mutex_lock(&thd->LOCK_thd_data);
+
+
+If it always returns 0, how about we change the signature of this
+function to return void?
+
+>  }
+
+Best"""  # noqa: E501
+
+
+EXPECTED_TEST_EMAIL_PATCH_QUOTED = r"""<p>Regarding 3be269542f4d18eaee0ad8fbeffa55708557879f,</p>
+<div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><p>[... 62 lines elided]
+diff --git a/storage/spider/spd_param.cc b/storage/spider/spd_param.cc
+index 2da262cd2bc..308857d153a 100644
+--- a/storage/spider/spd_param.cc
++++ b/storage/spider/spd_param.cc
+@@ -116,16 +116,20 @@ extern volatile ulonglong spider_mon_table_cache_vers=
+ion_req;
+       MYSQL_SYSVAR_NAME(param_name).def_val;                            \
+   }
++extern handlerton *spider_hton_ptr;
+ static int spider_trx_status_var(THD *thd, SHOW_VAR *var, char *buff,
+                                  ulonglong SPIDER_TRX::*counter)
+ {
+-  int error_num =3D 0;
+-  SPIDER_TRX *trx;
+   DBUG_ENTER("spider_direct_update");
+   var->type =3D SHOW_LONGLONG;
+-  if ((trx =3D spider_get_trx(thd, TRUE, &error_num)))
+-    var->value =3D (char *) &(trx->*counter);
+-  DBUG_RETURN(error_num);
++  var->value=3D buff;
++  if (thd !=3D current_thd)
++    mysql_mutex_lock(&thd->LOCK_thd_data);</p>
+</blockquote><p>If it always returns 0, how about we change the signature of this
+function to return void?</p>
+<div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><p>}</p>
+</blockquote><p>Best</p>"""  # noqa: E501
