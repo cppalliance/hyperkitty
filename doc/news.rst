@@ -21,6 +21,8 @@ News / Changelog
 - List owners can now delete messages and threads and reattach threads.
   (Fixes #261)
 - Archive rendering no longer removes backslash escapes.  (Closes #490)
+- Add support for mistune 3.x, making dependency on mistune>=3.0.
+
 
 
 .. _news-1.3.8:
@@ -43,9 +45,7 @@ News / Changelog
    (Closes #396)
  - Add support to parse outlook style replies so they can be hidden inside
    a quote section like regular quoted replies. (Fixes #478)
- - Change color for 4th level quoted text. (Fixes #354)
- - Fixed an issue in hyperkitty_import in trying to apply .strip() to a
-   email.header.Header object.  (Fixes #480)
+
 
 A11y
 ----
