@@ -45,7 +45,9 @@ News / Changelog
    (Closes #396)
  - Add support to parse outlook style replies so they can be hidden inside
    a quote section like regular quoted replies. (Fixes #478)
-
+ - Change color for 4th level quoted text. (Fixes #354)
+ - Fixed an issue in hyperkitty_import in trying to apply .strip() to a
+   email.header.Header object.  (Fixes #480)
 
 A11y
 ----
