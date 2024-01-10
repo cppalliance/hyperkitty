@@ -53,7 +53,7 @@
         {% endif %}
     </div> <!-- /email-header: gravatar, author-info, date, peramlink, changed_subject -->
     <div class="email-body {% if email.display_fixed %}fixed{% endif %}">
-      {{ email.content|render:mlist }}
+      {{ email|render:mlist }}
     </div>
 
     {% if unfolded and email.attachments.count %}
