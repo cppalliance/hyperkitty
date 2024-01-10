@@ -22,7 +22,8 @@ News / Changelog
   (Fixes #261)
 - Archive rendering no longer removes backslash escapes.  (Closes #490)
 - Add support for mistune 3.x, making dependency on mistune>=3.0.
-
+- Fix the rendering of contents of blockquote in plaintext rendering
+  mode. (Fixes #393)
 
 
 .. _news-1.3.8:
