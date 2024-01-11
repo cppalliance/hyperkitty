@@ -25,6 +25,7 @@ News / Changelog
 - Fix the rendering of contents of blockquote in plaintext rendering
   mode. (See #393)
 - Fixes the rendering of patches in markdown rendering mode. (Fixes #393)
+- Replace use of ``pytz`` with ``zoneinfo``. (See !462)
 
 
 .. _news-1.3.8:
@@ -127,6 +128,7 @@ A11y
 - Replace use of ``mock`` with ``unittest.mock`` in all tests. (Closes #429)
 - The check for writability of ``HYPERKITTY_ATTACHMENT_FOLDER`` when set has
   been improved to avoid a potential race condition.  (Closes #389)
+- Replace use of ``pytz`` with ``zoneinfo``. (Closes !462)
 
 Third Party
 -----------
