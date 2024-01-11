@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 # flake8: noqa
+import zoneinfo
+
 import django.db.models.deletion
 import django.utils.timezone
 from django.conf import settings
 from django.db import migrations, models
 
-import pytz
 
-
-TIMEZONES = sorted([ (tz, tz) for tz in pytz.common_timezones ])
+TIMEZONES = sorted([(tz, tz) for tz in zoneinfo.available_timezones()])
 
 
 class Migration(migrations.Migration):
