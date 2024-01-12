@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-09 10:43+0530\n"
+"POT-Creation-Date: 2024-01-12 21:08+0000\n"
 "PO-Revision-Date: 2023-12-27 08:09+0000\n"
 "Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -343,23 +343,23 @@ msgid "List overview"
 msgstr ""
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:29
-#: templates/hyperkitty/overview.html:121 views/message.py:74
+#: templates/hyperkitty/overview.html:116 views/message.py:76
 #: views/mlist.py:114 views/thread.py:191
 msgid "Download"
 msgstr "تنزيل"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:32
-#: templates/hyperkitty/overview.html:124
+#: templates/hyperkitty/overview.html:119
 msgid "Past 30 days"
 msgstr "الثلاثين يوما الماضية"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:33
-#: templates/hyperkitty/overview.html:125
+#: templates/hyperkitty/overview.html:120
 msgid "This month"
 msgstr "هذا الشهر"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:36
-#: templates/hyperkitty/overview.html:128
+#: templates/hyperkitty/overview.html:123
 msgid "Entire archive"
 msgstr "كامل الأرشيف"
 
@@ -420,8 +420,8 @@ msgid "Find list"
 msgstr "البحث عن قائمة"
 
 #: templates/hyperkitty/index.html:141 templates/hyperkitty/index.html:209
-#: templates/hyperkitty/user_profile/last_views.html:34
-#: templates/hyperkitty/user_profile/last_views.html:73
+#: templates/hyperkitty/user_profile/last_views.html:31
+#: templates/hyperkitty/user_profile/last_views.html:70
 msgid "new"
 msgstr "جديد"
 
@@ -436,8 +436,8 @@ msgstr "غير نشط"
 #: templates/hyperkitty/index.html:161 templates/hyperkitty/index.html:247
 #: templates/hyperkitty/overview.html:65 templates/hyperkitty/overview.html:72
 #: templates/hyperkitty/overview.html:79 templates/hyperkitty/overview.html:88
-#: templates/hyperkitty/overview.html:96 templates/hyperkitty/overview.html:151
-#: templates/hyperkitty/overview.html:168 templates/hyperkitty/reattach.html:37
+#: templates/hyperkitty/overview.html:96 templates/hyperkitty/overview.html:146
+#: templates/hyperkitty/overview.html:163 templates/hyperkitty/reattach.html:37
 #: templates/hyperkitty/thread.html:85
 msgid "Loading..."
 msgstr "جارٍ التحميل…"
@@ -448,7 +448,7 @@ msgstr ""
 
 #: templates/hyperkitty/index.html:190
 #: templates/hyperkitty/user_profile/favorites.html:40
-#: templates/hyperkitty/user_profile/last_views.html:45
+#: templates/hyperkitty/user_profile/last_views.html:42
 #: templates/hyperkitty/user_profile/profile.html:15
 #: templates/hyperkitty/user_profile/subscriptions.html:43
 #: templates/hyperkitty/user_profile/votes.html:46
@@ -463,14 +463,14 @@ msgstr "الوصف"
 msgid "Activity in the past 30 days"
 msgstr "النشاط في الأيام الثلاثين الماضية"
 
-#: templates/hyperkitty/index.html:236 templates/hyperkitty/overview.html:160
+#: templates/hyperkitty/index.html:236 templates/hyperkitty/overview.html:155
 #: templates/hyperkitty/thread_list.html:60
 #: templates/hyperkitty/threads/right_col.html:104
 #: templates/hyperkitty/threads/summary_thread_large.html:54
 msgid "participants"
 msgstr "المشاركون"
 
-#: templates/hyperkitty/index.html:241 templates/hyperkitty/overview.html:161
+#: templates/hyperkitty/index.html:241 templates/hyperkitty/overview.html:156
 #: templates/hyperkitty/thread_list.html:65
 msgid "discussions"
 msgstr "المحادثات"
@@ -497,14 +497,14 @@ msgstr "احذف"
 #: templates/hyperkitty/list_delete.html:32
 #: templates/hyperkitty/message_delete.html:43
 #: templates/hyperkitty/message_new.html:51
-#: templates/hyperkitty/messages/message.html:148
+#: templates/hyperkitty/messages/message.html:158
 msgid "or"
 msgstr "أو"
 
 #: templates/hyperkitty/list_delete.html:34
 #: templates/hyperkitty/message_delete.html:43
 #: templates/hyperkitty/message_new.html:51
-#: templates/hyperkitty/messages/message.html:148
+#: templates/hyperkitty/messages/message.html:158
 #: templates/hyperkitty/user_profile/votes.html:36
 #: templates/hyperkitty/user_profile/votes.html:74
 msgid "cancel"
@@ -538,7 +538,7 @@ msgid "in"
 msgstr "في"
 
 #: templates/hyperkitty/message_new.html:50
-#: templates/hyperkitty/messages/message.html:147
+#: templates/hyperkitty/messages/message.html:157
 msgid "Send"
 msgstr "أرسل"
 
@@ -572,15 +572,12 @@ msgid "Permalink for this message"
 msgstr "الرابط الدائم إلى هذه الرسالة"
 
 #: templates/hyperkitty/messages/message.html:92
-#: templates/hyperkitty/messages/message.html:98
+#: templates/hyperkitty/messages/message.html:95
+#: templates/hyperkitty/messages/message.html:97
 msgid "Reply"
 msgstr "رد"
 
-#: templates/hyperkitty/messages/message.html:95
-msgid "Sign in to reply online"
-msgstr ""
-
-#: templates/hyperkitty/messages/message.html:107
+#: templates/hyperkitty/messages/message.html:106
 #, python-format
 msgid ""
 "\n"
@@ -597,17 +594,22 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
+#: templates/hyperkitty/messages/message.html:129
+msgid "Sign in to reply online"
+msgstr ""
+
 #: templates/hyperkitty/messages/message.html:133
+#: templates/hyperkitty/messages/message.html:147
+msgid "Use email software"
+msgstr ""
+
+#: templates/hyperkitty/messages/message.html:143
 msgid "Quote"
 msgstr "اقتباس"
 
-#: templates/hyperkitty/messages/message.html:134
+#: templates/hyperkitty/messages/message.html:144
 msgid "Create new thread"
 msgstr "إنشاء موضوع جديد"
-
-#: templates/hyperkitty/messages/message.html:137
-msgid "Use email software"
-msgstr ""
 
 #: templates/hyperkitty/messages/right_col.html:11
 msgid "Back to the thread"
@@ -677,56 +679,51 @@ msgstr "المناقشات التي قمت بوضع علامة عليها"
 msgid "Discussions You've Posted to"
 msgstr ""
 
-#: templates/hyperkitty/overview.html:110
-#: templates/hyperkitty/thread_list.html:34
-msgid "You must be logged-in to create a thread."
-msgstr "يجب تسجيل الدخول لإنشاء موضوع."
-
-#: templates/hyperkitty/overview.html:112
+#: templates/hyperkitty/overview.html:109
 #, fuzzy
 #| msgid ""
 #| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
 #| "sm hidden-md hidden-lg\">S</span>ubscription"
 msgid ""
-"<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-"
-"none\">N</span>ew thread"
+"<span class=\"d-none d-md-inline\">Start a n</span><span class=\"d-md-none"
+"\">N</span>ew thread"
 msgstr "كافة المواضيع"
 
-#: templates/hyperkitty/overview.html:138
+#: templates/hyperkitty/overview.html:133
 #, fuzzy
 #| msgid "Entire archive"
 msgid "Delete Archive"
 msgstr "كامل الأرشيف"
 
-#: templates/hyperkitty/overview.html:148
+#: templates/hyperkitty/overview.html:143
 msgid "Activity Summary"
 msgstr "ملخص النشاط"
 
-#: templates/hyperkitty/overview.html:150
+#: templates/hyperkitty/overview.html:145
 msgid "Post volume over the past <strong>30</strong> days."
 msgstr ""
 
-#: templates/hyperkitty/overview.html:155
+#: templates/hyperkitty/overview.html:150
 msgid "The following statistics are from"
 msgstr "الإحصاءات التالية هي من"
 
-#: templates/hyperkitty/overview.html:156
+#: templates/hyperkitty/overview.html:151
 msgid "In"
 msgstr "في"
 
-#: templates/hyperkitty/overview.html:157
+#: templates/hyperkitty/overview.html:152
 msgid "the past <strong>30</strong> days:"
 msgstr "الأيام <strong> 30</strong> الماضية:"
 
-#: templates/hyperkitty/overview.html:166
+#: templates/hyperkitty/overview.html:161
 msgid "Most active posters"
 msgstr "الناشرون الأكثر نشاطا"
 
-#: templates/hyperkitty/overview.html:175
+#: templates/hyperkitty/overview.html:170
 msgid "Prominent posters"
 msgstr "المشاركون البارزون"
 
-#: templates/hyperkitty/overview.html:190
+#: templates/hyperkitty/overview.html:185
 msgid "kudos"
 msgstr "تهانينا"
 
@@ -905,19 +902,19 @@ msgstr ""
 msgid "Delete this thread"
 msgstr ""
 
-#: templates/hyperkitty/threads/right_col.html:120
+#: templates/hyperkitty/threads/right_col.html:122
 msgid "Unreads:"
 msgstr "غير مقروءة:"
 
-#: templates/hyperkitty/threads/right_col.html:122
+#: templates/hyperkitty/threads/right_col.html:124
 msgid "Go to:"
 msgstr "الذهاب إلى:"
 
-#: templates/hyperkitty/threads/right_col.html:122
+#: templates/hyperkitty/threads/right_col.html:124
 msgid "next"
 msgstr "التالي"
 
-#: templates/hyperkitty/threads/right_col.html:123
+#: templates/hyperkitty/threads/right_col.html:125
 msgid "prev"
 msgstr "السابق"
 
@@ -987,53 +984,53 @@ msgid "Subscriptions"
 msgstr "الاشتراكات"
 
 #: templates/hyperkitty/user_profile/favorites.html:24
-#: templates/hyperkitty/user_profile/last_views.html:27
+#: templates/hyperkitty/user_profile/last_views.html:24
 #: templates/hyperkitty/user_profile/votes.html:23
 msgid "Original author:"
 msgstr ""
 
 #: templates/hyperkitty/user_profile/favorites.html:26
-#: templates/hyperkitty/user_profile/last_views.html:29
+#: templates/hyperkitty/user_profile/last_views.html:26
 #: templates/hyperkitty/user_profile/votes.html:25
 msgid "Started on:"
 msgstr ""
 
 #: templates/hyperkitty/user_profile/favorites.html:28
-#: templates/hyperkitty/user_profile/last_views.html:31
+#: templates/hyperkitty/user_profile/last_views.html:28
 msgid "Last activity:"
 msgstr "آخر نشاط:"
 
 #: templates/hyperkitty/user_profile/favorites.html:30
-#: templates/hyperkitty/user_profile/last_views.html:33
+#: templates/hyperkitty/user_profile/last_views.html:30
 msgid "Replies:"
 msgstr "الردود:"
 
 #: templates/hyperkitty/user_profile/favorites.html:41
-#: templates/hyperkitty/user_profile/last_views.html:46
+#: templates/hyperkitty/user_profile/last_views.html:43
 #: templates/hyperkitty/user_profile/profile.html:16
 #: templates/hyperkitty/user_profile/votes.html:47
 msgid "Subject"
 msgstr "الموضوع"
 
 #: templates/hyperkitty/user_profile/favorites.html:42
-#: templates/hyperkitty/user_profile/last_views.html:47
+#: templates/hyperkitty/user_profile/last_views.html:44
 #: templates/hyperkitty/user_profile/votes.html:48
 msgid "Original author"
 msgstr ""
 
 #: templates/hyperkitty/user_profile/favorites.html:43
-#: templates/hyperkitty/user_profile/last_views.html:48
+#: templates/hyperkitty/user_profile/last_views.html:45
 #: templates/hyperkitty/user_profile/votes.html:49
 msgid "Start date"
 msgstr ""
 
 #: templates/hyperkitty/user_profile/favorites.html:44
-#: templates/hyperkitty/user_profile/last_views.html:49
+#: templates/hyperkitty/user_profile/last_views.html:46
 msgid "Last activity"
 msgstr "آخر نشاط"
 
 #: templates/hyperkitty/user_profile/favorites.html:45
-#: templates/hyperkitty/user_profile/last_views.html:50
+#: templates/hyperkitty/user_profile/last_views.html:47
 msgid "Replies"
 msgstr "الردود"
 
@@ -1041,12 +1038,11 @@ msgstr "الردود"
 msgid "No favorites yet."
 msgstr ""
 
-#: templates/hyperkitty/user_profile/last_views.html:22
-#: templates/hyperkitty/user_profile/last_views.html:59
+#: templates/hyperkitty/user_profile/last_views.html:56
 msgid "New comments"
 msgstr "تعليقات جديدة"
 
-#: templates/hyperkitty/user_profile/last_views.html:82
+#: templates/hyperkitty/user_profile/last_views.html:79
 msgid "Nothing read yet."
 msgstr ""
 
@@ -1138,26 +1134,26 @@ msgstr ""
 msgid "Email addresses:"
 msgstr "عناوين البريد الإلكتروني:"
 
-#: views/message.py:75
+#: views/message.py:77
 msgid "This message in gzipped mbox format"
 msgstr ""
 
-#: views/message.py:201
+#: views/message.py:206
 msgid "Your reply has been sent and is being processed."
 msgstr ""
 
-#: views/message.py:205
+#: views/message.py:210
 msgid ""
 "\n"
 "  You have been subscribed to {} list."
 msgstr ""
 
-#: views/message.py:288
+#: views/message.py:302
 #, python-format
 msgid "Could not delete message %(msg_id_hash)s: %(error)s"
 msgstr ""
 
-#: views/message.py:297
+#: views/message.py:311
 #, python-format
 msgid "Successfully deleted %(count)s messages."
 msgstr ""
@@ -1213,6 +1209,9 @@ msgstr ""
 msgid "This thread in gzipped mbox format"
 msgstr ""
 
+#~ msgid "You must be logged-in to create a thread."
+#~ msgstr "يجب تسجيل الدخول لإنشاء موضوع."
+
 #, fuzzy
 #~| msgid "Most active"
 #~ msgid "Most Active"
@@ -1239,8 +1238,8 @@ msgstr ""
 #~| "<span class=\"hidden-tn hidden-xs\">Manage s</span><span class=\"hidden-"
 #~| "sm hidden-md hidden-lg\">S</span>ubscription"
 #~ msgid ""
-#~ "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-"
-#~ "none\">S</span>ubscription"
+#~ "<span class=\"d-none d-md-inline\">Manage s</span><span class=\"d-md-none"
+#~ "\">S</span>ubscription"
 #~ msgstr "كافة المواضيع"
 
 #~ msgid "Go to"
