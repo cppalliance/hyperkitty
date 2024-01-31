@@ -331,8 +331,10 @@ class Attachment(models.Model):
 
     def get_content(self):
         folder = self._get_folder()
-        if folder is None or self.content is not None:
+        if self.content is not None:
             return bytes(self.content)
+        if folder is None:
+            return ""
         filepath = os.path.join(folder, str(self.counter))
         if not os.path.exists(filepath):
             logger.error("Could not find local attachment %s for email %s",

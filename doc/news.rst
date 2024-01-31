@@ -26,7 +26,7 @@ News / Changelog
   mode. (See #393)
 - Fixes the rendering of patches in markdown rendering mode. (Fixes #393)
 - Replace use of ``pytz`` with ``zoneinfo``. (See !462)
-
+- An attachment with content ``None`` is properly handled.  (Closes #496)
 
 .. _news-1.3.8:
 
