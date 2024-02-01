@@ -128,7 +128,6 @@ A11y
 - Replace use of ``mock`` with ``unittest.mock`` in all tests. (Closes #429)
 - The check for writability of ``HYPERKITTY_ATTACHMENT_FOLDER`` when set has
   been improved to avoid a potential race condition.  (Closes #389)
-- Replace use of ``pytz`` with ``zoneinfo``. (Closes !462)
 
 Third Party
 -----------
