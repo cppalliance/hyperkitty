@@ -11,21 +11,21 @@ News / Changelog
 (XXXX-XX-XX)
 
 - Handle the case when a user posting from Hyperkitty is banned in the
-  list. (Fixes #325)
+  list.  (Fixes #325)
 - Instead of defaulting to replying via Email software, provide option
-  to login and reply for un-authenticated users too. (Fixes #277)
+  to login and reply for un-authenticated users too.  (Fixes #277)
 - Tags count really doesn't add anything to the page since it isn't
-  expected to be too many like authors/messages. (Fixes #43)
+  expected to be too many like authors/messages.  (Fixes #43)
 - 'Start a new thread' will redirect to login if the user is not
-  logged in, instead of disabling it. (Fixes #50)
+  logged in, instead of disabling it.  (Fixes #50)
 - List owners can now delete messages and threads and reattach threads.
   (Fixes #261)
 - Archive rendering no longer removes backslash escapes.  (Closes #490)
 - Add support for mistune 3.x, making dependency on mistune>=3.0.
 - Fix the rendering of contents of blockquote in plaintext rendering
-  mode. (See #393)
-- Fixes the rendering of patches in markdown rendering mode. (Fixes #393)
-- Replace use of ``pytz`` with ``zoneinfo``. (See !462)
+  mode.  (See #393)
+- Fixes the rendering of patches in markdown rendering mode.  (Fixes #393)
+- Replace use of ``pytz`` with ``zoneinfo``.  (See !462)
 - An attachment with content ``None`` is properly handled.  (Closes #496)
 
 .. _news-1.3.8:
