@@ -14,6 +14,7 @@
 import os
 import sys
 
+sys.path.append('..')
 from hyperkitty import VERSION
 
 
@@ -51,7 +52,6 @@ copyright = '2012-2015, HyperKitty Developers'
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
-import sys; sys.path.append('..')
 # The short X.Y version.
 version = '.'.join(VERSION.split('.')[0:2])
 # The full version, including alpha/beta/rc tags.
