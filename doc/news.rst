@@ -27,6 +27,9 @@ News / Changelog
 - Fixes the rendering of patches in markdown rendering mode.  (Fixes #393)
 - Replace use of ``pytz`` with ``zoneinfo``.  (See !462)
 - An attachment with content ``None`` is properly handled.  (Closes #496)
+- Fix a bug which caused error in plaintext renderer when the
+  email was quoted more than default no of. max_nested_levels
+  in mistune. (Fixes #494)
 
 .. _news-1.3.8:
 
