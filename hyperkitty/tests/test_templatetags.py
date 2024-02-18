@@ -296,6 +296,13 @@ class TestDecoratePlain(TestCase):
         result = text_renderer(contents)
         self.assertEqual(result.strip(), EXPECTED_TEST_EMAIL_PATCH_QUOTED)
 
+    def test_plaintext_patch_gl_494(self):
+        self.maxDiff = None
+        contents = TEST_EMAIL_ISSUE_GL_494
+        result = text_renderer(contents)
+        self.assertEqual(
+            result.strip(), TEST_EMAIL_TEXT_RENDER_RESULT.strip())
+
 
 class SettingsValuesTest(TestCase):
 
@@ -387,3 +394,8 @@ ion_req;
 function to return void?</p>
 <div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><p>}</p>
 </blockquote><p>Best</p>"""  # noqa: E501
+
+TEST_EMAIL_ISSUE_GL_494 = """>> >>> >In the example"""
+
+TEST_EMAIL_TEXT_RENDER_RESULT = """<div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><div class="quoted-switch"><a href="#">...</a></div><blockquote class="blockquote quoted-text"><p>In the example</p>
+</blockquote></blockquote></blockquote></blockquote></blockquote></blockquote>"""  # noqa: E501

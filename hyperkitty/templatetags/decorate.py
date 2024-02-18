@@ -1,3 +1,5 @@
+from contextlib import suppress
+
 from django import template
 from django.utils.safestring import mark_safe
 
@@ -25,12 +27,18 @@ def render(email, mlist):
     """
     try:
         content = email.content
+        display_fixed = email.display_fixed
     except AttributeError:
         content = email.get('content', '')
+        display_fixed = email.get('display_fixed', False)
 
     if (
         mlist.archive_rendering_mode == ArchiveRenderingMode.markdown.name and
-        not email.display_fixed
+        not display_fixed
     ):
-        return mark_safe(markdown_renderer(content))
-    return mark_safe(text_renderer(content))
+        with suppress(TypeError):
+            return mark_safe(markdown_renderer(content))
+    try:
+        return mark_safe(text_renderer(content))
+    except (KeyError, ValueError):
+        return mark_safe('<pre>' + content + '</pre>')

@@ -185,8 +185,8 @@ def plugin_disable_markdown(md):
     markdown rendering.
     """
     md.block.rules = ['block_quote']
-    md.block.block_quote_rules = ['block_quote']
-    md.block.list_rules = ['block_quote']
+    md.block.block_quote_rules = ['block_quote', 'blank_line']
+    md.block.list_rules = []
     md.inline.rules = ['inline_html', 'auto_link']
 
 
