@@ -19,5 +19,5 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-__version__ = "1.3.9b1"
+__version__ = "1.3.9"
 VERSION = __version__

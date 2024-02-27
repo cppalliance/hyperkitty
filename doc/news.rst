@@ -8,7 +8,7 @@ News / Changelog
 1.3.9
 =====
 
-(XXXX-XX-XX)
+(2024-02-27)
 
 - Handle the case when a user posting from Hyperkitty is banned in the
   list.  (Fixes #325)
