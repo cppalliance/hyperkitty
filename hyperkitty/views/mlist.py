@@ -170,7 +170,7 @@ def _thread_list(request, mlist, threads,
                 else:
                     # The one in lvs is the older one, so we'll delete that.
                     del_id = lvs[thread_id][0]
-                LastView.objects.delete(pk=del_id)
+                LastView.objects.get(pk=del_id).delete()
             else:
                 lvs[thread_id] = (view_id, view_date)
 
