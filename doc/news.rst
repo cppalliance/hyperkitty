@@ -3,6 +3,16 @@ News / Changelog
 ================
 
 
+.. _news.1.3.10:
+
+1.3.10
+======
+
+(xxxx-xx-xx)
+
+- A coding error causing AttributeError 'Manager' object has no attribute
+   'delete' has been fixed.  (Fixes #498)
+
 .. _news-1.3.9:
 
 1.3.9
