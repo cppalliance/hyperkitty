@@ -12,6 +12,8 @@ News / Changelog
 
 - A coding error causing AttributeError 'Manager' object has no attribute
    'delete' has been fixed.  (Fixes #498)
+- Replace Django-Q with `Django-Q2 <https://django-q2.readthedocs.io/en/master/index.html>`_
+  since, it is not maintained and compatible with new Django version (Fixes #493)
 
 .. _news-1.3.9:
 
