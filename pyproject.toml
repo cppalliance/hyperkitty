@@ -6,7 +6,7 @@ description = "A web interface to access GNU Mailman v3 archives"
 keywords = ["email"]
 readme = "README.rst"
 authors = [
-    {name = "Mailman Developers", email = "mailman-developers@python.org"},
+    { name = "Mailman Developers", email = "mailman-developers@python.org" },
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -21,7 +21,7 @@ dependencies = [
     "django-extensions>=1.3.7",
     "django-gravatar2>=1.0.6",
     "django-haystack>=2.8.0",
-    "django-q>=1.0.0",
+    "django-q2>=1.0.0",
     "django>=4.0,<4.3",
     "django_mailman3>=1.3.10",
     "djangorestframework>=3.0.0",
@@ -32,7 +32,7 @@ dependencies = [
     "python-dateutil >= 2.0",
     "robot-detection>=0.3",
 ]
-license = {text = "GPLv3"}
+license = { text = "GPLv3" }
 requires-python = ">=3.9"
 
 [project.urls]
@@ -42,7 +42,7 @@ Homepage = "https://gitlab.com/mailman/hyperkitty"
 dev = [
     "isort",
     "Whoosh>=2.5.7",
-    "django-debug-toolbar",
+    "django-debug-toolbar"
 ]
 test = [
     "Whoosh>=2.5.7",
