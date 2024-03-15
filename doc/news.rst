@@ -14,6 +14,8 @@ News / Changelog
    'delete' has been fixed.  (Fixes #498)
 - Replace Django-Q with `Django-Q2 <https://django-q2.readthedocs.io/en/master/index.html>`_
   since, it is not maintained and compatible with new Django version (Fixes #493)
+- A MultipleObjectsReturned exception in checking if a thread is read is now
+  caught and handled.  (Fixes #500)
 
 .. _news-1.3.9:
 
