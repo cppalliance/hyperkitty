@@ -159,8 +159,15 @@ def thread_index(request, mlist_fqdn, threadid, month=None, year=None):
     # Last view
     last_view = None
     if request.user.is_authenticated:
-        last_view_obj, created = LastView.objects.get_or_create(
-                thread=thread, user=request.user)
+        try:
+            last_view_obj, created = LastView.objects.get_or_create(
+                    thread=thread, user=request.user)
+        except LastView.MultipleObjectsReturned:
+            last_view_duplicate, last_view_obj = LastView.objects.filter(
+                    thread=thread,
+                    user=request.user).order_by("view_date").all()
+            last_view_duplicate.delete()
+            created = False
         if not created:
             last_view = last_view_obj.view_date
             last_view_obj.save()  # update timestamp
