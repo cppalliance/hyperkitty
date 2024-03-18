@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-12 21:08+0000\n"
-"PO-Revision-Date: 2023-11-08 12:18+0000\n"
-"Last-Translator: Matsubara <matsubara.cc@mie-u.ac.jp>\n"
+"PO-Revision-Date: 2024-03-18 20:40+0000\n"
+"Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "hyperkitty/ja/>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: forms.py:53
 msgid "Add a tag..."
@@ -29,7 +29,7 @@ msgstr "追加"
 
 #: forms.py:56
 msgid "use commas to add multiple tags"
-msgstr "複数のタグを追加するにはカンマを使います"
+msgstr "複数のタグを追加するにはカンマ「,」で区切ってください"
 
 #: forms.py:64
 msgid "Attach a file"
@@ -49,7 +49,7 @@ msgstr "エラー 404"
 
 #: templates/hyperkitty/404.html:30 templates/hyperkitty/500.html:31
 msgid "Oh No!"
-msgstr "あらら！"
+msgstr "あらら!"
 
 #: templates/hyperkitty/404.html:32
 msgid "I can't find this page."
@@ -83,7 +83,7 @@ msgstr "このスレッドを閲覧"
 
 #: templates/hyperkitty/ajax/reattach_suggest.html:12
 msgid "(no suggestions)"
-msgstr "(投稿はありません)"
+msgstr "(提案はありません)"
 
 #: templates/hyperkitty/ajax/temp_message.html:12
 msgid "Sent just now, not yet distributed"
@@ -109,9 +109,8 @@ msgstr "フォーマット"
 msgid ""
 "This REST API can return the information into several formats.  The default "
 "format is html to allow human readibility."
-msgstr ""
-"この REST API では複数のフォーマットで情報を取得できます。デフォルトのフォー"
-"マットは人間が読みやすい html です。"
+msgstr "この REST API では複数のフォーマットで情報を取得できます。"
+"デフォルトのフォーマットは人間が読みやすい HTML です。"
 
 #: templates/hyperkitty/api.html:14
 msgid ""
@@ -235,7 +234,7 @@ msgstr "キーボードショートカット"
 
 #: templates/hyperkitty/base.html:197
 msgid "Thread View"
-msgstr "スレッドビュー"
+msgstr "スレッド表示"
 
 #: templates/hyperkitty/base.html:199
 msgid "Next unread message"
@@ -280,8 +279,7 @@ msgstr "エラー: 非公開リスト"
 #: templates/hyperkitty/errors/private.html:19
 msgid ""
 "This mailing list is private. You must be subscribed to view the archives."
-msgstr ""
-"このメーリングリストは非公開です。アーカイブを閲覧するには登録が必要です。"
+msgstr "このメーリングリストは非公開です。アーカイブを閲覧するには入会が必要です。"
 
 #: templates/hyperkitty/fragments/like_form.html:11
 msgid "You like it (cancel)"
@@ -341,9 +339,8 @@ msgstr "他のアドレスを関連付ける"
 #: templates/hyperkitty/fragments/send_as.html:20
 msgid ""
 "If you aren't a current list member, sending this message will subscribe you."
-msgstr ""
-"現在、メーリングリストのメンバーでない場合、メッセージを投稿するとメンバーに"
-"追加されます。"
+msgstr "メーリングリストのメンバーでない場合、メッセージを投稿するとメンバーとして入"
+"会されます。"
 
 #: templates/hyperkitty/fragments/thread_left_nav.html:12
 #: templates/hyperkitty/threads/right_col.html:26
@@ -495,9 +492,8 @@ msgstr "メーリングリストの削除"
 msgid ""
 "will be deleted from HyperKitty along with all the threads and messages. It "
 "will not be deleted from Mailman Core. Do you want to continue?"
-msgstr ""
-"はすべてのスレッドとメッセージも一緒に削除されます。Mailman Core からは削除さ"
-"れません。続行しますか？"
+msgstr "はすべてのスレッドとメッセージも一緒に削除されます。Mailman Core "
+"からは削除されません。続行しますか?"
 
 #: templates/hyperkitty/list_delete.html:31
 #: templates/hyperkitty/message_delete.html:42
@@ -537,7 +533,7 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"        %(count)s 通のメッセージが削除されます。続行しますか？\n"
+"        %(count)s 通のメッセージが削除されます。続行しますか?\n"
 "        "
 
 #: templates/hyperkitty/message_new.html:8
@@ -712,7 +708,7 @@ msgstr "統計期間"
 
 #: templates/hyperkitty/overview.html:151
 msgid "In"
-msgstr "で"
+msgstr ""
 
 #: templates/hyperkitty/overview.html:152
 msgid "the past <strong>30</strong> days:"
@@ -724,11 +720,11 @@ msgstr "最も活発な投稿者"
 
 #: templates/hyperkitty/overview.html:170
 msgid "Prominent posters"
-msgstr "有名な投稿者"
+msgstr "目立つ投稿者"
 
 #: templates/hyperkitty/overview.html:185
 msgid "kudos"
-msgstr "クードス"
+msgstr "賞賛"
 
 #: templates/hyperkitty/reattach.html:9
 msgid "Reattach a thread"
@@ -862,11 +858,11 @@ msgstr "カテゴリなし"
 
 #: templates/hyperkitty/threads/right_col.html:13
 msgid "Age (days ago)"
-msgstr "（日前）"
+msgstr "(日前)"
 
 #: templates/hyperkitty/threads/right_col.html:19
 msgid "Last active (days ago)"
-msgstr "最終更新(日前)"
+msgstr "最終更新 (日前)"
 
 #: templates/hyperkitty/threads/right_col.html:47
 #, python-format
@@ -982,7 +978,7 @@ msgstr "投票"
 
 #: templates/hyperkitty/user_profile/base.html:34
 msgid "Subscriptions"
-msgstr "購読"
+msgstr "入会"
 
 #: templates/hyperkitty/user_profile/favorites.html:24
 #: templates/hyperkitty/user_profile/last_views.html:24
@@ -1011,7 +1007,7 @@ msgstr "返信:"
 #: templates/hyperkitty/user_profile/profile.html:16
 #: templates/hyperkitty/user_profile/votes.html:47
 msgid "Subject"
-msgstr "題名"
+msgstr "件名"
 
 #: templates/hyperkitty/user_profile/favorites.html:42
 #: templates/hyperkitty/user_profile/last_views.html:44
@@ -1091,7 +1087,7 @@ msgstr "このリストに投稿する"
 
 #: templates/hyperkitty/user_profile/subscriptions.html:80
 msgid "no subscriptions"
-msgstr "購読なし"
+msgstr "入会なし"
 
 #: templates/hyperkitty/user_profile/votes.html:32
 #: templates/hyperkitty/user_profile/votes.html:70
@@ -1149,7 +1145,7 @@ msgid ""
 "  You have been subscribed to {} list."
 msgstr ""
 "\n"
-"  {} リストに登録されました。"
+"  {} リストに入会されました。"
 
 #: views/message.py:302
 #, python-format
