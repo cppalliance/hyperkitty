@@ -219,5 +219,9 @@ def rebuild_email_cache_votes(email_id):
 
 
 def _rebuild_email_cache_votes(email_id):
-    email = Email.objects.get(id=email_id)
+    try:
+        email = Email.objects.get(id=email_id)
+    except Email.DoesNotExist:
+        log.warning(f'Email with id {email_id} does not exist.')
+        return
     email.cached_values["votes"].rebuild()
